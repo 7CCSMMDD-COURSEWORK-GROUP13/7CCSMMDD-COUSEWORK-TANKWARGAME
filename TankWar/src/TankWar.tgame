@@ -1,0 +1,39 @@
+game Tank{
+	
+	screen MainFrame{
+		screenWidth = 750
+		screenHeight = 750
+	}
+	
+	obstacle test{
+		wall first{
+			wallWidth = 100
+			wallHeight = 100
+			wallPosX = 250
+			wallPosY = 250
+		}
+		wall second{
+			wallWidth = 100
+			wallHeight = 100
+			wallPosX = 550
+			wallPosY = 550
+		}
+	}
+		
+	
+	field easy {
+		enemyCount = 2
+	}
+	
+	field medium {
+		enemyCount = 4
+	}
+	
+	field hard {
+		enemyCount = 8
+	}
+	
+	//superMode
+	end-game("Congratulations You Win!","Unfortunately You Lost!")
+	start = easy
+}

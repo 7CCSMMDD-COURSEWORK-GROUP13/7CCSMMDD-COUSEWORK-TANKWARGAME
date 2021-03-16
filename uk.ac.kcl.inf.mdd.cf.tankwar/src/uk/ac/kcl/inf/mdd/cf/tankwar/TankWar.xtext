@@ -1,0 +1,132 @@
+grammar uk.ac.kcl.inf.mdd.cf.tankwar.TankWar with org.eclipse.xtext.common.Terminals
+
+generate tankWar "http://www.ac.uk/kcl/inf/mdd/cf/tankwar/TankWar"
+
+TankWarGame : 
+	"game" name=ID "{"
+		screen = ScreenSpecification 
+		obstacle = Obstaclepecification 
+		fields += FieldSpecification+
+		options += OptionSpecification+
+	"}"
+;
+
+
+
+
+
+
+Value :
+	StringValue |
+	IntValue |
+	DirectBehaviour 
+;
+
+DirectBehaviour :
+	EndGameBehaviour |
+	NoOpBehaviour {NoOpBehaviour}
+;
+
+EndGameBehaviour :
+	"end-game" "(" win=STRING "," lost=STRING ")"
+;
+
+NoOpBehaviour :
+	"nop"
+;
+
+StringValue :
+	value = STRING 
+;
+
+IntValue : 
+	value = INT 
+;
+
+ScreenSpecification :
+	"screen" name=ID "{" 
+		"screenWidth" "=" screenWidth=INT  
+		"screenHeight" "=" screenHeight=INT 
+    "}"
+;
+
+Obstaclepecification:
+	 "obstacle" name=ID "{"
+	 	fields += ObstacleMember*
+	 "}"
+;
+
+ObstacleMember:
+	WallObstacle|
+	WaterObstacle
+;
+
+WaterObstacle:
+	"water" name=ID "{"
+	
+	"}"
+;
+
+WallObstacle:
+	"wall" name=ID "{"
+		"wallWidth" "=" wallWidth=INT  
+		"wallHeight" "=" wallHeight=INT  
+		"wallPosX" "=" wallPosX=INT
+		"wallPosY" "=" wallPosY=INT
+	"}"
+;
+
+    
+FieldSpecification :
+	"field" name=ID "{" 
+		"enemyCount" "=" enemyCount=INT
+    "}"
+;
+
+FieldInitialisations :
+	LocalFieldInitialisations
+;
+
+
+LocalFieldInitialisations :
+	"init" "{" (initialisations += FieldInitialisation ";")+ "}" 
+;
+
+
+FieldInitialisation :
+	DefaultInitialisation |
+	RandomInitialisation |
+	ContextInitialisation
+;
+
+DefaultInitialisation :
+	"default" ":" "defaultInitialisation"
+;
+
+RandomInitialisation :
+	"random" ":" "randomInitialisation"
+;
+
+// FIXME This should support a number of values, one for each variable defined for the cell type
+ContextInitialisation :
+	"context" ":" "contextInitialisation"
+;
+
+
+OptionSpecification :
+	StartFieldDeclaration | 
+	AllowRestartMenu|
+	SuperModeDeclaration |
+	EndGameBehaviour
+;
+
+SuperModeDeclaration:
+	"superMode" {SuperModeDeclaration}
+;
+StartFieldDeclaration:
+	"start" "=" field = [FieldSpecification]
+;
+
+AllowRestartMenu:
+	"allowRestart" {AllowRestartMenu}
+;

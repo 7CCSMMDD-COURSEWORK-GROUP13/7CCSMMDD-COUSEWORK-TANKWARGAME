@@ -1,0 +1,244 @@
+package uk.ac.kcl.inf.mdd.cf.tankwar.generator
+
+import org.eclipse.xtext.generator.IFileSystemAccess
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarGame
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.ObstacleMember
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.WallObstacle
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.StartFieldDeclaration
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.EndGameBehaviour
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.OptionSpecification
+
+class FrameGenerator extends CommonGenerator {
+	new(ModelPreprocessor mpp) {
+		super(mpp)
+	}
+
+	def generate(IFileSystemAccess fsa) {
+		fsa.generateFile('''«generateFrameClassFileName()»''', generateFrame());
+	}
+
+	def generateFrame() '''
+		package «generateViewPackage»;
+		
+		import java.awt.*;
+		import java.awt.event.*;
+		import java.util.List;
+		import java.util.ArrayList;
+		import javax.swing.JOptionPane;
+		
+		/*
+		 *TankWar mainFrame
+		 *@author tiyiran
+		 */
+		/**
+		 * Created by tyr on 2016/2/21.
+		 */
+		public class «generateFrameClassName» extends Frame{
+		    public static final int GAME_WIDTH = «twg.screen.screenWidth»;
+		    public static final int GAME_HEIGHT = «twg.screen.screenHeight»;
+			public int ENEMY_TANK_COUNT = 5;
+		    Tank myTank = new Tank(50,50,true,this);
+		    
+		    «twg.obstacle.fields.join ("", [f | generateObstacleFieldInitialiserFor(f)])»
+		    
+		    List<Missile> missiles = new ArrayList<Missile>();
+		    List<Explode> explodes = new ArrayList<Explode>();
+		    List<Tank>   tanks = new ArrayList<Tank>();
+		    Image offScreenImage = null;
+		    
+		    public «generateFrameClassName»(){
+		    	«generateFieldInitialisation()»
+		    }
+		
+		    public void paint(Graphics g){
+		
+		        g.drawString("misslescount"+missiles.size(),10,50);
+		        g.drawString("explodescount"+explodes.size(),10,70);
+		        g.drawString("tankscount"+tanks.size(),10,90);
+		        g.drawString("tanks life"+myTank.getLife(),10,100);
+		
+«««		        if(tanks.size()<=0){
+«««		            for(int i =0;i<ENEMY_TANK_COUNTw;i++){
+«««		                tanks.add(new Tank(50+40*(i+1),50,false,Tank.Direction.D,this));
+«««		            }
+«««		        }
+		        for(int i = 0;i<missiles.size();i++){
+		            Missile m  = missiles.get(i);
+		            m.hitTanks(tanks);
+		            m.hitTank(myTank);
+		            «twg.obstacle.fields.join ("", [f | generateObstacleHitFor(f)])»
+		           
+		            m.draw(g);
+		        }
+		        for(int  i=0;i<explodes.size();i++){
+		            Explode e = explodes.get(i);
+		            e.draw(g);
+		        }
+		        for(int i =0;i<tanks.size();i++){
+		            Tank t = tanks.get(i);
+		            «twg.obstacle.fields.join ("", [f | generateObstacleCollideFor(f)])»
+		            t.collidesWithTank(tanks);
+		            t.draw(g);
+		        }
+		        
+		        
+		        «twg.obstacle.fields.join ("", [f | generateObstacleMyTankCollideFor(f)])»
+		       
+		        myTank.draw(g);
+		        «twg.obstacle.fields.join ("", [f | generateObstacleDrawFor(f)])»
+		        
+		    }
+		
+		    public void update(Graphics g){
+		        if(offScreenImage==null){
+		            offScreenImage = this.createImage(GAME_WIDTH,GAME_HEIGHT);
+		        }
+		        Graphics goffScreen = offScreenImage.getGraphics();
+		        Color c = goffScreen.getColor();
+		        goffScreen.setColor(Color.GREEN);
+		        goffScreen.fillRect(0,0,GAME_WIDTH,GAME_HEIGHT);
+		        goffScreen.setColor(c);
+		        paint(goffScreen);
+		        g.drawImage(offScreenImage,0,0,null);
+		    }
+		    /*
+		     xianshiTankmainFrame
+		     */
+		    public void launchFrame(){
+		        for(int i =0;i<ENEMY_TANK_COUNT;i++){
+		            tanks.add(new Tank(50+40*(i+1),50,false,Tank.Direction.D,this));
+		        }
+		        this.setTitle("TankWar");
+		        this.setLocation(400,300);
+		        this.setSize(GAME_WIDTH,GAME_HEIGHT);
+		        this.addWindowListener(new WindowAdapter() {
+		            public void windowClosing(WindowEvent e) {
+		                System.exit(0);
+		                //setVisible(false) ?????
+		            }
+		        });
+		        this.setBackground(Color.GREEN);
+		        this.addKeyListener(new KeyMonitor());
+		        this.setResizable(false);
+		        setVisible(true);
+		
+		        new Thread(new PaintThread()).start();
+		    }
+		    public static void main(String[] args){
+		        «generateFrameClassName» tc = new «generateFrameClassName»();
+		        tc.launchFrame();
+		    }
+		
+		    private class PaintThread implements Runnable{
+		        public void run(){
+		            while(true){
+		            	
+		            	«twg.options.join ("", [f | generateEndGameMessage(f)])»
+		            	
+		                repaint();
+		                try{
+		                    Thread.sleep(50);
+		                }catch (InterruptedException e){
+		                    e.printStackTrace();
+		                }
+		            }
+		        }
+		    }
+		
+		    private class KeyMonitor extends KeyAdapter{
+		        public void keyPressed(KeyEvent e){
+		            myTank.keyPressed(e);
+		        }
+		        public void keyReleased(KeyEvent e){
+		            myTank.keyReleased(e);
+		        }
+		    }
+		    
+		    «twg.fields.join (" ", [f | generateFieldInitialiserFor(f)])»
+		    
+		
+		}
+		
+	'''
+	
+	def generateEndGameMessage(OptionSpecification options){
+		if(options instanceof EndGameBehaviour){
+			'''
+		     if(tanks.size()<=0) {	
+		     	JOptionPane.showMessageDialog(TankClient.this, "«options.win»");
+		     	break;
+		     }
+		     if (!myTank.isLive()){
+		     	JOptionPane.showMessageDialog(TankClient.this, "«options.lost»");
+		     	break;
+		     }
+		     '''
+		}else{
+			''''''
+		}
+	}
+	
+	def generateObstacleFieldInitialiserFor(ObstacleMember member) {
+		if(member instanceof WallObstacle){
+			'''
+				Wall «member.name»Wall = new Wall(«member.wallPosX»,«member.wallPosY»,«member.wallWidth»,«member.wallHeight»,this);
+			'''
+		}else{
+			''''''
+		}
+	}
+	
+	def generateObstacleDrawFor(ObstacleMember member) {
+		if(member instanceof WallObstacle){
+			'''
+				«member.name»Wall.draw(g);
+			'''
+		}else{
+			''''''
+		}
+	}
+	
+	def generateObstacleHitFor(ObstacleMember member) {
+		if(member instanceof WallObstacle){
+			'''
+			m.hitWall(«member.name»Wall);
+			'''
+		}else{
+			''''''
+		}
+	}
+	
+	def generateObstacleCollideFor(ObstacleMember member) {
+		if(member instanceof WallObstacle){
+			'''
+			t.collidesWithWall(«member.name»Wall);
+			'''
+		}
+	}
+	
+	def generateObstacleMyTankCollideFor(ObstacleMember member) {
+		if(member instanceof WallObstacle){
+			'''
+			myTank.collidesWithWall(«member.name»Wall);
+			'''
+		}else{
+			''''''
+		}
+	}
+	
+	def generateFieldInitialisation() {
+		twg.options.filter(StartFieldDeclaration).join(" ", [o|'''initialise«o.field.name.toFirstUpper»Field();'''])
+	}
+	
+	def generateFieldInitialiserFor(FieldSpecification f) '''
+		public final void «f.generateFieldInitialiserName»() {
+			ENEMY_TANK_COUNT = «f.enemyCount»;
+		}
+	'''
+	
+	
+
+
+
+}
