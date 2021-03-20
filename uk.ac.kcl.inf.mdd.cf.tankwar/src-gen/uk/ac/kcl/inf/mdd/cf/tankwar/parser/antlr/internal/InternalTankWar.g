@@ -124,28 +124,9 @@ ruleTankWarGame returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getTankWarGameAccess().getObstacleObstaclepecificationParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getTankWarGameAccess().getFieldsFieldSpecificationParserRuleCall_4_0());
 				}
-				lv_obstacle_4_0=ruleObstaclepecification
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getTankWarGameRule());
-					}
-					set(
-						$current,
-						"obstacle",
-						lv_obstacle_4_0,
-						"uk.ac.kcl.inf.mdd.cf.tankwar.TankWar.Obstaclepecification");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getTankWarGameAccess().getFieldsFieldSpecificationParserRuleCall_5_0());
-				}
-				lv_fields_5_0=ruleFieldSpecification
+				lv_fields_4_0=ruleFieldSpecification
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getTankWarGameRule());
@@ -153,7 +134,7 @@ ruleTankWarGame returns [EObject current=null]
 					add(
 						$current,
 						"fields",
-						lv_fields_5_0,
+						lv_fields_4_0,
 						"uk.ac.kcl.inf.mdd.cf.tankwar.TankWar.FieldSpecification");
 					afterParserOrEnumRuleCall();
 				}
@@ -162,9 +143,9 @@ ruleTankWarGame returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getTankWarGameAccess().getOptionsOptionSpecificationParserRuleCall_6_0());
+					newCompositeNode(grammarAccess.getTankWarGameAccess().getOptionsOptionSpecificationParserRuleCall_5_0());
 				}
-				lv_options_6_0=ruleOptionSpecification
+				lv_options_5_0=ruleOptionSpecification
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getTankWarGameRule());
@@ -172,15 +153,15 @@ ruleTankWarGame returns [EObject current=null]
 					add(
 						$current,
 						"options",
-						lv_options_6_0,
+						lv_options_5_0,
 						"uk.ac.kcl.inf.mdd.cf.tankwar.TankWar.OptionSpecification");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)+
-		otherlv_7='}'
+		otherlv_6='}'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getTankWarGameAccess().getRightCurlyBracketKeyword_7());
+			newLeafNode(otherlv_6, grammarAccess.getTankWarGameAccess().getRightCurlyBracketKeyword_6());
 		}
 	)
 ;
@@ -867,9 +848,28 @@ ruleFieldSpecification returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_6='}'
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getFieldSpecificationAccess().getObstacleObstaclepecificationParserRuleCall_6_0());
+				}
+				lv_obstacle_6_0=ruleObstaclepecification
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getFieldSpecificationRule());
+					}
+					set(
+						$current,
+						"obstacle",
+						lv_obstacle_6_0,
+						"uk.ac.kcl.inf.mdd.cf.tankwar.TankWar.Obstaclepecification");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_7='}'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getFieldSpecificationAccess().getRightCurlyBracketKeyword_6());
+			newLeafNode(otherlv_7, grammarAccess.getFieldSpecificationAccess().getRightCurlyBracketKeyword_7());
 		}
 	)
 ;

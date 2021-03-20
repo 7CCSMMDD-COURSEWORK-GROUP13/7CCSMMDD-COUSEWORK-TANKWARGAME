@@ -39,9 +39,8 @@ class FrameGenerator extends CommonGenerator {
 		    public static final int GAME_HEIGHT = «twg.screen.screenHeight»;
 			public int ENEMY_TANK_COUNT = 5;
 		    Tank myTank = new Tank(50,50,true,this);
-		    
-		    «twg.obstacle.fields.join ("", [f | generateObstacleFieldInitialiserFor(f)])»
-		    
+		   
+			List<Wall> walls = new ArrayList<>();
 		    List<Missile> missiles = new ArrayList<Missile>();
 		    List<Explode> explodes = new ArrayList<Explode>();
 		    List<Tank>   tanks = new ArrayList<Tank>();
@@ -67,8 +66,9 @@ class FrameGenerator extends CommonGenerator {
 		            Missile m  = missiles.get(i);
 		            m.hitTanks(tanks);
 		            m.hitTank(myTank);
-		            «twg.obstacle.fields.join ("", [f | generateObstacleHitFor(f)])»
-		           
+					for (Wall wall:walls){
+						m.hitWall(wall);
+					}		           
 		            m.draw(g);
 		        }
 		        for(int  i=0;i<explodes.size();i++){
@@ -77,16 +77,21 @@ class FrameGenerator extends CommonGenerator {
 		        }
 		        for(int i =0;i<tanks.size();i++){
 		            Tank t = tanks.get(i);
-		            «twg.obstacle.fields.join ("", [f | generateObstacleCollideFor(f)])»
+		            for (Wall wall:walls){
+		                t.collidesWithWall(wall);
+		            }
 		            t.collidesWithTank(tanks);
 		            t.draw(g);
 		        }
 		        
 		        
-		        «twg.obstacle.fields.join ("", [f | generateObstacleMyTankCollideFor(f)])»
-		       
+		        for (Wall wall:walls){
+		        	myTank.collidesWithWall(wall);
+		        }
 		        myTank.draw(g);
-		        «twg.obstacle.fields.join ("", [f | generateObstacleDrawFor(f)])»
+		        for (Wall wall:walls){
+		        	wall.draw(g);
+		        }
 		        
 		    }
 		
@@ -182,7 +187,7 @@ class FrameGenerator extends CommonGenerator {
 	def generateObstacleFieldInitialiserFor(ObstacleMember member) {
 		if(member instanceof WallObstacle){
 			'''
-				Wall «member.name»Wall = new Wall(«member.wallPosX»,«member.wallPosY»,«member.wallWidth»,«member.wallHeight»,this);
+				walls.add(new Wall(«member.wallPosX»,«member.wallPosY»,«member.wallWidth»,«member.wallHeight»,this));
 			'''
 		}else{
 			''''''
@@ -234,6 +239,7 @@ class FrameGenerator extends CommonGenerator {
 	def generateFieldInitialiserFor(FieldSpecification f) '''
 		public final void «f.generateFieldInitialiserName»() {
 			ENEMY_TANK_COUNT = «f.enemyCount»;
+			«f.obstacle.fields.join("",[obstacle| generateObstacleFieldInitialiserFor(obstacle)])»
 		}
 	'''
 	

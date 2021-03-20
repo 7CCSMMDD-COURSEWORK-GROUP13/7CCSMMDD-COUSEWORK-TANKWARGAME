@@ -5,32 +5,62 @@ game Tank{
 		screenHeight = 750
 	}
 	
-	obstacle test{
-		wall first{
-			wallWidth = 100
-			wallHeight = 100
-			wallPosX = 250
-			wallPosY = 250
-		}
-		wall second{
-			wallWidth = 100
-			wallHeight = 100
-			wallPosX = 550
-			wallPosY = 550
-		}
-	}
-		
+	
 	
 	field easy {
 		enemyCount = 2
+		obstacle test{
+			wall first{
+				wallWidth = 100
+				wallHeight = 100
+				wallPosX = 250
+				wallPosY = 250
+			}
+		}
+		
 	}
 	
 	field medium {
 		enemyCount = 4
+		obstacle test{
+			wall first{
+				wallWidth = 100
+				wallHeight = 100
+				wallPosX = 250
+				wallPosY = 250
+			}
+			wall second{
+				wallWidth = 100
+				wallHeight = 100
+				wallPosX = 550
+				wallPosY = 550
+			}
+		}
+		
 	}
 	
 	field hard {
 		enemyCount = 8
+		obstacle test{
+			wall first{
+				wallWidth = 100
+				wallHeight = 100
+				wallPosX = 250
+				wallPosY = 250
+			}
+			wall second{
+				wallWidth = 100
+				wallHeight = 100
+				wallPosX = 550
+				wallPosY = 550
+			}
+			wall third{
+				wallWidth = 100
+				wallHeight = 100
+				wallPosX = 600
+				wallPosY = 600
+			}
+		}
 	}
 	
 	//superMode

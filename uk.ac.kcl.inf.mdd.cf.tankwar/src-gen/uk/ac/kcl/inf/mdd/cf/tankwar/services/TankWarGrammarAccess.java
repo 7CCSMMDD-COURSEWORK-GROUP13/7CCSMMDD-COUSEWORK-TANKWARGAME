@@ -33,18 +33,15 @@ public class TankWarGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cScreenAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cScreenScreenSpecificationParserRuleCall_3_0 = (RuleCall)cScreenAssignment_3.eContents().get(0);
-		private final Assignment cObstacleAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cObstacleObstaclepecificationParserRuleCall_4_0 = (RuleCall)cObstacleAssignment_4.eContents().get(0);
-		private final Assignment cFieldsAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cFieldsFieldSpecificationParserRuleCall_5_0 = (RuleCall)cFieldsAssignment_5.eContents().get(0);
-		private final Assignment cOptionsAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cOptionsOptionSpecificationParserRuleCall_6_0 = (RuleCall)cOptionsAssignment_6.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cFieldsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cFieldsFieldSpecificationParserRuleCall_4_0 = (RuleCall)cFieldsAssignment_4.eContents().get(0);
+		private final Assignment cOptionsAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cOptionsOptionSpecificationParserRuleCall_5_0 = (RuleCall)cOptionsAssignment_5.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//TankWarGame:
 		//	"game" name=ID "{"
 		//	screen=ScreenSpecification
-		//	obstacle=Obstaclepecification
 		//	fields+=FieldSpecification+
 		//	options+=OptionSpecification+
 		//	"}";
@@ -52,7 +49,6 @@ public class TankWarGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		
 		//"game" name=ID "{"
 		//screen=ScreenSpecification
-		//obstacle=Obstaclepecification
 		//fields+=FieldSpecification+
 		//options+=OptionSpecification+
 		//"}"
@@ -76,26 +72,20 @@ public class TankWarGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//ScreenSpecification
 		public RuleCall getScreenScreenSpecificationParserRuleCall_3_0() { return cScreenScreenSpecificationParserRuleCall_3_0; }
 		
-		//obstacle=Obstaclepecification
-		public Assignment getObstacleAssignment_4() { return cObstacleAssignment_4; }
-		
-		//Obstaclepecification
-		public RuleCall getObstacleObstaclepecificationParserRuleCall_4_0() { return cObstacleObstaclepecificationParserRuleCall_4_0; }
-		
 		//fields+=FieldSpecification+
-		public Assignment getFieldsAssignment_5() { return cFieldsAssignment_5; }
+		public Assignment getFieldsAssignment_4() { return cFieldsAssignment_4; }
 		
 		//FieldSpecification
-		public RuleCall getFieldsFieldSpecificationParserRuleCall_5_0() { return cFieldsFieldSpecificationParserRuleCall_5_0; }
+		public RuleCall getFieldsFieldSpecificationParserRuleCall_4_0() { return cFieldsFieldSpecificationParserRuleCall_4_0; }
 		
 		//options+=OptionSpecification+
-		public Assignment getOptionsAssignment_6() { return cOptionsAssignment_6; }
+		public Assignment getOptionsAssignment_5() { return cOptionsAssignment_5; }
 		
 		//OptionSpecification
-		public RuleCall getOptionsOptionSpecificationParserRuleCall_6_0() { return cOptionsOptionSpecificationParserRuleCall_6_0; }
+		public RuleCall getOptionsOptionSpecificationParserRuleCall_5_0() { return cOptionsOptionSpecificationParserRuleCall_5_0; }
 		
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
+		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 	public class ValueElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uk.ac.kcl.inf.mdd.cf.tankwar.TankWar.Value");
@@ -511,16 +501,20 @@ public class TankWarGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		private final Keyword cEqualsSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Assignment cEnemyCountAssignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final RuleCall cEnemyCountINTTerminalRuleCall_5_0 = (RuleCall)cEnemyCountAssignment_5.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Assignment cObstacleAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cObstacleObstaclepecificationParserRuleCall_6_0 = (RuleCall)cObstacleAssignment_6.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//FieldSpecification:
 		//	"field" name=ID "{"
 		//	"enemyCount" "=" enemyCount=INT
+		//	obstacle=Obstaclepecification
 		//	"}";
 		@Override public ParserRule getRule() { return rule; }
 		
 		//"field" name=ID "{"
 		//"enemyCount" "=" enemyCount=INT
+		//obstacle=Obstaclepecification
 		//"}"
 		public Group getGroup() { return cGroup; }
 		
@@ -548,8 +542,14 @@ public class TankWarGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//INT
 		public RuleCall getEnemyCountINTTerminalRuleCall_5_0() { return cEnemyCountINTTerminalRuleCall_5_0; }
 		
+		//obstacle=Obstaclepecification
+		public Assignment getObstacleAssignment_6() { return cObstacleAssignment_6; }
+		
+		//Obstaclepecification
+		public RuleCall getObstacleObstaclepecificationParserRuleCall_6_0() { return cObstacleObstaclepecificationParserRuleCall_6_0; }
+		
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 	public class FieldInitialisationsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uk.ac.kcl.inf.mdd.cf.tankwar.TankWar.FieldInitialisations");
@@ -880,7 +880,6 @@ public class TankWarGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	//TankWarGame:
 	//	"game" name=ID "{"
 	//	screen=ScreenSpecification
-	//	obstacle=Obstaclepecification
 	//	fields+=FieldSpecification+
 	//	options+=OptionSpecification+
 	//	"}";
@@ -1016,6 +1015,7 @@ public class TankWarGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	//FieldSpecification:
 	//	"field" name=ID "{"
 	//	"enemyCount" "=" enemyCount=INT
+	//	obstacle=Obstaclepecification
 	//	"}";
 	public FieldSpecificationElements getFieldSpecificationAccess() {
 		return pFieldSpecification;

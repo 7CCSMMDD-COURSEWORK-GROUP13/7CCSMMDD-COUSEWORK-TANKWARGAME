@@ -9,7 +9,6 @@
     <genClasses ecoreClass="TankWar.ecore#//TankWarGame">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TankWar.ecore#//TankWarGame/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TankWar.ecore#//TankWarGame/screen"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TankWar.ecore#//TankWarGame/obstacle"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TankWar.ecore#//TankWarGame/fields"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TankWar.ecore#//TankWarGame/options"/>
     </genClasses>
@@ -47,6 +46,7 @@
     <genClasses ecoreClass="TankWar.ecore#//FieldSpecification">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TankWar.ecore#//FieldSpecification/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TankWar.ecore#//FieldSpecification/enemyCount"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TankWar.ecore#//FieldSpecification/obstacle"/>
     </genClasses>
     <genClasses ecoreClass="TankWar.ecore#//FieldInitialisations"/>
     <genClasses ecoreClass="TankWar.ecore#//LocalFieldInitialisations">

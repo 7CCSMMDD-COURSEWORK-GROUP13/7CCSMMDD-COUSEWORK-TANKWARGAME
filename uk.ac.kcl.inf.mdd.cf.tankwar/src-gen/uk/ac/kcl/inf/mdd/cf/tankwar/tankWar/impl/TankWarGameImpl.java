@@ -20,7 +20,6 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification;
-import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Obstaclepecification;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.OptionSpecification;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.ScreenSpecification;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarGame;
@@ -36,7 +35,6 @@ import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarPackage;
  * <ul>
  *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarGameImpl#getName <em>Name</em>}</li>
  *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarGameImpl#getScreen <em>Screen</em>}</li>
- *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarGameImpl#getObstacle <em>Obstacle</em>}</li>
  *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarGameImpl#getFields <em>Fields</em>}</li>
  *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarGameImpl#getOptions <em>Options</em>}</li>
  * </ul>
@@ -74,16 +72,6 @@ public class TankWarGameImpl extends MinimalEObjectImpl.Container implements Tan
    * @ordered
    */
   protected ScreenSpecification screen;
-
-  /**
-   * The cached value of the '{@link #getObstacle() <em>Obstacle</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getObstacle()
-   * @generated
-   * @ordered
-   */
-  protected Obstaclepecification obstacle;
 
   /**
    * The cached value of the '{@link #getFields() <em>Fields</em>}' containment reference list.
@@ -207,56 +195,6 @@ public class TankWarGameImpl extends MinimalEObjectImpl.Container implements Tan
    * @generated
    */
   @Override
-  public Obstaclepecification getObstacle()
-  {
-    return obstacle;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetObstacle(Obstaclepecification newObstacle, NotificationChain msgs)
-  {
-    Obstaclepecification oldObstacle = obstacle;
-    obstacle = newObstacle;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TankWarPackage.TANK_WAR_GAME__OBSTACLE, oldObstacle, newObstacle);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setObstacle(Obstaclepecification newObstacle)
-  {
-    if (newObstacle != obstacle)
-    {
-      NotificationChain msgs = null;
-      if (obstacle != null)
-        msgs = ((InternalEObject)obstacle).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TankWarPackage.TANK_WAR_GAME__OBSTACLE, null, msgs);
-      if (newObstacle != null)
-        msgs = ((InternalEObject)newObstacle).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TankWarPackage.TANK_WAR_GAME__OBSTACLE, null, msgs);
-      msgs = basicSetObstacle(newObstacle, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TankWarPackage.TANK_WAR_GAME__OBSTACLE, newObstacle, newObstacle));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public EList<FieldSpecification> getFields()
   {
     if (fields == null)
@@ -293,8 +231,6 @@ public class TankWarGameImpl extends MinimalEObjectImpl.Container implements Tan
     {
       case TankWarPackage.TANK_WAR_GAME__SCREEN:
         return basicSetScreen(null, msgs);
-      case TankWarPackage.TANK_WAR_GAME__OBSTACLE:
-        return basicSetObstacle(null, msgs);
       case TankWarPackage.TANK_WAR_GAME__FIELDS:
         return ((InternalEList<?>)getFields()).basicRemove(otherEnd, msgs);
       case TankWarPackage.TANK_WAR_GAME__OPTIONS:
@@ -317,8 +253,6 @@ public class TankWarGameImpl extends MinimalEObjectImpl.Container implements Tan
         return getName();
       case TankWarPackage.TANK_WAR_GAME__SCREEN:
         return getScreen();
-      case TankWarPackage.TANK_WAR_GAME__OBSTACLE:
-        return getObstacle();
       case TankWarPackage.TANK_WAR_GAME__FIELDS:
         return getFields();
       case TankWarPackage.TANK_WAR_GAME__OPTIONS:
@@ -343,9 +277,6 @@ public class TankWarGameImpl extends MinimalEObjectImpl.Container implements Tan
         return;
       case TankWarPackage.TANK_WAR_GAME__SCREEN:
         setScreen((ScreenSpecification)newValue);
-        return;
-      case TankWarPackage.TANK_WAR_GAME__OBSTACLE:
-        setObstacle((Obstaclepecification)newValue);
         return;
       case TankWarPackage.TANK_WAR_GAME__FIELDS:
         getFields().clear();
@@ -375,9 +306,6 @@ public class TankWarGameImpl extends MinimalEObjectImpl.Container implements Tan
       case TankWarPackage.TANK_WAR_GAME__SCREEN:
         setScreen((ScreenSpecification)null);
         return;
-      case TankWarPackage.TANK_WAR_GAME__OBSTACLE:
-        setObstacle((Obstaclepecification)null);
-        return;
       case TankWarPackage.TANK_WAR_GAME__FIELDS:
         getFields().clear();
         return;
@@ -402,8 +330,6 @@ public class TankWarGameImpl extends MinimalEObjectImpl.Container implements Tan
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case TankWarPackage.TANK_WAR_GAME__SCREEN:
         return screen != null;
-      case TankWarPackage.TANK_WAR_GAME__OBSTACLE:
-        return obstacle != null;
       case TankWarPackage.TANK_WAR_GAME__FIELDS:
         return fields != null && !fields.isEmpty();
       case TankWarPackage.TANK_WAR_GAME__OPTIONS:

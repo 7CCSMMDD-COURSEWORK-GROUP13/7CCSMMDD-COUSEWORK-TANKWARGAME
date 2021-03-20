@@ -147,7 +147,7 @@ public class TankWarSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     FieldSpecification returns FieldSpecification
 	 *
 	 * Constraint:
-	 *     (name=ID enemyCount=INT)
+	 *     (name=ID enemyCount=INT obstacle=Obstaclepecification)
 	 */
 	protected void sequence_FieldSpecification(ISerializationContext context, FieldSpecification semanticObject) {
 		if (errorAcceptor != null) {
@@ -155,10 +155,13 @@ public class TankWarSemanticSequencer extends AbstractDelegatingSemanticSequence
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TankWarPackage.Literals.FIELD_SPECIFICATION__NAME));
 			if (transientValues.isValueTransient(semanticObject, TankWarPackage.Literals.FIELD_SPECIFICATION__ENEMY_COUNT) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TankWarPackage.Literals.FIELD_SPECIFICATION__ENEMY_COUNT));
+			if (transientValues.isValueTransient(semanticObject, TankWarPackage.Literals.FIELD_SPECIFICATION__OBSTACLE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TankWarPackage.Literals.FIELD_SPECIFICATION__OBSTACLE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getFieldSpecificationAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getFieldSpecificationAccess().getEnemyCountINTTerminalRuleCall_5_0(), semanticObject.getEnemyCount());
+		feeder.accept(grammarAccess.getFieldSpecificationAccess().getObstacleObstaclepecificationParserRuleCall_6_0(), semanticObject.getObstacle());
 		feeder.finish();
 	}
 	
@@ -287,7 +290,7 @@ public class TankWarSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     TankWarGame returns TankWarGame
 	 *
 	 * Constraint:
-	 *     (name=ID screen=ScreenSpecification obstacle=Obstaclepecification fields+=FieldSpecification+ options+=OptionSpecification+)
+	 *     (name=ID screen=ScreenSpecification fields+=FieldSpecification+ options+=OptionSpecification+)
 	 */
 	protected void sequence_TankWarGame(ISerializationContext context, TankWarGame semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

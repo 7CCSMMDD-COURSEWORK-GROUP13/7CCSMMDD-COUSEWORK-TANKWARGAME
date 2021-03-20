@@ -5,15 +5,10 @@ generate tankWar "http://www.ac.uk/kcl/inf/mdd/cf/tankwar/TankWar"
 TankWarGame : 
 	"game" name=ID "{"
 		screen = ScreenSpecification 
-		obstacle = Obstaclepecification 
 		fields += FieldSpecification+
 		options += OptionSpecification+
 	"}"
 ;
-
-
-
-
 
 
 Value :
@@ -80,6 +75,8 @@ WallObstacle:
 FieldSpecification :
 	"field" name=ID "{" 
 		"enemyCount" "=" enemyCount=INT
+	     obstacle = Obstaclepecification 
+		
     "}"
 ;
 

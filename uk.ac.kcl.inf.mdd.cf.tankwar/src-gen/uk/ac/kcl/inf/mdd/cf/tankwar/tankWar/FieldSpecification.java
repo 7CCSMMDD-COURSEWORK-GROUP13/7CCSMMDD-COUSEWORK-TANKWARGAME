@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification#getName <em>Name</em>}</li>
  *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification#getEnemyCount <em>Enemy Count</em>}</li>
+ *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification#getObstacle <em>Obstacle</em>}</li>
  * </ul>
  *
  * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarPackage#getFieldSpecification()
@@ -67,5 +68,27 @@ public interface FieldSpecification extends EObject
    * @generated
    */
   void setEnemyCount(int value);
+
+  /**
+   * Returns the value of the '<em><b>Obstacle</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Obstacle</em>' containment reference.
+   * @see #setObstacle(Obstaclepecification)
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarPackage#getFieldSpecification_Obstacle()
+   * @model containment="true"
+   * @generated
+   */
+  Obstaclepecification getObstacle();
+
+  /**
+   * Sets the value of the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification#getObstacle <em>Obstacle</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Obstacle</em>' containment reference.
+   * @see #getObstacle()
+   * @generated
+   */
+  void setObstacle(Obstaclepecification value);
 
 } // FieldSpecification

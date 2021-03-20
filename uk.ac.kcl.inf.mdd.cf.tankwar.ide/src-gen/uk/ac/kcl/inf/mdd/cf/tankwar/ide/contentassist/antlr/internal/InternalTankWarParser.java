@@ -2469,31 +2469,74 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TankWarGame__Group__4__Impl"
-    // InternalTankWar.g:799:1: rule__TankWarGame__Group__4__Impl : ( ( rule__TankWarGame__ObstacleAssignment_4 ) ) ;
+    // InternalTankWar.g:799:1: rule__TankWarGame__Group__4__Impl : ( ( ( rule__TankWarGame__FieldsAssignment_4 ) ) ( ( rule__TankWarGame__FieldsAssignment_4 )* ) ) ;
     public final void rule__TankWarGame__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:803:1: ( ( ( rule__TankWarGame__ObstacleAssignment_4 ) ) )
-            // InternalTankWar.g:804:1: ( ( rule__TankWarGame__ObstacleAssignment_4 ) )
+            // InternalTankWar.g:803:1: ( ( ( ( rule__TankWarGame__FieldsAssignment_4 ) ) ( ( rule__TankWarGame__FieldsAssignment_4 )* ) ) )
+            // InternalTankWar.g:804:1: ( ( ( rule__TankWarGame__FieldsAssignment_4 ) ) ( ( rule__TankWarGame__FieldsAssignment_4 )* ) )
             {
-            // InternalTankWar.g:804:1: ( ( rule__TankWarGame__ObstacleAssignment_4 ) )
-            // InternalTankWar.g:805:2: ( rule__TankWarGame__ObstacleAssignment_4 )
+            // InternalTankWar.g:804:1: ( ( ( rule__TankWarGame__FieldsAssignment_4 ) ) ( ( rule__TankWarGame__FieldsAssignment_4 )* ) )
+            // InternalTankWar.g:805:2: ( ( rule__TankWarGame__FieldsAssignment_4 ) ) ( ( rule__TankWarGame__FieldsAssignment_4 )* )
             {
-             before(grammarAccess.getTankWarGameAccess().getObstacleAssignment_4()); 
-            // InternalTankWar.g:806:2: ( rule__TankWarGame__ObstacleAssignment_4 )
-            // InternalTankWar.g:806:3: rule__TankWarGame__ObstacleAssignment_4
+            // InternalTankWar.g:805:2: ( ( rule__TankWarGame__FieldsAssignment_4 ) )
+            // InternalTankWar.g:806:3: ( rule__TankWarGame__FieldsAssignment_4 )
             {
-            pushFollow(FOLLOW_2);
-            rule__TankWarGame__ObstacleAssignment_4();
+             before(grammarAccess.getTankWarGameAccess().getFieldsAssignment_4()); 
+            // InternalTankWar.g:807:3: ( rule__TankWarGame__FieldsAssignment_4 )
+            // InternalTankWar.g:807:4: rule__TankWarGame__FieldsAssignment_4
+            {
+            pushFollow(FOLLOW_8);
+            rule__TankWarGame__FieldsAssignment_4();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getTankWarGameAccess().getObstacleAssignment_4()); 
+             after(grammarAccess.getTankWarGameAccess().getFieldsAssignment_4()); 
+
+            }
+
+            // InternalTankWar.g:810:2: ( ( rule__TankWarGame__FieldsAssignment_4 )* )
+            // InternalTankWar.g:811:3: ( rule__TankWarGame__FieldsAssignment_4 )*
+            {
+             before(grammarAccess.getTankWarGameAccess().getFieldsAssignment_4()); 
+            // InternalTankWar.g:812:3: ( rule__TankWarGame__FieldsAssignment_4 )*
+            loop5:
+            do {
+                int alt5=2;
+                int LA5_0 = input.LA(1);
+
+                if ( (LA5_0==30) ) {
+                    alt5=1;
+                }
+
+
+                switch (alt5) {
+            	case 1 :
+            	    // InternalTankWar.g:812:4: rule__TankWarGame__FieldsAssignment_4
+            	    {
+            	    pushFollow(FOLLOW_8);
+            	    rule__TankWarGame__FieldsAssignment_4();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop5;
+                }
+            } while (true);
+
+             after(grammarAccess.getTankWarGameAccess().getFieldsAssignment_4()); 
+
+            }
+
 
             }
 
@@ -2516,16 +2559,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TankWarGame__Group__5"
-    // InternalTankWar.g:814:1: rule__TankWarGame__Group__5 : rule__TankWarGame__Group__5__Impl rule__TankWarGame__Group__6 ;
+    // InternalTankWar.g:821:1: rule__TankWarGame__Group__5 : rule__TankWarGame__Group__5__Impl rule__TankWarGame__Group__6 ;
     public final void rule__TankWarGame__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:818:1: ( rule__TankWarGame__Group__5__Impl rule__TankWarGame__Group__6 )
-            // InternalTankWar.g:819:2: rule__TankWarGame__Group__5__Impl rule__TankWarGame__Group__6
+            // InternalTankWar.g:825:1: ( rule__TankWarGame__Group__5__Impl rule__TankWarGame__Group__6 )
+            // InternalTankWar.g:826:2: rule__TankWarGame__Group__5__Impl rule__TankWarGame__Group__6
             {
-            pushFollow(FOLLOW_8);
+            pushFollow(FOLLOW_9);
             rule__TankWarGame__Group__5__Impl();
 
             state._fsp--;
@@ -2554,58 +2597,58 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TankWarGame__Group__5__Impl"
-    // InternalTankWar.g:826:1: rule__TankWarGame__Group__5__Impl : ( ( ( rule__TankWarGame__FieldsAssignment_5 ) ) ( ( rule__TankWarGame__FieldsAssignment_5 )* ) ) ;
+    // InternalTankWar.g:833:1: rule__TankWarGame__Group__5__Impl : ( ( ( rule__TankWarGame__OptionsAssignment_5 ) ) ( ( rule__TankWarGame__OptionsAssignment_5 )* ) ) ;
     public final void rule__TankWarGame__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:830:1: ( ( ( ( rule__TankWarGame__FieldsAssignment_5 ) ) ( ( rule__TankWarGame__FieldsAssignment_5 )* ) ) )
-            // InternalTankWar.g:831:1: ( ( ( rule__TankWarGame__FieldsAssignment_5 ) ) ( ( rule__TankWarGame__FieldsAssignment_5 )* ) )
+            // InternalTankWar.g:837:1: ( ( ( ( rule__TankWarGame__OptionsAssignment_5 ) ) ( ( rule__TankWarGame__OptionsAssignment_5 )* ) ) )
+            // InternalTankWar.g:838:1: ( ( ( rule__TankWarGame__OptionsAssignment_5 ) ) ( ( rule__TankWarGame__OptionsAssignment_5 )* ) )
             {
-            // InternalTankWar.g:831:1: ( ( ( rule__TankWarGame__FieldsAssignment_5 ) ) ( ( rule__TankWarGame__FieldsAssignment_5 )* ) )
-            // InternalTankWar.g:832:2: ( ( rule__TankWarGame__FieldsAssignment_5 ) ) ( ( rule__TankWarGame__FieldsAssignment_5 )* )
+            // InternalTankWar.g:838:1: ( ( ( rule__TankWarGame__OptionsAssignment_5 ) ) ( ( rule__TankWarGame__OptionsAssignment_5 )* ) )
+            // InternalTankWar.g:839:2: ( ( rule__TankWarGame__OptionsAssignment_5 ) ) ( ( rule__TankWarGame__OptionsAssignment_5 )* )
             {
-            // InternalTankWar.g:832:2: ( ( rule__TankWarGame__FieldsAssignment_5 ) )
-            // InternalTankWar.g:833:3: ( rule__TankWarGame__FieldsAssignment_5 )
+            // InternalTankWar.g:839:2: ( ( rule__TankWarGame__OptionsAssignment_5 ) )
+            // InternalTankWar.g:840:3: ( rule__TankWarGame__OptionsAssignment_5 )
             {
-             before(grammarAccess.getTankWarGameAccess().getFieldsAssignment_5()); 
-            // InternalTankWar.g:834:3: ( rule__TankWarGame__FieldsAssignment_5 )
-            // InternalTankWar.g:834:4: rule__TankWarGame__FieldsAssignment_5
+             before(grammarAccess.getTankWarGameAccess().getOptionsAssignment_5()); 
+            // InternalTankWar.g:841:3: ( rule__TankWarGame__OptionsAssignment_5 )
+            // InternalTankWar.g:841:4: rule__TankWarGame__OptionsAssignment_5
             {
-            pushFollow(FOLLOW_9);
-            rule__TankWarGame__FieldsAssignment_5();
+            pushFollow(FOLLOW_10);
+            rule__TankWarGame__OptionsAssignment_5();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getTankWarGameAccess().getFieldsAssignment_5()); 
+             after(grammarAccess.getTankWarGameAccess().getOptionsAssignment_5()); 
 
             }
 
-            // InternalTankWar.g:837:2: ( ( rule__TankWarGame__FieldsAssignment_5 )* )
-            // InternalTankWar.g:838:3: ( rule__TankWarGame__FieldsAssignment_5 )*
+            // InternalTankWar.g:844:2: ( ( rule__TankWarGame__OptionsAssignment_5 )* )
+            // InternalTankWar.g:845:3: ( rule__TankWarGame__OptionsAssignment_5 )*
             {
-             before(grammarAccess.getTankWarGameAccess().getFieldsAssignment_5()); 
-            // InternalTankWar.g:839:3: ( rule__TankWarGame__FieldsAssignment_5 )*
-            loop5:
+             before(grammarAccess.getTankWarGameAccess().getOptionsAssignment_5()); 
+            // InternalTankWar.g:846:3: ( rule__TankWarGame__OptionsAssignment_5 )*
+            loop6:
             do {
-                int alt5=2;
-                int LA5_0 = input.LA(1);
+                int alt6=2;
+                int LA6_0 = input.LA(1);
 
-                if ( (LA5_0==30) ) {
-                    alt5=1;
+                if ( (LA6_0==15||(LA6_0>=41 && LA6_0<=43)) ) {
+                    alt6=1;
                 }
 
 
-                switch (alt5) {
+                switch (alt6) {
             	case 1 :
-            	    // InternalTankWar.g:839:4: rule__TankWarGame__FieldsAssignment_5
+            	    // InternalTankWar.g:846:4: rule__TankWarGame__OptionsAssignment_5
             	    {
-            	    pushFollow(FOLLOW_9);
-            	    rule__TankWarGame__FieldsAssignment_5();
+            	    pushFollow(FOLLOW_10);
+            	    rule__TankWarGame__OptionsAssignment_5();
 
             	    state._fsp--;
 
@@ -2614,11 +2657,11 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop5;
+            	    break loop6;
                 }
             } while (true);
 
-             after(grammarAccess.getTankWarGameAccess().getFieldsAssignment_5()); 
+             after(grammarAccess.getTankWarGameAccess().getOptionsAssignment_5()); 
 
             }
 
@@ -2644,22 +2687,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TankWarGame__Group__6"
-    // InternalTankWar.g:848:1: rule__TankWarGame__Group__6 : rule__TankWarGame__Group__6__Impl rule__TankWarGame__Group__7 ;
+    // InternalTankWar.g:855:1: rule__TankWarGame__Group__6 : rule__TankWarGame__Group__6__Impl ;
     public final void rule__TankWarGame__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:852:1: ( rule__TankWarGame__Group__6__Impl rule__TankWarGame__Group__7 )
-            // InternalTankWar.g:853:2: rule__TankWarGame__Group__6__Impl rule__TankWarGame__Group__7
+            // InternalTankWar.g:859:1: ( rule__TankWarGame__Group__6__Impl )
+            // InternalTankWar.g:860:2: rule__TankWarGame__Group__6__Impl
             {
-            pushFollow(FOLLOW_10);
-            rule__TankWarGame__Group__6__Impl();
-
-            state._fsp--;
-
             pushFollow(FOLLOW_2);
-            rule__TankWarGame__Group__7();
+            rule__TankWarGame__Group__6__Impl();
 
             state._fsp--;
 
@@ -2682,74 +2720,21 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__TankWarGame__Group__6__Impl"
-    // InternalTankWar.g:860:1: rule__TankWarGame__Group__6__Impl : ( ( ( rule__TankWarGame__OptionsAssignment_6 ) ) ( ( rule__TankWarGame__OptionsAssignment_6 )* ) ) ;
+    // InternalTankWar.g:866:1: rule__TankWarGame__Group__6__Impl : ( '}' ) ;
     public final void rule__TankWarGame__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:864:1: ( ( ( ( rule__TankWarGame__OptionsAssignment_6 ) ) ( ( rule__TankWarGame__OptionsAssignment_6 )* ) ) )
-            // InternalTankWar.g:865:1: ( ( ( rule__TankWarGame__OptionsAssignment_6 ) ) ( ( rule__TankWarGame__OptionsAssignment_6 )* ) )
+            // InternalTankWar.g:870:1: ( ( '}' ) )
+            // InternalTankWar.g:871:1: ( '}' )
             {
-            // InternalTankWar.g:865:1: ( ( ( rule__TankWarGame__OptionsAssignment_6 ) ) ( ( rule__TankWarGame__OptionsAssignment_6 )* ) )
-            // InternalTankWar.g:866:2: ( ( rule__TankWarGame__OptionsAssignment_6 ) ) ( ( rule__TankWarGame__OptionsAssignment_6 )* )
+            // InternalTankWar.g:871:1: ( '}' )
+            // InternalTankWar.g:872:2: '}'
             {
-            // InternalTankWar.g:866:2: ( ( rule__TankWarGame__OptionsAssignment_6 ) )
-            // InternalTankWar.g:867:3: ( rule__TankWarGame__OptionsAssignment_6 )
-            {
-             before(grammarAccess.getTankWarGameAccess().getOptionsAssignment_6()); 
-            // InternalTankWar.g:868:3: ( rule__TankWarGame__OptionsAssignment_6 )
-            // InternalTankWar.g:868:4: rule__TankWarGame__OptionsAssignment_6
-            {
-            pushFollow(FOLLOW_11);
-            rule__TankWarGame__OptionsAssignment_6();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getTankWarGameAccess().getOptionsAssignment_6()); 
-
-            }
-
-            // InternalTankWar.g:871:2: ( ( rule__TankWarGame__OptionsAssignment_6 )* )
-            // InternalTankWar.g:872:3: ( rule__TankWarGame__OptionsAssignment_6 )*
-            {
-             before(grammarAccess.getTankWarGameAccess().getOptionsAssignment_6()); 
-            // InternalTankWar.g:873:3: ( rule__TankWarGame__OptionsAssignment_6 )*
-            loop6:
-            do {
-                int alt6=2;
-                int LA6_0 = input.LA(1);
-
-                if ( (LA6_0==15||(LA6_0>=41 && LA6_0<=43)) ) {
-                    alt6=1;
-                }
-
-
-                switch (alt6) {
-            	case 1 :
-            	    // InternalTankWar.g:873:4: rule__TankWarGame__OptionsAssignment_6
-            	    {
-            	    pushFollow(FOLLOW_11);
-            	    rule__TankWarGame__OptionsAssignment_6();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop6;
-                }
-            } while (true);
-
-             after(grammarAccess.getTankWarGameAccess().getOptionsAssignment_6()); 
-
-            }
-
+             before(grammarAccess.getTankWarGameAccess().getRightCurlyBracketKeyword_6()); 
+            match(input,14,FOLLOW_2); 
+             after(grammarAccess.getTankWarGameAccess().getRightCurlyBracketKeyword_6()); 
 
             }
 
@@ -2771,85 +2756,15 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__TankWarGame__Group__6__Impl"
 
 
-    // $ANTLR start "rule__TankWarGame__Group__7"
-    // InternalTankWar.g:882:1: rule__TankWarGame__Group__7 : rule__TankWarGame__Group__7__Impl ;
-    public final void rule__TankWarGame__Group__7() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalTankWar.g:886:1: ( rule__TankWarGame__Group__7__Impl )
-            // InternalTankWar.g:887:2: rule__TankWarGame__Group__7__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__TankWarGame__Group__7__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__TankWarGame__Group__7"
-
-
-    // $ANTLR start "rule__TankWarGame__Group__7__Impl"
-    // InternalTankWar.g:893:1: rule__TankWarGame__Group__7__Impl : ( '}' ) ;
-    public final void rule__TankWarGame__Group__7__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalTankWar.g:897:1: ( ( '}' ) )
-            // InternalTankWar.g:898:1: ( '}' )
-            {
-            // InternalTankWar.g:898:1: ( '}' )
-            // InternalTankWar.g:899:2: '}'
-            {
-             before(grammarAccess.getTankWarGameAccess().getRightCurlyBracketKeyword_7()); 
-            match(input,14,FOLLOW_2); 
-             after(grammarAccess.getTankWarGameAccess().getRightCurlyBracketKeyword_7()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__TankWarGame__Group__7__Impl"
-
-
     // $ANTLR start "rule__DirectBehaviour__Group_1__0"
-    // InternalTankWar.g:909:1: rule__DirectBehaviour__Group_1__0 : rule__DirectBehaviour__Group_1__0__Impl rule__DirectBehaviour__Group_1__1 ;
+    // InternalTankWar.g:882:1: rule__DirectBehaviour__Group_1__0 : rule__DirectBehaviour__Group_1__0__Impl rule__DirectBehaviour__Group_1__1 ;
     public final void rule__DirectBehaviour__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:913:1: ( rule__DirectBehaviour__Group_1__0__Impl rule__DirectBehaviour__Group_1__1 )
-            // InternalTankWar.g:914:2: rule__DirectBehaviour__Group_1__0__Impl rule__DirectBehaviour__Group_1__1
+            // InternalTankWar.g:886:1: ( rule__DirectBehaviour__Group_1__0__Impl rule__DirectBehaviour__Group_1__1 )
+            // InternalTankWar.g:887:2: rule__DirectBehaviour__Group_1__0__Impl rule__DirectBehaviour__Group_1__1
             {
             pushFollow(FOLLOW_1);
             rule__DirectBehaviour__Group_1__0__Impl();
@@ -2880,17 +2795,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DirectBehaviour__Group_1__0__Impl"
-    // InternalTankWar.g:921:1: rule__DirectBehaviour__Group_1__0__Impl : ( ruleNoOpBehaviour ) ;
+    // InternalTankWar.g:894:1: rule__DirectBehaviour__Group_1__0__Impl : ( ruleNoOpBehaviour ) ;
     public final void rule__DirectBehaviour__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:925:1: ( ( ruleNoOpBehaviour ) )
-            // InternalTankWar.g:926:1: ( ruleNoOpBehaviour )
+            // InternalTankWar.g:898:1: ( ( ruleNoOpBehaviour ) )
+            // InternalTankWar.g:899:1: ( ruleNoOpBehaviour )
             {
-            // InternalTankWar.g:926:1: ( ruleNoOpBehaviour )
-            // InternalTankWar.g:927:2: ruleNoOpBehaviour
+            // InternalTankWar.g:899:1: ( ruleNoOpBehaviour )
+            // InternalTankWar.g:900:2: ruleNoOpBehaviour
             {
              before(grammarAccess.getDirectBehaviourAccess().getNoOpBehaviourParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -2921,14 +2836,14 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DirectBehaviour__Group_1__1"
-    // InternalTankWar.g:936:1: rule__DirectBehaviour__Group_1__1 : rule__DirectBehaviour__Group_1__1__Impl ;
+    // InternalTankWar.g:909:1: rule__DirectBehaviour__Group_1__1 : rule__DirectBehaviour__Group_1__1__Impl ;
     public final void rule__DirectBehaviour__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:940:1: ( rule__DirectBehaviour__Group_1__1__Impl )
-            // InternalTankWar.g:941:2: rule__DirectBehaviour__Group_1__1__Impl
+            // InternalTankWar.g:913:1: ( rule__DirectBehaviour__Group_1__1__Impl )
+            // InternalTankWar.g:914:2: rule__DirectBehaviour__Group_1__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__DirectBehaviour__Group_1__1__Impl();
@@ -2954,21 +2869,21 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DirectBehaviour__Group_1__1__Impl"
-    // InternalTankWar.g:947:1: rule__DirectBehaviour__Group_1__1__Impl : ( () ) ;
+    // InternalTankWar.g:920:1: rule__DirectBehaviour__Group_1__1__Impl : ( () ) ;
     public final void rule__DirectBehaviour__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:951:1: ( ( () ) )
-            // InternalTankWar.g:952:1: ( () )
+            // InternalTankWar.g:924:1: ( ( () ) )
+            // InternalTankWar.g:925:1: ( () )
             {
-            // InternalTankWar.g:952:1: ( () )
-            // InternalTankWar.g:953:2: ()
+            // InternalTankWar.g:925:1: ( () )
+            // InternalTankWar.g:926:2: ()
             {
              before(grammarAccess.getDirectBehaviourAccess().getNoOpBehaviourAction_1_1()); 
-            // InternalTankWar.g:954:2: ()
-            // InternalTankWar.g:954:3: 
+            // InternalTankWar.g:927:2: ()
+            // InternalTankWar.g:927:3: 
             {
             }
 
@@ -2991,16 +2906,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EndGameBehaviour__Group__0"
-    // InternalTankWar.g:963:1: rule__EndGameBehaviour__Group__0 : rule__EndGameBehaviour__Group__0__Impl rule__EndGameBehaviour__Group__1 ;
+    // InternalTankWar.g:936:1: rule__EndGameBehaviour__Group__0 : rule__EndGameBehaviour__Group__0__Impl rule__EndGameBehaviour__Group__1 ;
     public final void rule__EndGameBehaviour__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:967:1: ( rule__EndGameBehaviour__Group__0__Impl rule__EndGameBehaviour__Group__1 )
-            // InternalTankWar.g:968:2: rule__EndGameBehaviour__Group__0__Impl rule__EndGameBehaviour__Group__1
+            // InternalTankWar.g:940:1: ( rule__EndGameBehaviour__Group__0__Impl rule__EndGameBehaviour__Group__1 )
+            // InternalTankWar.g:941:2: rule__EndGameBehaviour__Group__0__Impl rule__EndGameBehaviour__Group__1
             {
-            pushFollow(FOLLOW_12);
+            pushFollow(FOLLOW_11);
             rule__EndGameBehaviour__Group__0__Impl();
 
             state._fsp--;
@@ -3029,17 +2944,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EndGameBehaviour__Group__0__Impl"
-    // InternalTankWar.g:975:1: rule__EndGameBehaviour__Group__0__Impl : ( 'end-game' ) ;
+    // InternalTankWar.g:948:1: rule__EndGameBehaviour__Group__0__Impl : ( 'end-game' ) ;
     public final void rule__EndGameBehaviour__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:979:1: ( ( 'end-game' ) )
-            // InternalTankWar.g:980:1: ( 'end-game' )
+            // InternalTankWar.g:952:1: ( ( 'end-game' ) )
+            // InternalTankWar.g:953:1: ( 'end-game' )
             {
-            // InternalTankWar.g:980:1: ( 'end-game' )
-            // InternalTankWar.g:981:2: 'end-game'
+            // InternalTankWar.g:953:1: ( 'end-game' )
+            // InternalTankWar.g:954:2: 'end-game'
             {
              before(grammarAccess.getEndGameBehaviourAccess().getEndGameKeyword_0()); 
             match(input,15,FOLLOW_2); 
@@ -3066,16 +2981,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EndGameBehaviour__Group__1"
-    // InternalTankWar.g:990:1: rule__EndGameBehaviour__Group__1 : rule__EndGameBehaviour__Group__1__Impl rule__EndGameBehaviour__Group__2 ;
+    // InternalTankWar.g:963:1: rule__EndGameBehaviour__Group__1 : rule__EndGameBehaviour__Group__1__Impl rule__EndGameBehaviour__Group__2 ;
     public final void rule__EndGameBehaviour__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:994:1: ( rule__EndGameBehaviour__Group__1__Impl rule__EndGameBehaviour__Group__2 )
-            // InternalTankWar.g:995:2: rule__EndGameBehaviour__Group__1__Impl rule__EndGameBehaviour__Group__2
+            // InternalTankWar.g:967:1: ( rule__EndGameBehaviour__Group__1__Impl rule__EndGameBehaviour__Group__2 )
+            // InternalTankWar.g:968:2: rule__EndGameBehaviour__Group__1__Impl rule__EndGameBehaviour__Group__2
             {
-            pushFollow(FOLLOW_13);
+            pushFollow(FOLLOW_12);
             rule__EndGameBehaviour__Group__1__Impl();
 
             state._fsp--;
@@ -3104,17 +3019,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EndGameBehaviour__Group__1__Impl"
-    // InternalTankWar.g:1002:1: rule__EndGameBehaviour__Group__1__Impl : ( '(' ) ;
+    // InternalTankWar.g:975:1: rule__EndGameBehaviour__Group__1__Impl : ( '(' ) ;
     public final void rule__EndGameBehaviour__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1006:1: ( ( '(' ) )
-            // InternalTankWar.g:1007:1: ( '(' )
+            // InternalTankWar.g:979:1: ( ( '(' ) )
+            // InternalTankWar.g:980:1: ( '(' )
             {
-            // InternalTankWar.g:1007:1: ( '(' )
-            // InternalTankWar.g:1008:2: '('
+            // InternalTankWar.g:980:1: ( '(' )
+            // InternalTankWar.g:981:2: '('
             {
              before(grammarAccess.getEndGameBehaviourAccess().getLeftParenthesisKeyword_1()); 
             match(input,16,FOLLOW_2); 
@@ -3141,16 +3056,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EndGameBehaviour__Group__2"
-    // InternalTankWar.g:1017:1: rule__EndGameBehaviour__Group__2 : rule__EndGameBehaviour__Group__2__Impl rule__EndGameBehaviour__Group__3 ;
+    // InternalTankWar.g:990:1: rule__EndGameBehaviour__Group__2 : rule__EndGameBehaviour__Group__2__Impl rule__EndGameBehaviour__Group__3 ;
     public final void rule__EndGameBehaviour__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1021:1: ( rule__EndGameBehaviour__Group__2__Impl rule__EndGameBehaviour__Group__3 )
-            // InternalTankWar.g:1022:2: rule__EndGameBehaviour__Group__2__Impl rule__EndGameBehaviour__Group__3
+            // InternalTankWar.g:994:1: ( rule__EndGameBehaviour__Group__2__Impl rule__EndGameBehaviour__Group__3 )
+            // InternalTankWar.g:995:2: rule__EndGameBehaviour__Group__2__Impl rule__EndGameBehaviour__Group__3
             {
-            pushFollow(FOLLOW_14);
+            pushFollow(FOLLOW_13);
             rule__EndGameBehaviour__Group__2__Impl();
 
             state._fsp--;
@@ -3179,21 +3094,21 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EndGameBehaviour__Group__2__Impl"
-    // InternalTankWar.g:1029:1: rule__EndGameBehaviour__Group__2__Impl : ( ( rule__EndGameBehaviour__WinAssignment_2 ) ) ;
+    // InternalTankWar.g:1002:1: rule__EndGameBehaviour__Group__2__Impl : ( ( rule__EndGameBehaviour__WinAssignment_2 ) ) ;
     public final void rule__EndGameBehaviour__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1033:1: ( ( ( rule__EndGameBehaviour__WinAssignment_2 ) ) )
-            // InternalTankWar.g:1034:1: ( ( rule__EndGameBehaviour__WinAssignment_2 ) )
+            // InternalTankWar.g:1006:1: ( ( ( rule__EndGameBehaviour__WinAssignment_2 ) ) )
+            // InternalTankWar.g:1007:1: ( ( rule__EndGameBehaviour__WinAssignment_2 ) )
             {
-            // InternalTankWar.g:1034:1: ( ( rule__EndGameBehaviour__WinAssignment_2 ) )
-            // InternalTankWar.g:1035:2: ( rule__EndGameBehaviour__WinAssignment_2 )
+            // InternalTankWar.g:1007:1: ( ( rule__EndGameBehaviour__WinAssignment_2 ) )
+            // InternalTankWar.g:1008:2: ( rule__EndGameBehaviour__WinAssignment_2 )
             {
              before(grammarAccess.getEndGameBehaviourAccess().getWinAssignment_2()); 
-            // InternalTankWar.g:1036:2: ( rule__EndGameBehaviour__WinAssignment_2 )
-            // InternalTankWar.g:1036:3: rule__EndGameBehaviour__WinAssignment_2
+            // InternalTankWar.g:1009:2: ( rule__EndGameBehaviour__WinAssignment_2 )
+            // InternalTankWar.g:1009:3: rule__EndGameBehaviour__WinAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__EndGameBehaviour__WinAssignment_2();
@@ -3226,16 +3141,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EndGameBehaviour__Group__3"
-    // InternalTankWar.g:1044:1: rule__EndGameBehaviour__Group__3 : rule__EndGameBehaviour__Group__3__Impl rule__EndGameBehaviour__Group__4 ;
+    // InternalTankWar.g:1017:1: rule__EndGameBehaviour__Group__3 : rule__EndGameBehaviour__Group__3__Impl rule__EndGameBehaviour__Group__4 ;
     public final void rule__EndGameBehaviour__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1048:1: ( rule__EndGameBehaviour__Group__3__Impl rule__EndGameBehaviour__Group__4 )
-            // InternalTankWar.g:1049:2: rule__EndGameBehaviour__Group__3__Impl rule__EndGameBehaviour__Group__4
+            // InternalTankWar.g:1021:1: ( rule__EndGameBehaviour__Group__3__Impl rule__EndGameBehaviour__Group__4 )
+            // InternalTankWar.g:1022:2: rule__EndGameBehaviour__Group__3__Impl rule__EndGameBehaviour__Group__4
             {
-            pushFollow(FOLLOW_13);
+            pushFollow(FOLLOW_12);
             rule__EndGameBehaviour__Group__3__Impl();
 
             state._fsp--;
@@ -3264,17 +3179,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EndGameBehaviour__Group__3__Impl"
-    // InternalTankWar.g:1056:1: rule__EndGameBehaviour__Group__3__Impl : ( ',' ) ;
+    // InternalTankWar.g:1029:1: rule__EndGameBehaviour__Group__3__Impl : ( ',' ) ;
     public final void rule__EndGameBehaviour__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1060:1: ( ( ',' ) )
-            // InternalTankWar.g:1061:1: ( ',' )
+            // InternalTankWar.g:1033:1: ( ( ',' ) )
+            // InternalTankWar.g:1034:1: ( ',' )
             {
-            // InternalTankWar.g:1061:1: ( ',' )
-            // InternalTankWar.g:1062:2: ','
+            // InternalTankWar.g:1034:1: ( ',' )
+            // InternalTankWar.g:1035:2: ','
             {
              before(grammarAccess.getEndGameBehaviourAccess().getCommaKeyword_3()); 
             match(input,17,FOLLOW_2); 
@@ -3301,16 +3216,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EndGameBehaviour__Group__4"
-    // InternalTankWar.g:1071:1: rule__EndGameBehaviour__Group__4 : rule__EndGameBehaviour__Group__4__Impl rule__EndGameBehaviour__Group__5 ;
+    // InternalTankWar.g:1044:1: rule__EndGameBehaviour__Group__4 : rule__EndGameBehaviour__Group__4__Impl rule__EndGameBehaviour__Group__5 ;
     public final void rule__EndGameBehaviour__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1075:1: ( rule__EndGameBehaviour__Group__4__Impl rule__EndGameBehaviour__Group__5 )
-            // InternalTankWar.g:1076:2: rule__EndGameBehaviour__Group__4__Impl rule__EndGameBehaviour__Group__5
+            // InternalTankWar.g:1048:1: ( rule__EndGameBehaviour__Group__4__Impl rule__EndGameBehaviour__Group__5 )
+            // InternalTankWar.g:1049:2: rule__EndGameBehaviour__Group__4__Impl rule__EndGameBehaviour__Group__5
             {
-            pushFollow(FOLLOW_15);
+            pushFollow(FOLLOW_14);
             rule__EndGameBehaviour__Group__4__Impl();
 
             state._fsp--;
@@ -3339,21 +3254,21 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EndGameBehaviour__Group__4__Impl"
-    // InternalTankWar.g:1083:1: rule__EndGameBehaviour__Group__4__Impl : ( ( rule__EndGameBehaviour__LostAssignment_4 ) ) ;
+    // InternalTankWar.g:1056:1: rule__EndGameBehaviour__Group__4__Impl : ( ( rule__EndGameBehaviour__LostAssignment_4 ) ) ;
     public final void rule__EndGameBehaviour__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1087:1: ( ( ( rule__EndGameBehaviour__LostAssignment_4 ) ) )
-            // InternalTankWar.g:1088:1: ( ( rule__EndGameBehaviour__LostAssignment_4 ) )
+            // InternalTankWar.g:1060:1: ( ( ( rule__EndGameBehaviour__LostAssignment_4 ) ) )
+            // InternalTankWar.g:1061:1: ( ( rule__EndGameBehaviour__LostAssignment_4 ) )
             {
-            // InternalTankWar.g:1088:1: ( ( rule__EndGameBehaviour__LostAssignment_4 ) )
-            // InternalTankWar.g:1089:2: ( rule__EndGameBehaviour__LostAssignment_4 )
+            // InternalTankWar.g:1061:1: ( ( rule__EndGameBehaviour__LostAssignment_4 ) )
+            // InternalTankWar.g:1062:2: ( rule__EndGameBehaviour__LostAssignment_4 )
             {
              before(grammarAccess.getEndGameBehaviourAccess().getLostAssignment_4()); 
-            // InternalTankWar.g:1090:2: ( rule__EndGameBehaviour__LostAssignment_4 )
-            // InternalTankWar.g:1090:3: rule__EndGameBehaviour__LostAssignment_4
+            // InternalTankWar.g:1063:2: ( rule__EndGameBehaviour__LostAssignment_4 )
+            // InternalTankWar.g:1063:3: rule__EndGameBehaviour__LostAssignment_4
             {
             pushFollow(FOLLOW_2);
             rule__EndGameBehaviour__LostAssignment_4();
@@ -3386,14 +3301,14 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EndGameBehaviour__Group__5"
-    // InternalTankWar.g:1098:1: rule__EndGameBehaviour__Group__5 : rule__EndGameBehaviour__Group__5__Impl ;
+    // InternalTankWar.g:1071:1: rule__EndGameBehaviour__Group__5 : rule__EndGameBehaviour__Group__5__Impl ;
     public final void rule__EndGameBehaviour__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1102:1: ( rule__EndGameBehaviour__Group__5__Impl )
-            // InternalTankWar.g:1103:2: rule__EndGameBehaviour__Group__5__Impl
+            // InternalTankWar.g:1075:1: ( rule__EndGameBehaviour__Group__5__Impl )
+            // InternalTankWar.g:1076:2: rule__EndGameBehaviour__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__EndGameBehaviour__Group__5__Impl();
@@ -3419,17 +3334,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EndGameBehaviour__Group__5__Impl"
-    // InternalTankWar.g:1109:1: rule__EndGameBehaviour__Group__5__Impl : ( ')' ) ;
+    // InternalTankWar.g:1082:1: rule__EndGameBehaviour__Group__5__Impl : ( ')' ) ;
     public final void rule__EndGameBehaviour__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1113:1: ( ( ')' ) )
-            // InternalTankWar.g:1114:1: ( ')' )
+            // InternalTankWar.g:1086:1: ( ( ')' ) )
+            // InternalTankWar.g:1087:1: ( ')' )
             {
-            // InternalTankWar.g:1114:1: ( ')' )
-            // InternalTankWar.g:1115:2: ')'
+            // InternalTankWar.g:1087:1: ( ')' )
+            // InternalTankWar.g:1088:2: ')'
             {
              before(grammarAccess.getEndGameBehaviourAccess().getRightParenthesisKeyword_5()); 
             match(input,18,FOLLOW_2); 
@@ -3456,14 +3371,14 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ScreenSpecification__Group__0"
-    // InternalTankWar.g:1125:1: rule__ScreenSpecification__Group__0 : rule__ScreenSpecification__Group__0__Impl rule__ScreenSpecification__Group__1 ;
+    // InternalTankWar.g:1098:1: rule__ScreenSpecification__Group__0 : rule__ScreenSpecification__Group__0__Impl rule__ScreenSpecification__Group__1 ;
     public final void rule__ScreenSpecification__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1129:1: ( rule__ScreenSpecification__Group__0__Impl rule__ScreenSpecification__Group__1 )
-            // InternalTankWar.g:1130:2: rule__ScreenSpecification__Group__0__Impl rule__ScreenSpecification__Group__1
+            // InternalTankWar.g:1102:1: ( rule__ScreenSpecification__Group__0__Impl rule__ScreenSpecification__Group__1 )
+            // InternalTankWar.g:1103:2: rule__ScreenSpecification__Group__0__Impl rule__ScreenSpecification__Group__1
             {
             pushFollow(FOLLOW_3);
             rule__ScreenSpecification__Group__0__Impl();
@@ -3494,17 +3409,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ScreenSpecification__Group__0__Impl"
-    // InternalTankWar.g:1137:1: rule__ScreenSpecification__Group__0__Impl : ( 'screen' ) ;
+    // InternalTankWar.g:1110:1: rule__ScreenSpecification__Group__0__Impl : ( 'screen' ) ;
     public final void rule__ScreenSpecification__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1141:1: ( ( 'screen' ) )
-            // InternalTankWar.g:1142:1: ( 'screen' )
+            // InternalTankWar.g:1114:1: ( ( 'screen' ) )
+            // InternalTankWar.g:1115:1: ( 'screen' )
             {
-            // InternalTankWar.g:1142:1: ( 'screen' )
-            // InternalTankWar.g:1143:2: 'screen'
+            // InternalTankWar.g:1115:1: ( 'screen' )
+            // InternalTankWar.g:1116:2: 'screen'
             {
              before(grammarAccess.getScreenSpecificationAccess().getScreenKeyword_0()); 
             match(input,19,FOLLOW_2); 
@@ -3531,14 +3446,14 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ScreenSpecification__Group__1"
-    // InternalTankWar.g:1152:1: rule__ScreenSpecification__Group__1 : rule__ScreenSpecification__Group__1__Impl rule__ScreenSpecification__Group__2 ;
+    // InternalTankWar.g:1125:1: rule__ScreenSpecification__Group__1 : rule__ScreenSpecification__Group__1__Impl rule__ScreenSpecification__Group__2 ;
     public final void rule__ScreenSpecification__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1156:1: ( rule__ScreenSpecification__Group__1__Impl rule__ScreenSpecification__Group__2 )
-            // InternalTankWar.g:1157:2: rule__ScreenSpecification__Group__1__Impl rule__ScreenSpecification__Group__2
+            // InternalTankWar.g:1129:1: ( rule__ScreenSpecification__Group__1__Impl rule__ScreenSpecification__Group__2 )
+            // InternalTankWar.g:1130:2: rule__ScreenSpecification__Group__1__Impl rule__ScreenSpecification__Group__2
             {
             pushFollow(FOLLOW_4);
             rule__ScreenSpecification__Group__1__Impl();
@@ -3569,21 +3484,21 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ScreenSpecification__Group__1__Impl"
-    // InternalTankWar.g:1164:1: rule__ScreenSpecification__Group__1__Impl : ( ( rule__ScreenSpecification__NameAssignment_1 ) ) ;
+    // InternalTankWar.g:1137:1: rule__ScreenSpecification__Group__1__Impl : ( ( rule__ScreenSpecification__NameAssignment_1 ) ) ;
     public final void rule__ScreenSpecification__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1168:1: ( ( ( rule__ScreenSpecification__NameAssignment_1 ) ) )
-            // InternalTankWar.g:1169:1: ( ( rule__ScreenSpecification__NameAssignment_1 ) )
+            // InternalTankWar.g:1141:1: ( ( ( rule__ScreenSpecification__NameAssignment_1 ) ) )
+            // InternalTankWar.g:1142:1: ( ( rule__ScreenSpecification__NameAssignment_1 ) )
             {
-            // InternalTankWar.g:1169:1: ( ( rule__ScreenSpecification__NameAssignment_1 ) )
-            // InternalTankWar.g:1170:2: ( rule__ScreenSpecification__NameAssignment_1 )
+            // InternalTankWar.g:1142:1: ( ( rule__ScreenSpecification__NameAssignment_1 ) )
+            // InternalTankWar.g:1143:2: ( rule__ScreenSpecification__NameAssignment_1 )
             {
              before(grammarAccess.getScreenSpecificationAccess().getNameAssignment_1()); 
-            // InternalTankWar.g:1171:2: ( rule__ScreenSpecification__NameAssignment_1 )
-            // InternalTankWar.g:1171:3: rule__ScreenSpecification__NameAssignment_1
+            // InternalTankWar.g:1144:2: ( rule__ScreenSpecification__NameAssignment_1 )
+            // InternalTankWar.g:1144:3: rule__ScreenSpecification__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__ScreenSpecification__NameAssignment_1();
@@ -3616,16 +3531,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ScreenSpecification__Group__2"
-    // InternalTankWar.g:1179:1: rule__ScreenSpecification__Group__2 : rule__ScreenSpecification__Group__2__Impl rule__ScreenSpecification__Group__3 ;
+    // InternalTankWar.g:1152:1: rule__ScreenSpecification__Group__2 : rule__ScreenSpecification__Group__2__Impl rule__ScreenSpecification__Group__3 ;
     public final void rule__ScreenSpecification__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1183:1: ( rule__ScreenSpecification__Group__2__Impl rule__ScreenSpecification__Group__3 )
-            // InternalTankWar.g:1184:2: rule__ScreenSpecification__Group__2__Impl rule__ScreenSpecification__Group__3
+            // InternalTankWar.g:1156:1: ( rule__ScreenSpecification__Group__2__Impl rule__ScreenSpecification__Group__3 )
+            // InternalTankWar.g:1157:2: rule__ScreenSpecification__Group__2__Impl rule__ScreenSpecification__Group__3
             {
-            pushFollow(FOLLOW_16);
+            pushFollow(FOLLOW_15);
             rule__ScreenSpecification__Group__2__Impl();
 
             state._fsp--;
@@ -3654,17 +3569,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ScreenSpecification__Group__2__Impl"
-    // InternalTankWar.g:1191:1: rule__ScreenSpecification__Group__2__Impl : ( '{' ) ;
+    // InternalTankWar.g:1164:1: rule__ScreenSpecification__Group__2__Impl : ( '{' ) ;
     public final void rule__ScreenSpecification__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1195:1: ( ( '{' ) )
-            // InternalTankWar.g:1196:1: ( '{' )
+            // InternalTankWar.g:1168:1: ( ( '{' ) )
+            // InternalTankWar.g:1169:1: ( '{' )
             {
-            // InternalTankWar.g:1196:1: ( '{' )
-            // InternalTankWar.g:1197:2: '{'
+            // InternalTankWar.g:1169:1: ( '{' )
+            // InternalTankWar.g:1170:2: '{'
             {
              before(grammarAccess.getScreenSpecificationAccess().getLeftCurlyBracketKeyword_2()); 
             match(input,13,FOLLOW_2); 
@@ -3691,16 +3606,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ScreenSpecification__Group__3"
-    // InternalTankWar.g:1206:1: rule__ScreenSpecification__Group__3 : rule__ScreenSpecification__Group__3__Impl rule__ScreenSpecification__Group__4 ;
+    // InternalTankWar.g:1179:1: rule__ScreenSpecification__Group__3 : rule__ScreenSpecification__Group__3__Impl rule__ScreenSpecification__Group__4 ;
     public final void rule__ScreenSpecification__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1210:1: ( rule__ScreenSpecification__Group__3__Impl rule__ScreenSpecification__Group__4 )
-            // InternalTankWar.g:1211:2: rule__ScreenSpecification__Group__3__Impl rule__ScreenSpecification__Group__4
+            // InternalTankWar.g:1183:1: ( rule__ScreenSpecification__Group__3__Impl rule__ScreenSpecification__Group__4 )
+            // InternalTankWar.g:1184:2: rule__ScreenSpecification__Group__3__Impl rule__ScreenSpecification__Group__4
             {
-            pushFollow(FOLLOW_17);
+            pushFollow(FOLLOW_16);
             rule__ScreenSpecification__Group__3__Impl();
 
             state._fsp--;
@@ -3729,17 +3644,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ScreenSpecification__Group__3__Impl"
-    // InternalTankWar.g:1218:1: rule__ScreenSpecification__Group__3__Impl : ( 'screenWidth' ) ;
+    // InternalTankWar.g:1191:1: rule__ScreenSpecification__Group__3__Impl : ( 'screenWidth' ) ;
     public final void rule__ScreenSpecification__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1222:1: ( ( 'screenWidth' ) )
-            // InternalTankWar.g:1223:1: ( 'screenWidth' )
+            // InternalTankWar.g:1195:1: ( ( 'screenWidth' ) )
+            // InternalTankWar.g:1196:1: ( 'screenWidth' )
             {
-            // InternalTankWar.g:1223:1: ( 'screenWidth' )
-            // InternalTankWar.g:1224:2: 'screenWidth'
+            // InternalTankWar.g:1196:1: ( 'screenWidth' )
+            // InternalTankWar.g:1197:2: 'screenWidth'
             {
              before(grammarAccess.getScreenSpecificationAccess().getScreenWidthKeyword_3()); 
             match(input,20,FOLLOW_2); 
@@ -3766,16 +3681,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ScreenSpecification__Group__4"
-    // InternalTankWar.g:1233:1: rule__ScreenSpecification__Group__4 : rule__ScreenSpecification__Group__4__Impl rule__ScreenSpecification__Group__5 ;
+    // InternalTankWar.g:1206:1: rule__ScreenSpecification__Group__4 : rule__ScreenSpecification__Group__4__Impl rule__ScreenSpecification__Group__5 ;
     public final void rule__ScreenSpecification__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1237:1: ( rule__ScreenSpecification__Group__4__Impl rule__ScreenSpecification__Group__5 )
-            // InternalTankWar.g:1238:2: rule__ScreenSpecification__Group__4__Impl rule__ScreenSpecification__Group__5
+            // InternalTankWar.g:1210:1: ( rule__ScreenSpecification__Group__4__Impl rule__ScreenSpecification__Group__5 )
+            // InternalTankWar.g:1211:2: rule__ScreenSpecification__Group__4__Impl rule__ScreenSpecification__Group__5
             {
-            pushFollow(FOLLOW_18);
+            pushFollow(FOLLOW_17);
             rule__ScreenSpecification__Group__4__Impl();
 
             state._fsp--;
@@ -3804,17 +3719,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ScreenSpecification__Group__4__Impl"
-    // InternalTankWar.g:1245:1: rule__ScreenSpecification__Group__4__Impl : ( '=' ) ;
+    // InternalTankWar.g:1218:1: rule__ScreenSpecification__Group__4__Impl : ( '=' ) ;
     public final void rule__ScreenSpecification__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1249:1: ( ( '=' ) )
-            // InternalTankWar.g:1250:1: ( '=' )
+            // InternalTankWar.g:1222:1: ( ( '=' ) )
+            // InternalTankWar.g:1223:1: ( '=' )
             {
-            // InternalTankWar.g:1250:1: ( '=' )
-            // InternalTankWar.g:1251:2: '='
+            // InternalTankWar.g:1223:1: ( '=' )
+            // InternalTankWar.g:1224:2: '='
             {
              before(grammarAccess.getScreenSpecificationAccess().getEqualsSignKeyword_4()); 
             match(input,21,FOLLOW_2); 
@@ -3841,16 +3756,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ScreenSpecification__Group__5"
-    // InternalTankWar.g:1260:1: rule__ScreenSpecification__Group__5 : rule__ScreenSpecification__Group__5__Impl rule__ScreenSpecification__Group__6 ;
+    // InternalTankWar.g:1233:1: rule__ScreenSpecification__Group__5 : rule__ScreenSpecification__Group__5__Impl rule__ScreenSpecification__Group__6 ;
     public final void rule__ScreenSpecification__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1264:1: ( rule__ScreenSpecification__Group__5__Impl rule__ScreenSpecification__Group__6 )
-            // InternalTankWar.g:1265:2: rule__ScreenSpecification__Group__5__Impl rule__ScreenSpecification__Group__6
+            // InternalTankWar.g:1237:1: ( rule__ScreenSpecification__Group__5__Impl rule__ScreenSpecification__Group__6 )
+            // InternalTankWar.g:1238:2: rule__ScreenSpecification__Group__5__Impl rule__ScreenSpecification__Group__6
             {
-            pushFollow(FOLLOW_19);
+            pushFollow(FOLLOW_18);
             rule__ScreenSpecification__Group__5__Impl();
 
             state._fsp--;
@@ -3879,21 +3794,21 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ScreenSpecification__Group__5__Impl"
-    // InternalTankWar.g:1272:1: rule__ScreenSpecification__Group__5__Impl : ( ( rule__ScreenSpecification__ScreenWidthAssignment_5 ) ) ;
+    // InternalTankWar.g:1245:1: rule__ScreenSpecification__Group__5__Impl : ( ( rule__ScreenSpecification__ScreenWidthAssignment_5 ) ) ;
     public final void rule__ScreenSpecification__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1276:1: ( ( ( rule__ScreenSpecification__ScreenWidthAssignment_5 ) ) )
-            // InternalTankWar.g:1277:1: ( ( rule__ScreenSpecification__ScreenWidthAssignment_5 ) )
+            // InternalTankWar.g:1249:1: ( ( ( rule__ScreenSpecification__ScreenWidthAssignment_5 ) ) )
+            // InternalTankWar.g:1250:1: ( ( rule__ScreenSpecification__ScreenWidthAssignment_5 ) )
             {
-            // InternalTankWar.g:1277:1: ( ( rule__ScreenSpecification__ScreenWidthAssignment_5 ) )
-            // InternalTankWar.g:1278:2: ( rule__ScreenSpecification__ScreenWidthAssignment_5 )
+            // InternalTankWar.g:1250:1: ( ( rule__ScreenSpecification__ScreenWidthAssignment_5 ) )
+            // InternalTankWar.g:1251:2: ( rule__ScreenSpecification__ScreenWidthAssignment_5 )
             {
              before(grammarAccess.getScreenSpecificationAccess().getScreenWidthAssignment_5()); 
-            // InternalTankWar.g:1279:2: ( rule__ScreenSpecification__ScreenWidthAssignment_5 )
-            // InternalTankWar.g:1279:3: rule__ScreenSpecification__ScreenWidthAssignment_5
+            // InternalTankWar.g:1252:2: ( rule__ScreenSpecification__ScreenWidthAssignment_5 )
+            // InternalTankWar.g:1252:3: rule__ScreenSpecification__ScreenWidthAssignment_5
             {
             pushFollow(FOLLOW_2);
             rule__ScreenSpecification__ScreenWidthAssignment_5();
@@ -3926,16 +3841,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ScreenSpecification__Group__6"
-    // InternalTankWar.g:1287:1: rule__ScreenSpecification__Group__6 : rule__ScreenSpecification__Group__6__Impl rule__ScreenSpecification__Group__7 ;
+    // InternalTankWar.g:1260:1: rule__ScreenSpecification__Group__6 : rule__ScreenSpecification__Group__6__Impl rule__ScreenSpecification__Group__7 ;
     public final void rule__ScreenSpecification__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1291:1: ( rule__ScreenSpecification__Group__6__Impl rule__ScreenSpecification__Group__7 )
-            // InternalTankWar.g:1292:2: rule__ScreenSpecification__Group__6__Impl rule__ScreenSpecification__Group__7
+            // InternalTankWar.g:1264:1: ( rule__ScreenSpecification__Group__6__Impl rule__ScreenSpecification__Group__7 )
+            // InternalTankWar.g:1265:2: rule__ScreenSpecification__Group__6__Impl rule__ScreenSpecification__Group__7
             {
-            pushFollow(FOLLOW_17);
+            pushFollow(FOLLOW_16);
             rule__ScreenSpecification__Group__6__Impl();
 
             state._fsp--;
@@ -3964,17 +3879,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ScreenSpecification__Group__6__Impl"
-    // InternalTankWar.g:1299:1: rule__ScreenSpecification__Group__6__Impl : ( 'screenHeight' ) ;
+    // InternalTankWar.g:1272:1: rule__ScreenSpecification__Group__6__Impl : ( 'screenHeight' ) ;
     public final void rule__ScreenSpecification__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1303:1: ( ( 'screenHeight' ) )
-            // InternalTankWar.g:1304:1: ( 'screenHeight' )
+            // InternalTankWar.g:1276:1: ( ( 'screenHeight' ) )
+            // InternalTankWar.g:1277:1: ( 'screenHeight' )
             {
-            // InternalTankWar.g:1304:1: ( 'screenHeight' )
-            // InternalTankWar.g:1305:2: 'screenHeight'
+            // InternalTankWar.g:1277:1: ( 'screenHeight' )
+            // InternalTankWar.g:1278:2: 'screenHeight'
             {
              before(grammarAccess.getScreenSpecificationAccess().getScreenHeightKeyword_6()); 
             match(input,22,FOLLOW_2); 
@@ -4001,16 +3916,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ScreenSpecification__Group__7"
-    // InternalTankWar.g:1314:1: rule__ScreenSpecification__Group__7 : rule__ScreenSpecification__Group__7__Impl rule__ScreenSpecification__Group__8 ;
+    // InternalTankWar.g:1287:1: rule__ScreenSpecification__Group__7 : rule__ScreenSpecification__Group__7__Impl rule__ScreenSpecification__Group__8 ;
     public final void rule__ScreenSpecification__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1318:1: ( rule__ScreenSpecification__Group__7__Impl rule__ScreenSpecification__Group__8 )
-            // InternalTankWar.g:1319:2: rule__ScreenSpecification__Group__7__Impl rule__ScreenSpecification__Group__8
+            // InternalTankWar.g:1291:1: ( rule__ScreenSpecification__Group__7__Impl rule__ScreenSpecification__Group__8 )
+            // InternalTankWar.g:1292:2: rule__ScreenSpecification__Group__7__Impl rule__ScreenSpecification__Group__8
             {
-            pushFollow(FOLLOW_18);
+            pushFollow(FOLLOW_17);
             rule__ScreenSpecification__Group__7__Impl();
 
             state._fsp--;
@@ -4039,17 +3954,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ScreenSpecification__Group__7__Impl"
-    // InternalTankWar.g:1326:1: rule__ScreenSpecification__Group__7__Impl : ( '=' ) ;
+    // InternalTankWar.g:1299:1: rule__ScreenSpecification__Group__7__Impl : ( '=' ) ;
     public final void rule__ScreenSpecification__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1330:1: ( ( '=' ) )
-            // InternalTankWar.g:1331:1: ( '=' )
+            // InternalTankWar.g:1303:1: ( ( '=' ) )
+            // InternalTankWar.g:1304:1: ( '=' )
             {
-            // InternalTankWar.g:1331:1: ( '=' )
-            // InternalTankWar.g:1332:2: '='
+            // InternalTankWar.g:1304:1: ( '=' )
+            // InternalTankWar.g:1305:2: '='
             {
              before(grammarAccess.getScreenSpecificationAccess().getEqualsSignKeyword_7()); 
             match(input,21,FOLLOW_2); 
@@ -4076,16 +3991,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ScreenSpecification__Group__8"
-    // InternalTankWar.g:1341:1: rule__ScreenSpecification__Group__8 : rule__ScreenSpecification__Group__8__Impl rule__ScreenSpecification__Group__9 ;
+    // InternalTankWar.g:1314:1: rule__ScreenSpecification__Group__8 : rule__ScreenSpecification__Group__8__Impl rule__ScreenSpecification__Group__9 ;
     public final void rule__ScreenSpecification__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1345:1: ( rule__ScreenSpecification__Group__8__Impl rule__ScreenSpecification__Group__9 )
-            // InternalTankWar.g:1346:2: rule__ScreenSpecification__Group__8__Impl rule__ScreenSpecification__Group__9
+            // InternalTankWar.g:1318:1: ( rule__ScreenSpecification__Group__8__Impl rule__ScreenSpecification__Group__9 )
+            // InternalTankWar.g:1319:2: rule__ScreenSpecification__Group__8__Impl rule__ScreenSpecification__Group__9
             {
-            pushFollow(FOLLOW_10);
+            pushFollow(FOLLOW_9);
             rule__ScreenSpecification__Group__8__Impl();
 
             state._fsp--;
@@ -4114,21 +4029,21 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ScreenSpecification__Group__8__Impl"
-    // InternalTankWar.g:1353:1: rule__ScreenSpecification__Group__8__Impl : ( ( rule__ScreenSpecification__ScreenHeightAssignment_8 ) ) ;
+    // InternalTankWar.g:1326:1: rule__ScreenSpecification__Group__8__Impl : ( ( rule__ScreenSpecification__ScreenHeightAssignment_8 ) ) ;
     public final void rule__ScreenSpecification__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1357:1: ( ( ( rule__ScreenSpecification__ScreenHeightAssignment_8 ) ) )
-            // InternalTankWar.g:1358:1: ( ( rule__ScreenSpecification__ScreenHeightAssignment_8 ) )
+            // InternalTankWar.g:1330:1: ( ( ( rule__ScreenSpecification__ScreenHeightAssignment_8 ) ) )
+            // InternalTankWar.g:1331:1: ( ( rule__ScreenSpecification__ScreenHeightAssignment_8 ) )
             {
-            // InternalTankWar.g:1358:1: ( ( rule__ScreenSpecification__ScreenHeightAssignment_8 ) )
-            // InternalTankWar.g:1359:2: ( rule__ScreenSpecification__ScreenHeightAssignment_8 )
+            // InternalTankWar.g:1331:1: ( ( rule__ScreenSpecification__ScreenHeightAssignment_8 ) )
+            // InternalTankWar.g:1332:2: ( rule__ScreenSpecification__ScreenHeightAssignment_8 )
             {
              before(grammarAccess.getScreenSpecificationAccess().getScreenHeightAssignment_8()); 
-            // InternalTankWar.g:1360:2: ( rule__ScreenSpecification__ScreenHeightAssignment_8 )
-            // InternalTankWar.g:1360:3: rule__ScreenSpecification__ScreenHeightAssignment_8
+            // InternalTankWar.g:1333:2: ( rule__ScreenSpecification__ScreenHeightAssignment_8 )
+            // InternalTankWar.g:1333:3: rule__ScreenSpecification__ScreenHeightAssignment_8
             {
             pushFollow(FOLLOW_2);
             rule__ScreenSpecification__ScreenHeightAssignment_8();
@@ -4161,14 +4076,14 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ScreenSpecification__Group__9"
-    // InternalTankWar.g:1368:1: rule__ScreenSpecification__Group__9 : rule__ScreenSpecification__Group__9__Impl ;
+    // InternalTankWar.g:1341:1: rule__ScreenSpecification__Group__9 : rule__ScreenSpecification__Group__9__Impl ;
     public final void rule__ScreenSpecification__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1372:1: ( rule__ScreenSpecification__Group__9__Impl )
-            // InternalTankWar.g:1373:2: rule__ScreenSpecification__Group__9__Impl
+            // InternalTankWar.g:1345:1: ( rule__ScreenSpecification__Group__9__Impl )
+            // InternalTankWar.g:1346:2: rule__ScreenSpecification__Group__9__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ScreenSpecification__Group__9__Impl();
@@ -4194,17 +4109,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ScreenSpecification__Group__9__Impl"
-    // InternalTankWar.g:1379:1: rule__ScreenSpecification__Group__9__Impl : ( '}' ) ;
+    // InternalTankWar.g:1352:1: rule__ScreenSpecification__Group__9__Impl : ( '}' ) ;
     public final void rule__ScreenSpecification__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1383:1: ( ( '}' ) )
-            // InternalTankWar.g:1384:1: ( '}' )
+            // InternalTankWar.g:1356:1: ( ( '}' ) )
+            // InternalTankWar.g:1357:1: ( '}' )
             {
-            // InternalTankWar.g:1384:1: ( '}' )
-            // InternalTankWar.g:1385:2: '}'
+            // InternalTankWar.g:1357:1: ( '}' )
+            // InternalTankWar.g:1358:2: '}'
             {
              before(grammarAccess.getScreenSpecificationAccess().getRightCurlyBracketKeyword_9()); 
             match(input,14,FOLLOW_2); 
@@ -4231,14 +4146,14 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Obstaclepecification__Group__0"
-    // InternalTankWar.g:1395:1: rule__Obstaclepecification__Group__0 : rule__Obstaclepecification__Group__0__Impl rule__Obstaclepecification__Group__1 ;
+    // InternalTankWar.g:1368:1: rule__Obstaclepecification__Group__0 : rule__Obstaclepecification__Group__0__Impl rule__Obstaclepecification__Group__1 ;
     public final void rule__Obstaclepecification__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1399:1: ( rule__Obstaclepecification__Group__0__Impl rule__Obstaclepecification__Group__1 )
-            // InternalTankWar.g:1400:2: rule__Obstaclepecification__Group__0__Impl rule__Obstaclepecification__Group__1
+            // InternalTankWar.g:1372:1: ( rule__Obstaclepecification__Group__0__Impl rule__Obstaclepecification__Group__1 )
+            // InternalTankWar.g:1373:2: rule__Obstaclepecification__Group__0__Impl rule__Obstaclepecification__Group__1
             {
             pushFollow(FOLLOW_3);
             rule__Obstaclepecification__Group__0__Impl();
@@ -4269,17 +4184,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Obstaclepecification__Group__0__Impl"
-    // InternalTankWar.g:1407:1: rule__Obstaclepecification__Group__0__Impl : ( 'obstacle' ) ;
+    // InternalTankWar.g:1380:1: rule__Obstaclepecification__Group__0__Impl : ( 'obstacle' ) ;
     public final void rule__Obstaclepecification__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1411:1: ( ( 'obstacle' ) )
-            // InternalTankWar.g:1412:1: ( 'obstacle' )
+            // InternalTankWar.g:1384:1: ( ( 'obstacle' ) )
+            // InternalTankWar.g:1385:1: ( 'obstacle' )
             {
-            // InternalTankWar.g:1412:1: ( 'obstacle' )
-            // InternalTankWar.g:1413:2: 'obstacle'
+            // InternalTankWar.g:1385:1: ( 'obstacle' )
+            // InternalTankWar.g:1386:2: 'obstacle'
             {
              before(grammarAccess.getObstaclepecificationAccess().getObstacleKeyword_0()); 
             match(input,23,FOLLOW_2); 
@@ -4306,14 +4221,14 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Obstaclepecification__Group__1"
-    // InternalTankWar.g:1422:1: rule__Obstaclepecification__Group__1 : rule__Obstaclepecification__Group__1__Impl rule__Obstaclepecification__Group__2 ;
+    // InternalTankWar.g:1395:1: rule__Obstaclepecification__Group__1 : rule__Obstaclepecification__Group__1__Impl rule__Obstaclepecification__Group__2 ;
     public final void rule__Obstaclepecification__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1426:1: ( rule__Obstaclepecification__Group__1__Impl rule__Obstaclepecification__Group__2 )
-            // InternalTankWar.g:1427:2: rule__Obstaclepecification__Group__1__Impl rule__Obstaclepecification__Group__2
+            // InternalTankWar.g:1399:1: ( rule__Obstaclepecification__Group__1__Impl rule__Obstaclepecification__Group__2 )
+            // InternalTankWar.g:1400:2: rule__Obstaclepecification__Group__1__Impl rule__Obstaclepecification__Group__2
             {
             pushFollow(FOLLOW_4);
             rule__Obstaclepecification__Group__1__Impl();
@@ -4344,21 +4259,21 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Obstaclepecification__Group__1__Impl"
-    // InternalTankWar.g:1434:1: rule__Obstaclepecification__Group__1__Impl : ( ( rule__Obstaclepecification__NameAssignment_1 ) ) ;
+    // InternalTankWar.g:1407:1: rule__Obstaclepecification__Group__1__Impl : ( ( rule__Obstaclepecification__NameAssignment_1 ) ) ;
     public final void rule__Obstaclepecification__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1438:1: ( ( ( rule__Obstaclepecification__NameAssignment_1 ) ) )
-            // InternalTankWar.g:1439:1: ( ( rule__Obstaclepecification__NameAssignment_1 ) )
+            // InternalTankWar.g:1411:1: ( ( ( rule__Obstaclepecification__NameAssignment_1 ) ) )
+            // InternalTankWar.g:1412:1: ( ( rule__Obstaclepecification__NameAssignment_1 ) )
             {
-            // InternalTankWar.g:1439:1: ( ( rule__Obstaclepecification__NameAssignment_1 ) )
-            // InternalTankWar.g:1440:2: ( rule__Obstaclepecification__NameAssignment_1 )
+            // InternalTankWar.g:1412:1: ( ( rule__Obstaclepecification__NameAssignment_1 ) )
+            // InternalTankWar.g:1413:2: ( rule__Obstaclepecification__NameAssignment_1 )
             {
              before(grammarAccess.getObstaclepecificationAccess().getNameAssignment_1()); 
-            // InternalTankWar.g:1441:2: ( rule__Obstaclepecification__NameAssignment_1 )
-            // InternalTankWar.g:1441:3: rule__Obstaclepecification__NameAssignment_1
+            // InternalTankWar.g:1414:2: ( rule__Obstaclepecification__NameAssignment_1 )
+            // InternalTankWar.g:1414:3: rule__Obstaclepecification__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Obstaclepecification__NameAssignment_1();
@@ -4391,16 +4306,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Obstaclepecification__Group__2"
-    // InternalTankWar.g:1449:1: rule__Obstaclepecification__Group__2 : rule__Obstaclepecification__Group__2__Impl rule__Obstaclepecification__Group__3 ;
+    // InternalTankWar.g:1422:1: rule__Obstaclepecification__Group__2 : rule__Obstaclepecification__Group__2__Impl rule__Obstaclepecification__Group__3 ;
     public final void rule__Obstaclepecification__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1453:1: ( rule__Obstaclepecification__Group__2__Impl rule__Obstaclepecification__Group__3 )
-            // InternalTankWar.g:1454:2: rule__Obstaclepecification__Group__2__Impl rule__Obstaclepecification__Group__3
+            // InternalTankWar.g:1426:1: ( rule__Obstaclepecification__Group__2__Impl rule__Obstaclepecification__Group__3 )
+            // InternalTankWar.g:1427:2: rule__Obstaclepecification__Group__2__Impl rule__Obstaclepecification__Group__3
             {
-            pushFollow(FOLLOW_20);
+            pushFollow(FOLLOW_19);
             rule__Obstaclepecification__Group__2__Impl();
 
             state._fsp--;
@@ -4429,17 +4344,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Obstaclepecification__Group__2__Impl"
-    // InternalTankWar.g:1461:1: rule__Obstaclepecification__Group__2__Impl : ( '{' ) ;
+    // InternalTankWar.g:1434:1: rule__Obstaclepecification__Group__2__Impl : ( '{' ) ;
     public final void rule__Obstaclepecification__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1465:1: ( ( '{' ) )
-            // InternalTankWar.g:1466:1: ( '{' )
+            // InternalTankWar.g:1438:1: ( ( '{' ) )
+            // InternalTankWar.g:1439:1: ( '{' )
             {
-            // InternalTankWar.g:1466:1: ( '{' )
-            // InternalTankWar.g:1467:2: '{'
+            // InternalTankWar.g:1439:1: ( '{' )
+            // InternalTankWar.g:1440:2: '{'
             {
              before(grammarAccess.getObstaclepecificationAccess().getLeftCurlyBracketKeyword_2()); 
             match(input,13,FOLLOW_2); 
@@ -4466,16 +4381,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Obstaclepecification__Group__3"
-    // InternalTankWar.g:1476:1: rule__Obstaclepecification__Group__3 : rule__Obstaclepecification__Group__3__Impl rule__Obstaclepecification__Group__4 ;
+    // InternalTankWar.g:1449:1: rule__Obstaclepecification__Group__3 : rule__Obstaclepecification__Group__3__Impl rule__Obstaclepecification__Group__4 ;
     public final void rule__Obstaclepecification__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1480:1: ( rule__Obstaclepecification__Group__3__Impl rule__Obstaclepecification__Group__4 )
-            // InternalTankWar.g:1481:2: rule__Obstaclepecification__Group__3__Impl rule__Obstaclepecification__Group__4
+            // InternalTankWar.g:1453:1: ( rule__Obstaclepecification__Group__3__Impl rule__Obstaclepecification__Group__4 )
+            // InternalTankWar.g:1454:2: rule__Obstaclepecification__Group__3__Impl rule__Obstaclepecification__Group__4
             {
-            pushFollow(FOLLOW_20);
+            pushFollow(FOLLOW_19);
             rule__Obstaclepecification__Group__3__Impl();
 
             state._fsp--;
@@ -4504,20 +4419,20 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Obstaclepecification__Group__3__Impl"
-    // InternalTankWar.g:1488:1: rule__Obstaclepecification__Group__3__Impl : ( ( rule__Obstaclepecification__FieldsAssignment_3 )* ) ;
+    // InternalTankWar.g:1461:1: rule__Obstaclepecification__Group__3__Impl : ( ( rule__Obstaclepecification__FieldsAssignment_3 )* ) ;
     public final void rule__Obstaclepecification__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1492:1: ( ( ( rule__Obstaclepecification__FieldsAssignment_3 )* ) )
-            // InternalTankWar.g:1493:1: ( ( rule__Obstaclepecification__FieldsAssignment_3 )* )
+            // InternalTankWar.g:1465:1: ( ( ( rule__Obstaclepecification__FieldsAssignment_3 )* ) )
+            // InternalTankWar.g:1466:1: ( ( rule__Obstaclepecification__FieldsAssignment_3 )* )
             {
-            // InternalTankWar.g:1493:1: ( ( rule__Obstaclepecification__FieldsAssignment_3 )* )
-            // InternalTankWar.g:1494:2: ( rule__Obstaclepecification__FieldsAssignment_3 )*
+            // InternalTankWar.g:1466:1: ( ( rule__Obstaclepecification__FieldsAssignment_3 )* )
+            // InternalTankWar.g:1467:2: ( rule__Obstaclepecification__FieldsAssignment_3 )*
             {
              before(grammarAccess.getObstaclepecificationAccess().getFieldsAssignment_3()); 
-            // InternalTankWar.g:1495:2: ( rule__Obstaclepecification__FieldsAssignment_3 )*
+            // InternalTankWar.g:1468:2: ( rule__Obstaclepecification__FieldsAssignment_3 )*
             loop7:
             do {
                 int alt7=2;
@@ -4530,9 +4445,9 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalTankWar.g:1495:3: rule__Obstaclepecification__FieldsAssignment_3
+            	    // InternalTankWar.g:1468:3: rule__Obstaclepecification__FieldsAssignment_3
             	    {
-            	    pushFollow(FOLLOW_21);
+            	    pushFollow(FOLLOW_20);
             	    rule__Obstaclepecification__FieldsAssignment_3();
 
             	    state._fsp--;
@@ -4569,14 +4484,14 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Obstaclepecification__Group__4"
-    // InternalTankWar.g:1503:1: rule__Obstaclepecification__Group__4 : rule__Obstaclepecification__Group__4__Impl ;
+    // InternalTankWar.g:1476:1: rule__Obstaclepecification__Group__4 : rule__Obstaclepecification__Group__4__Impl ;
     public final void rule__Obstaclepecification__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1507:1: ( rule__Obstaclepecification__Group__4__Impl )
-            // InternalTankWar.g:1508:2: rule__Obstaclepecification__Group__4__Impl
+            // InternalTankWar.g:1480:1: ( rule__Obstaclepecification__Group__4__Impl )
+            // InternalTankWar.g:1481:2: rule__Obstaclepecification__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Obstaclepecification__Group__4__Impl();
@@ -4602,17 +4517,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Obstaclepecification__Group__4__Impl"
-    // InternalTankWar.g:1514:1: rule__Obstaclepecification__Group__4__Impl : ( '}' ) ;
+    // InternalTankWar.g:1487:1: rule__Obstaclepecification__Group__4__Impl : ( '}' ) ;
     public final void rule__Obstaclepecification__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1518:1: ( ( '}' ) )
-            // InternalTankWar.g:1519:1: ( '}' )
+            // InternalTankWar.g:1491:1: ( ( '}' ) )
+            // InternalTankWar.g:1492:1: ( '}' )
             {
-            // InternalTankWar.g:1519:1: ( '}' )
-            // InternalTankWar.g:1520:2: '}'
+            // InternalTankWar.g:1492:1: ( '}' )
+            // InternalTankWar.g:1493:2: '}'
             {
              before(grammarAccess.getObstaclepecificationAccess().getRightCurlyBracketKeyword_4()); 
             match(input,14,FOLLOW_2); 
@@ -4639,14 +4554,14 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WaterObstacle__Group__0"
-    // InternalTankWar.g:1530:1: rule__WaterObstacle__Group__0 : rule__WaterObstacle__Group__0__Impl rule__WaterObstacle__Group__1 ;
+    // InternalTankWar.g:1503:1: rule__WaterObstacle__Group__0 : rule__WaterObstacle__Group__0__Impl rule__WaterObstacle__Group__1 ;
     public final void rule__WaterObstacle__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1534:1: ( rule__WaterObstacle__Group__0__Impl rule__WaterObstacle__Group__1 )
-            // InternalTankWar.g:1535:2: rule__WaterObstacle__Group__0__Impl rule__WaterObstacle__Group__1
+            // InternalTankWar.g:1507:1: ( rule__WaterObstacle__Group__0__Impl rule__WaterObstacle__Group__1 )
+            // InternalTankWar.g:1508:2: rule__WaterObstacle__Group__0__Impl rule__WaterObstacle__Group__1
             {
             pushFollow(FOLLOW_3);
             rule__WaterObstacle__Group__0__Impl();
@@ -4677,17 +4592,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WaterObstacle__Group__0__Impl"
-    // InternalTankWar.g:1542:1: rule__WaterObstacle__Group__0__Impl : ( 'water' ) ;
+    // InternalTankWar.g:1515:1: rule__WaterObstacle__Group__0__Impl : ( 'water' ) ;
     public final void rule__WaterObstacle__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1546:1: ( ( 'water' ) )
-            // InternalTankWar.g:1547:1: ( 'water' )
+            // InternalTankWar.g:1519:1: ( ( 'water' ) )
+            // InternalTankWar.g:1520:1: ( 'water' )
             {
-            // InternalTankWar.g:1547:1: ( 'water' )
-            // InternalTankWar.g:1548:2: 'water'
+            // InternalTankWar.g:1520:1: ( 'water' )
+            // InternalTankWar.g:1521:2: 'water'
             {
              before(grammarAccess.getWaterObstacleAccess().getWaterKeyword_0()); 
             match(input,24,FOLLOW_2); 
@@ -4714,14 +4629,14 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WaterObstacle__Group__1"
-    // InternalTankWar.g:1557:1: rule__WaterObstacle__Group__1 : rule__WaterObstacle__Group__1__Impl rule__WaterObstacle__Group__2 ;
+    // InternalTankWar.g:1530:1: rule__WaterObstacle__Group__1 : rule__WaterObstacle__Group__1__Impl rule__WaterObstacle__Group__2 ;
     public final void rule__WaterObstacle__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1561:1: ( rule__WaterObstacle__Group__1__Impl rule__WaterObstacle__Group__2 )
-            // InternalTankWar.g:1562:2: rule__WaterObstacle__Group__1__Impl rule__WaterObstacle__Group__2
+            // InternalTankWar.g:1534:1: ( rule__WaterObstacle__Group__1__Impl rule__WaterObstacle__Group__2 )
+            // InternalTankWar.g:1535:2: rule__WaterObstacle__Group__1__Impl rule__WaterObstacle__Group__2
             {
             pushFollow(FOLLOW_4);
             rule__WaterObstacle__Group__1__Impl();
@@ -4752,21 +4667,21 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WaterObstacle__Group__1__Impl"
-    // InternalTankWar.g:1569:1: rule__WaterObstacle__Group__1__Impl : ( ( rule__WaterObstacle__NameAssignment_1 ) ) ;
+    // InternalTankWar.g:1542:1: rule__WaterObstacle__Group__1__Impl : ( ( rule__WaterObstacle__NameAssignment_1 ) ) ;
     public final void rule__WaterObstacle__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1573:1: ( ( ( rule__WaterObstacle__NameAssignment_1 ) ) )
-            // InternalTankWar.g:1574:1: ( ( rule__WaterObstacle__NameAssignment_1 ) )
+            // InternalTankWar.g:1546:1: ( ( ( rule__WaterObstacle__NameAssignment_1 ) ) )
+            // InternalTankWar.g:1547:1: ( ( rule__WaterObstacle__NameAssignment_1 ) )
             {
-            // InternalTankWar.g:1574:1: ( ( rule__WaterObstacle__NameAssignment_1 ) )
-            // InternalTankWar.g:1575:2: ( rule__WaterObstacle__NameAssignment_1 )
+            // InternalTankWar.g:1547:1: ( ( rule__WaterObstacle__NameAssignment_1 ) )
+            // InternalTankWar.g:1548:2: ( rule__WaterObstacle__NameAssignment_1 )
             {
              before(grammarAccess.getWaterObstacleAccess().getNameAssignment_1()); 
-            // InternalTankWar.g:1576:2: ( rule__WaterObstacle__NameAssignment_1 )
-            // InternalTankWar.g:1576:3: rule__WaterObstacle__NameAssignment_1
+            // InternalTankWar.g:1549:2: ( rule__WaterObstacle__NameAssignment_1 )
+            // InternalTankWar.g:1549:3: rule__WaterObstacle__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__WaterObstacle__NameAssignment_1();
@@ -4799,16 +4714,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WaterObstacle__Group__2"
-    // InternalTankWar.g:1584:1: rule__WaterObstacle__Group__2 : rule__WaterObstacle__Group__2__Impl rule__WaterObstacle__Group__3 ;
+    // InternalTankWar.g:1557:1: rule__WaterObstacle__Group__2 : rule__WaterObstacle__Group__2__Impl rule__WaterObstacle__Group__3 ;
     public final void rule__WaterObstacle__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1588:1: ( rule__WaterObstacle__Group__2__Impl rule__WaterObstacle__Group__3 )
-            // InternalTankWar.g:1589:2: rule__WaterObstacle__Group__2__Impl rule__WaterObstacle__Group__3
+            // InternalTankWar.g:1561:1: ( rule__WaterObstacle__Group__2__Impl rule__WaterObstacle__Group__3 )
+            // InternalTankWar.g:1562:2: rule__WaterObstacle__Group__2__Impl rule__WaterObstacle__Group__3
             {
-            pushFollow(FOLLOW_10);
+            pushFollow(FOLLOW_9);
             rule__WaterObstacle__Group__2__Impl();
 
             state._fsp--;
@@ -4837,17 +4752,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WaterObstacle__Group__2__Impl"
-    // InternalTankWar.g:1596:1: rule__WaterObstacle__Group__2__Impl : ( '{' ) ;
+    // InternalTankWar.g:1569:1: rule__WaterObstacle__Group__2__Impl : ( '{' ) ;
     public final void rule__WaterObstacle__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1600:1: ( ( '{' ) )
-            // InternalTankWar.g:1601:1: ( '{' )
+            // InternalTankWar.g:1573:1: ( ( '{' ) )
+            // InternalTankWar.g:1574:1: ( '{' )
             {
-            // InternalTankWar.g:1601:1: ( '{' )
-            // InternalTankWar.g:1602:2: '{'
+            // InternalTankWar.g:1574:1: ( '{' )
+            // InternalTankWar.g:1575:2: '{'
             {
              before(grammarAccess.getWaterObstacleAccess().getLeftCurlyBracketKeyword_2()); 
             match(input,13,FOLLOW_2); 
@@ -4874,14 +4789,14 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WaterObstacle__Group__3"
-    // InternalTankWar.g:1611:1: rule__WaterObstacle__Group__3 : rule__WaterObstacle__Group__3__Impl ;
+    // InternalTankWar.g:1584:1: rule__WaterObstacle__Group__3 : rule__WaterObstacle__Group__3__Impl ;
     public final void rule__WaterObstacle__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1615:1: ( rule__WaterObstacle__Group__3__Impl )
-            // InternalTankWar.g:1616:2: rule__WaterObstacle__Group__3__Impl
+            // InternalTankWar.g:1588:1: ( rule__WaterObstacle__Group__3__Impl )
+            // InternalTankWar.g:1589:2: rule__WaterObstacle__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__WaterObstacle__Group__3__Impl();
@@ -4907,17 +4822,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WaterObstacle__Group__3__Impl"
-    // InternalTankWar.g:1622:1: rule__WaterObstacle__Group__3__Impl : ( '}' ) ;
+    // InternalTankWar.g:1595:1: rule__WaterObstacle__Group__3__Impl : ( '}' ) ;
     public final void rule__WaterObstacle__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1626:1: ( ( '}' ) )
-            // InternalTankWar.g:1627:1: ( '}' )
+            // InternalTankWar.g:1599:1: ( ( '}' ) )
+            // InternalTankWar.g:1600:1: ( '}' )
             {
-            // InternalTankWar.g:1627:1: ( '}' )
-            // InternalTankWar.g:1628:2: '}'
+            // InternalTankWar.g:1600:1: ( '}' )
+            // InternalTankWar.g:1601:2: '}'
             {
              before(grammarAccess.getWaterObstacleAccess().getRightCurlyBracketKeyword_3()); 
             match(input,14,FOLLOW_2); 
@@ -4944,14 +4859,14 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__0"
-    // InternalTankWar.g:1638:1: rule__WallObstacle__Group__0 : rule__WallObstacle__Group__0__Impl rule__WallObstacle__Group__1 ;
+    // InternalTankWar.g:1611:1: rule__WallObstacle__Group__0 : rule__WallObstacle__Group__0__Impl rule__WallObstacle__Group__1 ;
     public final void rule__WallObstacle__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1642:1: ( rule__WallObstacle__Group__0__Impl rule__WallObstacle__Group__1 )
-            // InternalTankWar.g:1643:2: rule__WallObstacle__Group__0__Impl rule__WallObstacle__Group__1
+            // InternalTankWar.g:1615:1: ( rule__WallObstacle__Group__0__Impl rule__WallObstacle__Group__1 )
+            // InternalTankWar.g:1616:2: rule__WallObstacle__Group__0__Impl rule__WallObstacle__Group__1
             {
             pushFollow(FOLLOW_3);
             rule__WallObstacle__Group__0__Impl();
@@ -4982,17 +4897,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__0__Impl"
-    // InternalTankWar.g:1650:1: rule__WallObstacle__Group__0__Impl : ( 'wall' ) ;
+    // InternalTankWar.g:1623:1: rule__WallObstacle__Group__0__Impl : ( 'wall' ) ;
     public final void rule__WallObstacle__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1654:1: ( ( 'wall' ) )
-            // InternalTankWar.g:1655:1: ( 'wall' )
+            // InternalTankWar.g:1627:1: ( ( 'wall' ) )
+            // InternalTankWar.g:1628:1: ( 'wall' )
             {
-            // InternalTankWar.g:1655:1: ( 'wall' )
-            // InternalTankWar.g:1656:2: 'wall'
+            // InternalTankWar.g:1628:1: ( 'wall' )
+            // InternalTankWar.g:1629:2: 'wall'
             {
              before(grammarAccess.getWallObstacleAccess().getWallKeyword_0()); 
             match(input,25,FOLLOW_2); 
@@ -5019,14 +4934,14 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__1"
-    // InternalTankWar.g:1665:1: rule__WallObstacle__Group__1 : rule__WallObstacle__Group__1__Impl rule__WallObstacle__Group__2 ;
+    // InternalTankWar.g:1638:1: rule__WallObstacle__Group__1 : rule__WallObstacle__Group__1__Impl rule__WallObstacle__Group__2 ;
     public final void rule__WallObstacle__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1669:1: ( rule__WallObstacle__Group__1__Impl rule__WallObstacle__Group__2 )
-            // InternalTankWar.g:1670:2: rule__WallObstacle__Group__1__Impl rule__WallObstacle__Group__2
+            // InternalTankWar.g:1642:1: ( rule__WallObstacle__Group__1__Impl rule__WallObstacle__Group__2 )
+            // InternalTankWar.g:1643:2: rule__WallObstacle__Group__1__Impl rule__WallObstacle__Group__2
             {
             pushFollow(FOLLOW_4);
             rule__WallObstacle__Group__1__Impl();
@@ -5057,21 +4972,21 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__1__Impl"
-    // InternalTankWar.g:1677:1: rule__WallObstacle__Group__1__Impl : ( ( rule__WallObstacle__NameAssignment_1 ) ) ;
+    // InternalTankWar.g:1650:1: rule__WallObstacle__Group__1__Impl : ( ( rule__WallObstacle__NameAssignment_1 ) ) ;
     public final void rule__WallObstacle__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1681:1: ( ( ( rule__WallObstacle__NameAssignment_1 ) ) )
-            // InternalTankWar.g:1682:1: ( ( rule__WallObstacle__NameAssignment_1 ) )
+            // InternalTankWar.g:1654:1: ( ( ( rule__WallObstacle__NameAssignment_1 ) ) )
+            // InternalTankWar.g:1655:1: ( ( rule__WallObstacle__NameAssignment_1 ) )
             {
-            // InternalTankWar.g:1682:1: ( ( rule__WallObstacle__NameAssignment_1 ) )
-            // InternalTankWar.g:1683:2: ( rule__WallObstacle__NameAssignment_1 )
+            // InternalTankWar.g:1655:1: ( ( rule__WallObstacle__NameAssignment_1 ) )
+            // InternalTankWar.g:1656:2: ( rule__WallObstacle__NameAssignment_1 )
             {
              before(grammarAccess.getWallObstacleAccess().getNameAssignment_1()); 
-            // InternalTankWar.g:1684:2: ( rule__WallObstacle__NameAssignment_1 )
-            // InternalTankWar.g:1684:3: rule__WallObstacle__NameAssignment_1
+            // InternalTankWar.g:1657:2: ( rule__WallObstacle__NameAssignment_1 )
+            // InternalTankWar.g:1657:3: rule__WallObstacle__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__WallObstacle__NameAssignment_1();
@@ -5104,16 +5019,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__2"
-    // InternalTankWar.g:1692:1: rule__WallObstacle__Group__2 : rule__WallObstacle__Group__2__Impl rule__WallObstacle__Group__3 ;
+    // InternalTankWar.g:1665:1: rule__WallObstacle__Group__2 : rule__WallObstacle__Group__2__Impl rule__WallObstacle__Group__3 ;
     public final void rule__WallObstacle__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1696:1: ( rule__WallObstacle__Group__2__Impl rule__WallObstacle__Group__3 )
-            // InternalTankWar.g:1697:2: rule__WallObstacle__Group__2__Impl rule__WallObstacle__Group__3
+            // InternalTankWar.g:1669:1: ( rule__WallObstacle__Group__2__Impl rule__WallObstacle__Group__3 )
+            // InternalTankWar.g:1670:2: rule__WallObstacle__Group__2__Impl rule__WallObstacle__Group__3
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_21);
             rule__WallObstacle__Group__2__Impl();
 
             state._fsp--;
@@ -5142,17 +5057,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__2__Impl"
-    // InternalTankWar.g:1704:1: rule__WallObstacle__Group__2__Impl : ( '{' ) ;
+    // InternalTankWar.g:1677:1: rule__WallObstacle__Group__2__Impl : ( '{' ) ;
     public final void rule__WallObstacle__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1708:1: ( ( '{' ) )
-            // InternalTankWar.g:1709:1: ( '{' )
+            // InternalTankWar.g:1681:1: ( ( '{' ) )
+            // InternalTankWar.g:1682:1: ( '{' )
             {
-            // InternalTankWar.g:1709:1: ( '{' )
-            // InternalTankWar.g:1710:2: '{'
+            // InternalTankWar.g:1682:1: ( '{' )
+            // InternalTankWar.g:1683:2: '{'
             {
              before(grammarAccess.getWallObstacleAccess().getLeftCurlyBracketKeyword_2()); 
             match(input,13,FOLLOW_2); 
@@ -5179,16 +5094,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__3"
-    // InternalTankWar.g:1719:1: rule__WallObstacle__Group__3 : rule__WallObstacle__Group__3__Impl rule__WallObstacle__Group__4 ;
+    // InternalTankWar.g:1692:1: rule__WallObstacle__Group__3 : rule__WallObstacle__Group__3__Impl rule__WallObstacle__Group__4 ;
     public final void rule__WallObstacle__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1723:1: ( rule__WallObstacle__Group__3__Impl rule__WallObstacle__Group__4 )
-            // InternalTankWar.g:1724:2: rule__WallObstacle__Group__3__Impl rule__WallObstacle__Group__4
+            // InternalTankWar.g:1696:1: ( rule__WallObstacle__Group__3__Impl rule__WallObstacle__Group__4 )
+            // InternalTankWar.g:1697:2: rule__WallObstacle__Group__3__Impl rule__WallObstacle__Group__4
             {
-            pushFollow(FOLLOW_17);
+            pushFollow(FOLLOW_16);
             rule__WallObstacle__Group__3__Impl();
 
             state._fsp--;
@@ -5217,17 +5132,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__3__Impl"
-    // InternalTankWar.g:1731:1: rule__WallObstacle__Group__3__Impl : ( 'wallWidth' ) ;
+    // InternalTankWar.g:1704:1: rule__WallObstacle__Group__3__Impl : ( 'wallWidth' ) ;
     public final void rule__WallObstacle__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1735:1: ( ( 'wallWidth' ) )
-            // InternalTankWar.g:1736:1: ( 'wallWidth' )
+            // InternalTankWar.g:1708:1: ( ( 'wallWidth' ) )
+            // InternalTankWar.g:1709:1: ( 'wallWidth' )
             {
-            // InternalTankWar.g:1736:1: ( 'wallWidth' )
-            // InternalTankWar.g:1737:2: 'wallWidth'
+            // InternalTankWar.g:1709:1: ( 'wallWidth' )
+            // InternalTankWar.g:1710:2: 'wallWidth'
             {
              before(grammarAccess.getWallObstacleAccess().getWallWidthKeyword_3()); 
             match(input,26,FOLLOW_2); 
@@ -5254,16 +5169,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__4"
-    // InternalTankWar.g:1746:1: rule__WallObstacle__Group__4 : rule__WallObstacle__Group__4__Impl rule__WallObstacle__Group__5 ;
+    // InternalTankWar.g:1719:1: rule__WallObstacle__Group__4 : rule__WallObstacle__Group__4__Impl rule__WallObstacle__Group__5 ;
     public final void rule__WallObstacle__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1750:1: ( rule__WallObstacle__Group__4__Impl rule__WallObstacle__Group__5 )
-            // InternalTankWar.g:1751:2: rule__WallObstacle__Group__4__Impl rule__WallObstacle__Group__5
+            // InternalTankWar.g:1723:1: ( rule__WallObstacle__Group__4__Impl rule__WallObstacle__Group__5 )
+            // InternalTankWar.g:1724:2: rule__WallObstacle__Group__4__Impl rule__WallObstacle__Group__5
             {
-            pushFollow(FOLLOW_18);
+            pushFollow(FOLLOW_17);
             rule__WallObstacle__Group__4__Impl();
 
             state._fsp--;
@@ -5292,17 +5207,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__4__Impl"
-    // InternalTankWar.g:1758:1: rule__WallObstacle__Group__4__Impl : ( '=' ) ;
+    // InternalTankWar.g:1731:1: rule__WallObstacle__Group__4__Impl : ( '=' ) ;
     public final void rule__WallObstacle__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1762:1: ( ( '=' ) )
-            // InternalTankWar.g:1763:1: ( '=' )
+            // InternalTankWar.g:1735:1: ( ( '=' ) )
+            // InternalTankWar.g:1736:1: ( '=' )
             {
-            // InternalTankWar.g:1763:1: ( '=' )
-            // InternalTankWar.g:1764:2: '='
+            // InternalTankWar.g:1736:1: ( '=' )
+            // InternalTankWar.g:1737:2: '='
             {
              before(grammarAccess.getWallObstacleAccess().getEqualsSignKeyword_4()); 
             match(input,21,FOLLOW_2); 
@@ -5329,16 +5244,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__5"
-    // InternalTankWar.g:1773:1: rule__WallObstacle__Group__5 : rule__WallObstacle__Group__5__Impl rule__WallObstacle__Group__6 ;
+    // InternalTankWar.g:1746:1: rule__WallObstacle__Group__5 : rule__WallObstacle__Group__5__Impl rule__WallObstacle__Group__6 ;
     public final void rule__WallObstacle__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1777:1: ( rule__WallObstacle__Group__5__Impl rule__WallObstacle__Group__6 )
-            // InternalTankWar.g:1778:2: rule__WallObstacle__Group__5__Impl rule__WallObstacle__Group__6
+            // InternalTankWar.g:1750:1: ( rule__WallObstacle__Group__5__Impl rule__WallObstacle__Group__6 )
+            // InternalTankWar.g:1751:2: rule__WallObstacle__Group__5__Impl rule__WallObstacle__Group__6
             {
-            pushFollow(FOLLOW_23);
+            pushFollow(FOLLOW_22);
             rule__WallObstacle__Group__5__Impl();
 
             state._fsp--;
@@ -5367,21 +5282,21 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__5__Impl"
-    // InternalTankWar.g:1785:1: rule__WallObstacle__Group__5__Impl : ( ( rule__WallObstacle__WallWidthAssignment_5 ) ) ;
+    // InternalTankWar.g:1758:1: rule__WallObstacle__Group__5__Impl : ( ( rule__WallObstacle__WallWidthAssignment_5 ) ) ;
     public final void rule__WallObstacle__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1789:1: ( ( ( rule__WallObstacle__WallWidthAssignment_5 ) ) )
-            // InternalTankWar.g:1790:1: ( ( rule__WallObstacle__WallWidthAssignment_5 ) )
+            // InternalTankWar.g:1762:1: ( ( ( rule__WallObstacle__WallWidthAssignment_5 ) ) )
+            // InternalTankWar.g:1763:1: ( ( rule__WallObstacle__WallWidthAssignment_5 ) )
             {
-            // InternalTankWar.g:1790:1: ( ( rule__WallObstacle__WallWidthAssignment_5 ) )
-            // InternalTankWar.g:1791:2: ( rule__WallObstacle__WallWidthAssignment_5 )
+            // InternalTankWar.g:1763:1: ( ( rule__WallObstacle__WallWidthAssignment_5 ) )
+            // InternalTankWar.g:1764:2: ( rule__WallObstacle__WallWidthAssignment_5 )
             {
              before(grammarAccess.getWallObstacleAccess().getWallWidthAssignment_5()); 
-            // InternalTankWar.g:1792:2: ( rule__WallObstacle__WallWidthAssignment_5 )
-            // InternalTankWar.g:1792:3: rule__WallObstacle__WallWidthAssignment_5
+            // InternalTankWar.g:1765:2: ( rule__WallObstacle__WallWidthAssignment_5 )
+            // InternalTankWar.g:1765:3: rule__WallObstacle__WallWidthAssignment_5
             {
             pushFollow(FOLLOW_2);
             rule__WallObstacle__WallWidthAssignment_5();
@@ -5414,16 +5329,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__6"
-    // InternalTankWar.g:1800:1: rule__WallObstacle__Group__6 : rule__WallObstacle__Group__6__Impl rule__WallObstacle__Group__7 ;
+    // InternalTankWar.g:1773:1: rule__WallObstacle__Group__6 : rule__WallObstacle__Group__6__Impl rule__WallObstacle__Group__7 ;
     public final void rule__WallObstacle__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1804:1: ( rule__WallObstacle__Group__6__Impl rule__WallObstacle__Group__7 )
-            // InternalTankWar.g:1805:2: rule__WallObstacle__Group__6__Impl rule__WallObstacle__Group__7
+            // InternalTankWar.g:1777:1: ( rule__WallObstacle__Group__6__Impl rule__WallObstacle__Group__7 )
+            // InternalTankWar.g:1778:2: rule__WallObstacle__Group__6__Impl rule__WallObstacle__Group__7
             {
-            pushFollow(FOLLOW_17);
+            pushFollow(FOLLOW_16);
             rule__WallObstacle__Group__6__Impl();
 
             state._fsp--;
@@ -5452,17 +5367,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__6__Impl"
-    // InternalTankWar.g:1812:1: rule__WallObstacle__Group__6__Impl : ( 'wallHeight' ) ;
+    // InternalTankWar.g:1785:1: rule__WallObstacle__Group__6__Impl : ( 'wallHeight' ) ;
     public final void rule__WallObstacle__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1816:1: ( ( 'wallHeight' ) )
-            // InternalTankWar.g:1817:1: ( 'wallHeight' )
+            // InternalTankWar.g:1789:1: ( ( 'wallHeight' ) )
+            // InternalTankWar.g:1790:1: ( 'wallHeight' )
             {
-            // InternalTankWar.g:1817:1: ( 'wallHeight' )
-            // InternalTankWar.g:1818:2: 'wallHeight'
+            // InternalTankWar.g:1790:1: ( 'wallHeight' )
+            // InternalTankWar.g:1791:2: 'wallHeight'
             {
              before(grammarAccess.getWallObstacleAccess().getWallHeightKeyword_6()); 
             match(input,27,FOLLOW_2); 
@@ -5489,16 +5404,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__7"
-    // InternalTankWar.g:1827:1: rule__WallObstacle__Group__7 : rule__WallObstacle__Group__7__Impl rule__WallObstacle__Group__8 ;
+    // InternalTankWar.g:1800:1: rule__WallObstacle__Group__7 : rule__WallObstacle__Group__7__Impl rule__WallObstacle__Group__8 ;
     public final void rule__WallObstacle__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1831:1: ( rule__WallObstacle__Group__7__Impl rule__WallObstacle__Group__8 )
-            // InternalTankWar.g:1832:2: rule__WallObstacle__Group__7__Impl rule__WallObstacle__Group__8
+            // InternalTankWar.g:1804:1: ( rule__WallObstacle__Group__7__Impl rule__WallObstacle__Group__8 )
+            // InternalTankWar.g:1805:2: rule__WallObstacle__Group__7__Impl rule__WallObstacle__Group__8
             {
-            pushFollow(FOLLOW_18);
+            pushFollow(FOLLOW_17);
             rule__WallObstacle__Group__7__Impl();
 
             state._fsp--;
@@ -5527,17 +5442,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__7__Impl"
-    // InternalTankWar.g:1839:1: rule__WallObstacle__Group__7__Impl : ( '=' ) ;
+    // InternalTankWar.g:1812:1: rule__WallObstacle__Group__7__Impl : ( '=' ) ;
     public final void rule__WallObstacle__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1843:1: ( ( '=' ) )
-            // InternalTankWar.g:1844:1: ( '=' )
+            // InternalTankWar.g:1816:1: ( ( '=' ) )
+            // InternalTankWar.g:1817:1: ( '=' )
             {
-            // InternalTankWar.g:1844:1: ( '=' )
-            // InternalTankWar.g:1845:2: '='
+            // InternalTankWar.g:1817:1: ( '=' )
+            // InternalTankWar.g:1818:2: '='
             {
              before(grammarAccess.getWallObstacleAccess().getEqualsSignKeyword_7()); 
             match(input,21,FOLLOW_2); 
@@ -5564,16 +5479,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__8"
-    // InternalTankWar.g:1854:1: rule__WallObstacle__Group__8 : rule__WallObstacle__Group__8__Impl rule__WallObstacle__Group__9 ;
+    // InternalTankWar.g:1827:1: rule__WallObstacle__Group__8 : rule__WallObstacle__Group__8__Impl rule__WallObstacle__Group__9 ;
     public final void rule__WallObstacle__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1858:1: ( rule__WallObstacle__Group__8__Impl rule__WallObstacle__Group__9 )
-            // InternalTankWar.g:1859:2: rule__WallObstacle__Group__8__Impl rule__WallObstacle__Group__9
+            // InternalTankWar.g:1831:1: ( rule__WallObstacle__Group__8__Impl rule__WallObstacle__Group__9 )
+            // InternalTankWar.g:1832:2: rule__WallObstacle__Group__8__Impl rule__WallObstacle__Group__9
             {
-            pushFollow(FOLLOW_24);
+            pushFollow(FOLLOW_23);
             rule__WallObstacle__Group__8__Impl();
 
             state._fsp--;
@@ -5602,21 +5517,21 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__8__Impl"
-    // InternalTankWar.g:1866:1: rule__WallObstacle__Group__8__Impl : ( ( rule__WallObstacle__WallHeightAssignment_8 ) ) ;
+    // InternalTankWar.g:1839:1: rule__WallObstacle__Group__8__Impl : ( ( rule__WallObstacle__WallHeightAssignment_8 ) ) ;
     public final void rule__WallObstacle__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1870:1: ( ( ( rule__WallObstacle__WallHeightAssignment_8 ) ) )
-            // InternalTankWar.g:1871:1: ( ( rule__WallObstacle__WallHeightAssignment_8 ) )
+            // InternalTankWar.g:1843:1: ( ( ( rule__WallObstacle__WallHeightAssignment_8 ) ) )
+            // InternalTankWar.g:1844:1: ( ( rule__WallObstacle__WallHeightAssignment_8 ) )
             {
-            // InternalTankWar.g:1871:1: ( ( rule__WallObstacle__WallHeightAssignment_8 ) )
-            // InternalTankWar.g:1872:2: ( rule__WallObstacle__WallHeightAssignment_8 )
+            // InternalTankWar.g:1844:1: ( ( rule__WallObstacle__WallHeightAssignment_8 ) )
+            // InternalTankWar.g:1845:2: ( rule__WallObstacle__WallHeightAssignment_8 )
             {
              before(grammarAccess.getWallObstacleAccess().getWallHeightAssignment_8()); 
-            // InternalTankWar.g:1873:2: ( rule__WallObstacle__WallHeightAssignment_8 )
-            // InternalTankWar.g:1873:3: rule__WallObstacle__WallHeightAssignment_8
+            // InternalTankWar.g:1846:2: ( rule__WallObstacle__WallHeightAssignment_8 )
+            // InternalTankWar.g:1846:3: rule__WallObstacle__WallHeightAssignment_8
             {
             pushFollow(FOLLOW_2);
             rule__WallObstacle__WallHeightAssignment_8();
@@ -5649,16 +5564,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__9"
-    // InternalTankWar.g:1881:1: rule__WallObstacle__Group__9 : rule__WallObstacle__Group__9__Impl rule__WallObstacle__Group__10 ;
+    // InternalTankWar.g:1854:1: rule__WallObstacle__Group__9 : rule__WallObstacle__Group__9__Impl rule__WallObstacle__Group__10 ;
     public final void rule__WallObstacle__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1885:1: ( rule__WallObstacle__Group__9__Impl rule__WallObstacle__Group__10 )
-            // InternalTankWar.g:1886:2: rule__WallObstacle__Group__9__Impl rule__WallObstacle__Group__10
+            // InternalTankWar.g:1858:1: ( rule__WallObstacle__Group__9__Impl rule__WallObstacle__Group__10 )
+            // InternalTankWar.g:1859:2: rule__WallObstacle__Group__9__Impl rule__WallObstacle__Group__10
             {
-            pushFollow(FOLLOW_17);
+            pushFollow(FOLLOW_16);
             rule__WallObstacle__Group__9__Impl();
 
             state._fsp--;
@@ -5687,17 +5602,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__9__Impl"
-    // InternalTankWar.g:1893:1: rule__WallObstacle__Group__9__Impl : ( 'wallPosX' ) ;
+    // InternalTankWar.g:1866:1: rule__WallObstacle__Group__9__Impl : ( 'wallPosX' ) ;
     public final void rule__WallObstacle__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1897:1: ( ( 'wallPosX' ) )
-            // InternalTankWar.g:1898:1: ( 'wallPosX' )
+            // InternalTankWar.g:1870:1: ( ( 'wallPosX' ) )
+            // InternalTankWar.g:1871:1: ( 'wallPosX' )
             {
-            // InternalTankWar.g:1898:1: ( 'wallPosX' )
-            // InternalTankWar.g:1899:2: 'wallPosX'
+            // InternalTankWar.g:1871:1: ( 'wallPosX' )
+            // InternalTankWar.g:1872:2: 'wallPosX'
             {
              before(grammarAccess.getWallObstacleAccess().getWallPosXKeyword_9()); 
             match(input,28,FOLLOW_2); 
@@ -5724,16 +5639,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__10"
-    // InternalTankWar.g:1908:1: rule__WallObstacle__Group__10 : rule__WallObstacle__Group__10__Impl rule__WallObstacle__Group__11 ;
+    // InternalTankWar.g:1881:1: rule__WallObstacle__Group__10 : rule__WallObstacle__Group__10__Impl rule__WallObstacle__Group__11 ;
     public final void rule__WallObstacle__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1912:1: ( rule__WallObstacle__Group__10__Impl rule__WallObstacle__Group__11 )
-            // InternalTankWar.g:1913:2: rule__WallObstacle__Group__10__Impl rule__WallObstacle__Group__11
+            // InternalTankWar.g:1885:1: ( rule__WallObstacle__Group__10__Impl rule__WallObstacle__Group__11 )
+            // InternalTankWar.g:1886:2: rule__WallObstacle__Group__10__Impl rule__WallObstacle__Group__11
             {
-            pushFollow(FOLLOW_18);
+            pushFollow(FOLLOW_17);
             rule__WallObstacle__Group__10__Impl();
 
             state._fsp--;
@@ -5762,17 +5677,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__10__Impl"
-    // InternalTankWar.g:1920:1: rule__WallObstacle__Group__10__Impl : ( '=' ) ;
+    // InternalTankWar.g:1893:1: rule__WallObstacle__Group__10__Impl : ( '=' ) ;
     public final void rule__WallObstacle__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1924:1: ( ( '=' ) )
-            // InternalTankWar.g:1925:1: ( '=' )
+            // InternalTankWar.g:1897:1: ( ( '=' ) )
+            // InternalTankWar.g:1898:1: ( '=' )
             {
-            // InternalTankWar.g:1925:1: ( '=' )
-            // InternalTankWar.g:1926:2: '='
+            // InternalTankWar.g:1898:1: ( '=' )
+            // InternalTankWar.g:1899:2: '='
             {
              before(grammarAccess.getWallObstacleAccess().getEqualsSignKeyword_10()); 
             match(input,21,FOLLOW_2); 
@@ -5799,16 +5714,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__11"
-    // InternalTankWar.g:1935:1: rule__WallObstacle__Group__11 : rule__WallObstacle__Group__11__Impl rule__WallObstacle__Group__12 ;
+    // InternalTankWar.g:1908:1: rule__WallObstacle__Group__11 : rule__WallObstacle__Group__11__Impl rule__WallObstacle__Group__12 ;
     public final void rule__WallObstacle__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1939:1: ( rule__WallObstacle__Group__11__Impl rule__WallObstacle__Group__12 )
-            // InternalTankWar.g:1940:2: rule__WallObstacle__Group__11__Impl rule__WallObstacle__Group__12
+            // InternalTankWar.g:1912:1: ( rule__WallObstacle__Group__11__Impl rule__WallObstacle__Group__12 )
+            // InternalTankWar.g:1913:2: rule__WallObstacle__Group__11__Impl rule__WallObstacle__Group__12
             {
-            pushFollow(FOLLOW_25);
+            pushFollow(FOLLOW_24);
             rule__WallObstacle__Group__11__Impl();
 
             state._fsp--;
@@ -5837,21 +5752,21 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__11__Impl"
-    // InternalTankWar.g:1947:1: rule__WallObstacle__Group__11__Impl : ( ( rule__WallObstacle__WallPosXAssignment_11 ) ) ;
+    // InternalTankWar.g:1920:1: rule__WallObstacle__Group__11__Impl : ( ( rule__WallObstacle__WallPosXAssignment_11 ) ) ;
     public final void rule__WallObstacle__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1951:1: ( ( ( rule__WallObstacle__WallPosXAssignment_11 ) ) )
-            // InternalTankWar.g:1952:1: ( ( rule__WallObstacle__WallPosXAssignment_11 ) )
+            // InternalTankWar.g:1924:1: ( ( ( rule__WallObstacle__WallPosXAssignment_11 ) ) )
+            // InternalTankWar.g:1925:1: ( ( rule__WallObstacle__WallPosXAssignment_11 ) )
             {
-            // InternalTankWar.g:1952:1: ( ( rule__WallObstacle__WallPosXAssignment_11 ) )
-            // InternalTankWar.g:1953:2: ( rule__WallObstacle__WallPosXAssignment_11 )
+            // InternalTankWar.g:1925:1: ( ( rule__WallObstacle__WallPosXAssignment_11 ) )
+            // InternalTankWar.g:1926:2: ( rule__WallObstacle__WallPosXAssignment_11 )
             {
              before(grammarAccess.getWallObstacleAccess().getWallPosXAssignment_11()); 
-            // InternalTankWar.g:1954:2: ( rule__WallObstacle__WallPosXAssignment_11 )
-            // InternalTankWar.g:1954:3: rule__WallObstacle__WallPosXAssignment_11
+            // InternalTankWar.g:1927:2: ( rule__WallObstacle__WallPosXAssignment_11 )
+            // InternalTankWar.g:1927:3: rule__WallObstacle__WallPosXAssignment_11
             {
             pushFollow(FOLLOW_2);
             rule__WallObstacle__WallPosXAssignment_11();
@@ -5884,16 +5799,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__12"
-    // InternalTankWar.g:1962:1: rule__WallObstacle__Group__12 : rule__WallObstacle__Group__12__Impl rule__WallObstacle__Group__13 ;
+    // InternalTankWar.g:1935:1: rule__WallObstacle__Group__12 : rule__WallObstacle__Group__12__Impl rule__WallObstacle__Group__13 ;
     public final void rule__WallObstacle__Group__12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1966:1: ( rule__WallObstacle__Group__12__Impl rule__WallObstacle__Group__13 )
-            // InternalTankWar.g:1967:2: rule__WallObstacle__Group__12__Impl rule__WallObstacle__Group__13
+            // InternalTankWar.g:1939:1: ( rule__WallObstacle__Group__12__Impl rule__WallObstacle__Group__13 )
+            // InternalTankWar.g:1940:2: rule__WallObstacle__Group__12__Impl rule__WallObstacle__Group__13
             {
-            pushFollow(FOLLOW_17);
+            pushFollow(FOLLOW_16);
             rule__WallObstacle__Group__12__Impl();
 
             state._fsp--;
@@ -5922,17 +5837,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__12__Impl"
-    // InternalTankWar.g:1974:1: rule__WallObstacle__Group__12__Impl : ( 'wallPosY' ) ;
+    // InternalTankWar.g:1947:1: rule__WallObstacle__Group__12__Impl : ( 'wallPosY' ) ;
     public final void rule__WallObstacle__Group__12__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1978:1: ( ( 'wallPosY' ) )
-            // InternalTankWar.g:1979:1: ( 'wallPosY' )
+            // InternalTankWar.g:1951:1: ( ( 'wallPosY' ) )
+            // InternalTankWar.g:1952:1: ( 'wallPosY' )
             {
-            // InternalTankWar.g:1979:1: ( 'wallPosY' )
-            // InternalTankWar.g:1980:2: 'wallPosY'
+            // InternalTankWar.g:1952:1: ( 'wallPosY' )
+            // InternalTankWar.g:1953:2: 'wallPosY'
             {
              before(grammarAccess.getWallObstacleAccess().getWallPosYKeyword_12()); 
             match(input,29,FOLLOW_2); 
@@ -5959,16 +5874,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__13"
-    // InternalTankWar.g:1989:1: rule__WallObstacle__Group__13 : rule__WallObstacle__Group__13__Impl rule__WallObstacle__Group__14 ;
+    // InternalTankWar.g:1962:1: rule__WallObstacle__Group__13 : rule__WallObstacle__Group__13__Impl rule__WallObstacle__Group__14 ;
     public final void rule__WallObstacle__Group__13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:1993:1: ( rule__WallObstacle__Group__13__Impl rule__WallObstacle__Group__14 )
-            // InternalTankWar.g:1994:2: rule__WallObstacle__Group__13__Impl rule__WallObstacle__Group__14
+            // InternalTankWar.g:1966:1: ( rule__WallObstacle__Group__13__Impl rule__WallObstacle__Group__14 )
+            // InternalTankWar.g:1967:2: rule__WallObstacle__Group__13__Impl rule__WallObstacle__Group__14
             {
-            pushFollow(FOLLOW_18);
+            pushFollow(FOLLOW_17);
             rule__WallObstacle__Group__13__Impl();
 
             state._fsp--;
@@ -5997,17 +5912,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__13__Impl"
-    // InternalTankWar.g:2001:1: rule__WallObstacle__Group__13__Impl : ( '=' ) ;
+    // InternalTankWar.g:1974:1: rule__WallObstacle__Group__13__Impl : ( '=' ) ;
     public final void rule__WallObstacle__Group__13__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:2005:1: ( ( '=' ) )
-            // InternalTankWar.g:2006:1: ( '=' )
+            // InternalTankWar.g:1978:1: ( ( '=' ) )
+            // InternalTankWar.g:1979:1: ( '=' )
             {
-            // InternalTankWar.g:2006:1: ( '=' )
-            // InternalTankWar.g:2007:2: '='
+            // InternalTankWar.g:1979:1: ( '=' )
+            // InternalTankWar.g:1980:2: '='
             {
              before(grammarAccess.getWallObstacleAccess().getEqualsSignKeyword_13()); 
             match(input,21,FOLLOW_2); 
@@ -6034,16 +5949,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__14"
-    // InternalTankWar.g:2016:1: rule__WallObstacle__Group__14 : rule__WallObstacle__Group__14__Impl rule__WallObstacle__Group__15 ;
+    // InternalTankWar.g:1989:1: rule__WallObstacle__Group__14 : rule__WallObstacle__Group__14__Impl rule__WallObstacle__Group__15 ;
     public final void rule__WallObstacle__Group__14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:2020:1: ( rule__WallObstacle__Group__14__Impl rule__WallObstacle__Group__15 )
-            // InternalTankWar.g:2021:2: rule__WallObstacle__Group__14__Impl rule__WallObstacle__Group__15
+            // InternalTankWar.g:1993:1: ( rule__WallObstacle__Group__14__Impl rule__WallObstacle__Group__15 )
+            // InternalTankWar.g:1994:2: rule__WallObstacle__Group__14__Impl rule__WallObstacle__Group__15
             {
-            pushFollow(FOLLOW_10);
+            pushFollow(FOLLOW_9);
             rule__WallObstacle__Group__14__Impl();
 
             state._fsp--;
@@ -6072,21 +5987,21 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__14__Impl"
-    // InternalTankWar.g:2028:1: rule__WallObstacle__Group__14__Impl : ( ( rule__WallObstacle__WallPosYAssignment_14 ) ) ;
+    // InternalTankWar.g:2001:1: rule__WallObstacle__Group__14__Impl : ( ( rule__WallObstacle__WallPosYAssignment_14 ) ) ;
     public final void rule__WallObstacle__Group__14__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:2032:1: ( ( ( rule__WallObstacle__WallPosYAssignment_14 ) ) )
-            // InternalTankWar.g:2033:1: ( ( rule__WallObstacle__WallPosYAssignment_14 ) )
+            // InternalTankWar.g:2005:1: ( ( ( rule__WallObstacle__WallPosYAssignment_14 ) ) )
+            // InternalTankWar.g:2006:1: ( ( rule__WallObstacle__WallPosYAssignment_14 ) )
             {
-            // InternalTankWar.g:2033:1: ( ( rule__WallObstacle__WallPosYAssignment_14 ) )
-            // InternalTankWar.g:2034:2: ( rule__WallObstacle__WallPosYAssignment_14 )
+            // InternalTankWar.g:2006:1: ( ( rule__WallObstacle__WallPosYAssignment_14 ) )
+            // InternalTankWar.g:2007:2: ( rule__WallObstacle__WallPosYAssignment_14 )
             {
              before(grammarAccess.getWallObstacleAccess().getWallPosYAssignment_14()); 
-            // InternalTankWar.g:2035:2: ( rule__WallObstacle__WallPosYAssignment_14 )
-            // InternalTankWar.g:2035:3: rule__WallObstacle__WallPosYAssignment_14
+            // InternalTankWar.g:2008:2: ( rule__WallObstacle__WallPosYAssignment_14 )
+            // InternalTankWar.g:2008:3: rule__WallObstacle__WallPosYAssignment_14
             {
             pushFollow(FOLLOW_2);
             rule__WallObstacle__WallPosYAssignment_14();
@@ -6119,14 +6034,14 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__15"
-    // InternalTankWar.g:2043:1: rule__WallObstacle__Group__15 : rule__WallObstacle__Group__15__Impl ;
+    // InternalTankWar.g:2016:1: rule__WallObstacle__Group__15 : rule__WallObstacle__Group__15__Impl ;
     public final void rule__WallObstacle__Group__15() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:2047:1: ( rule__WallObstacle__Group__15__Impl )
-            // InternalTankWar.g:2048:2: rule__WallObstacle__Group__15__Impl
+            // InternalTankWar.g:2020:1: ( rule__WallObstacle__Group__15__Impl )
+            // InternalTankWar.g:2021:2: rule__WallObstacle__Group__15__Impl
             {
             pushFollow(FOLLOW_2);
             rule__WallObstacle__Group__15__Impl();
@@ -6152,17 +6067,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__Group__15__Impl"
-    // InternalTankWar.g:2054:1: rule__WallObstacle__Group__15__Impl : ( '}' ) ;
+    // InternalTankWar.g:2027:1: rule__WallObstacle__Group__15__Impl : ( '}' ) ;
     public final void rule__WallObstacle__Group__15__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:2058:1: ( ( '}' ) )
-            // InternalTankWar.g:2059:1: ( '}' )
+            // InternalTankWar.g:2031:1: ( ( '}' ) )
+            // InternalTankWar.g:2032:1: ( '}' )
             {
-            // InternalTankWar.g:2059:1: ( '}' )
-            // InternalTankWar.g:2060:2: '}'
+            // InternalTankWar.g:2032:1: ( '}' )
+            // InternalTankWar.g:2033:2: '}'
             {
              before(grammarAccess.getWallObstacleAccess().getRightCurlyBracketKeyword_15()); 
             match(input,14,FOLLOW_2); 
@@ -6189,14 +6104,14 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FieldSpecification__Group__0"
-    // InternalTankWar.g:2070:1: rule__FieldSpecification__Group__0 : rule__FieldSpecification__Group__0__Impl rule__FieldSpecification__Group__1 ;
+    // InternalTankWar.g:2043:1: rule__FieldSpecification__Group__0 : rule__FieldSpecification__Group__0__Impl rule__FieldSpecification__Group__1 ;
     public final void rule__FieldSpecification__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:2074:1: ( rule__FieldSpecification__Group__0__Impl rule__FieldSpecification__Group__1 )
-            // InternalTankWar.g:2075:2: rule__FieldSpecification__Group__0__Impl rule__FieldSpecification__Group__1
+            // InternalTankWar.g:2047:1: ( rule__FieldSpecification__Group__0__Impl rule__FieldSpecification__Group__1 )
+            // InternalTankWar.g:2048:2: rule__FieldSpecification__Group__0__Impl rule__FieldSpecification__Group__1
             {
             pushFollow(FOLLOW_3);
             rule__FieldSpecification__Group__0__Impl();
@@ -6227,17 +6142,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FieldSpecification__Group__0__Impl"
-    // InternalTankWar.g:2082:1: rule__FieldSpecification__Group__0__Impl : ( 'field' ) ;
+    // InternalTankWar.g:2055:1: rule__FieldSpecification__Group__0__Impl : ( 'field' ) ;
     public final void rule__FieldSpecification__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:2086:1: ( ( 'field' ) )
-            // InternalTankWar.g:2087:1: ( 'field' )
+            // InternalTankWar.g:2059:1: ( ( 'field' ) )
+            // InternalTankWar.g:2060:1: ( 'field' )
             {
-            // InternalTankWar.g:2087:1: ( 'field' )
-            // InternalTankWar.g:2088:2: 'field'
+            // InternalTankWar.g:2060:1: ( 'field' )
+            // InternalTankWar.g:2061:2: 'field'
             {
              before(grammarAccess.getFieldSpecificationAccess().getFieldKeyword_0()); 
             match(input,30,FOLLOW_2); 
@@ -6264,14 +6179,14 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FieldSpecification__Group__1"
-    // InternalTankWar.g:2097:1: rule__FieldSpecification__Group__1 : rule__FieldSpecification__Group__1__Impl rule__FieldSpecification__Group__2 ;
+    // InternalTankWar.g:2070:1: rule__FieldSpecification__Group__1 : rule__FieldSpecification__Group__1__Impl rule__FieldSpecification__Group__2 ;
     public final void rule__FieldSpecification__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:2101:1: ( rule__FieldSpecification__Group__1__Impl rule__FieldSpecification__Group__2 )
-            // InternalTankWar.g:2102:2: rule__FieldSpecification__Group__1__Impl rule__FieldSpecification__Group__2
+            // InternalTankWar.g:2074:1: ( rule__FieldSpecification__Group__1__Impl rule__FieldSpecification__Group__2 )
+            // InternalTankWar.g:2075:2: rule__FieldSpecification__Group__1__Impl rule__FieldSpecification__Group__2
             {
             pushFollow(FOLLOW_4);
             rule__FieldSpecification__Group__1__Impl();
@@ -6302,21 +6217,21 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FieldSpecification__Group__1__Impl"
-    // InternalTankWar.g:2109:1: rule__FieldSpecification__Group__1__Impl : ( ( rule__FieldSpecification__NameAssignment_1 ) ) ;
+    // InternalTankWar.g:2082:1: rule__FieldSpecification__Group__1__Impl : ( ( rule__FieldSpecification__NameAssignment_1 ) ) ;
     public final void rule__FieldSpecification__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:2113:1: ( ( ( rule__FieldSpecification__NameAssignment_1 ) ) )
-            // InternalTankWar.g:2114:1: ( ( rule__FieldSpecification__NameAssignment_1 ) )
+            // InternalTankWar.g:2086:1: ( ( ( rule__FieldSpecification__NameAssignment_1 ) ) )
+            // InternalTankWar.g:2087:1: ( ( rule__FieldSpecification__NameAssignment_1 ) )
             {
-            // InternalTankWar.g:2114:1: ( ( rule__FieldSpecification__NameAssignment_1 ) )
-            // InternalTankWar.g:2115:2: ( rule__FieldSpecification__NameAssignment_1 )
+            // InternalTankWar.g:2087:1: ( ( rule__FieldSpecification__NameAssignment_1 ) )
+            // InternalTankWar.g:2088:2: ( rule__FieldSpecification__NameAssignment_1 )
             {
              before(grammarAccess.getFieldSpecificationAccess().getNameAssignment_1()); 
-            // InternalTankWar.g:2116:2: ( rule__FieldSpecification__NameAssignment_1 )
-            // InternalTankWar.g:2116:3: rule__FieldSpecification__NameAssignment_1
+            // InternalTankWar.g:2089:2: ( rule__FieldSpecification__NameAssignment_1 )
+            // InternalTankWar.g:2089:3: rule__FieldSpecification__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__FieldSpecification__NameAssignment_1();
@@ -6349,16 +6264,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FieldSpecification__Group__2"
-    // InternalTankWar.g:2124:1: rule__FieldSpecification__Group__2 : rule__FieldSpecification__Group__2__Impl rule__FieldSpecification__Group__3 ;
+    // InternalTankWar.g:2097:1: rule__FieldSpecification__Group__2 : rule__FieldSpecification__Group__2__Impl rule__FieldSpecification__Group__3 ;
     public final void rule__FieldSpecification__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:2128:1: ( rule__FieldSpecification__Group__2__Impl rule__FieldSpecification__Group__3 )
-            // InternalTankWar.g:2129:2: rule__FieldSpecification__Group__2__Impl rule__FieldSpecification__Group__3
+            // InternalTankWar.g:2101:1: ( rule__FieldSpecification__Group__2__Impl rule__FieldSpecification__Group__3 )
+            // InternalTankWar.g:2102:2: rule__FieldSpecification__Group__2__Impl rule__FieldSpecification__Group__3
             {
-            pushFollow(FOLLOW_26);
+            pushFollow(FOLLOW_25);
             rule__FieldSpecification__Group__2__Impl();
 
             state._fsp--;
@@ -6387,17 +6302,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FieldSpecification__Group__2__Impl"
-    // InternalTankWar.g:2136:1: rule__FieldSpecification__Group__2__Impl : ( '{' ) ;
+    // InternalTankWar.g:2109:1: rule__FieldSpecification__Group__2__Impl : ( '{' ) ;
     public final void rule__FieldSpecification__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:2140:1: ( ( '{' ) )
-            // InternalTankWar.g:2141:1: ( '{' )
+            // InternalTankWar.g:2113:1: ( ( '{' ) )
+            // InternalTankWar.g:2114:1: ( '{' )
             {
-            // InternalTankWar.g:2141:1: ( '{' )
-            // InternalTankWar.g:2142:2: '{'
+            // InternalTankWar.g:2114:1: ( '{' )
+            // InternalTankWar.g:2115:2: '{'
             {
              before(grammarAccess.getFieldSpecificationAccess().getLeftCurlyBracketKeyword_2()); 
             match(input,13,FOLLOW_2); 
@@ -6424,16 +6339,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FieldSpecification__Group__3"
-    // InternalTankWar.g:2151:1: rule__FieldSpecification__Group__3 : rule__FieldSpecification__Group__3__Impl rule__FieldSpecification__Group__4 ;
+    // InternalTankWar.g:2124:1: rule__FieldSpecification__Group__3 : rule__FieldSpecification__Group__3__Impl rule__FieldSpecification__Group__4 ;
     public final void rule__FieldSpecification__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:2155:1: ( rule__FieldSpecification__Group__3__Impl rule__FieldSpecification__Group__4 )
-            // InternalTankWar.g:2156:2: rule__FieldSpecification__Group__3__Impl rule__FieldSpecification__Group__4
+            // InternalTankWar.g:2128:1: ( rule__FieldSpecification__Group__3__Impl rule__FieldSpecification__Group__4 )
+            // InternalTankWar.g:2129:2: rule__FieldSpecification__Group__3__Impl rule__FieldSpecification__Group__4
             {
-            pushFollow(FOLLOW_17);
+            pushFollow(FOLLOW_16);
             rule__FieldSpecification__Group__3__Impl();
 
             state._fsp--;
@@ -6462,17 +6377,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FieldSpecification__Group__3__Impl"
-    // InternalTankWar.g:2163:1: rule__FieldSpecification__Group__3__Impl : ( 'enemyCount' ) ;
+    // InternalTankWar.g:2136:1: rule__FieldSpecification__Group__3__Impl : ( 'enemyCount' ) ;
     public final void rule__FieldSpecification__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:2167:1: ( ( 'enemyCount' ) )
-            // InternalTankWar.g:2168:1: ( 'enemyCount' )
+            // InternalTankWar.g:2140:1: ( ( 'enemyCount' ) )
+            // InternalTankWar.g:2141:1: ( 'enemyCount' )
             {
-            // InternalTankWar.g:2168:1: ( 'enemyCount' )
-            // InternalTankWar.g:2169:2: 'enemyCount'
+            // InternalTankWar.g:2141:1: ( 'enemyCount' )
+            // InternalTankWar.g:2142:2: 'enemyCount'
             {
              before(grammarAccess.getFieldSpecificationAccess().getEnemyCountKeyword_3()); 
             match(input,31,FOLLOW_2); 
@@ -6499,16 +6414,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FieldSpecification__Group__4"
-    // InternalTankWar.g:2178:1: rule__FieldSpecification__Group__4 : rule__FieldSpecification__Group__4__Impl rule__FieldSpecification__Group__5 ;
+    // InternalTankWar.g:2151:1: rule__FieldSpecification__Group__4 : rule__FieldSpecification__Group__4__Impl rule__FieldSpecification__Group__5 ;
     public final void rule__FieldSpecification__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:2182:1: ( rule__FieldSpecification__Group__4__Impl rule__FieldSpecification__Group__5 )
-            // InternalTankWar.g:2183:2: rule__FieldSpecification__Group__4__Impl rule__FieldSpecification__Group__5
+            // InternalTankWar.g:2155:1: ( rule__FieldSpecification__Group__4__Impl rule__FieldSpecification__Group__5 )
+            // InternalTankWar.g:2156:2: rule__FieldSpecification__Group__4__Impl rule__FieldSpecification__Group__5
             {
-            pushFollow(FOLLOW_18);
+            pushFollow(FOLLOW_17);
             rule__FieldSpecification__Group__4__Impl();
 
             state._fsp--;
@@ -6537,17 +6452,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FieldSpecification__Group__4__Impl"
-    // InternalTankWar.g:2190:1: rule__FieldSpecification__Group__4__Impl : ( '=' ) ;
+    // InternalTankWar.g:2163:1: rule__FieldSpecification__Group__4__Impl : ( '=' ) ;
     public final void rule__FieldSpecification__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:2194:1: ( ( '=' ) )
-            // InternalTankWar.g:2195:1: ( '=' )
+            // InternalTankWar.g:2167:1: ( ( '=' ) )
+            // InternalTankWar.g:2168:1: ( '=' )
             {
-            // InternalTankWar.g:2195:1: ( '=' )
-            // InternalTankWar.g:2196:2: '='
+            // InternalTankWar.g:2168:1: ( '=' )
+            // InternalTankWar.g:2169:2: '='
             {
              before(grammarAccess.getFieldSpecificationAccess().getEqualsSignKeyword_4()); 
             match(input,21,FOLLOW_2); 
@@ -6574,16 +6489,16 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FieldSpecification__Group__5"
-    // InternalTankWar.g:2205:1: rule__FieldSpecification__Group__5 : rule__FieldSpecification__Group__5__Impl rule__FieldSpecification__Group__6 ;
+    // InternalTankWar.g:2178:1: rule__FieldSpecification__Group__5 : rule__FieldSpecification__Group__5__Impl rule__FieldSpecification__Group__6 ;
     public final void rule__FieldSpecification__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:2209:1: ( rule__FieldSpecification__Group__5__Impl rule__FieldSpecification__Group__6 )
-            // InternalTankWar.g:2210:2: rule__FieldSpecification__Group__5__Impl rule__FieldSpecification__Group__6
+            // InternalTankWar.g:2182:1: ( rule__FieldSpecification__Group__5__Impl rule__FieldSpecification__Group__6 )
+            // InternalTankWar.g:2183:2: rule__FieldSpecification__Group__5__Impl rule__FieldSpecification__Group__6
             {
-            pushFollow(FOLLOW_10);
+            pushFollow(FOLLOW_26);
             rule__FieldSpecification__Group__5__Impl();
 
             state._fsp--;
@@ -6612,21 +6527,21 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FieldSpecification__Group__5__Impl"
-    // InternalTankWar.g:2217:1: rule__FieldSpecification__Group__5__Impl : ( ( rule__FieldSpecification__EnemyCountAssignment_5 ) ) ;
+    // InternalTankWar.g:2190:1: rule__FieldSpecification__Group__5__Impl : ( ( rule__FieldSpecification__EnemyCountAssignment_5 ) ) ;
     public final void rule__FieldSpecification__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:2221:1: ( ( ( rule__FieldSpecification__EnemyCountAssignment_5 ) ) )
-            // InternalTankWar.g:2222:1: ( ( rule__FieldSpecification__EnemyCountAssignment_5 ) )
+            // InternalTankWar.g:2194:1: ( ( ( rule__FieldSpecification__EnemyCountAssignment_5 ) ) )
+            // InternalTankWar.g:2195:1: ( ( rule__FieldSpecification__EnemyCountAssignment_5 ) )
             {
-            // InternalTankWar.g:2222:1: ( ( rule__FieldSpecification__EnemyCountAssignment_5 ) )
-            // InternalTankWar.g:2223:2: ( rule__FieldSpecification__EnemyCountAssignment_5 )
+            // InternalTankWar.g:2195:1: ( ( rule__FieldSpecification__EnemyCountAssignment_5 ) )
+            // InternalTankWar.g:2196:2: ( rule__FieldSpecification__EnemyCountAssignment_5 )
             {
              before(grammarAccess.getFieldSpecificationAccess().getEnemyCountAssignment_5()); 
-            // InternalTankWar.g:2224:2: ( rule__FieldSpecification__EnemyCountAssignment_5 )
-            // InternalTankWar.g:2224:3: rule__FieldSpecification__EnemyCountAssignment_5
+            // InternalTankWar.g:2197:2: ( rule__FieldSpecification__EnemyCountAssignment_5 )
+            // InternalTankWar.g:2197:3: rule__FieldSpecification__EnemyCountAssignment_5
             {
             pushFollow(FOLLOW_2);
             rule__FieldSpecification__EnemyCountAssignment_5();
@@ -6659,17 +6574,22 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FieldSpecification__Group__6"
-    // InternalTankWar.g:2232:1: rule__FieldSpecification__Group__6 : rule__FieldSpecification__Group__6__Impl ;
+    // InternalTankWar.g:2205:1: rule__FieldSpecification__Group__6 : rule__FieldSpecification__Group__6__Impl rule__FieldSpecification__Group__7 ;
     public final void rule__FieldSpecification__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:2236:1: ( rule__FieldSpecification__Group__6__Impl )
-            // InternalTankWar.g:2237:2: rule__FieldSpecification__Group__6__Impl
+            // InternalTankWar.g:2209:1: ( rule__FieldSpecification__Group__6__Impl rule__FieldSpecification__Group__7 )
+            // InternalTankWar.g:2210:2: rule__FieldSpecification__Group__6__Impl rule__FieldSpecification__Group__7
             {
-            pushFollow(FOLLOW_2);
+            pushFollow(FOLLOW_9);
             rule__FieldSpecification__Group__6__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__FieldSpecification__Group__7();
 
             state._fsp--;
 
@@ -6692,21 +6612,31 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FieldSpecification__Group__6__Impl"
-    // InternalTankWar.g:2243:1: rule__FieldSpecification__Group__6__Impl : ( '}' ) ;
+    // InternalTankWar.g:2217:1: rule__FieldSpecification__Group__6__Impl : ( ( rule__FieldSpecification__ObstacleAssignment_6 ) ) ;
     public final void rule__FieldSpecification__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:2247:1: ( ( '}' ) )
-            // InternalTankWar.g:2248:1: ( '}' )
+            // InternalTankWar.g:2221:1: ( ( ( rule__FieldSpecification__ObstacleAssignment_6 ) ) )
+            // InternalTankWar.g:2222:1: ( ( rule__FieldSpecification__ObstacleAssignment_6 ) )
             {
-            // InternalTankWar.g:2248:1: ( '}' )
-            // InternalTankWar.g:2249:2: '}'
+            // InternalTankWar.g:2222:1: ( ( rule__FieldSpecification__ObstacleAssignment_6 ) )
+            // InternalTankWar.g:2223:2: ( rule__FieldSpecification__ObstacleAssignment_6 )
             {
-             before(grammarAccess.getFieldSpecificationAccess().getRightCurlyBracketKeyword_6()); 
-            match(input,14,FOLLOW_2); 
-             after(grammarAccess.getFieldSpecificationAccess().getRightCurlyBracketKeyword_6()); 
+             before(grammarAccess.getFieldSpecificationAccess().getObstacleAssignment_6()); 
+            // InternalTankWar.g:2224:2: ( rule__FieldSpecification__ObstacleAssignment_6 )
+            // InternalTankWar.g:2224:3: rule__FieldSpecification__ObstacleAssignment_6
+            {
+            pushFollow(FOLLOW_2);
+            rule__FieldSpecification__ObstacleAssignment_6();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getFieldSpecificationAccess().getObstacleAssignment_6()); 
 
             }
 
@@ -6726,6 +6656,76 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
         return ;
     }
     // $ANTLR end "rule__FieldSpecification__Group__6__Impl"
+
+
+    // $ANTLR start "rule__FieldSpecification__Group__7"
+    // InternalTankWar.g:2232:1: rule__FieldSpecification__Group__7 : rule__FieldSpecification__Group__7__Impl ;
+    public final void rule__FieldSpecification__Group__7() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTankWar.g:2236:1: ( rule__FieldSpecification__Group__7__Impl )
+            // InternalTankWar.g:2237:2: rule__FieldSpecification__Group__7__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__FieldSpecification__Group__7__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__FieldSpecification__Group__7"
+
+
+    // $ANTLR start "rule__FieldSpecification__Group__7__Impl"
+    // InternalTankWar.g:2243:1: rule__FieldSpecification__Group__7__Impl : ( '}' ) ;
+    public final void rule__FieldSpecification__Group__7__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTankWar.g:2247:1: ( ( '}' ) )
+            // InternalTankWar.g:2248:1: ( '}' )
+            {
+            // InternalTankWar.g:2248:1: ( '}' )
+            // InternalTankWar.g:2249:2: '}'
+            {
+             before(grammarAccess.getFieldSpecificationAccess().getRightCurlyBracketKeyword_7()); 
+            match(input,14,FOLLOW_2); 
+             after(grammarAccess.getFieldSpecificationAccess().getRightCurlyBracketKeyword_7()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__FieldSpecification__Group__7__Impl"
 
 
     // $ANTLR start "rule__LocalFieldInitialisations__Group__0"
@@ -6888,7 +6888,7 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
             // InternalTankWar.g:2317:1: ( rule__LocalFieldInitialisations__Group__2__Impl rule__LocalFieldInitialisations__Group__3 )
             // InternalTankWar.g:2318:2: rule__LocalFieldInitialisations__Group__2__Impl rule__LocalFieldInitialisations__Group__3
             {
-            pushFollow(FOLLOW_10);
+            pushFollow(FOLLOW_9);
             rule__LocalFieldInitialisations__Group__2__Impl();
 
             state._fsp--;
@@ -8046,7 +8046,7 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
             // InternalTankWar.g:2729:1: ( rule__StartFieldDeclaration__Group__0__Impl rule__StartFieldDeclaration__Group__1 )
             // InternalTankWar.g:2730:2: rule__StartFieldDeclaration__Group__0__Impl rule__StartFieldDeclaration__Group__1
             {
-            pushFollow(FOLLOW_17);
+            pushFollow(FOLLOW_16);
             rule__StartFieldDeclaration__Group__0__Impl();
 
             state._fsp--;
@@ -8489,67 +8489,26 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__TankWarGame__ScreenAssignment_3"
 
 
-    // $ANTLR start "rule__TankWarGame__ObstacleAssignment_4"
-    // InternalTankWar.g:2890:1: rule__TankWarGame__ObstacleAssignment_4 : ( ruleObstaclepecification ) ;
-    public final void rule__TankWarGame__ObstacleAssignment_4() throws RecognitionException {
+    // $ANTLR start "rule__TankWarGame__FieldsAssignment_4"
+    // InternalTankWar.g:2890:1: rule__TankWarGame__FieldsAssignment_4 : ( ruleFieldSpecification ) ;
+    public final void rule__TankWarGame__FieldsAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:2894:1: ( ( ruleObstaclepecification ) )
-            // InternalTankWar.g:2895:2: ( ruleObstaclepecification )
+            // InternalTankWar.g:2894:1: ( ( ruleFieldSpecification ) )
+            // InternalTankWar.g:2895:2: ( ruleFieldSpecification )
             {
-            // InternalTankWar.g:2895:2: ( ruleObstaclepecification )
-            // InternalTankWar.g:2896:3: ruleObstaclepecification
+            // InternalTankWar.g:2895:2: ( ruleFieldSpecification )
+            // InternalTankWar.g:2896:3: ruleFieldSpecification
             {
-             before(grammarAccess.getTankWarGameAccess().getObstacleObstaclepecificationParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_2);
-            ruleObstaclepecification();
-
-            state._fsp--;
-
-             after(grammarAccess.getTankWarGameAccess().getObstacleObstaclepecificationParserRuleCall_4_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__TankWarGame__ObstacleAssignment_4"
-
-
-    // $ANTLR start "rule__TankWarGame__FieldsAssignment_5"
-    // InternalTankWar.g:2905:1: rule__TankWarGame__FieldsAssignment_5 : ( ruleFieldSpecification ) ;
-    public final void rule__TankWarGame__FieldsAssignment_5() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalTankWar.g:2909:1: ( ( ruleFieldSpecification ) )
-            // InternalTankWar.g:2910:2: ( ruleFieldSpecification )
-            {
-            // InternalTankWar.g:2910:2: ( ruleFieldSpecification )
-            // InternalTankWar.g:2911:3: ruleFieldSpecification
-            {
-             before(grammarAccess.getTankWarGameAccess().getFieldsFieldSpecificationParserRuleCall_5_0()); 
+             before(grammarAccess.getTankWarGameAccess().getFieldsFieldSpecificationParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
             ruleFieldSpecification();
 
             state._fsp--;
 
-             after(grammarAccess.getTankWarGameAccess().getFieldsFieldSpecificationParserRuleCall_5_0()); 
+             after(grammarAccess.getTankWarGameAccess().getFieldsFieldSpecificationParserRuleCall_4_0()); 
 
             }
 
@@ -8568,29 +8527,29 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__TankWarGame__FieldsAssignment_5"
+    // $ANTLR end "rule__TankWarGame__FieldsAssignment_4"
 
 
-    // $ANTLR start "rule__TankWarGame__OptionsAssignment_6"
-    // InternalTankWar.g:2920:1: rule__TankWarGame__OptionsAssignment_6 : ( ruleOptionSpecification ) ;
-    public final void rule__TankWarGame__OptionsAssignment_6() throws RecognitionException {
+    // $ANTLR start "rule__TankWarGame__OptionsAssignment_5"
+    // InternalTankWar.g:2905:1: rule__TankWarGame__OptionsAssignment_5 : ( ruleOptionSpecification ) ;
+    public final void rule__TankWarGame__OptionsAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:2924:1: ( ( ruleOptionSpecification ) )
-            // InternalTankWar.g:2925:2: ( ruleOptionSpecification )
+            // InternalTankWar.g:2909:1: ( ( ruleOptionSpecification ) )
+            // InternalTankWar.g:2910:2: ( ruleOptionSpecification )
             {
-            // InternalTankWar.g:2925:2: ( ruleOptionSpecification )
-            // InternalTankWar.g:2926:3: ruleOptionSpecification
+            // InternalTankWar.g:2910:2: ( ruleOptionSpecification )
+            // InternalTankWar.g:2911:3: ruleOptionSpecification
             {
-             before(grammarAccess.getTankWarGameAccess().getOptionsOptionSpecificationParserRuleCall_6_0()); 
+             before(grammarAccess.getTankWarGameAccess().getOptionsOptionSpecificationParserRuleCall_5_0()); 
             pushFollow(FOLLOW_2);
             ruleOptionSpecification();
 
             state._fsp--;
 
-             after(grammarAccess.getTankWarGameAccess().getOptionsOptionSpecificationParserRuleCall_6_0()); 
+             after(grammarAccess.getTankWarGameAccess().getOptionsOptionSpecificationParserRuleCall_5_0()); 
 
             }
 
@@ -8609,21 +8568,21 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__TankWarGame__OptionsAssignment_6"
+    // $ANTLR end "rule__TankWarGame__OptionsAssignment_5"
 
 
     // $ANTLR start "rule__EndGameBehaviour__WinAssignment_2"
-    // InternalTankWar.g:2935:1: rule__EndGameBehaviour__WinAssignment_2 : ( RULE_STRING ) ;
+    // InternalTankWar.g:2920:1: rule__EndGameBehaviour__WinAssignment_2 : ( RULE_STRING ) ;
     public final void rule__EndGameBehaviour__WinAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:2939:1: ( ( RULE_STRING ) )
-            // InternalTankWar.g:2940:2: ( RULE_STRING )
+            // InternalTankWar.g:2924:1: ( ( RULE_STRING ) )
+            // InternalTankWar.g:2925:2: ( RULE_STRING )
             {
-            // InternalTankWar.g:2940:2: ( RULE_STRING )
-            // InternalTankWar.g:2941:3: RULE_STRING
+            // InternalTankWar.g:2925:2: ( RULE_STRING )
+            // InternalTankWar.g:2926:3: RULE_STRING
             {
              before(grammarAccess.getEndGameBehaviourAccess().getWinSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -8650,17 +8609,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EndGameBehaviour__LostAssignment_4"
-    // InternalTankWar.g:2950:1: rule__EndGameBehaviour__LostAssignment_4 : ( RULE_STRING ) ;
+    // InternalTankWar.g:2935:1: rule__EndGameBehaviour__LostAssignment_4 : ( RULE_STRING ) ;
     public final void rule__EndGameBehaviour__LostAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:2954:1: ( ( RULE_STRING ) )
-            // InternalTankWar.g:2955:2: ( RULE_STRING )
+            // InternalTankWar.g:2939:1: ( ( RULE_STRING ) )
+            // InternalTankWar.g:2940:2: ( RULE_STRING )
             {
-            // InternalTankWar.g:2955:2: ( RULE_STRING )
-            // InternalTankWar.g:2956:3: RULE_STRING
+            // InternalTankWar.g:2940:2: ( RULE_STRING )
+            // InternalTankWar.g:2941:3: RULE_STRING
             {
              before(grammarAccess.getEndGameBehaviourAccess().getLostSTRINGTerminalRuleCall_4_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -8687,17 +8646,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__StringValue__ValueAssignment"
-    // InternalTankWar.g:2965:1: rule__StringValue__ValueAssignment : ( RULE_STRING ) ;
+    // InternalTankWar.g:2950:1: rule__StringValue__ValueAssignment : ( RULE_STRING ) ;
     public final void rule__StringValue__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:2969:1: ( ( RULE_STRING ) )
-            // InternalTankWar.g:2970:2: ( RULE_STRING )
+            // InternalTankWar.g:2954:1: ( ( RULE_STRING ) )
+            // InternalTankWar.g:2955:2: ( RULE_STRING )
             {
-            // InternalTankWar.g:2970:2: ( RULE_STRING )
-            // InternalTankWar.g:2971:3: RULE_STRING
+            // InternalTankWar.g:2955:2: ( RULE_STRING )
+            // InternalTankWar.g:2956:3: RULE_STRING
             {
              before(grammarAccess.getStringValueAccess().getValueSTRINGTerminalRuleCall_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -8724,17 +8683,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__IntValue__ValueAssignment"
-    // InternalTankWar.g:2980:1: rule__IntValue__ValueAssignment : ( RULE_INT ) ;
+    // InternalTankWar.g:2965:1: rule__IntValue__ValueAssignment : ( RULE_INT ) ;
     public final void rule__IntValue__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:2984:1: ( ( RULE_INT ) )
-            // InternalTankWar.g:2985:2: ( RULE_INT )
+            // InternalTankWar.g:2969:1: ( ( RULE_INT ) )
+            // InternalTankWar.g:2970:2: ( RULE_INT )
             {
-            // InternalTankWar.g:2985:2: ( RULE_INT )
-            // InternalTankWar.g:2986:3: RULE_INT
+            // InternalTankWar.g:2970:2: ( RULE_INT )
+            // InternalTankWar.g:2971:3: RULE_INT
             {
              before(grammarAccess.getIntValueAccess().getValueINTTerminalRuleCall_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -8761,17 +8720,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ScreenSpecification__NameAssignment_1"
-    // InternalTankWar.g:2995:1: rule__ScreenSpecification__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalTankWar.g:2980:1: rule__ScreenSpecification__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__ScreenSpecification__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:2999:1: ( ( RULE_ID ) )
-            // InternalTankWar.g:3000:2: ( RULE_ID )
+            // InternalTankWar.g:2984:1: ( ( RULE_ID ) )
+            // InternalTankWar.g:2985:2: ( RULE_ID )
             {
-            // InternalTankWar.g:3000:2: ( RULE_ID )
-            // InternalTankWar.g:3001:3: RULE_ID
+            // InternalTankWar.g:2985:2: ( RULE_ID )
+            // InternalTankWar.g:2986:3: RULE_ID
             {
              before(grammarAccess.getScreenSpecificationAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -8798,17 +8757,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ScreenSpecification__ScreenWidthAssignment_5"
-    // InternalTankWar.g:3010:1: rule__ScreenSpecification__ScreenWidthAssignment_5 : ( RULE_INT ) ;
+    // InternalTankWar.g:2995:1: rule__ScreenSpecification__ScreenWidthAssignment_5 : ( RULE_INT ) ;
     public final void rule__ScreenSpecification__ScreenWidthAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:3014:1: ( ( RULE_INT ) )
-            // InternalTankWar.g:3015:2: ( RULE_INT )
+            // InternalTankWar.g:2999:1: ( ( RULE_INT ) )
+            // InternalTankWar.g:3000:2: ( RULE_INT )
             {
-            // InternalTankWar.g:3015:2: ( RULE_INT )
-            // InternalTankWar.g:3016:3: RULE_INT
+            // InternalTankWar.g:3000:2: ( RULE_INT )
+            // InternalTankWar.g:3001:3: RULE_INT
             {
              before(grammarAccess.getScreenSpecificationAccess().getScreenWidthINTTerminalRuleCall_5_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -8835,17 +8794,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ScreenSpecification__ScreenHeightAssignment_8"
-    // InternalTankWar.g:3025:1: rule__ScreenSpecification__ScreenHeightAssignment_8 : ( RULE_INT ) ;
+    // InternalTankWar.g:3010:1: rule__ScreenSpecification__ScreenHeightAssignment_8 : ( RULE_INT ) ;
     public final void rule__ScreenSpecification__ScreenHeightAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:3029:1: ( ( RULE_INT ) )
-            // InternalTankWar.g:3030:2: ( RULE_INT )
+            // InternalTankWar.g:3014:1: ( ( RULE_INT ) )
+            // InternalTankWar.g:3015:2: ( RULE_INT )
             {
-            // InternalTankWar.g:3030:2: ( RULE_INT )
-            // InternalTankWar.g:3031:3: RULE_INT
+            // InternalTankWar.g:3015:2: ( RULE_INT )
+            // InternalTankWar.g:3016:3: RULE_INT
             {
              before(grammarAccess.getScreenSpecificationAccess().getScreenHeightINTTerminalRuleCall_8_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -8872,17 +8831,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Obstaclepecification__NameAssignment_1"
-    // InternalTankWar.g:3040:1: rule__Obstaclepecification__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalTankWar.g:3025:1: rule__Obstaclepecification__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Obstaclepecification__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:3044:1: ( ( RULE_ID ) )
-            // InternalTankWar.g:3045:2: ( RULE_ID )
+            // InternalTankWar.g:3029:1: ( ( RULE_ID ) )
+            // InternalTankWar.g:3030:2: ( RULE_ID )
             {
-            // InternalTankWar.g:3045:2: ( RULE_ID )
-            // InternalTankWar.g:3046:3: RULE_ID
+            // InternalTankWar.g:3030:2: ( RULE_ID )
+            // InternalTankWar.g:3031:3: RULE_ID
             {
              before(grammarAccess.getObstaclepecificationAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -8909,17 +8868,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Obstaclepecification__FieldsAssignment_3"
-    // InternalTankWar.g:3055:1: rule__Obstaclepecification__FieldsAssignment_3 : ( ruleObstacleMember ) ;
+    // InternalTankWar.g:3040:1: rule__Obstaclepecification__FieldsAssignment_3 : ( ruleObstacleMember ) ;
     public final void rule__Obstaclepecification__FieldsAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:3059:1: ( ( ruleObstacleMember ) )
-            // InternalTankWar.g:3060:2: ( ruleObstacleMember )
+            // InternalTankWar.g:3044:1: ( ( ruleObstacleMember ) )
+            // InternalTankWar.g:3045:2: ( ruleObstacleMember )
             {
-            // InternalTankWar.g:3060:2: ( ruleObstacleMember )
-            // InternalTankWar.g:3061:3: ruleObstacleMember
+            // InternalTankWar.g:3045:2: ( ruleObstacleMember )
+            // InternalTankWar.g:3046:3: ruleObstacleMember
             {
              before(grammarAccess.getObstaclepecificationAccess().getFieldsObstacleMemberParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -8950,17 +8909,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WaterObstacle__NameAssignment_1"
-    // InternalTankWar.g:3070:1: rule__WaterObstacle__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalTankWar.g:3055:1: rule__WaterObstacle__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__WaterObstacle__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:3074:1: ( ( RULE_ID ) )
-            // InternalTankWar.g:3075:2: ( RULE_ID )
+            // InternalTankWar.g:3059:1: ( ( RULE_ID ) )
+            // InternalTankWar.g:3060:2: ( RULE_ID )
             {
-            // InternalTankWar.g:3075:2: ( RULE_ID )
-            // InternalTankWar.g:3076:3: RULE_ID
+            // InternalTankWar.g:3060:2: ( RULE_ID )
+            // InternalTankWar.g:3061:3: RULE_ID
             {
              before(grammarAccess.getWaterObstacleAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -8987,17 +8946,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__NameAssignment_1"
-    // InternalTankWar.g:3085:1: rule__WallObstacle__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalTankWar.g:3070:1: rule__WallObstacle__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__WallObstacle__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:3089:1: ( ( RULE_ID ) )
-            // InternalTankWar.g:3090:2: ( RULE_ID )
+            // InternalTankWar.g:3074:1: ( ( RULE_ID ) )
+            // InternalTankWar.g:3075:2: ( RULE_ID )
             {
-            // InternalTankWar.g:3090:2: ( RULE_ID )
-            // InternalTankWar.g:3091:3: RULE_ID
+            // InternalTankWar.g:3075:2: ( RULE_ID )
+            // InternalTankWar.g:3076:3: RULE_ID
             {
              before(grammarAccess.getWallObstacleAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -9024,17 +8983,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__WallWidthAssignment_5"
-    // InternalTankWar.g:3100:1: rule__WallObstacle__WallWidthAssignment_5 : ( RULE_INT ) ;
+    // InternalTankWar.g:3085:1: rule__WallObstacle__WallWidthAssignment_5 : ( RULE_INT ) ;
     public final void rule__WallObstacle__WallWidthAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:3104:1: ( ( RULE_INT ) )
-            // InternalTankWar.g:3105:2: ( RULE_INT )
+            // InternalTankWar.g:3089:1: ( ( RULE_INT ) )
+            // InternalTankWar.g:3090:2: ( RULE_INT )
             {
-            // InternalTankWar.g:3105:2: ( RULE_INT )
-            // InternalTankWar.g:3106:3: RULE_INT
+            // InternalTankWar.g:3090:2: ( RULE_INT )
+            // InternalTankWar.g:3091:3: RULE_INT
             {
              before(grammarAccess.getWallObstacleAccess().getWallWidthINTTerminalRuleCall_5_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -9061,17 +9020,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__WallHeightAssignment_8"
-    // InternalTankWar.g:3115:1: rule__WallObstacle__WallHeightAssignment_8 : ( RULE_INT ) ;
+    // InternalTankWar.g:3100:1: rule__WallObstacle__WallHeightAssignment_8 : ( RULE_INT ) ;
     public final void rule__WallObstacle__WallHeightAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:3119:1: ( ( RULE_INT ) )
-            // InternalTankWar.g:3120:2: ( RULE_INT )
+            // InternalTankWar.g:3104:1: ( ( RULE_INT ) )
+            // InternalTankWar.g:3105:2: ( RULE_INT )
             {
-            // InternalTankWar.g:3120:2: ( RULE_INT )
-            // InternalTankWar.g:3121:3: RULE_INT
+            // InternalTankWar.g:3105:2: ( RULE_INT )
+            // InternalTankWar.g:3106:3: RULE_INT
             {
              before(grammarAccess.getWallObstacleAccess().getWallHeightINTTerminalRuleCall_8_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -9098,17 +9057,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__WallPosXAssignment_11"
-    // InternalTankWar.g:3130:1: rule__WallObstacle__WallPosXAssignment_11 : ( RULE_INT ) ;
+    // InternalTankWar.g:3115:1: rule__WallObstacle__WallPosXAssignment_11 : ( RULE_INT ) ;
     public final void rule__WallObstacle__WallPosXAssignment_11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:3134:1: ( ( RULE_INT ) )
-            // InternalTankWar.g:3135:2: ( RULE_INT )
+            // InternalTankWar.g:3119:1: ( ( RULE_INT ) )
+            // InternalTankWar.g:3120:2: ( RULE_INT )
             {
-            // InternalTankWar.g:3135:2: ( RULE_INT )
-            // InternalTankWar.g:3136:3: RULE_INT
+            // InternalTankWar.g:3120:2: ( RULE_INT )
+            // InternalTankWar.g:3121:3: RULE_INT
             {
              before(grammarAccess.getWallObstacleAccess().getWallPosXINTTerminalRuleCall_11_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -9135,17 +9094,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__WallObstacle__WallPosYAssignment_14"
-    // InternalTankWar.g:3145:1: rule__WallObstacle__WallPosYAssignment_14 : ( RULE_INT ) ;
+    // InternalTankWar.g:3130:1: rule__WallObstacle__WallPosYAssignment_14 : ( RULE_INT ) ;
     public final void rule__WallObstacle__WallPosYAssignment_14() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:3149:1: ( ( RULE_INT ) )
-            // InternalTankWar.g:3150:2: ( RULE_INT )
+            // InternalTankWar.g:3134:1: ( ( RULE_INT ) )
+            // InternalTankWar.g:3135:2: ( RULE_INT )
             {
-            // InternalTankWar.g:3150:2: ( RULE_INT )
-            // InternalTankWar.g:3151:3: RULE_INT
+            // InternalTankWar.g:3135:2: ( RULE_INT )
+            // InternalTankWar.g:3136:3: RULE_INT
             {
              before(grammarAccess.getWallObstacleAccess().getWallPosYINTTerminalRuleCall_14_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -9172,17 +9131,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FieldSpecification__NameAssignment_1"
-    // InternalTankWar.g:3160:1: rule__FieldSpecification__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalTankWar.g:3145:1: rule__FieldSpecification__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__FieldSpecification__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:3164:1: ( ( RULE_ID ) )
-            // InternalTankWar.g:3165:2: ( RULE_ID )
+            // InternalTankWar.g:3149:1: ( ( RULE_ID ) )
+            // InternalTankWar.g:3150:2: ( RULE_ID )
             {
-            // InternalTankWar.g:3165:2: ( RULE_ID )
-            // InternalTankWar.g:3166:3: RULE_ID
+            // InternalTankWar.g:3150:2: ( RULE_ID )
+            // InternalTankWar.g:3151:3: RULE_ID
             {
              before(grammarAccess.getFieldSpecificationAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -9209,17 +9168,17 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FieldSpecification__EnemyCountAssignment_5"
-    // InternalTankWar.g:3175:1: rule__FieldSpecification__EnemyCountAssignment_5 : ( RULE_INT ) ;
+    // InternalTankWar.g:3160:1: rule__FieldSpecification__EnemyCountAssignment_5 : ( RULE_INT ) ;
     public final void rule__FieldSpecification__EnemyCountAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTankWar.g:3179:1: ( ( RULE_INT ) )
-            // InternalTankWar.g:3180:2: ( RULE_INT )
+            // InternalTankWar.g:3164:1: ( ( RULE_INT ) )
+            // InternalTankWar.g:3165:2: ( RULE_INT )
             {
-            // InternalTankWar.g:3180:2: ( RULE_INT )
-            // InternalTankWar.g:3181:3: RULE_INT
+            // InternalTankWar.g:3165:2: ( RULE_INT )
+            // InternalTankWar.g:3166:3: RULE_INT
             {
              before(grammarAccess.getFieldSpecificationAccess().getEnemyCountINTTerminalRuleCall_5_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -9243,6 +9202,47 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
         return ;
     }
     // $ANTLR end "rule__FieldSpecification__EnemyCountAssignment_5"
+
+
+    // $ANTLR start "rule__FieldSpecification__ObstacleAssignment_6"
+    // InternalTankWar.g:3175:1: rule__FieldSpecification__ObstacleAssignment_6 : ( ruleObstaclepecification ) ;
+    public final void rule__FieldSpecification__ObstacleAssignment_6() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTankWar.g:3179:1: ( ( ruleObstaclepecification ) )
+            // InternalTankWar.g:3180:2: ( ruleObstaclepecification )
+            {
+            // InternalTankWar.g:3180:2: ( ruleObstaclepecification )
+            // InternalTankWar.g:3181:3: ruleObstaclepecification
+            {
+             before(grammarAccess.getFieldSpecificationAccess().getObstacleObstaclepecificationParserRuleCall_6_0()); 
+            pushFollow(FOLLOW_2);
+            ruleObstaclepecification();
+
+            state._fsp--;
+
+             after(grammarAccess.getFieldSpecificationAccess().getObstacleObstaclepecificationParserRuleCall_6_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__FieldSpecification__ObstacleAssignment_6"
 
 
     // $ANTLR start "rule__LocalFieldInitialisations__InitialisationsAssignment_2_0"
@@ -9340,27 +9340,27 @@ public class InternalTankWarParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000002000L});
     public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x00000E0000008000L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000040000002L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x00000E0000008002L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000003004000L});
-    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000003000002L});
-    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x00000E0000008000L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000040000002L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x00000E0000008002L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000003004000L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000003000002L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000000800000L});
     public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x000000A400000000L});
     public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x000000A400000002L});
     public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000200000000L});

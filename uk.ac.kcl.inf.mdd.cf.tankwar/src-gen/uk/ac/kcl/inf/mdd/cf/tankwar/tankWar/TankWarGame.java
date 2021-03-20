@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarGame#getName <em>Name</em>}</li>
  *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarGame#getScreen <em>Screen</em>}</li>
- *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarGame#getObstacle <em>Obstacle</em>}</li>
  *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarGame#getFields <em>Fields</em>}</li>
  *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarGame#getOptions <em>Options</em>}</li>
  * </ul>
@@ -72,28 +71,6 @@ public interface TankWarGame extends EObject
    * @generated
    */
   void setScreen(ScreenSpecification value);
-
-  /**
-   * Returns the value of the '<em><b>Obstacle</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Obstacle</em>' containment reference.
-   * @see #setObstacle(Obstaclepecification)
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarPackage#getTankWarGame_Obstacle()
-   * @model containment="true"
-   * @generated
-   */
-  Obstaclepecification getObstacle();
-
-  /**
-   * Sets the value of the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarGame#getObstacle <em>Obstacle</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Obstacle</em>' containment reference.
-   * @see #getObstacle()
-   * @generated
-   */
-  void setObstacle(Obstaclepecification value);
 
   /**
    * Returns the value of the '<em><b>Fields</b></em>' containment reference list.

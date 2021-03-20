@@ -275,7 +275,7 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
    * @generated
    */
   @Override
-  public EReference getTankWarGame_Obstacle()
+  public EReference getTankWarGame_Fields()
   {
     return (EReference)tankWarGameEClass.getEStructuralFeatures().get(2);
   }
@@ -286,20 +286,9 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
    * @generated
    */
   @Override
-  public EReference getTankWarGame_Fields()
-  {
-    return (EReference)tankWarGameEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public EReference getTankWarGame_Options()
   {
-    return (EReference)tankWarGameEClass.getEStructuralFeatures().get(4);
+    return (EReference)tankWarGameEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -605,6 +594,17 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
    * @generated
    */
   @Override
+  public EReference getFieldSpecification_Obstacle()
+  {
+    return (EReference)fieldSpecificationEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EClass getFieldInitialisations()
   {
     return fieldInitialisationsEClass;
@@ -732,7 +732,6 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
     tankWarGameEClass = createEClass(TANK_WAR_GAME);
     createEAttribute(tankWarGameEClass, TANK_WAR_GAME__NAME);
     createEReference(tankWarGameEClass, TANK_WAR_GAME__SCREEN);
-    createEReference(tankWarGameEClass, TANK_WAR_GAME__OBSTACLE);
     createEReference(tankWarGameEClass, TANK_WAR_GAME__FIELDS);
     createEReference(tankWarGameEClass, TANK_WAR_GAME__OPTIONS);
 
@@ -773,6 +772,7 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
     fieldSpecificationEClass = createEClass(FIELD_SPECIFICATION);
     createEAttribute(fieldSpecificationEClass, FIELD_SPECIFICATION__NAME);
     createEAttribute(fieldSpecificationEClass, FIELD_SPECIFICATION__ENEMY_COUNT);
+    createEReference(fieldSpecificationEClass, FIELD_SPECIFICATION__OBSTACLE);
 
     fieldInitialisationsEClass = createEClass(FIELD_INITIALISATIONS);
 
@@ -837,7 +837,6 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
     initEClass(tankWarGameEClass, TankWarGame.class, "TankWarGame", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getTankWarGame_Name(), ecorePackage.getEString(), "name", null, 0, 1, TankWarGame.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTankWarGame_Screen(), this.getScreenSpecification(), null, "screen", null, 0, 1, TankWarGame.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTankWarGame_Obstacle(), this.getObstaclepecification(), null, "obstacle", null, 0, 1, TankWarGame.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTankWarGame_Fields(), this.getFieldSpecification(), null, "fields", null, 0, -1, TankWarGame.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTankWarGame_Options(), this.getOptionSpecification(), null, "options", null, 0, -1, TankWarGame.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -878,6 +877,7 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
     initEClass(fieldSpecificationEClass, FieldSpecification.class, "FieldSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getFieldSpecification_Name(), ecorePackage.getEString(), "name", null, 0, 1, FieldSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getFieldSpecification_EnemyCount(), ecorePackage.getEInt(), "enemyCount", null, 0, 1, FieldSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFieldSpecification_Obstacle(), this.getObstaclepecification(), null, "obstacle", null, 0, 1, FieldSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(fieldInitialisationsEClass, FieldInitialisations.class, "FieldInitialisations", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

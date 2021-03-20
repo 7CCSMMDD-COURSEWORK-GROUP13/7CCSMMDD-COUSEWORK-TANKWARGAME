@@ -802,9 +802,16 @@ rule__TankWarGame__Group__4__Impl
 	}
 :
 (
-	{ before(grammarAccess.getTankWarGameAccess().getObstacleAssignment_4()); }
-	(rule__TankWarGame__ObstacleAssignment_4)
-	{ after(grammarAccess.getTankWarGameAccess().getObstacleAssignment_4()); }
+	(
+		{ before(grammarAccess.getTankWarGameAccess().getFieldsAssignment_4()); }
+		(rule__TankWarGame__FieldsAssignment_4)
+		{ after(grammarAccess.getTankWarGameAccess().getFieldsAssignment_4()); }
+	)
+	(
+		{ before(grammarAccess.getTankWarGameAccess().getFieldsAssignment_4()); }
+		(rule__TankWarGame__FieldsAssignment_4)*
+		{ after(grammarAccess.getTankWarGameAccess().getFieldsAssignment_4()); }
+	)
 )
 ;
 finally {
@@ -830,14 +837,14 @@ rule__TankWarGame__Group__5__Impl
 :
 (
 	(
-		{ before(grammarAccess.getTankWarGameAccess().getFieldsAssignment_5()); }
-		(rule__TankWarGame__FieldsAssignment_5)
-		{ after(grammarAccess.getTankWarGameAccess().getFieldsAssignment_5()); }
+		{ before(grammarAccess.getTankWarGameAccess().getOptionsAssignment_5()); }
+		(rule__TankWarGame__OptionsAssignment_5)
+		{ after(grammarAccess.getTankWarGameAccess().getOptionsAssignment_5()); }
 	)
 	(
-		{ before(grammarAccess.getTankWarGameAccess().getFieldsAssignment_5()); }
-		(rule__TankWarGame__FieldsAssignment_5)*
-		{ after(grammarAccess.getTankWarGameAccess().getFieldsAssignment_5()); }
+		{ before(grammarAccess.getTankWarGameAccess().getOptionsAssignment_5()); }
+		(rule__TankWarGame__OptionsAssignment_5)*
+		{ after(grammarAccess.getTankWarGameAccess().getOptionsAssignment_5()); }
 	)
 )
 ;
@@ -851,7 +858,6 @@ rule__TankWarGame__Group__6
 	}
 :
 	rule__TankWarGame__Group__6__Impl
-	rule__TankWarGame__Group__7
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -863,42 +869,9 @@ rule__TankWarGame__Group__6__Impl
 	}
 :
 (
-	(
-		{ before(grammarAccess.getTankWarGameAccess().getOptionsAssignment_6()); }
-		(rule__TankWarGame__OptionsAssignment_6)
-		{ after(grammarAccess.getTankWarGameAccess().getOptionsAssignment_6()); }
-	)
-	(
-		{ before(grammarAccess.getTankWarGameAccess().getOptionsAssignment_6()); }
-		(rule__TankWarGame__OptionsAssignment_6)*
-		{ after(grammarAccess.getTankWarGameAccess().getOptionsAssignment_6()); }
-	)
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__TankWarGame__Group__7
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__TankWarGame__Group__7__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__TankWarGame__Group__7__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getTankWarGameAccess().getRightCurlyBracketKeyword_7()); }
+	{ before(grammarAccess.getTankWarGameAccess().getRightCurlyBracketKeyword_6()); }
 	'}'
-	{ after(grammarAccess.getTankWarGameAccess().getRightCurlyBracketKeyword_7()); }
+	{ after(grammarAccess.getTankWarGameAccess().getRightCurlyBracketKeyword_6()); }
 )
 ;
 finally {
@@ -2235,6 +2208,7 @@ rule__FieldSpecification__Group__6
 	}
 :
 	rule__FieldSpecification__Group__6__Impl
+	rule__FieldSpecification__Group__7
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -2246,9 +2220,35 @@ rule__FieldSpecification__Group__6__Impl
 	}
 :
 (
-	{ before(grammarAccess.getFieldSpecificationAccess().getRightCurlyBracketKeyword_6()); }
+	{ before(grammarAccess.getFieldSpecificationAccess().getObstacleAssignment_6()); }
+	(rule__FieldSpecification__ObstacleAssignment_6)
+	{ after(grammarAccess.getFieldSpecificationAccess().getObstacleAssignment_6()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__FieldSpecification__Group__7
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__FieldSpecification__Group__7__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__FieldSpecification__Group__7__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getFieldSpecificationAccess().getRightCurlyBracketKeyword_7()); }
 	'}'
-	{ after(grammarAccess.getFieldSpecificationAccess().getRightCurlyBracketKeyword_6()); }
+	{ after(grammarAccess.getFieldSpecificationAccess().getRightCurlyBracketKeyword_7()); }
 )
 ;
 finally {
@@ -2887,45 +2887,30 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__TankWarGame__ObstacleAssignment_4
+rule__TankWarGame__FieldsAssignment_4
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getTankWarGameAccess().getObstacleObstaclepecificationParserRuleCall_4_0()); }
-		ruleObstaclepecification
-		{ after(grammarAccess.getTankWarGameAccess().getObstacleObstaclepecificationParserRuleCall_4_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__TankWarGame__FieldsAssignment_5
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getTankWarGameAccess().getFieldsFieldSpecificationParserRuleCall_5_0()); }
+		{ before(grammarAccess.getTankWarGameAccess().getFieldsFieldSpecificationParserRuleCall_4_0()); }
 		ruleFieldSpecification
-		{ after(grammarAccess.getTankWarGameAccess().getFieldsFieldSpecificationParserRuleCall_5_0()); }
+		{ after(grammarAccess.getTankWarGameAccess().getFieldsFieldSpecificationParserRuleCall_4_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__TankWarGame__OptionsAssignment_6
+rule__TankWarGame__OptionsAssignment_5
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getTankWarGameAccess().getOptionsOptionSpecificationParserRuleCall_6_0()); }
+		{ before(grammarAccess.getTankWarGameAccess().getOptionsOptionSpecificationParserRuleCall_5_0()); }
 		ruleOptionSpecification
-		{ after(grammarAccess.getTankWarGameAccess().getOptionsOptionSpecificationParserRuleCall_6_0()); }
+		{ after(grammarAccess.getTankWarGameAccess().getOptionsOptionSpecificationParserRuleCall_5_0()); }
 	)
 ;
 finally {
@@ -3181,6 +3166,21 @@ rule__FieldSpecification__EnemyCountAssignment_5
 		{ before(grammarAccess.getFieldSpecificationAccess().getEnemyCountINTTerminalRuleCall_5_0()); }
 		RULE_INT
 		{ after(grammarAccess.getFieldSpecificationAccess().getEnemyCountINTTerminalRuleCall_5_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__FieldSpecification__ObstacleAssignment_6
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getFieldSpecificationAccess().getObstacleObstaclepecificationParserRuleCall_6_0()); }
+		ruleObstaclepecification
+		{ after(grammarAccess.getFieldSpecificationAccess().getObstacleObstaclepecificationParserRuleCall_6_0()); }
 	)
 ;
 finally {

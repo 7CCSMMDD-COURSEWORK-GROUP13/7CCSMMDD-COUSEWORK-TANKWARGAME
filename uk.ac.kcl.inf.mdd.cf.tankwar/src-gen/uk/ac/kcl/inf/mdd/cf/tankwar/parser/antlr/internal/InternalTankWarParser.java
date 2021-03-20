@@ -141,32 +141,30 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTankWarGame"
-    // InternalTankWar.g:71:1: ruleTankWarGame returns [EObject current=null] : (otherlv_0= 'game' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_screen_3_0= ruleScreenSpecification ) ) ( (lv_obstacle_4_0= ruleObstaclepecification ) ) ( (lv_fields_5_0= ruleFieldSpecification ) )+ ( (lv_options_6_0= ruleOptionSpecification ) )+ otherlv_7= '}' ) ;
+    // InternalTankWar.g:71:1: ruleTankWarGame returns [EObject current=null] : (otherlv_0= 'game' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_screen_3_0= ruleScreenSpecification ) ) ( (lv_fields_4_0= ruleFieldSpecification ) )+ ( (lv_options_5_0= ruleOptionSpecification ) )+ otherlv_6= '}' ) ;
     public final EObject ruleTankWarGame() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token lv_name_1_0=null;
         Token otherlv_2=null;
-        Token otherlv_7=null;
+        Token otherlv_6=null;
         EObject lv_screen_3_0 = null;
 
-        EObject lv_obstacle_4_0 = null;
+        EObject lv_fields_4_0 = null;
 
-        EObject lv_fields_5_0 = null;
-
-        EObject lv_options_6_0 = null;
+        EObject lv_options_5_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalTankWar.g:77:2: ( (otherlv_0= 'game' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_screen_3_0= ruleScreenSpecification ) ) ( (lv_obstacle_4_0= ruleObstaclepecification ) ) ( (lv_fields_5_0= ruleFieldSpecification ) )+ ( (lv_options_6_0= ruleOptionSpecification ) )+ otherlv_7= '}' ) )
-            // InternalTankWar.g:78:2: (otherlv_0= 'game' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_screen_3_0= ruleScreenSpecification ) ) ( (lv_obstacle_4_0= ruleObstaclepecification ) ) ( (lv_fields_5_0= ruleFieldSpecification ) )+ ( (lv_options_6_0= ruleOptionSpecification ) )+ otherlv_7= '}' )
+            // InternalTankWar.g:77:2: ( (otherlv_0= 'game' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_screen_3_0= ruleScreenSpecification ) ) ( (lv_fields_4_0= ruleFieldSpecification ) )+ ( (lv_options_5_0= ruleOptionSpecification ) )+ otherlv_6= '}' ) )
+            // InternalTankWar.g:78:2: (otherlv_0= 'game' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_screen_3_0= ruleScreenSpecification ) ) ( (lv_fields_4_0= ruleFieldSpecification ) )+ ( (lv_options_5_0= ruleOptionSpecification ) )+ otherlv_6= '}' )
             {
-            // InternalTankWar.g:78:2: (otherlv_0= 'game' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_screen_3_0= ruleScreenSpecification ) ) ( (lv_obstacle_4_0= ruleObstaclepecification ) ) ( (lv_fields_5_0= ruleFieldSpecification ) )+ ( (lv_options_6_0= ruleOptionSpecification ) )+ otherlv_7= '}' )
-            // InternalTankWar.g:79:3: otherlv_0= 'game' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_screen_3_0= ruleScreenSpecification ) ) ( (lv_obstacle_4_0= ruleObstaclepecification ) ) ( (lv_fields_5_0= ruleFieldSpecification ) )+ ( (lv_options_6_0= ruleOptionSpecification ) )+ otherlv_7= '}'
+            // InternalTankWar.g:78:2: (otherlv_0= 'game' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_screen_3_0= ruleScreenSpecification ) ) ( (lv_fields_4_0= ruleFieldSpecification ) )+ ( (lv_options_5_0= ruleOptionSpecification ) )+ otherlv_6= '}' )
+            // InternalTankWar.g:79:3: otherlv_0= 'game' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_screen_3_0= ruleScreenSpecification ) ) ( (lv_fields_4_0= ruleFieldSpecification ) )+ ( (lv_options_5_0= ruleOptionSpecification ) )+ otherlv_6= '}'
             {
             otherlv_0=(Token)match(input,11,FOLLOW_3); 
 
@@ -233,38 +231,7 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalTankWar.g:124:3: ( (lv_obstacle_4_0= ruleObstaclepecification ) )
-            // InternalTankWar.g:125:4: (lv_obstacle_4_0= ruleObstaclepecification )
-            {
-            // InternalTankWar.g:125:4: (lv_obstacle_4_0= ruleObstaclepecification )
-            // InternalTankWar.g:126:5: lv_obstacle_4_0= ruleObstaclepecification
-            {
-
-            					newCompositeNode(grammarAccess.getTankWarGameAccess().getObstacleObstaclepecificationParserRuleCall_4_0());
-            				
-            pushFollow(FOLLOW_7);
-            lv_obstacle_4_0=ruleObstaclepecification();
-
-            state._fsp--;
-
-
-            					if (current==null) {
-            						current = createModelElementForParent(grammarAccess.getTankWarGameRule());
-            					}
-            					set(
-            						current,
-            						"obstacle",
-            						lv_obstacle_4_0,
-            						"uk.ac.kcl.inf.mdd.cf.tankwar.TankWar.Obstaclepecification");
-            					afterParserOrEnumRuleCall();
-            				
-
-            }
-
-
-            }
-
-            // InternalTankWar.g:143:3: ( (lv_fields_5_0= ruleFieldSpecification ) )+
+            // InternalTankWar.g:124:3: ( (lv_fields_4_0= ruleFieldSpecification ) )+
             int cnt1=0;
             loop1:
             do {
@@ -278,16 +245,16 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
                 switch (alt1) {
             	case 1 :
-            	    // InternalTankWar.g:144:4: (lv_fields_5_0= ruleFieldSpecification )
+            	    // InternalTankWar.g:125:4: (lv_fields_4_0= ruleFieldSpecification )
             	    {
-            	    // InternalTankWar.g:144:4: (lv_fields_5_0= ruleFieldSpecification )
-            	    // InternalTankWar.g:145:5: lv_fields_5_0= ruleFieldSpecification
+            	    // InternalTankWar.g:125:4: (lv_fields_4_0= ruleFieldSpecification )
+            	    // InternalTankWar.g:126:5: lv_fields_4_0= ruleFieldSpecification
             	    {
 
-            	    					newCompositeNode(grammarAccess.getTankWarGameAccess().getFieldsFieldSpecificationParserRuleCall_5_0());
+            	    					newCompositeNode(grammarAccess.getTankWarGameAccess().getFieldsFieldSpecificationParserRuleCall_4_0());
             	    				
-            	    pushFollow(FOLLOW_8);
-            	    lv_fields_5_0=ruleFieldSpecification();
+            	    pushFollow(FOLLOW_7);
+            	    lv_fields_4_0=ruleFieldSpecification();
 
             	    state._fsp--;
 
@@ -298,7 +265,7 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
             	    					add(
             	    						current,
             	    						"fields",
-            	    						lv_fields_5_0,
+            	    						lv_fields_4_0,
             	    						"uk.ac.kcl.inf.mdd.cf.tankwar.TankWar.FieldSpecification");
             	    					afterParserOrEnumRuleCall();
             	    				
@@ -318,7 +285,7 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
                 cnt1++;
             } while (true);
 
-            // InternalTankWar.g:162:3: ( (lv_options_6_0= ruleOptionSpecification ) )+
+            // InternalTankWar.g:143:3: ( (lv_options_5_0= ruleOptionSpecification ) )+
             int cnt2=0;
             loop2:
             do {
@@ -332,16 +299,16 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
                 switch (alt2) {
             	case 1 :
-            	    // InternalTankWar.g:163:4: (lv_options_6_0= ruleOptionSpecification )
+            	    // InternalTankWar.g:144:4: (lv_options_5_0= ruleOptionSpecification )
             	    {
-            	    // InternalTankWar.g:163:4: (lv_options_6_0= ruleOptionSpecification )
-            	    // InternalTankWar.g:164:5: lv_options_6_0= ruleOptionSpecification
+            	    // InternalTankWar.g:144:4: (lv_options_5_0= ruleOptionSpecification )
+            	    // InternalTankWar.g:145:5: lv_options_5_0= ruleOptionSpecification
             	    {
 
-            	    					newCompositeNode(grammarAccess.getTankWarGameAccess().getOptionsOptionSpecificationParserRuleCall_6_0());
+            	    					newCompositeNode(grammarAccess.getTankWarGameAccess().getOptionsOptionSpecificationParserRuleCall_5_0());
             	    				
-            	    pushFollow(FOLLOW_9);
-            	    lv_options_6_0=ruleOptionSpecification();
+            	    pushFollow(FOLLOW_8);
+            	    lv_options_5_0=ruleOptionSpecification();
 
             	    state._fsp--;
 
@@ -352,7 +319,7 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
             	    					add(
             	    						current,
             	    						"options",
-            	    						lv_options_6_0,
+            	    						lv_options_5_0,
             	    						"uk.ac.kcl.inf.mdd.cf.tankwar.TankWar.OptionSpecification");
             	    					afterParserOrEnumRuleCall();
             	    				
@@ -372,9 +339,9 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
                 cnt2++;
             } while (true);
 
-            otherlv_7=(Token)match(input,13,FOLLOW_2); 
+            otherlv_6=(Token)match(input,13,FOLLOW_2); 
 
-            			newLeafNode(otherlv_7, grammarAccess.getTankWarGameAccess().getRightCurlyBracketKeyword_7());
+            			newLeafNode(otherlv_6, grammarAccess.getTankWarGameAccess().getRightCurlyBracketKeyword_6());
             		
 
             }
@@ -399,7 +366,7 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDirectBehaviour"
-    // InternalTankWar.g:189:1: entryRuleDirectBehaviour returns [EObject current=null] : iv_ruleDirectBehaviour= ruleDirectBehaviour EOF ;
+    // InternalTankWar.g:170:1: entryRuleDirectBehaviour returns [EObject current=null] : iv_ruleDirectBehaviour= ruleDirectBehaviour EOF ;
     public final EObject entryRuleDirectBehaviour() throws RecognitionException {
         EObject current = null;
 
@@ -407,8 +374,8 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalTankWar.g:189:56: (iv_ruleDirectBehaviour= ruleDirectBehaviour EOF )
-            // InternalTankWar.g:190:2: iv_ruleDirectBehaviour= ruleDirectBehaviour EOF
+            // InternalTankWar.g:170:56: (iv_ruleDirectBehaviour= ruleDirectBehaviour EOF )
+            // InternalTankWar.g:171:2: iv_ruleDirectBehaviour= ruleDirectBehaviour EOF
             {
              newCompositeNode(grammarAccess.getDirectBehaviourRule()); 
             pushFollow(FOLLOW_1);
@@ -435,7 +402,7 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDirectBehaviour"
-    // InternalTankWar.g:196:1: ruleDirectBehaviour returns [EObject current=null] : (this_EndGameBehaviour_0= ruleEndGameBehaviour | ( ruleNoOpBehaviour () ) ) ;
+    // InternalTankWar.g:177:1: ruleDirectBehaviour returns [EObject current=null] : (this_EndGameBehaviour_0= ruleEndGameBehaviour | ( ruleNoOpBehaviour () ) ) ;
     public final EObject ruleDirectBehaviour() throws RecognitionException {
         EObject current = null;
 
@@ -446,10 +413,10 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTankWar.g:202:2: ( (this_EndGameBehaviour_0= ruleEndGameBehaviour | ( ruleNoOpBehaviour () ) ) )
-            // InternalTankWar.g:203:2: (this_EndGameBehaviour_0= ruleEndGameBehaviour | ( ruleNoOpBehaviour () ) )
+            // InternalTankWar.g:183:2: ( (this_EndGameBehaviour_0= ruleEndGameBehaviour | ( ruleNoOpBehaviour () ) ) )
+            // InternalTankWar.g:184:2: (this_EndGameBehaviour_0= ruleEndGameBehaviour | ( ruleNoOpBehaviour () ) )
             {
-            // InternalTankWar.g:203:2: (this_EndGameBehaviour_0= ruleEndGameBehaviour | ( ruleNoOpBehaviour () ) )
+            // InternalTankWar.g:184:2: (this_EndGameBehaviour_0= ruleEndGameBehaviour | ( ruleNoOpBehaviour () ) )
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -467,7 +434,7 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
             }
             switch (alt3) {
                 case 1 :
-                    // InternalTankWar.g:204:3: this_EndGameBehaviour_0= ruleEndGameBehaviour
+                    // InternalTankWar.g:185:3: this_EndGameBehaviour_0= ruleEndGameBehaviour
                     {
 
                     			newCompositeNode(grammarAccess.getDirectBehaviourAccess().getEndGameBehaviourParserRuleCall_0());
@@ -485,10 +452,10 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalTankWar.g:213:3: ( ruleNoOpBehaviour () )
+                    // InternalTankWar.g:194:3: ( ruleNoOpBehaviour () )
                     {
-                    // InternalTankWar.g:213:3: ( ruleNoOpBehaviour () )
-                    // InternalTankWar.g:214:4: ruleNoOpBehaviour ()
+                    // InternalTankWar.g:194:3: ( ruleNoOpBehaviour () )
+                    // InternalTankWar.g:195:4: ruleNoOpBehaviour ()
                     {
 
                     				newCompositeNode(grammarAccess.getDirectBehaviourAccess().getNoOpBehaviourParserRuleCall_1_0());
@@ -501,8 +468,8 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
                     				afterParserOrEnumRuleCall();
                     			
-                    // InternalTankWar.g:221:4: ()
-                    // InternalTankWar.g:222:5: 
+                    // InternalTankWar.g:202:4: ()
+                    // InternalTankWar.g:203:5: 
                     {
 
                     					current = forceCreateModelElement(
@@ -541,7 +508,7 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEndGameBehaviour"
-    // InternalTankWar.g:233:1: entryRuleEndGameBehaviour returns [EObject current=null] : iv_ruleEndGameBehaviour= ruleEndGameBehaviour EOF ;
+    // InternalTankWar.g:214:1: entryRuleEndGameBehaviour returns [EObject current=null] : iv_ruleEndGameBehaviour= ruleEndGameBehaviour EOF ;
     public final EObject entryRuleEndGameBehaviour() throws RecognitionException {
         EObject current = null;
 
@@ -549,8 +516,8 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalTankWar.g:233:57: (iv_ruleEndGameBehaviour= ruleEndGameBehaviour EOF )
-            // InternalTankWar.g:234:2: iv_ruleEndGameBehaviour= ruleEndGameBehaviour EOF
+            // InternalTankWar.g:214:57: (iv_ruleEndGameBehaviour= ruleEndGameBehaviour EOF )
+            // InternalTankWar.g:215:2: iv_ruleEndGameBehaviour= ruleEndGameBehaviour EOF
             {
              newCompositeNode(grammarAccess.getEndGameBehaviourRule()); 
             pushFollow(FOLLOW_1);
@@ -577,7 +544,7 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEndGameBehaviour"
-    // InternalTankWar.g:240:1: ruleEndGameBehaviour returns [EObject current=null] : (otherlv_0= 'end-game' otherlv_1= '(' ( (lv_win_2_0= RULE_STRING ) ) otherlv_3= ',' ( (lv_lost_4_0= RULE_STRING ) ) otherlv_5= ')' ) ;
+    // InternalTankWar.g:221:1: ruleEndGameBehaviour returns [EObject current=null] : (otherlv_0= 'end-game' otherlv_1= '(' ( (lv_win_2_0= RULE_STRING ) ) otherlv_3= ',' ( (lv_lost_4_0= RULE_STRING ) ) otherlv_5= ')' ) ;
     public final EObject ruleEndGameBehaviour() throws RecognitionException {
         EObject current = null;
 
@@ -592,27 +559,27 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTankWar.g:246:2: ( (otherlv_0= 'end-game' otherlv_1= '(' ( (lv_win_2_0= RULE_STRING ) ) otherlv_3= ',' ( (lv_lost_4_0= RULE_STRING ) ) otherlv_5= ')' ) )
-            // InternalTankWar.g:247:2: (otherlv_0= 'end-game' otherlv_1= '(' ( (lv_win_2_0= RULE_STRING ) ) otherlv_3= ',' ( (lv_lost_4_0= RULE_STRING ) ) otherlv_5= ')' )
+            // InternalTankWar.g:227:2: ( (otherlv_0= 'end-game' otherlv_1= '(' ( (lv_win_2_0= RULE_STRING ) ) otherlv_3= ',' ( (lv_lost_4_0= RULE_STRING ) ) otherlv_5= ')' ) )
+            // InternalTankWar.g:228:2: (otherlv_0= 'end-game' otherlv_1= '(' ( (lv_win_2_0= RULE_STRING ) ) otherlv_3= ',' ( (lv_lost_4_0= RULE_STRING ) ) otherlv_5= ')' )
             {
-            // InternalTankWar.g:247:2: (otherlv_0= 'end-game' otherlv_1= '(' ( (lv_win_2_0= RULE_STRING ) ) otherlv_3= ',' ( (lv_lost_4_0= RULE_STRING ) ) otherlv_5= ')' )
-            // InternalTankWar.g:248:3: otherlv_0= 'end-game' otherlv_1= '(' ( (lv_win_2_0= RULE_STRING ) ) otherlv_3= ',' ( (lv_lost_4_0= RULE_STRING ) ) otherlv_5= ')'
+            // InternalTankWar.g:228:2: (otherlv_0= 'end-game' otherlv_1= '(' ( (lv_win_2_0= RULE_STRING ) ) otherlv_3= ',' ( (lv_lost_4_0= RULE_STRING ) ) otherlv_5= ')' )
+            // InternalTankWar.g:229:3: otherlv_0= 'end-game' otherlv_1= '(' ( (lv_win_2_0= RULE_STRING ) ) otherlv_3= ',' ( (lv_lost_4_0= RULE_STRING ) ) otherlv_5= ')'
             {
-            otherlv_0=(Token)match(input,14,FOLLOW_10); 
+            otherlv_0=(Token)match(input,14,FOLLOW_9); 
 
             			newLeafNode(otherlv_0, grammarAccess.getEndGameBehaviourAccess().getEndGameKeyword_0());
             		
-            otherlv_1=(Token)match(input,15,FOLLOW_11); 
+            otherlv_1=(Token)match(input,15,FOLLOW_10); 
 
             			newLeafNode(otherlv_1, grammarAccess.getEndGameBehaviourAccess().getLeftParenthesisKeyword_1());
             		
-            // InternalTankWar.g:256:3: ( (lv_win_2_0= RULE_STRING ) )
-            // InternalTankWar.g:257:4: (lv_win_2_0= RULE_STRING )
+            // InternalTankWar.g:237:3: ( (lv_win_2_0= RULE_STRING ) )
+            // InternalTankWar.g:238:4: (lv_win_2_0= RULE_STRING )
             {
-            // InternalTankWar.g:257:4: (lv_win_2_0= RULE_STRING )
-            // InternalTankWar.g:258:5: lv_win_2_0= RULE_STRING
+            // InternalTankWar.g:238:4: (lv_win_2_0= RULE_STRING )
+            // InternalTankWar.g:239:5: lv_win_2_0= RULE_STRING
             {
-            lv_win_2_0=(Token)match(input,RULE_STRING,FOLLOW_12); 
+            lv_win_2_0=(Token)match(input,RULE_STRING,FOLLOW_11); 
 
             					newLeafNode(lv_win_2_0, grammarAccess.getEndGameBehaviourAccess().getWinSTRINGTerminalRuleCall_2_0());
             				
@@ -632,17 +599,17 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,16,FOLLOW_11); 
+            otherlv_3=(Token)match(input,16,FOLLOW_10); 
 
             			newLeafNode(otherlv_3, grammarAccess.getEndGameBehaviourAccess().getCommaKeyword_3());
             		
-            // InternalTankWar.g:278:3: ( (lv_lost_4_0= RULE_STRING ) )
-            // InternalTankWar.g:279:4: (lv_lost_4_0= RULE_STRING )
+            // InternalTankWar.g:259:3: ( (lv_lost_4_0= RULE_STRING ) )
+            // InternalTankWar.g:260:4: (lv_lost_4_0= RULE_STRING )
             {
-            // InternalTankWar.g:279:4: (lv_lost_4_0= RULE_STRING )
-            // InternalTankWar.g:280:5: lv_lost_4_0= RULE_STRING
+            // InternalTankWar.g:260:4: (lv_lost_4_0= RULE_STRING )
+            // InternalTankWar.g:261:5: lv_lost_4_0= RULE_STRING
             {
-            lv_lost_4_0=(Token)match(input,RULE_STRING,FOLLOW_13); 
+            lv_lost_4_0=(Token)match(input,RULE_STRING,FOLLOW_12); 
 
             					newLeafNode(lv_lost_4_0, grammarAccess.getEndGameBehaviourAccess().getLostSTRINGTerminalRuleCall_4_0());
             				
@@ -689,7 +656,7 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNoOpBehaviour"
-    // InternalTankWar.g:304:1: entryRuleNoOpBehaviour returns [String current=null] : iv_ruleNoOpBehaviour= ruleNoOpBehaviour EOF ;
+    // InternalTankWar.g:285:1: entryRuleNoOpBehaviour returns [String current=null] : iv_ruleNoOpBehaviour= ruleNoOpBehaviour EOF ;
     public final String entryRuleNoOpBehaviour() throws RecognitionException {
         String current = null;
 
@@ -697,8 +664,8 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalTankWar.g:304:53: (iv_ruleNoOpBehaviour= ruleNoOpBehaviour EOF )
-            // InternalTankWar.g:305:2: iv_ruleNoOpBehaviour= ruleNoOpBehaviour EOF
+            // InternalTankWar.g:285:53: (iv_ruleNoOpBehaviour= ruleNoOpBehaviour EOF )
+            // InternalTankWar.g:286:2: iv_ruleNoOpBehaviour= ruleNoOpBehaviour EOF
             {
              newCompositeNode(grammarAccess.getNoOpBehaviourRule()); 
             pushFollow(FOLLOW_1);
@@ -725,7 +692,7 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNoOpBehaviour"
-    // InternalTankWar.g:311:1: ruleNoOpBehaviour returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'nop' ;
+    // InternalTankWar.g:292:1: ruleNoOpBehaviour returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'nop' ;
     public final AntlrDatatypeRuleToken ruleNoOpBehaviour() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -735,8 +702,8 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTankWar.g:317:2: (kw= 'nop' )
-            // InternalTankWar.g:318:2: kw= 'nop'
+            // InternalTankWar.g:298:2: (kw= 'nop' )
+            // InternalTankWar.g:299:2: kw= 'nop'
             {
             kw=(Token)match(input,18,FOLLOW_2); 
 
@@ -763,7 +730,7 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStringValue"
-    // InternalTankWar.g:326:1: entryRuleStringValue returns [EObject current=null] : iv_ruleStringValue= ruleStringValue EOF ;
+    // InternalTankWar.g:307:1: entryRuleStringValue returns [EObject current=null] : iv_ruleStringValue= ruleStringValue EOF ;
     public final EObject entryRuleStringValue() throws RecognitionException {
         EObject current = null;
 
@@ -771,8 +738,8 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalTankWar.g:326:52: (iv_ruleStringValue= ruleStringValue EOF )
-            // InternalTankWar.g:327:2: iv_ruleStringValue= ruleStringValue EOF
+            // InternalTankWar.g:307:52: (iv_ruleStringValue= ruleStringValue EOF )
+            // InternalTankWar.g:308:2: iv_ruleStringValue= ruleStringValue EOF
             {
              newCompositeNode(grammarAccess.getStringValueRule()); 
             pushFollow(FOLLOW_1);
@@ -799,7 +766,7 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStringValue"
-    // InternalTankWar.g:333:1: ruleStringValue returns [EObject current=null] : ( (lv_value_0_0= RULE_STRING ) ) ;
+    // InternalTankWar.g:314:1: ruleStringValue returns [EObject current=null] : ( (lv_value_0_0= RULE_STRING ) ) ;
     public final EObject ruleStringValue() throws RecognitionException {
         EObject current = null;
 
@@ -809,14 +776,14 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTankWar.g:339:2: ( ( (lv_value_0_0= RULE_STRING ) ) )
-            // InternalTankWar.g:340:2: ( (lv_value_0_0= RULE_STRING ) )
+            // InternalTankWar.g:320:2: ( ( (lv_value_0_0= RULE_STRING ) ) )
+            // InternalTankWar.g:321:2: ( (lv_value_0_0= RULE_STRING ) )
             {
-            // InternalTankWar.g:340:2: ( (lv_value_0_0= RULE_STRING ) )
-            // InternalTankWar.g:341:3: (lv_value_0_0= RULE_STRING )
+            // InternalTankWar.g:321:2: ( (lv_value_0_0= RULE_STRING ) )
+            // InternalTankWar.g:322:3: (lv_value_0_0= RULE_STRING )
             {
-            // InternalTankWar.g:341:3: (lv_value_0_0= RULE_STRING )
-            // InternalTankWar.g:342:4: lv_value_0_0= RULE_STRING
+            // InternalTankWar.g:322:3: (lv_value_0_0= RULE_STRING )
+            // InternalTankWar.g:323:4: lv_value_0_0= RULE_STRING
             {
             lv_value_0_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
 
@@ -858,7 +825,7 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIntValue"
-    // InternalTankWar.g:361:1: entryRuleIntValue returns [EObject current=null] : iv_ruleIntValue= ruleIntValue EOF ;
+    // InternalTankWar.g:342:1: entryRuleIntValue returns [EObject current=null] : iv_ruleIntValue= ruleIntValue EOF ;
     public final EObject entryRuleIntValue() throws RecognitionException {
         EObject current = null;
 
@@ -866,8 +833,8 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalTankWar.g:361:49: (iv_ruleIntValue= ruleIntValue EOF )
-            // InternalTankWar.g:362:2: iv_ruleIntValue= ruleIntValue EOF
+            // InternalTankWar.g:342:49: (iv_ruleIntValue= ruleIntValue EOF )
+            // InternalTankWar.g:343:2: iv_ruleIntValue= ruleIntValue EOF
             {
              newCompositeNode(grammarAccess.getIntValueRule()); 
             pushFollow(FOLLOW_1);
@@ -894,7 +861,7 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIntValue"
-    // InternalTankWar.g:368:1: ruleIntValue returns [EObject current=null] : ( (lv_value_0_0= RULE_INT ) ) ;
+    // InternalTankWar.g:349:1: ruleIntValue returns [EObject current=null] : ( (lv_value_0_0= RULE_INT ) ) ;
     public final EObject ruleIntValue() throws RecognitionException {
         EObject current = null;
 
@@ -904,14 +871,14 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTankWar.g:374:2: ( ( (lv_value_0_0= RULE_INT ) ) )
-            // InternalTankWar.g:375:2: ( (lv_value_0_0= RULE_INT ) )
+            // InternalTankWar.g:355:2: ( ( (lv_value_0_0= RULE_INT ) ) )
+            // InternalTankWar.g:356:2: ( (lv_value_0_0= RULE_INT ) )
             {
-            // InternalTankWar.g:375:2: ( (lv_value_0_0= RULE_INT ) )
-            // InternalTankWar.g:376:3: (lv_value_0_0= RULE_INT )
+            // InternalTankWar.g:356:2: ( (lv_value_0_0= RULE_INT ) )
+            // InternalTankWar.g:357:3: (lv_value_0_0= RULE_INT )
             {
-            // InternalTankWar.g:376:3: (lv_value_0_0= RULE_INT )
-            // InternalTankWar.g:377:4: lv_value_0_0= RULE_INT
+            // InternalTankWar.g:357:3: (lv_value_0_0= RULE_INT )
+            // InternalTankWar.g:358:4: lv_value_0_0= RULE_INT
             {
             lv_value_0_0=(Token)match(input,RULE_INT,FOLLOW_2); 
 
@@ -953,7 +920,7 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleScreenSpecification"
-    // InternalTankWar.g:396:1: entryRuleScreenSpecification returns [EObject current=null] : iv_ruleScreenSpecification= ruleScreenSpecification EOF ;
+    // InternalTankWar.g:377:1: entryRuleScreenSpecification returns [EObject current=null] : iv_ruleScreenSpecification= ruleScreenSpecification EOF ;
     public final EObject entryRuleScreenSpecification() throws RecognitionException {
         EObject current = null;
 
@@ -961,8 +928,8 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalTankWar.g:396:60: (iv_ruleScreenSpecification= ruleScreenSpecification EOF )
-            // InternalTankWar.g:397:2: iv_ruleScreenSpecification= ruleScreenSpecification EOF
+            // InternalTankWar.g:377:60: (iv_ruleScreenSpecification= ruleScreenSpecification EOF )
+            // InternalTankWar.g:378:2: iv_ruleScreenSpecification= ruleScreenSpecification EOF
             {
              newCompositeNode(grammarAccess.getScreenSpecificationRule()); 
             pushFollow(FOLLOW_1);
@@ -989,7 +956,7 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleScreenSpecification"
-    // InternalTankWar.g:403:1: ruleScreenSpecification returns [EObject current=null] : (otherlv_0= 'screen' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'screenWidth' otherlv_4= '=' ( (lv_screenWidth_5_0= RULE_INT ) ) otherlv_6= 'screenHeight' otherlv_7= '=' ( (lv_screenHeight_8_0= RULE_INT ) ) otherlv_9= '}' ) ;
+    // InternalTankWar.g:384:1: ruleScreenSpecification returns [EObject current=null] : (otherlv_0= 'screen' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'screenWidth' otherlv_4= '=' ( (lv_screenWidth_5_0= RULE_INT ) ) otherlv_6= 'screenHeight' otherlv_7= '=' ( (lv_screenHeight_8_0= RULE_INT ) ) otherlv_9= '}' ) ;
     public final EObject ruleScreenSpecification() throws RecognitionException {
         EObject current = null;
 
@@ -1008,21 +975,21 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTankWar.g:409:2: ( (otherlv_0= 'screen' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'screenWidth' otherlv_4= '=' ( (lv_screenWidth_5_0= RULE_INT ) ) otherlv_6= 'screenHeight' otherlv_7= '=' ( (lv_screenHeight_8_0= RULE_INT ) ) otherlv_9= '}' ) )
-            // InternalTankWar.g:410:2: (otherlv_0= 'screen' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'screenWidth' otherlv_4= '=' ( (lv_screenWidth_5_0= RULE_INT ) ) otherlv_6= 'screenHeight' otherlv_7= '=' ( (lv_screenHeight_8_0= RULE_INT ) ) otherlv_9= '}' )
+            // InternalTankWar.g:390:2: ( (otherlv_0= 'screen' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'screenWidth' otherlv_4= '=' ( (lv_screenWidth_5_0= RULE_INT ) ) otherlv_6= 'screenHeight' otherlv_7= '=' ( (lv_screenHeight_8_0= RULE_INT ) ) otherlv_9= '}' ) )
+            // InternalTankWar.g:391:2: (otherlv_0= 'screen' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'screenWidth' otherlv_4= '=' ( (lv_screenWidth_5_0= RULE_INT ) ) otherlv_6= 'screenHeight' otherlv_7= '=' ( (lv_screenHeight_8_0= RULE_INT ) ) otherlv_9= '}' )
             {
-            // InternalTankWar.g:410:2: (otherlv_0= 'screen' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'screenWidth' otherlv_4= '=' ( (lv_screenWidth_5_0= RULE_INT ) ) otherlv_6= 'screenHeight' otherlv_7= '=' ( (lv_screenHeight_8_0= RULE_INT ) ) otherlv_9= '}' )
-            // InternalTankWar.g:411:3: otherlv_0= 'screen' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'screenWidth' otherlv_4= '=' ( (lv_screenWidth_5_0= RULE_INT ) ) otherlv_6= 'screenHeight' otherlv_7= '=' ( (lv_screenHeight_8_0= RULE_INT ) ) otherlv_9= '}'
+            // InternalTankWar.g:391:2: (otherlv_0= 'screen' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'screenWidth' otherlv_4= '=' ( (lv_screenWidth_5_0= RULE_INT ) ) otherlv_6= 'screenHeight' otherlv_7= '=' ( (lv_screenHeight_8_0= RULE_INT ) ) otherlv_9= '}' )
+            // InternalTankWar.g:392:3: otherlv_0= 'screen' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'screenWidth' otherlv_4= '=' ( (lv_screenWidth_5_0= RULE_INT ) ) otherlv_6= 'screenHeight' otherlv_7= '=' ( (lv_screenHeight_8_0= RULE_INT ) ) otherlv_9= '}'
             {
             otherlv_0=(Token)match(input,19,FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getScreenSpecificationAccess().getScreenKeyword_0());
             		
-            // InternalTankWar.g:415:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalTankWar.g:416:4: (lv_name_1_0= RULE_ID )
+            // InternalTankWar.g:396:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalTankWar.g:397:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalTankWar.g:416:4: (lv_name_1_0= RULE_ID )
-            // InternalTankWar.g:417:5: lv_name_1_0= RULE_ID
+            // InternalTankWar.g:397:4: (lv_name_1_0= RULE_ID )
+            // InternalTankWar.g:398:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_4); 
 
@@ -1044,25 +1011,25 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,12,FOLLOW_14); 
+            otherlv_2=(Token)match(input,12,FOLLOW_13); 
 
             			newLeafNode(otherlv_2, grammarAccess.getScreenSpecificationAccess().getLeftCurlyBracketKeyword_2());
             		
-            otherlv_3=(Token)match(input,20,FOLLOW_15); 
+            otherlv_3=(Token)match(input,20,FOLLOW_14); 
 
             			newLeafNode(otherlv_3, grammarAccess.getScreenSpecificationAccess().getScreenWidthKeyword_3());
             		
-            otherlv_4=(Token)match(input,21,FOLLOW_16); 
+            otherlv_4=(Token)match(input,21,FOLLOW_15); 
 
             			newLeafNode(otherlv_4, grammarAccess.getScreenSpecificationAccess().getEqualsSignKeyword_4());
             		
-            // InternalTankWar.g:445:3: ( (lv_screenWidth_5_0= RULE_INT ) )
-            // InternalTankWar.g:446:4: (lv_screenWidth_5_0= RULE_INT )
+            // InternalTankWar.g:426:3: ( (lv_screenWidth_5_0= RULE_INT ) )
+            // InternalTankWar.g:427:4: (lv_screenWidth_5_0= RULE_INT )
             {
-            // InternalTankWar.g:446:4: (lv_screenWidth_5_0= RULE_INT )
-            // InternalTankWar.g:447:5: lv_screenWidth_5_0= RULE_INT
+            // InternalTankWar.g:427:4: (lv_screenWidth_5_0= RULE_INT )
+            // InternalTankWar.g:428:5: lv_screenWidth_5_0= RULE_INT
             {
-            lv_screenWidth_5_0=(Token)match(input,RULE_INT,FOLLOW_17); 
+            lv_screenWidth_5_0=(Token)match(input,RULE_INT,FOLLOW_16); 
 
             					newLeafNode(lv_screenWidth_5_0, grammarAccess.getScreenSpecificationAccess().getScreenWidthINTTerminalRuleCall_5_0());
             				
@@ -1082,21 +1049,21 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,22,FOLLOW_15); 
+            otherlv_6=(Token)match(input,22,FOLLOW_14); 
 
             			newLeafNode(otherlv_6, grammarAccess.getScreenSpecificationAccess().getScreenHeightKeyword_6());
             		
-            otherlv_7=(Token)match(input,21,FOLLOW_16); 
+            otherlv_7=(Token)match(input,21,FOLLOW_15); 
 
             			newLeafNode(otherlv_7, grammarAccess.getScreenSpecificationAccess().getEqualsSignKeyword_7());
             		
-            // InternalTankWar.g:471:3: ( (lv_screenHeight_8_0= RULE_INT ) )
-            // InternalTankWar.g:472:4: (lv_screenHeight_8_0= RULE_INT )
+            // InternalTankWar.g:452:3: ( (lv_screenHeight_8_0= RULE_INT ) )
+            // InternalTankWar.g:453:4: (lv_screenHeight_8_0= RULE_INT )
             {
-            // InternalTankWar.g:472:4: (lv_screenHeight_8_0= RULE_INT )
-            // InternalTankWar.g:473:5: lv_screenHeight_8_0= RULE_INT
+            // InternalTankWar.g:453:4: (lv_screenHeight_8_0= RULE_INT )
+            // InternalTankWar.g:454:5: lv_screenHeight_8_0= RULE_INT
             {
-            lv_screenHeight_8_0=(Token)match(input,RULE_INT,FOLLOW_18); 
+            lv_screenHeight_8_0=(Token)match(input,RULE_INT,FOLLOW_17); 
 
             					newLeafNode(lv_screenHeight_8_0, grammarAccess.getScreenSpecificationAccess().getScreenHeightINTTerminalRuleCall_8_0());
             				
@@ -1143,7 +1110,7 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleObstaclepecification"
-    // InternalTankWar.g:497:1: entryRuleObstaclepecification returns [EObject current=null] : iv_ruleObstaclepecification= ruleObstaclepecification EOF ;
+    // InternalTankWar.g:478:1: entryRuleObstaclepecification returns [EObject current=null] : iv_ruleObstaclepecification= ruleObstaclepecification EOF ;
     public final EObject entryRuleObstaclepecification() throws RecognitionException {
         EObject current = null;
 
@@ -1151,8 +1118,8 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalTankWar.g:497:61: (iv_ruleObstaclepecification= ruleObstaclepecification EOF )
-            // InternalTankWar.g:498:2: iv_ruleObstaclepecification= ruleObstaclepecification EOF
+            // InternalTankWar.g:478:61: (iv_ruleObstaclepecification= ruleObstaclepecification EOF )
+            // InternalTankWar.g:479:2: iv_ruleObstaclepecification= ruleObstaclepecification EOF
             {
              newCompositeNode(grammarAccess.getObstaclepecificationRule()); 
             pushFollow(FOLLOW_1);
@@ -1179,7 +1146,7 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleObstaclepecification"
-    // InternalTankWar.g:504:1: ruleObstaclepecification returns [EObject current=null] : (otherlv_0= 'obstacle' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_fields_3_0= ruleObstacleMember ) )* otherlv_4= '}' ) ;
+    // InternalTankWar.g:485:1: ruleObstaclepecification returns [EObject current=null] : (otherlv_0= 'obstacle' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_fields_3_0= ruleObstacleMember ) )* otherlv_4= '}' ) ;
     public final EObject ruleObstaclepecification() throws RecognitionException {
         EObject current = null;
 
@@ -1194,21 +1161,21 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTankWar.g:510:2: ( (otherlv_0= 'obstacle' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_fields_3_0= ruleObstacleMember ) )* otherlv_4= '}' ) )
-            // InternalTankWar.g:511:2: (otherlv_0= 'obstacle' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_fields_3_0= ruleObstacleMember ) )* otherlv_4= '}' )
+            // InternalTankWar.g:491:2: ( (otherlv_0= 'obstacle' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_fields_3_0= ruleObstacleMember ) )* otherlv_4= '}' ) )
+            // InternalTankWar.g:492:2: (otherlv_0= 'obstacle' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_fields_3_0= ruleObstacleMember ) )* otherlv_4= '}' )
             {
-            // InternalTankWar.g:511:2: (otherlv_0= 'obstacle' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_fields_3_0= ruleObstacleMember ) )* otherlv_4= '}' )
-            // InternalTankWar.g:512:3: otherlv_0= 'obstacle' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_fields_3_0= ruleObstacleMember ) )* otherlv_4= '}'
+            // InternalTankWar.g:492:2: (otherlv_0= 'obstacle' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_fields_3_0= ruleObstacleMember ) )* otherlv_4= '}' )
+            // InternalTankWar.g:493:3: otherlv_0= 'obstacle' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_fields_3_0= ruleObstacleMember ) )* otherlv_4= '}'
             {
             otherlv_0=(Token)match(input,23,FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getObstaclepecificationAccess().getObstacleKeyword_0());
             		
-            // InternalTankWar.g:516:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalTankWar.g:517:4: (lv_name_1_0= RULE_ID )
+            // InternalTankWar.g:497:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalTankWar.g:498:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalTankWar.g:517:4: (lv_name_1_0= RULE_ID )
-            // InternalTankWar.g:518:5: lv_name_1_0= RULE_ID
+            // InternalTankWar.g:498:4: (lv_name_1_0= RULE_ID )
+            // InternalTankWar.g:499:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_4); 
 
@@ -1230,11 +1197,11 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,12,FOLLOW_19); 
+            otherlv_2=(Token)match(input,12,FOLLOW_18); 
 
             			newLeafNode(otherlv_2, grammarAccess.getObstaclepecificationAccess().getLeftCurlyBracketKeyword_2());
             		
-            // InternalTankWar.g:538:3: ( (lv_fields_3_0= ruleObstacleMember ) )*
+            // InternalTankWar.g:519:3: ( (lv_fields_3_0= ruleObstacleMember ) )*
             loop4:
             do {
                 int alt4=2;
@@ -1247,15 +1214,15 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
                 switch (alt4) {
             	case 1 :
-            	    // InternalTankWar.g:539:4: (lv_fields_3_0= ruleObstacleMember )
+            	    // InternalTankWar.g:520:4: (lv_fields_3_0= ruleObstacleMember )
             	    {
-            	    // InternalTankWar.g:539:4: (lv_fields_3_0= ruleObstacleMember )
-            	    // InternalTankWar.g:540:5: lv_fields_3_0= ruleObstacleMember
+            	    // InternalTankWar.g:520:4: (lv_fields_3_0= ruleObstacleMember )
+            	    // InternalTankWar.g:521:5: lv_fields_3_0= ruleObstacleMember
             	    {
 
             	    					newCompositeNode(grammarAccess.getObstaclepecificationAccess().getFieldsObstacleMemberParserRuleCall_3_0());
             	    				
-            	    pushFollow(FOLLOW_19);
+            	    pushFollow(FOLLOW_18);
             	    lv_fields_3_0=ruleObstacleMember();
 
             	    state._fsp--;
@@ -1310,7 +1277,7 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleObstacleMember"
-    // InternalTankWar.g:565:1: entryRuleObstacleMember returns [EObject current=null] : iv_ruleObstacleMember= ruleObstacleMember EOF ;
+    // InternalTankWar.g:546:1: entryRuleObstacleMember returns [EObject current=null] : iv_ruleObstacleMember= ruleObstacleMember EOF ;
     public final EObject entryRuleObstacleMember() throws RecognitionException {
         EObject current = null;
 
@@ -1318,8 +1285,8 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalTankWar.g:565:55: (iv_ruleObstacleMember= ruleObstacleMember EOF )
-            // InternalTankWar.g:566:2: iv_ruleObstacleMember= ruleObstacleMember EOF
+            // InternalTankWar.g:546:55: (iv_ruleObstacleMember= ruleObstacleMember EOF )
+            // InternalTankWar.g:547:2: iv_ruleObstacleMember= ruleObstacleMember EOF
             {
              newCompositeNode(grammarAccess.getObstacleMemberRule()); 
             pushFollow(FOLLOW_1);
@@ -1346,7 +1313,7 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleObstacleMember"
-    // InternalTankWar.g:572:1: ruleObstacleMember returns [EObject current=null] : (this_WallObstacle_0= ruleWallObstacle | this_WaterObstacle_1= ruleWaterObstacle ) ;
+    // InternalTankWar.g:553:1: ruleObstacleMember returns [EObject current=null] : (this_WallObstacle_0= ruleWallObstacle | this_WaterObstacle_1= ruleWaterObstacle ) ;
     public final EObject ruleObstacleMember() throws RecognitionException {
         EObject current = null;
 
@@ -1359,10 +1326,10 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTankWar.g:578:2: ( (this_WallObstacle_0= ruleWallObstacle | this_WaterObstacle_1= ruleWaterObstacle ) )
-            // InternalTankWar.g:579:2: (this_WallObstacle_0= ruleWallObstacle | this_WaterObstacle_1= ruleWaterObstacle )
+            // InternalTankWar.g:559:2: ( (this_WallObstacle_0= ruleWallObstacle | this_WaterObstacle_1= ruleWaterObstacle ) )
+            // InternalTankWar.g:560:2: (this_WallObstacle_0= ruleWallObstacle | this_WaterObstacle_1= ruleWaterObstacle )
             {
-            // InternalTankWar.g:579:2: (this_WallObstacle_0= ruleWallObstacle | this_WaterObstacle_1= ruleWaterObstacle )
+            // InternalTankWar.g:560:2: (this_WallObstacle_0= ruleWallObstacle | this_WaterObstacle_1= ruleWaterObstacle )
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -1380,7 +1347,7 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
             }
             switch (alt5) {
                 case 1 :
-                    // InternalTankWar.g:580:3: this_WallObstacle_0= ruleWallObstacle
+                    // InternalTankWar.g:561:3: this_WallObstacle_0= ruleWallObstacle
                     {
 
                     			newCompositeNode(grammarAccess.getObstacleMemberAccess().getWallObstacleParserRuleCall_0());
@@ -1398,7 +1365,7 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalTankWar.g:589:3: this_WaterObstacle_1= ruleWaterObstacle
+                    // InternalTankWar.g:570:3: this_WaterObstacle_1= ruleWaterObstacle
                     {
 
                     			newCompositeNode(grammarAccess.getObstacleMemberAccess().getWaterObstacleParserRuleCall_1());
@@ -1438,7 +1405,7 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleWaterObstacle"
-    // InternalTankWar.g:601:1: entryRuleWaterObstacle returns [EObject current=null] : iv_ruleWaterObstacle= ruleWaterObstacle EOF ;
+    // InternalTankWar.g:582:1: entryRuleWaterObstacle returns [EObject current=null] : iv_ruleWaterObstacle= ruleWaterObstacle EOF ;
     public final EObject entryRuleWaterObstacle() throws RecognitionException {
         EObject current = null;
 
@@ -1446,8 +1413,8 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalTankWar.g:601:54: (iv_ruleWaterObstacle= ruleWaterObstacle EOF )
-            // InternalTankWar.g:602:2: iv_ruleWaterObstacle= ruleWaterObstacle EOF
+            // InternalTankWar.g:582:54: (iv_ruleWaterObstacle= ruleWaterObstacle EOF )
+            // InternalTankWar.g:583:2: iv_ruleWaterObstacle= ruleWaterObstacle EOF
             {
              newCompositeNode(grammarAccess.getWaterObstacleRule()); 
             pushFollow(FOLLOW_1);
@@ -1474,7 +1441,7 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleWaterObstacle"
-    // InternalTankWar.g:608:1: ruleWaterObstacle returns [EObject current=null] : (otherlv_0= 'water' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' ) ;
+    // InternalTankWar.g:589:1: ruleWaterObstacle returns [EObject current=null] : (otherlv_0= 'water' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' ) ;
     public final EObject ruleWaterObstacle() throws RecognitionException {
         EObject current = null;
 
@@ -1487,21 +1454,21 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTankWar.g:614:2: ( (otherlv_0= 'water' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' ) )
-            // InternalTankWar.g:615:2: (otherlv_0= 'water' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' )
+            // InternalTankWar.g:595:2: ( (otherlv_0= 'water' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' ) )
+            // InternalTankWar.g:596:2: (otherlv_0= 'water' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' )
             {
-            // InternalTankWar.g:615:2: (otherlv_0= 'water' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' )
-            // InternalTankWar.g:616:3: otherlv_0= 'water' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}'
+            // InternalTankWar.g:596:2: (otherlv_0= 'water' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}' )
+            // InternalTankWar.g:597:3: otherlv_0= 'water' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= '}'
             {
             otherlv_0=(Token)match(input,24,FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getWaterObstacleAccess().getWaterKeyword_0());
             		
-            // InternalTankWar.g:620:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalTankWar.g:621:4: (lv_name_1_0= RULE_ID )
+            // InternalTankWar.g:601:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalTankWar.g:602:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalTankWar.g:621:4: (lv_name_1_0= RULE_ID )
-            // InternalTankWar.g:622:5: lv_name_1_0= RULE_ID
+            // InternalTankWar.g:602:4: (lv_name_1_0= RULE_ID )
+            // InternalTankWar.g:603:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_4); 
 
@@ -1523,7 +1490,7 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,12,FOLLOW_18); 
+            otherlv_2=(Token)match(input,12,FOLLOW_17); 
 
             			newLeafNode(otherlv_2, grammarAccess.getWaterObstacleAccess().getLeftCurlyBracketKeyword_2());
             		
@@ -1554,7 +1521,7 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleWallObstacle"
-    // InternalTankWar.g:650:1: entryRuleWallObstacle returns [EObject current=null] : iv_ruleWallObstacle= ruleWallObstacle EOF ;
+    // InternalTankWar.g:631:1: entryRuleWallObstacle returns [EObject current=null] : iv_ruleWallObstacle= ruleWallObstacle EOF ;
     public final EObject entryRuleWallObstacle() throws RecognitionException {
         EObject current = null;
 
@@ -1562,8 +1529,8 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalTankWar.g:650:53: (iv_ruleWallObstacle= ruleWallObstacle EOF )
-            // InternalTankWar.g:651:2: iv_ruleWallObstacle= ruleWallObstacle EOF
+            // InternalTankWar.g:631:53: (iv_ruleWallObstacle= ruleWallObstacle EOF )
+            // InternalTankWar.g:632:2: iv_ruleWallObstacle= ruleWallObstacle EOF
             {
              newCompositeNode(grammarAccess.getWallObstacleRule()); 
             pushFollow(FOLLOW_1);
@@ -1590,7 +1557,7 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleWallObstacle"
-    // InternalTankWar.g:657:1: ruleWallObstacle returns [EObject current=null] : (otherlv_0= 'wall' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'wallWidth' otherlv_4= '=' ( (lv_wallWidth_5_0= RULE_INT ) ) otherlv_6= 'wallHeight' otherlv_7= '=' ( (lv_wallHeight_8_0= RULE_INT ) ) otherlv_9= 'wallPosX' otherlv_10= '=' ( (lv_wallPosX_11_0= RULE_INT ) ) otherlv_12= 'wallPosY' otherlv_13= '=' ( (lv_wallPosY_14_0= RULE_INT ) ) otherlv_15= '}' ) ;
+    // InternalTankWar.g:638:1: ruleWallObstacle returns [EObject current=null] : (otherlv_0= 'wall' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'wallWidth' otherlv_4= '=' ( (lv_wallWidth_5_0= RULE_INT ) ) otherlv_6= 'wallHeight' otherlv_7= '=' ( (lv_wallHeight_8_0= RULE_INT ) ) otherlv_9= 'wallPosX' otherlv_10= '=' ( (lv_wallPosX_11_0= RULE_INT ) ) otherlv_12= 'wallPosY' otherlv_13= '=' ( (lv_wallPosY_14_0= RULE_INT ) ) otherlv_15= '}' ) ;
     public final EObject ruleWallObstacle() throws RecognitionException {
         EObject current = null;
 
@@ -1615,21 +1582,21 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTankWar.g:663:2: ( (otherlv_0= 'wall' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'wallWidth' otherlv_4= '=' ( (lv_wallWidth_5_0= RULE_INT ) ) otherlv_6= 'wallHeight' otherlv_7= '=' ( (lv_wallHeight_8_0= RULE_INT ) ) otherlv_9= 'wallPosX' otherlv_10= '=' ( (lv_wallPosX_11_0= RULE_INT ) ) otherlv_12= 'wallPosY' otherlv_13= '=' ( (lv_wallPosY_14_0= RULE_INT ) ) otherlv_15= '}' ) )
-            // InternalTankWar.g:664:2: (otherlv_0= 'wall' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'wallWidth' otherlv_4= '=' ( (lv_wallWidth_5_0= RULE_INT ) ) otherlv_6= 'wallHeight' otherlv_7= '=' ( (lv_wallHeight_8_0= RULE_INT ) ) otherlv_9= 'wallPosX' otherlv_10= '=' ( (lv_wallPosX_11_0= RULE_INT ) ) otherlv_12= 'wallPosY' otherlv_13= '=' ( (lv_wallPosY_14_0= RULE_INT ) ) otherlv_15= '}' )
+            // InternalTankWar.g:644:2: ( (otherlv_0= 'wall' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'wallWidth' otherlv_4= '=' ( (lv_wallWidth_5_0= RULE_INT ) ) otherlv_6= 'wallHeight' otherlv_7= '=' ( (lv_wallHeight_8_0= RULE_INT ) ) otherlv_9= 'wallPosX' otherlv_10= '=' ( (lv_wallPosX_11_0= RULE_INT ) ) otherlv_12= 'wallPosY' otherlv_13= '=' ( (lv_wallPosY_14_0= RULE_INT ) ) otherlv_15= '}' ) )
+            // InternalTankWar.g:645:2: (otherlv_0= 'wall' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'wallWidth' otherlv_4= '=' ( (lv_wallWidth_5_0= RULE_INT ) ) otherlv_6= 'wallHeight' otherlv_7= '=' ( (lv_wallHeight_8_0= RULE_INT ) ) otherlv_9= 'wallPosX' otherlv_10= '=' ( (lv_wallPosX_11_0= RULE_INT ) ) otherlv_12= 'wallPosY' otherlv_13= '=' ( (lv_wallPosY_14_0= RULE_INT ) ) otherlv_15= '}' )
             {
-            // InternalTankWar.g:664:2: (otherlv_0= 'wall' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'wallWidth' otherlv_4= '=' ( (lv_wallWidth_5_0= RULE_INT ) ) otherlv_6= 'wallHeight' otherlv_7= '=' ( (lv_wallHeight_8_0= RULE_INT ) ) otherlv_9= 'wallPosX' otherlv_10= '=' ( (lv_wallPosX_11_0= RULE_INT ) ) otherlv_12= 'wallPosY' otherlv_13= '=' ( (lv_wallPosY_14_0= RULE_INT ) ) otherlv_15= '}' )
-            // InternalTankWar.g:665:3: otherlv_0= 'wall' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'wallWidth' otherlv_4= '=' ( (lv_wallWidth_5_0= RULE_INT ) ) otherlv_6= 'wallHeight' otherlv_7= '=' ( (lv_wallHeight_8_0= RULE_INT ) ) otherlv_9= 'wallPosX' otherlv_10= '=' ( (lv_wallPosX_11_0= RULE_INT ) ) otherlv_12= 'wallPosY' otherlv_13= '=' ( (lv_wallPosY_14_0= RULE_INT ) ) otherlv_15= '}'
+            // InternalTankWar.g:645:2: (otherlv_0= 'wall' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'wallWidth' otherlv_4= '=' ( (lv_wallWidth_5_0= RULE_INT ) ) otherlv_6= 'wallHeight' otherlv_7= '=' ( (lv_wallHeight_8_0= RULE_INT ) ) otherlv_9= 'wallPosX' otherlv_10= '=' ( (lv_wallPosX_11_0= RULE_INT ) ) otherlv_12= 'wallPosY' otherlv_13= '=' ( (lv_wallPosY_14_0= RULE_INT ) ) otherlv_15= '}' )
+            // InternalTankWar.g:646:3: otherlv_0= 'wall' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'wallWidth' otherlv_4= '=' ( (lv_wallWidth_5_0= RULE_INT ) ) otherlv_6= 'wallHeight' otherlv_7= '=' ( (lv_wallHeight_8_0= RULE_INT ) ) otherlv_9= 'wallPosX' otherlv_10= '=' ( (lv_wallPosX_11_0= RULE_INT ) ) otherlv_12= 'wallPosY' otherlv_13= '=' ( (lv_wallPosY_14_0= RULE_INT ) ) otherlv_15= '}'
             {
             otherlv_0=(Token)match(input,25,FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getWallObstacleAccess().getWallKeyword_0());
             		
-            // InternalTankWar.g:669:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalTankWar.g:670:4: (lv_name_1_0= RULE_ID )
+            // InternalTankWar.g:650:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalTankWar.g:651:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalTankWar.g:670:4: (lv_name_1_0= RULE_ID )
-            // InternalTankWar.g:671:5: lv_name_1_0= RULE_ID
+            // InternalTankWar.g:651:4: (lv_name_1_0= RULE_ID )
+            // InternalTankWar.g:652:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_4); 
 
@@ -1651,25 +1618,25 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,12,FOLLOW_20); 
+            otherlv_2=(Token)match(input,12,FOLLOW_19); 
 
             			newLeafNode(otherlv_2, grammarAccess.getWallObstacleAccess().getLeftCurlyBracketKeyword_2());
             		
-            otherlv_3=(Token)match(input,26,FOLLOW_15); 
+            otherlv_3=(Token)match(input,26,FOLLOW_14); 
 
             			newLeafNode(otherlv_3, grammarAccess.getWallObstacleAccess().getWallWidthKeyword_3());
             		
-            otherlv_4=(Token)match(input,21,FOLLOW_16); 
+            otherlv_4=(Token)match(input,21,FOLLOW_15); 
 
             			newLeafNode(otherlv_4, grammarAccess.getWallObstacleAccess().getEqualsSignKeyword_4());
             		
-            // InternalTankWar.g:699:3: ( (lv_wallWidth_5_0= RULE_INT ) )
-            // InternalTankWar.g:700:4: (lv_wallWidth_5_0= RULE_INT )
+            // InternalTankWar.g:680:3: ( (lv_wallWidth_5_0= RULE_INT ) )
+            // InternalTankWar.g:681:4: (lv_wallWidth_5_0= RULE_INT )
             {
-            // InternalTankWar.g:700:4: (lv_wallWidth_5_0= RULE_INT )
-            // InternalTankWar.g:701:5: lv_wallWidth_5_0= RULE_INT
+            // InternalTankWar.g:681:4: (lv_wallWidth_5_0= RULE_INT )
+            // InternalTankWar.g:682:5: lv_wallWidth_5_0= RULE_INT
             {
-            lv_wallWidth_5_0=(Token)match(input,RULE_INT,FOLLOW_21); 
+            lv_wallWidth_5_0=(Token)match(input,RULE_INT,FOLLOW_20); 
 
             					newLeafNode(lv_wallWidth_5_0, grammarAccess.getWallObstacleAccess().getWallWidthINTTerminalRuleCall_5_0());
             				
@@ -1689,21 +1656,21 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,27,FOLLOW_15); 
+            otherlv_6=(Token)match(input,27,FOLLOW_14); 
 
             			newLeafNode(otherlv_6, grammarAccess.getWallObstacleAccess().getWallHeightKeyword_6());
             		
-            otherlv_7=(Token)match(input,21,FOLLOW_16); 
+            otherlv_7=(Token)match(input,21,FOLLOW_15); 
 
             			newLeafNode(otherlv_7, grammarAccess.getWallObstacleAccess().getEqualsSignKeyword_7());
             		
-            // InternalTankWar.g:725:3: ( (lv_wallHeight_8_0= RULE_INT ) )
-            // InternalTankWar.g:726:4: (lv_wallHeight_8_0= RULE_INT )
+            // InternalTankWar.g:706:3: ( (lv_wallHeight_8_0= RULE_INT ) )
+            // InternalTankWar.g:707:4: (lv_wallHeight_8_0= RULE_INT )
             {
-            // InternalTankWar.g:726:4: (lv_wallHeight_8_0= RULE_INT )
-            // InternalTankWar.g:727:5: lv_wallHeight_8_0= RULE_INT
+            // InternalTankWar.g:707:4: (lv_wallHeight_8_0= RULE_INT )
+            // InternalTankWar.g:708:5: lv_wallHeight_8_0= RULE_INT
             {
-            lv_wallHeight_8_0=(Token)match(input,RULE_INT,FOLLOW_22); 
+            lv_wallHeight_8_0=(Token)match(input,RULE_INT,FOLLOW_21); 
 
             					newLeafNode(lv_wallHeight_8_0, grammarAccess.getWallObstacleAccess().getWallHeightINTTerminalRuleCall_8_0());
             				
@@ -1723,21 +1690,21 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,28,FOLLOW_15); 
+            otherlv_9=(Token)match(input,28,FOLLOW_14); 
 
             			newLeafNode(otherlv_9, grammarAccess.getWallObstacleAccess().getWallPosXKeyword_9());
             		
-            otherlv_10=(Token)match(input,21,FOLLOW_16); 
+            otherlv_10=(Token)match(input,21,FOLLOW_15); 
 
             			newLeafNode(otherlv_10, grammarAccess.getWallObstacleAccess().getEqualsSignKeyword_10());
             		
-            // InternalTankWar.g:751:3: ( (lv_wallPosX_11_0= RULE_INT ) )
-            // InternalTankWar.g:752:4: (lv_wallPosX_11_0= RULE_INT )
+            // InternalTankWar.g:732:3: ( (lv_wallPosX_11_0= RULE_INT ) )
+            // InternalTankWar.g:733:4: (lv_wallPosX_11_0= RULE_INT )
             {
-            // InternalTankWar.g:752:4: (lv_wallPosX_11_0= RULE_INT )
-            // InternalTankWar.g:753:5: lv_wallPosX_11_0= RULE_INT
+            // InternalTankWar.g:733:4: (lv_wallPosX_11_0= RULE_INT )
+            // InternalTankWar.g:734:5: lv_wallPosX_11_0= RULE_INT
             {
-            lv_wallPosX_11_0=(Token)match(input,RULE_INT,FOLLOW_23); 
+            lv_wallPosX_11_0=(Token)match(input,RULE_INT,FOLLOW_22); 
 
             					newLeafNode(lv_wallPosX_11_0, grammarAccess.getWallObstacleAccess().getWallPosXINTTerminalRuleCall_11_0());
             				
@@ -1757,21 +1724,21 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_12=(Token)match(input,29,FOLLOW_15); 
+            otherlv_12=(Token)match(input,29,FOLLOW_14); 
 
             			newLeafNode(otherlv_12, grammarAccess.getWallObstacleAccess().getWallPosYKeyword_12());
             		
-            otherlv_13=(Token)match(input,21,FOLLOW_16); 
+            otherlv_13=(Token)match(input,21,FOLLOW_15); 
 
             			newLeafNode(otherlv_13, grammarAccess.getWallObstacleAccess().getEqualsSignKeyword_13());
             		
-            // InternalTankWar.g:777:3: ( (lv_wallPosY_14_0= RULE_INT ) )
-            // InternalTankWar.g:778:4: (lv_wallPosY_14_0= RULE_INT )
+            // InternalTankWar.g:758:3: ( (lv_wallPosY_14_0= RULE_INT ) )
+            // InternalTankWar.g:759:4: (lv_wallPosY_14_0= RULE_INT )
             {
-            // InternalTankWar.g:778:4: (lv_wallPosY_14_0= RULE_INT )
-            // InternalTankWar.g:779:5: lv_wallPosY_14_0= RULE_INT
+            // InternalTankWar.g:759:4: (lv_wallPosY_14_0= RULE_INT )
+            // InternalTankWar.g:760:5: lv_wallPosY_14_0= RULE_INT
             {
-            lv_wallPosY_14_0=(Token)match(input,RULE_INT,FOLLOW_18); 
+            lv_wallPosY_14_0=(Token)match(input,RULE_INT,FOLLOW_17); 
 
             					newLeafNode(lv_wallPosY_14_0, grammarAccess.getWallObstacleAccess().getWallPosYINTTerminalRuleCall_14_0());
             				
@@ -1818,7 +1785,7 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFieldSpecification"
-    // InternalTankWar.g:803:1: entryRuleFieldSpecification returns [EObject current=null] : iv_ruleFieldSpecification= ruleFieldSpecification EOF ;
+    // InternalTankWar.g:784:1: entryRuleFieldSpecification returns [EObject current=null] : iv_ruleFieldSpecification= ruleFieldSpecification EOF ;
     public final EObject entryRuleFieldSpecification() throws RecognitionException {
         EObject current = null;
 
@@ -1826,8 +1793,8 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalTankWar.g:803:59: (iv_ruleFieldSpecification= ruleFieldSpecification EOF )
-            // InternalTankWar.g:804:2: iv_ruleFieldSpecification= ruleFieldSpecification EOF
+            // InternalTankWar.g:784:59: (iv_ruleFieldSpecification= ruleFieldSpecification EOF )
+            // InternalTankWar.g:785:2: iv_ruleFieldSpecification= ruleFieldSpecification EOF
             {
              newCompositeNode(grammarAccess.getFieldSpecificationRule()); 
             pushFollow(FOLLOW_1);
@@ -1854,7 +1821,7 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFieldSpecification"
-    // InternalTankWar.g:810:1: ruleFieldSpecification returns [EObject current=null] : (otherlv_0= 'field' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'enemyCount' otherlv_4= '=' ( (lv_enemyCount_5_0= RULE_INT ) ) otherlv_6= '}' ) ;
+    // InternalTankWar.g:791:1: ruleFieldSpecification returns [EObject current=null] : (otherlv_0= 'field' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'enemyCount' otherlv_4= '=' ( (lv_enemyCount_5_0= RULE_INT ) ) ( (lv_obstacle_6_0= ruleObstaclepecification ) ) otherlv_7= '}' ) ;
     public final EObject ruleFieldSpecification() throws RecognitionException {
         EObject current = null;
 
@@ -1864,27 +1831,29 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
         Token otherlv_3=null;
         Token otherlv_4=null;
         Token lv_enemyCount_5_0=null;
-        Token otherlv_6=null;
+        Token otherlv_7=null;
+        EObject lv_obstacle_6_0 = null;
+
 
 
         	enterRule();
 
         try {
-            // InternalTankWar.g:816:2: ( (otherlv_0= 'field' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'enemyCount' otherlv_4= '=' ( (lv_enemyCount_5_0= RULE_INT ) ) otherlv_6= '}' ) )
-            // InternalTankWar.g:817:2: (otherlv_0= 'field' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'enemyCount' otherlv_4= '=' ( (lv_enemyCount_5_0= RULE_INT ) ) otherlv_6= '}' )
+            // InternalTankWar.g:797:2: ( (otherlv_0= 'field' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'enemyCount' otherlv_4= '=' ( (lv_enemyCount_5_0= RULE_INT ) ) ( (lv_obstacle_6_0= ruleObstaclepecification ) ) otherlv_7= '}' ) )
+            // InternalTankWar.g:798:2: (otherlv_0= 'field' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'enemyCount' otherlv_4= '=' ( (lv_enemyCount_5_0= RULE_INT ) ) ( (lv_obstacle_6_0= ruleObstaclepecification ) ) otherlv_7= '}' )
             {
-            // InternalTankWar.g:817:2: (otherlv_0= 'field' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'enemyCount' otherlv_4= '=' ( (lv_enemyCount_5_0= RULE_INT ) ) otherlv_6= '}' )
-            // InternalTankWar.g:818:3: otherlv_0= 'field' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'enemyCount' otherlv_4= '=' ( (lv_enemyCount_5_0= RULE_INT ) ) otherlv_6= '}'
+            // InternalTankWar.g:798:2: (otherlv_0= 'field' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'enemyCount' otherlv_4= '=' ( (lv_enemyCount_5_0= RULE_INT ) ) ( (lv_obstacle_6_0= ruleObstaclepecification ) ) otherlv_7= '}' )
+            // InternalTankWar.g:799:3: otherlv_0= 'field' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'enemyCount' otherlv_4= '=' ( (lv_enemyCount_5_0= RULE_INT ) ) ( (lv_obstacle_6_0= ruleObstaclepecification ) ) otherlv_7= '}'
             {
             otherlv_0=(Token)match(input,30,FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getFieldSpecificationAccess().getFieldKeyword_0());
             		
-            // InternalTankWar.g:822:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalTankWar.g:823:4: (lv_name_1_0= RULE_ID )
+            // InternalTankWar.g:803:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalTankWar.g:804:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalTankWar.g:823:4: (lv_name_1_0= RULE_ID )
-            // InternalTankWar.g:824:5: lv_name_1_0= RULE_ID
+            // InternalTankWar.g:804:4: (lv_name_1_0= RULE_ID )
+            // InternalTankWar.g:805:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_4); 
 
@@ -1906,25 +1875,25 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,12,FOLLOW_24); 
+            otherlv_2=(Token)match(input,12,FOLLOW_23); 
 
             			newLeafNode(otherlv_2, grammarAccess.getFieldSpecificationAccess().getLeftCurlyBracketKeyword_2());
             		
-            otherlv_3=(Token)match(input,31,FOLLOW_15); 
+            otherlv_3=(Token)match(input,31,FOLLOW_14); 
 
             			newLeafNode(otherlv_3, grammarAccess.getFieldSpecificationAccess().getEnemyCountKeyword_3());
             		
-            otherlv_4=(Token)match(input,21,FOLLOW_16); 
+            otherlv_4=(Token)match(input,21,FOLLOW_15); 
 
             			newLeafNode(otherlv_4, grammarAccess.getFieldSpecificationAccess().getEqualsSignKeyword_4());
             		
-            // InternalTankWar.g:852:3: ( (lv_enemyCount_5_0= RULE_INT ) )
-            // InternalTankWar.g:853:4: (lv_enemyCount_5_0= RULE_INT )
+            // InternalTankWar.g:833:3: ( (lv_enemyCount_5_0= RULE_INT ) )
+            // InternalTankWar.g:834:4: (lv_enemyCount_5_0= RULE_INT )
             {
-            // InternalTankWar.g:853:4: (lv_enemyCount_5_0= RULE_INT )
-            // InternalTankWar.g:854:5: lv_enemyCount_5_0= RULE_INT
+            // InternalTankWar.g:834:4: (lv_enemyCount_5_0= RULE_INT )
+            // InternalTankWar.g:835:5: lv_enemyCount_5_0= RULE_INT
             {
-            lv_enemyCount_5_0=(Token)match(input,RULE_INT,FOLLOW_18); 
+            lv_enemyCount_5_0=(Token)match(input,RULE_INT,FOLLOW_24); 
 
             					newLeafNode(lv_enemyCount_5_0, grammarAccess.getFieldSpecificationAccess().getEnemyCountINTTerminalRuleCall_5_0());
             				
@@ -1944,9 +1913,40 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,13,FOLLOW_2); 
+            // InternalTankWar.g:851:3: ( (lv_obstacle_6_0= ruleObstaclepecification ) )
+            // InternalTankWar.g:852:4: (lv_obstacle_6_0= ruleObstaclepecification )
+            {
+            // InternalTankWar.g:852:4: (lv_obstacle_6_0= ruleObstaclepecification )
+            // InternalTankWar.g:853:5: lv_obstacle_6_0= ruleObstaclepecification
+            {
 
-            			newLeafNode(otherlv_6, grammarAccess.getFieldSpecificationAccess().getRightCurlyBracketKeyword_6());
+            					newCompositeNode(grammarAccess.getFieldSpecificationAccess().getObstacleObstaclepecificationParserRuleCall_6_0());
+            				
+            pushFollow(FOLLOW_17);
+            lv_obstacle_6_0=ruleObstaclepecification();
+
+            state._fsp--;
+
+
+            					if (current==null) {
+            						current = createModelElementForParent(grammarAccess.getFieldSpecificationRule());
+            					}
+            					set(
+            						current,
+            						"obstacle",
+            						lv_obstacle_6_0,
+            						"uk.ac.kcl.inf.mdd.cf.tankwar.TankWar.Obstaclepecification");
+            					afterParserOrEnumRuleCall();
+            				
+
+            }
+
+
+            }
+
+            otherlv_7=(Token)match(input,13,FOLLOW_2); 
+
+            			newLeafNode(otherlv_7, grammarAccess.getFieldSpecificationAccess().getRightCurlyBracketKeyword_7());
             		
 
             }
@@ -2886,7 +2886,7 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
             // InternalTankWar.g:1185:2: (otherlv_0= 'start' otherlv_1= '=' ( (otherlv_2= RULE_ID ) ) )
             // InternalTankWar.g:1186:3: otherlv_0= 'start' otherlv_1= '=' ( (otherlv_2= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,42,FOLLOW_15); 
+            otherlv_0=(Token)match(input,42,FOLLOW_14); 
 
             			newLeafNode(otherlv_0, grammarAccess.getStartFieldDeclarationAccess().getStartKeyword_0());
             		
@@ -3036,25 +3036,25 @@ public class InternalTankWarParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000001000L});
     public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x00000E0040004000L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x00000E0000006000L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000003002000L});
-    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x00000E0040004000L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x00000E0000006000L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000003002000L});
+    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000000800000L});
     public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x000000A400000000L});
     public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000200000000L});
     public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x000000A400002000L});

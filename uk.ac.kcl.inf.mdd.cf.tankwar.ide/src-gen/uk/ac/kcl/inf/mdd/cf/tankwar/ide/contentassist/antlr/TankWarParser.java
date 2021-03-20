@@ -54,9 +54,8 @@ public class TankWarParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getAllowRestartMenuAccess().getGroup(), "rule__AllowRestartMenu__Group__0");
 			builder.put(grammarAccess.getTankWarGameAccess().getNameAssignment_1(), "rule__TankWarGame__NameAssignment_1");
 			builder.put(grammarAccess.getTankWarGameAccess().getScreenAssignment_3(), "rule__TankWarGame__ScreenAssignment_3");
-			builder.put(grammarAccess.getTankWarGameAccess().getObstacleAssignment_4(), "rule__TankWarGame__ObstacleAssignment_4");
-			builder.put(grammarAccess.getTankWarGameAccess().getFieldsAssignment_5(), "rule__TankWarGame__FieldsAssignment_5");
-			builder.put(grammarAccess.getTankWarGameAccess().getOptionsAssignment_6(), "rule__TankWarGame__OptionsAssignment_6");
+			builder.put(grammarAccess.getTankWarGameAccess().getFieldsAssignment_4(), "rule__TankWarGame__FieldsAssignment_4");
+			builder.put(grammarAccess.getTankWarGameAccess().getOptionsAssignment_5(), "rule__TankWarGame__OptionsAssignment_5");
 			builder.put(grammarAccess.getEndGameBehaviourAccess().getWinAssignment_2(), "rule__EndGameBehaviour__WinAssignment_2");
 			builder.put(grammarAccess.getEndGameBehaviourAccess().getLostAssignment_4(), "rule__EndGameBehaviour__LostAssignment_4");
 			builder.put(grammarAccess.getStringValueAccess().getValueAssignment(), "rule__StringValue__ValueAssignment");
@@ -74,6 +73,7 @@ public class TankWarParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getWallObstacleAccess().getWallPosYAssignment_14(), "rule__WallObstacle__WallPosYAssignment_14");
 			builder.put(grammarAccess.getFieldSpecificationAccess().getNameAssignment_1(), "rule__FieldSpecification__NameAssignment_1");
 			builder.put(grammarAccess.getFieldSpecificationAccess().getEnemyCountAssignment_5(), "rule__FieldSpecification__EnemyCountAssignment_5");
+			builder.put(grammarAccess.getFieldSpecificationAccess().getObstacleAssignment_6(), "rule__FieldSpecification__ObstacleAssignment_6");
 			builder.put(grammarAccess.getLocalFieldInitialisationsAccess().getInitialisationsAssignment_2_0(), "rule__LocalFieldInitialisations__InitialisationsAssignment_2_0");
 			builder.put(grammarAccess.getStartFieldDeclarationAccess().getFieldAssignment_2(), "rule__StartFieldDeclaration__FieldAssignment_2");
 		}

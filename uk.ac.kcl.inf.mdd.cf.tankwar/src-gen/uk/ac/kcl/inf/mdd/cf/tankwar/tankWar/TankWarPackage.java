@@ -86,22 +86,13 @@ public interface TankWarPackage extends EPackage
   int TANK_WAR_GAME__SCREEN = 1;
 
   /**
-   * The feature id for the '<em><b>Obstacle</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TANK_WAR_GAME__OBSTACLE = 2;
-
-  /**
    * The feature id for the '<em><b>Fields</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TANK_WAR_GAME__FIELDS = 3;
+  int TANK_WAR_GAME__FIELDS = 2;
 
   /**
    * The feature id for the '<em><b>Options</b></em>' containment reference list.
@@ -110,7 +101,7 @@ public interface TankWarPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TANK_WAR_GAME__OPTIONS = 4;
+  int TANK_WAR_GAME__OPTIONS = 3;
 
   /**
    * The number of structural features of the '<em>Game</em>' class.
@@ -119,7 +110,7 @@ public interface TankWarPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TANK_WAR_GAME_FEATURE_COUNT = 5;
+  int TANK_WAR_GAME_FEATURE_COUNT = 4;
 
   /**
    * The meta object id for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.ValueImpl <em>Value</em>}' class.
@@ -484,13 +475,22 @@ public interface TankWarPackage extends EPackage
   int FIELD_SPECIFICATION__ENEMY_COUNT = 1;
 
   /**
+   * The feature id for the '<em><b>Obstacle</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FIELD_SPECIFICATION__OBSTACLE = 2;
+
+  /**
    * The number of structural features of the '<em>Field Specification</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FIELD_SPECIFICATION_FEATURE_COUNT = 2;
+  int FIELD_SPECIFICATION_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.FieldInitialisationsImpl <em>Field Initialisations</em>}' class.
@@ -675,17 +675,6 @@ public interface TankWarPackage extends EPackage
    * @generated
    */
   EReference getTankWarGame_Screen();
-
-  /**
-   * Returns the meta object for the containment reference '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarGame#getObstacle <em>Obstacle</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Obstacle</em>'.
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarGame#getObstacle()
-   * @see #getTankWarGame()
-   * @generated
-   */
-  EReference getTankWarGame_Obstacle();
 
   /**
    * Returns the meta object for the containment reference list '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarGame#getFields <em>Fields</em>}'.
@@ -996,6 +985,17 @@ public interface TankWarPackage extends EPackage
   EAttribute getFieldSpecification_EnemyCount();
 
   /**
+   * Returns the meta object for the containment reference '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification#getObstacle <em>Obstacle</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Obstacle</em>'.
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification#getObstacle()
+   * @see #getFieldSpecification()
+   * @generated
+   */
+  EReference getFieldSpecification_Obstacle();
+
+  /**
    * Returns the meta object for class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldInitialisations <em>Field Initialisations</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1135,14 +1135,6 @@ public interface TankWarPackage extends EPackage
      * @generated
      */
     EReference TANK_WAR_GAME__SCREEN = eINSTANCE.getTankWarGame_Screen();
-
-    /**
-     * The meta object literal for the '<em><b>Obstacle</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference TANK_WAR_GAME__OBSTACLE = eINSTANCE.getTankWarGame_Obstacle();
 
     /**
      * The meta object literal for the '<em><b>Fields</b></em>' containment reference list feature.
@@ -1397,6 +1389,14 @@ public interface TankWarPackage extends EPackage
      * @generated
      */
     EAttribute FIELD_SPECIFICATION__ENEMY_COUNT = eINSTANCE.getFieldSpecification_EnemyCount();
+
+    /**
+     * The meta object literal for the '<em><b>Obstacle</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FIELD_SPECIFICATION__OBSTACLE = eINSTANCE.getFieldSpecification_Obstacle();
 
     /**
      * The meta object literal for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.FieldInitialisationsImpl <em>Field Initialisations</em>}' class.
