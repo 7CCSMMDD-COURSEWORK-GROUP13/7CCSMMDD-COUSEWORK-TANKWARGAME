@@ -47,7 +47,7 @@ class TankGenerator extends CommonGenerator {
 		    private int Oldx,Oldy;
 		    private boolean bL = false,bU = false,bR = false,bD = false;
 		
-		    enum Direction{L,LU,U,RU,RD,R,D,LD,STOP};
+		    public enum Direction{L,LU,U,RU,RD,R,D,LD,STOP};
 		
 		    private Direction dir = Direction.STOP;
 		    private Direction ptdir = Direction.D;

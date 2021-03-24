@@ -22,6 +22,7 @@ class TankWarGenerator extends AbstractGenerator {
 			new TankGenerator(processedModel).generate(fsa);
 			new ExplodeGenerator(processedModel).generate(fsa);
 			new FrameGenerator(processedModel).generate(fsa);
+			new LevelGenerator(processedModel).generate(fsa);
 		
 	}
 }

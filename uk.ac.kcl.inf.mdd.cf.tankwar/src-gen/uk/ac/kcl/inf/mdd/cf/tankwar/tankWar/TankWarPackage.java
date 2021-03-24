@@ -484,13 +484,22 @@ public interface TankWarPackage extends EPackage
   int FIELD_SPECIFICATION__OBSTACLE = 2;
 
   /**
+   * The feature id for the '<em><b>Next Level</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FIELD_SPECIFICATION__NEXT_LEVEL = 3;
+
+  /**
    * The number of structural features of the '<em>Field Specification</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FIELD_SPECIFICATION_FEATURE_COUNT = 3;
+  int FIELD_SPECIFICATION_FEATURE_COUNT = 4;
 
   /**
    * The meta object id for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.FieldInitialisationsImpl <em>Field Initialisations</em>}' class.
@@ -996,6 +1005,17 @@ public interface TankWarPackage extends EPackage
   EReference getFieldSpecification_Obstacle();
 
   /**
+   * Returns the meta object for the reference '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification#getNextLevel <em>Next Level</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Next Level</em>'.
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification#getNextLevel()
+   * @see #getFieldSpecification()
+   * @generated
+   */
+  EReference getFieldSpecification_NextLevel();
+
+  /**
    * Returns the meta object for class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldInitialisations <em>Field Initialisations</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1397,6 +1417,14 @@ public interface TankWarPackage extends EPackage
      * @generated
      */
     EReference FIELD_SPECIFICATION__OBSTACLE = eINSTANCE.getFieldSpecification_Obstacle();
+
+    /**
+     * The meta object literal for the '<em><b>Next Level</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FIELD_SPECIFICATION__NEXT_LEVEL = eINSTANCE.getFieldSpecification_NextLevel();
 
     /**
      * The meta object literal for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.FieldInitialisationsImpl <em>Field Initialisations</em>}' class.

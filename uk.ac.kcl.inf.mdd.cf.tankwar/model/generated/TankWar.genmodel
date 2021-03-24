@@ -47,6 +47,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TankWar.ecore#//FieldSpecification/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TankWar.ecore#//FieldSpecification/enemyCount"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TankWar.ecore#//FieldSpecification/obstacle"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TankWar.ecore#//FieldSpecification/nextLevel"/>
     </genClasses>
     <genClasses ecoreClass="TankWar.ecore#//FieldInitialisations"/>
     <genClasses ecoreClass="TankWar.ecore#//LocalFieldInitialisations">

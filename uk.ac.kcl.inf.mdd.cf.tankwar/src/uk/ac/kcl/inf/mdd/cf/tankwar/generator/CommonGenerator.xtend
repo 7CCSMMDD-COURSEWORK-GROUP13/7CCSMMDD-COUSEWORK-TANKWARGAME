@@ -26,7 +26,11 @@ class CommonGenerator {
 	def generateModelPackage() '''«twg.name».model'''
 
 	def generateModelPackageFolder() '''«twg.name»/model'''
+	
+	def generateLevelPackage() '''«twg.name».level'''
+	
 
+	def generateLevelPackageFolder() '''«twg.name»/level'''
 
 
 	def generateFrameClassName() '''TankClient'''
@@ -38,6 +42,10 @@ class CommonGenerator {
 	def generateMissileClassName() '''Missile'''
 
 	def generateExplodeClassName() '''Explode'''
+
+	def generateAbsLevelClassName() '''Level'''
+
+	def generateLevelClassName(String level) '''Level«level.toFirstUpper»'''
 
 	def generateFieldClassName() '''«twg.name.toFirstUpper»Field'''
 
@@ -59,6 +67,8 @@ class CommonGenerator {
 
 	def generateExplodeClassFileName() '''«generateViewPackageFolder»/«generateExplodeClassName()».java'''
 	
-	
+	def generateLevelClassFileName(String level) '''«generateLevelPackageFolder»/«generateLevelClassName(level.toFirstUpper)».java'''
+		
+	def generateAbsLevelClassFileName() '''«generateLevelPackageFolder»/«generateAbsLevelClassName».java'''
 	
 }

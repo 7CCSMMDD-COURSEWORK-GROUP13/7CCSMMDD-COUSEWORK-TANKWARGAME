@@ -18,6 +18,7 @@ game Tank{
 			}
 		}
 		
+		nextLevel goto medium
 	}
 	
 	field medium {
@@ -36,6 +37,9 @@ game Tank{
 				wallPosY = 550
 			}
 		}
+		
+		nextLevel goto hard
+		
 		
 	}
 	
@@ -61,6 +65,9 @@ game Tank{
 				wallPosY = 600
 			}
 		}
+		
+		nextLevel goto easy
+		
 	}
 	
 	//superMode

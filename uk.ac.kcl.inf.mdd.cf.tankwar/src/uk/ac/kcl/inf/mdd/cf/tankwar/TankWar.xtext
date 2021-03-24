@@ -76,6 +76,7 @@ FieldSpecification :
 	"field" name=ID "{" 
 		"enemyCount" "=" enemyCount=INT
 	     obstacle = Obstaclepecification 
+	     "nextLevel" "goto"  nextLevel = [FieldSpecification]
 		
     "}"
 ;

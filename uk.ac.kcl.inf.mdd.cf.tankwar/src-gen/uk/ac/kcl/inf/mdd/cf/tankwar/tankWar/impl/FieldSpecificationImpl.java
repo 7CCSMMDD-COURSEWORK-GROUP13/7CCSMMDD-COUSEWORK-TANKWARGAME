@@ -27,6 +27,7 @@ import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarPackage;
  *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.FieldSpecificationImpl#getName <em>Name</em>}</li>
  *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.FieldSpecificationImpl#getEnemyCount <em>Enemy Count</em>}</li>
  *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.FieldSpecificationImpl#getObstacle <em>Obstacle</em>}</li>
+ *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.FieldSpecificationImpl#getNextLevel <em>Next Level</em>}</li>
  * </ul>
  *
  * @generated
@@ -82,6 +83,16 @@ public class FieldSpecificationImpl extends MinimalEObjectImpl.Container impleme
    * @ordered
    */
   protected Obstaclepecification obstacle;
+
+  /**
+   * The cached value of the '{@link #getNextLevel() <em>Next Level</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getNextLevel()
+   * @generated
+   * @ordered
+   */
+  protected FieldSpecification nextLevel;
 
   /**
    * <!-- begin-user-doc -->
@@ -210,6 +221,51 @@ public class FieldSpecificationImpl extends MinimalEObjectImpl.Container impleme
    * @generated
    */
   @Override
+  public FieldSpecification getNextLevel()
+  {
+    if (nextLevel != null && nextLevel.eIsProxy())
+    {
+      InternalEObject oldNextLevel = (InternalEObject)nextLevel;
+      nextLevel = (FieldSpecification)eResolveProxy(oldNextLevel);
+      if (nextLevel != oldNextLevel)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, TankWarPackage.FIELD_SPECIFICATION__NEXT_LEVEL, oldNextLevel, nextLevel));
+      }
+    }
+    return nextLevel;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FieldSpecification basicGetNextLevel()
+  {
+    return nextLevel;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setNextLevel(FieldSpecification newNextLevel)
+  {
+    FieldSpecification oldNextLevel = nextLevel;
+    nextLevel = newNextLevel;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TankWarPackage.FIELD_SPECIFICATION__NEXT_LEVEL, oldNextLevel, nextLevel));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
@@ -236,6 +292,9 @@ public class FieldSpecificationImpl extends MinimalEObjectImpl.Container impleme
         return getEnemyCount();
       case TankWarPackage.FIELD_SPECIFICATION__OBSTACLE:
         return getObstacle();
+      case TankWarPackage.FIELD_SPECIFICATION__NEXT_LEVEL:
+        if (resolve) return getNextLevel();
+        return basicGetNextLevel();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -258,6 +317,9 @@ public class FieldSpecificationImpl extends MinimalEObjectImpl.Container impleme
         return;
       case TankWarPackage.FIELD_SPECIFICATION__OBSTACLE:
         setObstacle((Obstaclepecification)newValue);
+        return;
+      case TankWarPackage.FIELD_SPECIFICATION__NEXT_LEVEL:
+        setNextLevel((FieldSpecification)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -282,6 +344,9 @@ public class FieldSpecificationImpl extends MinimalEObjectImpl.Container impleme
       case TankWarPackage.FIELD_SPECIFICATION__OBSTACLE:
         setObstacle((Obstaclepecification)null);
         return;
+      case TankWarPackage.FIELD_SPECIFICATION__NEXT_LEVEL:
+        setNextLevel((FieldSpecification)null);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -302,6 +367,8 @@ public class FieldSpecificationImpl extends MinimalEObjectImpl.Container impleme
         return enemyCount != ENEMY_COUNT_EDEFAULT;
       case TankWarPackage.FIELD_SPECIFICATION__OBSTACLE:
         return obstacle != null;
+      case TankWarPackage.FIELD_SPECIFICATION__NEXT_LEVEL:
+        return nextLevel != null;
     }
     return super.eIsSet(featureID);
   }

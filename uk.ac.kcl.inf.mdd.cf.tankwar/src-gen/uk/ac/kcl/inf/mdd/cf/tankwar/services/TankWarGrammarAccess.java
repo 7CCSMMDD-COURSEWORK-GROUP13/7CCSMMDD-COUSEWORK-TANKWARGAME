@@ -503,18 +503,25 @@ public class TankWarGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		private final RuleCall cEnemyCountINTTerminalRuleCall_5_0 = (RuleCall)cEnemyCountAssignment_5.eContents().get(0);
 		private final Assignment cObstacleAssignment_6 = (Assignment)cGroup.eContents().get(6);
 		private final RuleCall cObstacleObstaclepecificationParserRuleCall_6_0 = (RuleCall)cObstacleAssignment_6.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Keyword cNextLevelKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Keyword cGotoKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Assignment cNextLevelAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final CrossReference cNextLevelFieldSpecificationCrossReference_9_0 = (CrossReference)cNextLevelAssignment_9.eContents().get(0);
+		private final RuleCall cNextLevelFieldSpecificationIDTerminalRuleCall_9_0_1 = (RuleCall)cNextLevelFieldSpecificationCrossReference_9_0.eContents().get(1);
+		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
 		//FieldSpecification:
 		//	"field" name=ID "{"
 		//	"enemyCount" "=" enemyCount=INT
 		//	obstacle=Obstaclepecification
+		//	"nextLevel" "goto" nextLevel=[FieldSpecification]
 		//	"}";
 		@Override public ParserRule getRule() { return rule; }
 		
 		//"field" name=ID "{"
 		//"enemyCount" "=" enemyCount=INT
 		//obstacle=Obstaclepecification
+		//"nextLevel" "goto" nextLevel=[FieldSpecification]
 		//"}"
 		public Group getGroup() { return cGroup; }
 		
@@ -548,8 +555,23 @@ public class TankWarGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//Obstaclepecification
 		public RuleCall getObstacleObstaclepecificationParserRuleCall_6_0() { return cObstacleObstaclepecificationParserRuleCall_6_0; }
 		
+		//"nextLevel"
+		public Keyword getNextLevelKeyword_7() { return cNextLevelKeyword_7; }
+		
+		//"goto"
+		public Keyword getGotoKeyword_8() { return cGotoKeyword_8; }
+		
+		//nextLevel=[FieldSpecification]
+		public Assignment getNextLevelAssignment_9() { return cNextLevelAssignment_9; }
+		
+		//[FieldSpecification]
+		public CrossReference getNextLevelFieldSpecificationCrossReference_9_0() { return cNextLevelFieldSpecificationCrossReference_9_0; }
+		
+		//ID
+		public RuleCall getNextLevelFieldSpecificationIDTerminalRuleCall_9_0_1() { return cNextLevelFieldSpecificationIDTerminalRuleCall_9_0_1; }
+		
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
+		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
 	}
 	public class FieldInitialisationsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uk.ac.kcl.inf.mdd.cf.tankwar.TankWar.FieldInitialisations");
@@ -1016,6 +1038,7 @@ public class TankWarGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	//	"field" name=ID "{"
 	//	"enemyCount" "=" enemyCount=INT
 	//	obstacle=Obstaclepecification
+	//	"nextLevel" "goto" nextLevel=[FieldSpecification]
 	//	"}";
 	public FieldSpecificationElements getFieldSpecificationAccess() {
 		return pFieldSpecification;

@@ -74,6 +74,7 @@ public class TankWarParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getFieldSpecificationAccess().getNameAssignment_1(), "rule__FieldSpecification__NameAssignment_1");
 			builder.put(grammarAccess.getFieldSpecificationAccess().getEnemyCountAssignment_5(), "rule__FieldSpecification__EnemyCountAssignment_5");
 			builder.put(grammarAccess.getFieldSpecificationAccess().getObstacleAssignment_6(), "rule__FieldSpecification__ObstacleAssignment_6");
+			builder.put(grammarAccess.getFieldSpecificationAccess().getNextLevelAssignment_9(), "rule__FieldSpecification__NextLevelAssignment_9");
 			builder.put(grammarAccess.getLocalFieldInitialisationsAccess().getInitialisationsAssignment_2_0(), "rule__LocalFieldInitialisations__InitialisationsAssignment_2_0");
 			builder.put(grammarAccess.getStartFieldDeclarationAccess().getFieldAssignment_2(), "rule__StartFieldDeclaration__FieldAssignment_2");
 		}

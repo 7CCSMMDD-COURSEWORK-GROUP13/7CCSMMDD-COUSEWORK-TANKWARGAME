@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification#getName <em>Name</em>}</li>
  *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification#getEnemyCount <em>Enemy Count</em>}</li>
  *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification#getObstacle <em>Obstacle</em>}</li>
+ *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification#getNextLevel <em>Next Level</em>}</li>
  * </ul>
  *
  * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarPackage#getFieldSpecification()
@@ -90,5 +91,27 @@ public interface FieldSpecification extends EObject
    * @generated
    */
   void setObstacle(Obstaclepecification value);
+
+  /**
+   * Returns the value of the '<em><b>Next Level</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Next Level</em>' reference.
+   * @see #setNextLevel(FieldSpecification)
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarPackage#getFieldSpecification_NextLevel()
+   * @model
+   * @generated
+   */
+  FieldSpecification getNextLevel();
+
+  /**
+   * Sets the value of the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification#getNextLevel <em>Next Level</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Next Level</em>' reference.
+   * @see #getNextLevel()
+   * @generated
+   */
+  void setNextLevel(FieldSpecification value);
 
 } // FieldSpecification

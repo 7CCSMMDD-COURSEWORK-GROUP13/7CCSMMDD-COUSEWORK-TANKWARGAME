@@ -26,6 +26,7 @@ class FrameGenerator extends CommonGenerator {
 		import java.util.List;
 		import java.util.ArrayList;
 		import javax.swing.JOptionPane;
+		import «generateLevelPackage».*;
 		
 		/*
 		 *TankWar mainFrame
@@ -45,9 +46,11 @@ class FrameGenerator extends CommonGenerator {
 		    List<Explode> explodes = new ArrayList<Explode>();
 		    List<Tank>   tanks = new ArrayList<Tank>();
 		    Image offScreenImage = null;
+		    private Level currentLevel = null;
 		    
 		    public «generateFrameClassName»(){
-		    	«generateFieldInitialisation()»
+		    	currentLevel = new «getInitLevelName()»(this);
+		    	init();
 		    }
 		
 		    public void paint(Graphics g){
@@ -57,11 +60,6 @@ class FrameGenerator extends CommonGenerator {
 		        g.drawString("tankscount"+tanks.size(),10,90);
 		        g.drawString("tanks life"+myTank.getLife(),10,100);
 		
-«««		        if(tanks.size()<=0){
-«««		            for(int i =0;i<ENEMY_TANK_COUNTw;i++){
-«««		                tanks.add(new Tank(50+40*(i+1),50,false,Tank.Direction.D,this));
-«««		            }
-«««		        }
 		        for(int i = 0;i<missiles.size();i++){
 		            Missile m  = missiles.get(i);
 		            m.hitTanks(tanks);
@@ -111,16 +109,15 @@ class FrameGenerator extends CommonGenerator {
 		     xianshiTankmainFrame
 		     */
 		    public void launchFrame(){
-		        for(int i =0;i<ENEMY_TANK_COUNT;i++){
-		            tanks.add(new Tank(50+40*(i+1),50,false,Tank.Direction.D,this));
-		        }
+«««		        for(int i =0;i<ENEMY_TANK_COUNT;i++){
+«««		            tanks.add(new Tank(50+40*(i+1),50,false,Tank.Direction.D,this));
+«««		        }
 		        this.setTitle("TankWar");
 		        this.setLocation(400,300);
 		        this.setSize(GAME_WIDTH,GAME_HEIGHT);
 		        this.addWindowListener(new WindowAdapter() {
 		            public void windowClosing(WindowEvent e) {
 		                System.exit(0);
-		                //setVisible(false) ?????
 		            }
 		        });
 		        this.setBackground(Color.GREEN);
@@ -133,6 +130,19 @@ class FrameGenerator extends CommonGenerator {
 		    public static void main(String[] args){
 		        «generateFrameClassName» tc = new «generateFrameClassName»();
 		        tc.launchFrame();
+		    }
+		    
+		    public void clean(){
+		           walls.clear();
+		           missiles.clear();
+		           explodes.clear();
+		           tanks.clear();
+		    }
+		    
+		    public void init(){
+		            myTank = new Tank(50,50,true,this);
+		            walls = currentLevel.getWalls();
+		            tanks = currentLevel.getTanks();
 		    }
 		
 		    private class PaintThread implements Runnable{
@@ -160,7 +170,7 @@ class FrameGenerator extends CommonGenerator {
 		        }
 		    }
 		    
-		    «twg.fields.join (" ", [f | generateFieldInitialiserFor(f)])»
+«««		    «twg.fields.join (" ", [f | generateFieldInitialiserFor(f)])»
 		    
 		
 		}
@@ -170,13 +180,33 @@ class FrameGenerator extends CommonGenerator {
 	def generateEndGameMessage(OptionSpecification options){
 		if(options instanceof EndGameBehaviour){
 			'''
-		     if(tanks.size()<=0) {	
-		     	JOptionPane.showMessageDialog(TankClient.this, "«options.win»");
-		     	break;
+		     if(tanks.size()<=0) {
+		     	Object[] options = {"next","exit"};
+		     	int userOption = JOptionPane.showOptionDialog(null, "«options.win»", "TankWar Game Result", JOptionPane.YES_OPTION,
+		     	                            JOptionPane.QUESTION_MESSAGE,null, options, options[0]);
+		        if (userOption == 0) {
+		           currentLevel = currentLevel.getNextLevel();
+		           if(currentLevel!=null){
+		           	 	System.out.println(currentLevel.getEnemyNum());
+		       			clean();
+		           		init();
+		           }
+		     	}else {
+		            System.exit(1);
+		     	}
 		     }
+		     
 		     if (!myTank.isLive()){
-		     	JOptionPane.showMessageDialog(TankClient.this, "«options.lost»");
-		     	break;
+		     	Object[] options = {"replay","exit"};
+		     	int userOption = JOptionPane.showOptionDialog(null,"«options.lost»", "TankWar Game Result", JOptionPane.YES_OPTION,
+		     	                            JOptionPane.QUESTION_MESSAGE,null, options, options[0]);		 
+		     	 if (userOption == 0) {
+		     	 	System.out.println(currentLevel.getEnemyNum());
+		       		clean();
+		           	init();		         
+		         }else {
+		            System.exit(1);
+		         }
 		     }
 		     '''
 		}else{
@@ -184,15 +214,15 @@ class FrameGenerator extends CommonGenerator {
 		}
 	}
 	
-	def generateObstacleFieldInitialiserFor(ObstacleMember member) {
-		if(member instanceof WallObstacle){
-			'''
-				walls.add(new Wall(«member.wallPosX»,«member.wallPosY»,«member.wallWidth»,«member.wallHeight»,this));
-			'''
-		}else{
-			''''''
-		}
-	}
+//	def generateObstacleFieldInitialiserFor(ObstacleMember member) {
+//		if(member instanceof WallObstacle){
+//			'''
+//				walls.add(new Wall(«member.wallPosX»,«member.wallPosY»,«member.wallWidth»,«member.wallHeight»,this));
+//			'''
+//		}else{
+//			''''''
+//		}
+//	}
 	
 	def generateObstacleDrawFor(ObstacleMember member) {
 		if(member instanceof WallObstacle){
@@ -232,16 +262,16 @@ class FrameGenerator extends CommonGenerator {
 		}
 	}
 	
-	def generateFieldInitialisation() {
-		twg.options.filter(StartFieldDeclaration).join(" ", [o|'''initialise«o.field.name.toFirstUpper»Field();'''])
+	def getInitLevelName() {
+		twg.options.filter(StartFieldDeclaration).join(" ", [o|'''Level«o.field.name.toFirstUpper»'''])
 	}
 	
-	def generateFieldInitialiserFor(FieldSpecification f) '''
-		public final void «f.generateFieldInitialiserName»() {
-			ENEMY_TANK_COUNT = «f.enemyCount»;
-			«f.obstacle.fields.join("",[obstacle| generateObstacleFieldInitialiserFor(obstacle)])»
-		}
-	'''
+//	def generateFieldInitialiserFor(FieldSpecification f) '''
+//		public final void «f.generateFieldInitialiserName»() {
+//			ENEMY_TANK_COUNT = «f.enemyCount»;
+//			«f.obstacle.fields.join("",[obstacle| generateObstacleFieldInitialiserFor(obstacle)])»
+//		}
+//	'''
 	
 	
 

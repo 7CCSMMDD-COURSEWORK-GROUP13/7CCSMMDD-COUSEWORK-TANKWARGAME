@@ -867,9 +867,30 @@ ruleFieldSpecification returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_7='}'
+		otherlv_7='nextLevel'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getFieldSpecificationAccess().getRightCurlyBracketKeyword_7());
+			newLeafNode(otherlv_7, grammarAccess.getFieldSpecificationAccess().getNextLevelKeyword_7());
+		}
+		otherlv_8='goto'
+		{
+			newLeafNode(otherlv_8, grammarAccess.getFieldSpecificationAccess().getGotoKeyword_8());
+		}
+		(
+			(
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getFieldSpecificationRule());
+					}
+				}
+				otherlv_9=RULE_ID
+				{
+					newLeafNode(otherlv_9, grammarAccess.getFieldSpecificationAccess().getNextLevelFieldSpecificationCrossReference_9_0());
+				}
+			)
+		)
+		otherlv_10='}'
+		{
+			newLeafNode(otherlv_10, grammarAccess.getFieldSpecificationAccess().getRightCurlyBracketKeyword_10());
 		}
 	)
 ;
