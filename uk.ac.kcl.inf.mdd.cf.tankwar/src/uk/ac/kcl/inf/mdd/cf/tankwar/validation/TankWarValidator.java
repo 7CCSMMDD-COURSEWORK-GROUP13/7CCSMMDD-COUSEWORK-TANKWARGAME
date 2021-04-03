@@ -6,6 +6,7 @@ package uk.ac.kcl.inf.mdd.cf.tankwar.validation;
 import org.eclipse.xtext.validation.Check;
 
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.ScreenSpecification;
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarGame;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarPackage;
 
 /**
@@ -15,16 +16,16 @@ import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarPackage;
  */
 public class TankWarValidator extends AbstractTankWarValidator {
 	
-//	public static final String INVALID_NAME = "invalidName";
-//
-//	@Check
-//	public void checkGreetingStartsWithCapital(Greeting greeting) {
-//		if (!Character.isUpperCase(greeting.getName().charAt(0))) {
-//			warning("Name should start with a capital",
-//					TankWarPackage.Literals.GREETING__NAME,
-//					INVALID_NAME);
-//		}
-//	}
+	public static final String INVALID_NAME = "invalidName";
+
+	@Check
+	public void checkGameNameCapital(TankWarGame tankWarGame) {
+		if (!Character.isUpperCase(tankWarGame.getName().charAt(0))) {
+			warning("Name should start with a capital",
+					TankWarPackage.Literals.TANK_WAR_GAME__NAME,
+					INVALID_NAME);
+		}
+	}
 	
 	@Check
 	public void checkScreenSpecification(ScreenSpecification screenSpecification) {
