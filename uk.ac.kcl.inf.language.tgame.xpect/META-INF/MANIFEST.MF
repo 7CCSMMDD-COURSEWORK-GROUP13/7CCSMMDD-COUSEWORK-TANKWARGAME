@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Xpect
+Bundle-SymbolicName: uk.ac.kcl.inf.language.tgame.xpect
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: uk.ac.kcl.inf.language.tgame.xpect
+Bundle-RequiredExecutionEnvironment: JavaSE-15
+Require-Bundle: uk.ac.kcl.inf.mdd.cf.tankwar;bundle-version="1.0.0",
+ uk.ac.kcl.inf.mdd.cf.tankwar.ui;bundle-version="1.0.0",
+ org.eclipse.xpect.xtext.lib;bundle-version="0.2.0"
