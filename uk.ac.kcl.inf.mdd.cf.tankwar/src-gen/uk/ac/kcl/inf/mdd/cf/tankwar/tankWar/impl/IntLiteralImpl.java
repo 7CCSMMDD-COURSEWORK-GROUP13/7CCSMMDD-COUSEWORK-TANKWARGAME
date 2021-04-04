@@ -9,50 +9,50 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.StringValue;
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.IntLiteral;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>String Value</b></em>'.
+ * An implementation of the model object '<em><b>Int Literal</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.StringValueImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.IntLiteralImpl#getVal <em>Val</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class StringValueImpl extends ValueImpl implements StringValue
+public class IntLiteralImpl extends ExpressionImpl implements IntLiteral
 {
   /**
-   * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+   * The default value of the '{@link #getVal() <em>Val</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getValue()
+   * @see #getVal()
    * @generated
    * @ordered
    */
-  protected static final String VALUE_EDEFAULT = null;
+  protected static final int VAL_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
+   * The cached value of the '{@link #getVal() <em>Val</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getValue()
+   * @see #getVal()
    * @generated
    * @ordered
    */
-  protected String value = VALUE_EDEFAULT;
+  protected int val = VAL_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected StringValueImpl()
+  protected IntLiteralImpl()
   {
     super();
   }
@@ -65,7 +65,7 @@ public class StringValueImpl extends ValueImpl implements StringValue
   @Override
   protected EClass eStaticClass()
   {
-    return TankWarPackage.Literals.STRING_VALUE;
+    return TankWarPackage.Literals.INT_LITERAL;
   }
 
   /**
@@ -74,9 +74,9 @@ public class StringValueImpl extends ValueImpl implements StringValue
    * @generated
    */
   @Override
-  public String getValue()
+  public int getVal()
   {
-    return value;
+    return val;
   }
 
   /**
@@ -85,12 +85,12 @@ public class StringValueImpl extends ValueImpl implements StringValue
    * @generated
    */
   @Override
-  public void setValue(String newValue)
+  public void setVal(int newVal)
   {
-    String oldValue = value;
-    value = newValue;
+    int oldVal = val;
+    val = newVal;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TankWarPackage.STRING_VALUE__VALUE, oldValue, value));
+      eNotify(new ENotificationImpl(this, Notification.SET, TankWarPackage.INT_LITERAL__VAL, oldVal, val));
   }
 
   /**
@@ -103,8 +103,8 @@ public class StringValueImpl extends ValueImpl implements StringValue
   {
     switch (featureID)
     {
-      case TankWarPackage.STRING_VALUE__VALUE:
-        return getValue();
+      case TankWarPackage.INT_LITERAL__VAL:
+        return getVal();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +119,8 @@ public class StringValueImpl extends ValueImpl implements StringValue
   {
     switch (featureID)
     {
-      case TankWarPackage.STRING_VALUE__VALUE:
-        setValue((String)newValue);
+      case TankWarPackage.INT_LITERAL__VAL:
+        setVal((Integer)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +136,8 @@ public class StringValueImpl extends ValueImpl implements StringValue
   {
     switch (featureID)
     {
-      case TankWarPackage.STRING_VALUE__VALUE:
-        setValue(VALUE_EDEFAULT);
+      case TankWarPackage.INT_LITERAL__VAL:
+        setVal(VAL_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +153,8 @@ public class StringValueImpl extends ValueImpl implements StringValue
   {
     switch (featureID)
     {
-      case TankWarPackage.STRING_VALUE__VALUE:
-        return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+      case TankWarPackage.INT_LITERAL__VAL:
+        return val != VAL_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -170,10 +170,10 @@ public class StringValueImpl extends ValueImpl implements StringValue
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (value: ");
-    result.append(value);
+    result.append(" (val: ");
+    result.append(val);
     result.append(')');
     return result.toString();
   }
 
-} //StringValueImpl
+} //IntLiteralImpl

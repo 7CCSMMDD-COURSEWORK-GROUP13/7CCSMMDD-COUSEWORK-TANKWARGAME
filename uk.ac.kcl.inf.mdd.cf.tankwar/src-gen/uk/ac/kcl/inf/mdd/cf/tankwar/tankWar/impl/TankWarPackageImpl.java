@@ -10,25 +10,23 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Addition;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.AllowRestartMenu;
-import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.DirectBehaviour;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.EndGameBehaviour;
-import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldInitialisations;
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Expression;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification;
-import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.IntValue;
-import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.LocalFieldInitialisations;
-import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.NoOpBehaviour;
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.IntLiteral;
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Multiplication;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.ObstacleMember;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Obstaclepecification;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.OptionSpecification;
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.RealLiteral;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.ScreenSpecification;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.StartFieldDeclaration;
-import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.StringValue;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.SuperModeDeclaration;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarFactory;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarGame;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarPackage;
-import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Value;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.WallObstacle;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.WaterObstacle;
 
@@ -52,35 +50,7 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass valueEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass directBehaviourEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass endGameBehaviourEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass stringValueEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass intValueEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -129,20 +99,6 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass fieldInitialisationsEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass localFieldInitialisationsEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass optionSpecificationEClass = null;
 
   /**
@@ -171,7 +127,35 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass noOpBehaviourEClass = null;
+  private EClass expressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass intLiteralEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass realLiteralEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass additionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass multiplicationEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -297,28 +281,6 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
    * @generated
    */
   @Override
-  public EClass getValue()
-  {
-    return valueEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getDirectBehaviour()
-  {
-    return directBehaviourEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public EClass getEndGameBehaviour()
   {
     return endGameBehaviourEClass;
@@ -352,50 +314,6 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
    * @generated
    */
   @Override
-  public EClass getStringValue()
-  {
-    return stringValueEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getStringValue_Value()
-  {
-    return (EAttribute)stringValueEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getIntValue()
-  {
-    return intValueEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getIntValue_Value()
-  {
-    return (EAttribute)intValueEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public EClass getScreenSpecification()
   {
     return screenSpecificationEClass;
@@ -418,9 +336,9 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
    * @generated
    */
   @Override
-  public EAttribute getScreenSpecification_ScreenWidth()
+  public EReference getScreenSpecification_ScreenWidth()
   {
-    return (EAttribute)screenSpecificationEClass.getEStructuralFeatures().get(1);
+    return (EReference)screenSpecificationEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -429,9 +347,9 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
    * @generated
    */
   @Override
-  public EAttribute getScreenSpecification_ScreenHeight()
+  public EReference getScreenSpecification_ScreenHeight()
   {
-    return (EAttribute)screenSpecificationEClass.getEStructuralFeatures().get(2);
+    return (EReference)screenSpecificationEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -616,39 +534,6 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
    * @generated
    */
   @Override
-  public EClass getFieldInitialisations()
-  {
-    return fieldInitialisationsEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getLocalFieldInitialisations()
-  {
-    return localFieldInitialisationsEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getLocalFieldInitialisations_Initialisations()
-  {
-    return (EAttribute)localFieldInitialisationsEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public EClass getOptionSpecification()
   {
     return optionSpecificationEClass;
@@ -704,9 +589,141 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
    * @generated
    */
   @Override
-  public EClass getNoOpBehaviour()
+  public EClass getExpression()
   {
-    return noOpBehaviourEClass;
+    return expressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getIntLiteral()
+  {
+    return intLiteralEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getIntLiteral_Val()
+  {
+    return (EAttribute)intLiteralEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getRealLiteral()
+  {
+    return realLiteralEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getRealLiteral_Val()
+  {
+    return (EAttribute)realLiteralEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getAddition()
+  {
+    return additionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getAddition_Left()
+  {
+    return (EReference)additionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAddition_Operator()
+  {
+    return (EAttribute)additionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getAddition_Right()
+  {
+    return (EReference)additionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getMultiplication()
+  {
+    return multiplicationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getMultiplication_Left()
+  {
+    return (EReference)multiplicationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getMultiplication_Operator()
+  {
+    return (EAttribute)multiplicationEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getMultiplication_Right()
+  {
+    return (EReference)multiplicationEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -746,24 +763,14 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
     createEReference(tankWarGameEClass, TANK_WAR_GAME__FIELDS);
     createEReference(tankWarGameEClass, TANK_WAR_GAME__OPTIONS);
 
-    valueEClass = createEClass(VALUE);
-
-    directBehaviourEClass = createEClass(DIRECT_BEHAVIOUR);
-
     endGameBehaviourEClass = createEClass(END_GAME_BEHAVIOUR);
     createEAttribute(endGameBehaviourEClass, END_GAME_BEHAVIOUR__WIN);
     createEAttribute(endGameBehaviourEClass, END_GAME_BEHAVIOUR__LOST);
 
-    stringValueEClass = createEClass(STRING_VALUE);
-    createEAttribute(stringValueEClass, STRING_VALUE__VALUE);
-
-    intValueEClass = createEClass(INT_VALUE);
-    createEAttribute(intValueEClass, INT_VALUE__VALUE);
-
     screenSpecificationEClass = createEClass(SCREEN_SPECIFICATION);
     createEAttribute(screenSpecificationEClass, SCREEN_SPECIFICATION__NAME);
-    createEAttribute(screenSpecificationEClass, SCREEN_SPECIFICATION__SCREEN_WIDTH);
-    createEAttribute(screenSpecificationEClass, SCREEN_SPECIFICATION__SCREEN_HEIGHT);
+    createEReference(screenSpecificationEClass, SCREEN_SPECIFICATION__SCREEN_WIDTH);
+    createEReference(screenSpecificationEClass, SCREEN_SPECIFICATION__SCREEN_HEIGHT);
 
     obstaclepecificationEClass = createEClass(OBSTACLEPECIFICATION);
     createEAttribute(obstaclepecificationEClass, OBSTACLEPECIFICATION__NAME);
@@ -786,11 +793,6 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
     createEReference(fieldSpecificationEClass, FIELD_SPECIFICATION__OBSTACLE);
     createEReference(fieldSpecificationEClass, FIELD_SPECIFICATION__NEXT_LEVEL);
 
-    fieldInitialisationsEClass = createEClass(FIELD_INITIALISATIONS);
-
-    localFieldInitialisationsEClass = createEClass(LOCAL_FIELD_INITIALISATIONS);
-    createEAttribute(localFieldInitialisationsEClass, LOCAL_FIELD_INITIALISATIONS__INITIALISATIONS);
-
     optionSpecificationEClass = createEClass(OPTION_SPECIFICATION);
 
     superModeDeclarationEClass = createEClass(SUPER_MODE_DECLARATION);
@@ -800,7 +802,23 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
 
     allowRestartMenuEClass = createEClass(ALLOW_RESTART_MENU);
 
-    noOpBehaviourEClass = createEClass(NO_OP_BEHAVIOUR);
+    expressionEClass = createEClass(EXPRESSION);
+
+    intLiteralEClass = createEClass(INT_LITERAL);
+    createEAttribute(intLiteralEClass, INT_LITERAL__VAL);
+
+    realLiteralEClass = createEClass(REAL_LITERAL);
+    createEAttribute(realLiteralEClass, REAL_LITERAL__VAL);
+
+    additionEClass = createEClass(ADDITION);
+    createEReference(additionEClass, ADDITION__LEFT);
+    createEAttribute(additionEClass, ADDITION__OPERATOR);
+    createEReference(additionEClass, ADDITION__RIGHT);
+
+    multiplicationEClass = createEClass(MULTIPLICATION);
+    createEReference(multiplicationEClass, MULTIPLICATION__LEFT);
+    createEAttribute(multiplicationEClass, MULTIPLICATION__OPERATOR);
+    createEReference(multiplicationEClass, MULTIPLICATION__RIGHT);
   }
 
   /**
@@ -832,18 +850,16 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    directBehaviourEClass.getESuperTypes().add(this.getValue());
-    endGameBehaviourEClass.getESuperTypes().add(this.getDirectBehaviour());
     endGameBehaviourEClass.getESuperTypes().add(this.getOptionSpecification());
-    stringValueEClass.getESuperTypes().add(this.getValue());
-    intValueEClass.getESuperTypes().add(this.getValue());
     waterObstacleEClass.getESuperTypes().add(this.getObstacleMember());
     wallObstacleEClass.getESuperTypes().add(this.getObstacleMember());
-    localFieldInitialisationsEClass.getESuperTypes().add(this.getFieldInitialisations());
     superModeDeclarationEClass.getESuperTypes().add(this.getOptionSpecification());
     startFieldDeclarationEClass.getESuperTypes().add(this.getOptionSpecification());
     allowRestartMenuEClass.getESuperTypes().add(this.getOptionSpecification());
-    noOpBehaviourEClass.getESuperTypes().add(this.getDirectBehaviour());
+    intLiteralEClass.getESuperTypes().add(this.getExpression());
+    realLiteralEClass.getESuperTypes().add(this.getExpression());
+    additionEClass.getESuperTypes().add(this.getExpression());
+    multiplicationEClass.getESuperTypes().add(this.getExpression());
 
     // Initialize classes and features; add operations and parameters
     initEClass(tankWarGameEClass, TankWarGame.class, "TankWarGame", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -852,24 +868,14 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
     initEReference(getTankWarGame_Fields(), this.getFieldSpecification(), null, "fields", null, 0, -1, TankWarGame.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTankWarGame_Options(), this.getOptionSpecification(), null, "options", null, 0, -1, TankWarGame.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(valueEClass, Value.class, "Value", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(directBehaviourEClass, DirectBehaviour.class, "DirectBehaviour", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
     initEClass(endGameBehaviourEClass, EndGameBehaviour.class, "EndGameBehaviour", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getEndGameBehaviour_Win(), ecorePackage.getEString(), "win", null, 0, 1, EndGameBehaviour.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getEndGameBehaviour_Lost(), ecorePackage.getEString(), "lost", null, 0, 1, EndGameBehaviour.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(stringValueEClass, StringValue.class, "StringValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getStringValue_Value(), ecorePackage.getEString(), "value", null, 0, 1, StringValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(intValueEClass, IntValue.class, "IntValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getIntValue_Value(), ecorePackage.getEInt(), "value", null, 0, 1, IntValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
     initEClass(screenSpecificationEClass, ScreenSpecification.class, "ScreenSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getScreenSpecification_Name(), ecorePackage.getEString(), "name", null, 0, 1, ScreenSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getScreenSpecification_ScreenWidth(), ecorePackage.getEInt(), "screenWidth", null, 0, 1, ScreenSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getScreenSpecification_ScreenHeight(), ecorePackage.getEInt(), "screenHeight", null, 0, 1, ScreenSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getScreenSpecification_ScreenWidth(), this.getExpression(), null, "screenWidth", null, 0, 1, ScreenSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getScreenSpecification_ScreenHeight(), this.getExpression(), null, "screenHeight", null, 0, 1, ScreenSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(obstaclepecificationEClass, Obstaclepecification.class, "Obstaclepecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getObstaclepecification_Name(), ecorePackage.getEString(), "name", null, 0, 1, Obstaclepecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -892,11 +898,6 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
     initEReference(getFieldSpecification_Obstacle(), this.getObstaclepecification(), null, "obstacle", null, 0, 1, FieldSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFieldSpecification_NextLevel(), this.getFieldSpecification(), null, "nextLevel", null, 0, 1, FieldSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(fieldInitialisationsEClass, FieldInitialisations.class, "FieldInitialisations", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(localFieldInitialisationsEClass, LocalFieldInitialisations.class, "LocalFieldInitialisations", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getLocalFieldInitialisations_Initialisations(), ecorePackage.getEString(), "initialisations", null, 0, -1, LocalFieldInitialisations.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
     initEClass(optionSpecificationEClass, OptionSpecification.class, "OptionSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(superModeDeclarationEClass, SuperModeDeclaration.class, "SuperModeDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -906,7 +907,23 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
 
     initEClass(allowRestartMenuEClass, AllowRestartMenu.class, "AllowRestartMenu", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(noOpBehaviourEClass, NoOpBehaviour.class, "NoOpBehaviour", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(intLiteralEClass, IntLiteral.class, "IntLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getIntLiteral_Val(), ecorePackage.getEInt(), "val", null, 0, 1, IntLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(realLiteralEClass, RealLiteral.class, "RealLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getRealLiteral_Val(), ecorePackage.getEFloat(), "val", null, 0, 1, RealLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(additionEClass, Addition.class, "Addition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getAddition_Left(), this.getExpression(), null, "left", null, 0, 1, Addition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAddition_Operator(), ecorePackage.getEString(), "operator", null, 0, -1, Addition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAddition_Right(), this.getExpression(), null, "right", null, 0, -1, Addition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(multiplicationEClass, Multiplication.class, "Multiplication", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getMultiplication_Left(), this.getExpression(), null, "left", null, 0, 1, Multiplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMultiplication_Operator(), ecorePackage.getEString(), "operator", null, 0, -1, Multiplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMultiplication_Right(), this.getExpression(), null, "right", null, 0, -1, Multiplication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

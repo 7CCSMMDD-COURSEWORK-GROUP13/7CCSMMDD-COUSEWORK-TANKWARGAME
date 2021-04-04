@@ -113,42 +113,23 @@ public interface TankWarPackage extends EPackage
   int TANK_WAR_GAME_FEATURE_COUNT = 4;
 
   /**
-   * The meta object id for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.ValueImpl <em>Value</em>}' class.
+   * The meta object id for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.OptionSpecificationImpl <em>Option Specification</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.ValueImpl
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getValue()
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.OptionSpecificationImpl
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getOptionSpecification()
    * @generated
    */
-  int VALUE = 1;
+  int OPTION_SPECIFICATION = 8;
 
   /**
-   * The number of structural features of the '<em>Value</em>' class.
+   * The number of structural features of the '<em>Option Specification</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int VALUE_FEATURE_COUNT = 0;
-
-  /**
-   * The meta object id for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.DirectBehaviourImpl <em>Direct Behaviour</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.DirectBehaviourImpl
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getDirectBehaviour()
-   * @generated
-   */
-  int DIRECT_BEHAVIOUR = 2;
-
-  /**
-   * The number of structural features of the '<em>Direct Behaviour</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DIRECT_BEHAVIOUR_FEATURE_COUNT = VALUE_FEATURE_COUNT + 0;
+  int OPTION_SPECIFICATION_FEATURE_COUNT = 0;
 
   /**
    * The meta object id for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.EndGameBehaviourImpl <em>End Game Behaviour</em>}' class.
@@ -158,7 +139,7 @@ public interface TankWarPackage extends EPackage
    * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getEndGameBehaviour()
    * @generated
    */
-  int END_GAME_BEHAVIOUR = 3;
+  int END_GAME_BEHAVIOUR = 1;
 
   /**
    * The feature id for the '<em><b>Win</b></em>' attribute.
@@ -167,7 +148,7 @@ public interface TankWarPackage extends EPackage
    * @generated
    * @ordered
    */
-  int END_GAME_BEHAVIOUR__WIN = DIRECT_BEHAVIOUR_FEATURE_COUNT + 0;
+  int END_GAME_BEHAVIOUR__WIN = OPTION_SPECIFICATION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Lost</b></em>' attribute.
@@ -176,7 +157,7 @@ public interface TankWarPackage extends EPackage
    * @generated
    * @ordered
    */
-  int END_GAME_BEHAVIOUR__LOST = DIRECT_BEHAVIOUR_FEATURE_COUNT + 1;
+  int END_GAME_BEHAVIOUR__LOST = OPTION_SPECIFICATION_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>End Game Behaviour</em>' class.
@@ -185,63 +166,7 @@ public interface TankWarPackage extends EPackage
    * @generated
    * @ordered
    */
-  int END_GAME_BEHAVIOUR_FEATURE_COUNT = DIRECT_BEHAVIOUR_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.StringValueImpl <em>String Value</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.StringValueImpl
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getStringValue()
-   * @generated
-   */
-  int STRING_VALUE = 4;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STRING_VALUE__VALUE = VALUE_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>String Value</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STRING_VALUE_FEATURE_COUNT = VALUE_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.IntValueImpl <em>Int Value</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.IntValueImpl
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getIntValue()
-   * @generated
-   */
-  int INT_VALUE = 5;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INT_VALUE__VALUE = VALUE_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Int Value</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INT_VALUE_FEATURE_COUNT = VALUE_FEATURE_COUNT + 1;
+  int END_GAME_BEHAVIOUR_FEATURE_COUNT = OPTION_SPECIFICATION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.ScreenSpecificationImpl <em>Screen Specification</em>}' class.
@@ -251,7 +176,7 @@ public interface TankWarPackage extends EPackage
    * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getScreenSpecification()
    * @generated
    */
-  int SCREEN_SPECIFICATION = 6;
+  int SCREEN_SPECIFICATION = 2;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -263,7 +188,7 @@ public interface TankWarPackage extends EPackage
   int SCREEN_SPECIFICATION__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Screen Width</b></em>' attribute.
+   * The feature id for the '<em><b>Screen Width</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -272,7 +197,7 @@ public interface TankWarPackage extends EPackage
   int SCREEN_SPECIFICATION__SCREEN_WIDTH = 1;
 
   /**
-   * The feature id for the '<em><b>Screen Height</b></em>' attribute.
+   * The feature id for the '<em><b>Screen Height</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -297,7 +222,7 @@ public interface TankWarPackage extends EPackage
    * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getObstaclepecification()
    * @generated
    */
-  int OBSTACLEPECIFICATION = 7;
+  int OBSTACLEPECIFICATION = 3;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -334,7 +259,7 @@ public interface TankWarPackage extends EPackage
    * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getObstacleMember()
    * @generated
    */
-  int OBSTACLE_MEMBER = 8;
+  int OBSTACLE_MEMBER = 4;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -362,7 +287,7 @@ public interface TankWarPackage extends EPackage
    * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getWaterObstacle()
    * @generated
    */
-  int WATER_OBSTACLE = 9;
+  int WATER_OBSTACLE = 5;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -390,7 +315,7 @@ public interface TankWarPackage extends EPackage
    * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getWallObstacle()
    * @generated
    */
-  int WALL_OBSTACLE = 10;
+  int WALL_OBSTACLE = 6;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -454,7 +379,7 @@ public interface TankWarPackage extends EPackage
    * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getFieldSpecification()
    * @generated
    */
-  int FIELD_SPECIFICATION = 11;
+  int FIELD_SPECIFICATION = 7;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -502,72 +427,6 @@ public interface TankWarPackage extends EPackage
   int FIELD_SPECIFICATION_FEATURE_COUNT = 4;
 
   /**
-   * The meta object id for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.FieldInitialisationsImpl <em>Field Initialisations</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.FieldInitialisationsImpl
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getFieldInitialisations()
-   * @generated
-   */
-  int FIELD_INITIALISATIONS = 12;
-
-  /**
-   * The number of structural features of the '<em>Field Initialisations</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FIELD_INITIALISATIONS_FEATURE_COUNT = 0;
-
-  /**
-   * The meta object id for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.LocalFieldInitialisationsImpl <em>Local Field Initialisations</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.LocalFieldInitialisationsImpl
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getLocalFieldInitialisations()
-   * @generated
-   */
-  int LOCAL_FIELD_INITIALISATIONS = 13;
-
-  /**
-   * The feature id for the '<em><b>Initialisations</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LOCAL_FIELD_INITIALISATIONS__INITIALISATIONS = FIELD_INITIALISATIONS_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Local Field Initialisations</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LOCAL_FIELD_INITIALISATIONS_FEATURE_COUNT = FIELD_INITIALISATIONS_FEATURE_COUNT + 1;
-
-  /**
-   * The meta object id for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.OptionSpecificationImpl <em>Option Specification</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.OptionSpecificationImpl
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getOptionSpecification()
-   * @generated
-   */
-  int OPTION_SPECIFICATION = 14;
-
-  /**
-   * The number of structural features of the '<em>Option Specification</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OPTION_SPECIFICATION_FEATURE_COUNT = 0;
-
-  /**
    * The meta object id for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.SuperModeDeclarationImpl <em>Super Mode Declaration</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -575,7 +434,7 @@ public interface TankWarPackage extends EPackage
    * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getSuperModeDeclaration()
    * @generated
    */
-  int SUPER_MODE_DECLARATION = 15;
+  int SUPER_MODE_DECLARATION = 9;
 
   /**
    * The number of structural features of the '<em>Super Mode Declaration</em>' class.
@@ -594,7 +453,7 @@ public interface TankWarPackage extends EPackage
    * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getStartFieldDeclaration()
    * @generated
    */
-  int START_FIELD_DECLARATION = 16;
+  int START_FIELD_DECLARATION = 10;
 
   /**
    * The feature id for the '<em><b>Field</b></em>' reference.
@@ -622,7 +481,7 @@ public interface TankWarPackage extends EPackage
    * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getAllowRestartMenu()
    * @generated
    */
-  int ALLOW_RESTART_MENU = 17;
+  int ALLOW_RESTART_MENU = 11;
 
   /**
    * The number of structural features of the '<em>Allow Restart Menu</em>' class.
@@ -634,23 +493,171 @@ public interface TankWarPackage extends EPackage
   int ALLOW_RESTART_MENU_FEATURE_COUNT = OPTION_SPECIFICATION_FEATURE_COUNT + 0;
 
   /**
-   * The meta object id for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.NoOpBehaviourImpl <em>No Op Behaviour</em>}' class.
+   * The meta object id for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.ExpressionImpl <em>Expression</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.NoOpBehaviourImpl
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getNoOpBehaviour()
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.ExpressionImpl
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getExpression()
    * @generated
    */
-  int NO_OP_BEHAVIOUR = 18;
+  int EXPRESSION = 12;
 
   /**
-   * The number of structural features of the '<em>No Op Behaviour</em>' class.
+   * The number of structural features of the '<em>Expression</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NO_OP_BEHAVIOUR_FEATURE_COUNT = DIRECT_BEHAVIOUR_FEATURE_COUNT + 0;
+  int EXPRESSION_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.IntLiteralImpl <em>Int Literal</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.IntLiteralImpl
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getIntLiteral()
+   * @generated
+   */
+  int INT_LITERAL = 13;
+
+  /**
+   * The feature id for the '<em><b>Val</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INT_LITERAL__VAL = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Int Literal</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INT_LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.RealLiteralImpl <em>Real Literal</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.RealLiteralImpl
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getRealLiteral()
+   * @generated
+   */
+  int REAL_LITERAL = 14;
+
+  /**
+   * The feature id for the '<em><b>Val</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REAL_LITERAL__VAL = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Real Literal</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REAL_LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.AdditionImpl <em>Addition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.AdditionImpl
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getAddition()
+   * @generated
+   */
+  int ADDITION = 15;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADDITION__LEFT = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Operator</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADDITION__OPERATOR = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADDITION__RIGHT = EXPRESSION_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>Addition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ADDITION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
+
+  /**
+   * The meta object id for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.MultiplicationImpl <em>Multiplication</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.MultiplicationImpl
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getMultiplication()
+   * @generated
+   */
+  int MULTIPLICATION = 16;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULTIPLICATION__LEFT = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Operator</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULTIPLICATION__OPERATOR = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULTIPLICATION__RIGHT = EXPRESSION_FEATURE_COUNT + 2;
+
+  /**
+   * The number of structural features of the '<em>Multiplication</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULTIPLICATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
 
 
   /**
@@ -708,26 +715,6 @@ public interface TankWarPackage extends EPackage
   EReference getTankWarGame_Options();
 
   /**
-   * Returns the meta object for class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Value <em>Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Value</em>'.
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Value
-   * @generated
-   */
-  EClass getValue();
-
-  /**
-   * Returns the meta object for class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.DirectBehaviour <em>Direct Behaviour</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Direct Behaviour</em>'.
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.DirectBehaviour
-   * @generated
-   */
-  EClass getDirectBehaviour();
-
-  /**
    * Returns the meta object for class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.EndGameBehaviour <em>End Game Behaviour</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -760,48 +747,6 @@ public interface TankWarPackage extends EPackage
   EAttribute getEndGameBehaviour_Lost();
 
   /**
-   * Returns the meta object for class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.StringValue <em>String Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>String Value</em>'.
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.StringValue
-   * @generated
-   */
-  EClass getStringValue();
-
-  /**
-   * Returns the meta object for the attribute '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.StringValue#getValue <em>Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value</em>'.
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.StringValue#getValue()
-   * @see #getStringValue()
-   * @generated
-   */
-  EAttribute getStringValue_Value();
-
-  /**
-   * Returns the meta object for class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.IntValue <em>Int Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Int Value</em>'.
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.IntValue
-   * @generated
-   */
-  EClass getIntValue();
-
-  /**
-   * Returns the meta object for the attribute '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.IntValue#getValue <em>Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value</em>'.
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.IntValue#getValue()
-   * @see #getIntValue()
-   * @generated
-   */
-  EAttribute getIntValue_Value();
-
-  /**
    * Returns the meta object for class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.ScreenSpecification <em>Screen Specification</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -823,26 +768,26 @@ public interface TankWarPackage extends EPackage
   EAttribute getScreenSpecification_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.ScreenSpecification#getScreenWidth <em>Screen Width</em>}'.
+   * Returns the meta object for the containment reference '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.ScreenSpecification#getScreenWidth <em>Screen Width</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Screen Width</em>'.
+   * @return the meta object for the containment reference '<em>Screen Width</em>'.
    * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.ScreenSpecification#getScreenWidth()
    * @see #getScreenSpecification()
    * @generated
    */
-  EAttribute getScreenSpecification_ScreenWidth();
+  EReference getScreenSpecification_ScreenWidth();
 
   /**
-   * Returns the meta object for the attribute '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.ScreenSpecification#getScreenHeight <em>Screen Height</em>}'.
+   * Returns the meta object for the containment reference '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.ScreenSpecification#getScreenHeight <em>Screen Height</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Screen Height</em>'.
+   * @return the meta object for the containment reference '<em>Screen Height</em>'.
    * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.ScreenSpecification#getScreenHeight()
    * @see #getScreenSpecification()
    * @generated
    */
-  EAttribute getScreenSpecification_ScreenHeight();
+  EReference getScreenSpecification_ScreenHeight();
 
   /**
    * Returns the meta object for class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Obstaclepecification <em>Obstaclepecification</em>}'.
@@ -1016,37 +961,6 @@ public interface TankWarPackage extends EPackage
   EReference getFieldSpecification_NextLevel();
 
   /**
-   * Returns the meta object for class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldInitialisations <em>Field Initialisations</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Field Initialisations</em>'.
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldInitialisations
-   * @generated
-   */
-  EClass getFieldInitialisations();
-
-  /**
-   * Returns the meta object for class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.LocalFieldInitialisations <em>Local Field Initialisations</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Local Field Initialisations</em>'.
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.LocalFieldInitialisations
-   * @generated
-   */
-  EClass getLocalFieldInitialisations();
-
-  /**
-   * Returns the meta object for the attribute list '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.LocalFieldInitialisations#getInitialisations <em>Initialisations</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Initialisations</em>'.
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.LocalFieldInitialisations#getInitialisations()
-   * @see #getLocalFieldInitialisations()
-   * @generated
-   */
-  EAttribute getLocalFieldInitialisations_Initialisations();
-
-  /**
    * Returns the meta object for class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.OptionSpecification <em>Option Specification</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1098,14 +1012,142 @@ public interface TankWarPackage extends EPackage
   EClass getAllowRestartMenu();
 
   /**
-   * Returns the meta object for class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.NoOpBehaviour <em>No Op Behaviour</em>}'.
+   * Returns the meta object for class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Expression <em>Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>No Op Behaviour</em>'.
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.NoOpBehaviour
+   * @return the meta object for class '<em>Expression</em>'.
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Expression
    * @generated
    */
-  EClass getNoOpBehaviour();
+  EClass getExpression();
+
+  /**
+   * Returns the meta object for class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.IntLiteral <em>Int Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Int Literal</em>'.
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.IntLiteral
+   * @generated
+   */
+  EClass getIntLiteral();
+
+  /**
+   * Returns the meta object for the attribute '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.IntLiteral#getVal <em>Val</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Val</em>'.
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.IntLiteral#getVal()
+   * @see #getIntLiteral()
+   * @generated
+   */
+  EAttribute getIntLiteral_Val();
+
+  /**
+   * Returns the meta object for class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.RealLiteral <em>Real Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Real Literal</em>'.
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.RealLiteral
+   * @generated
+   */
+  EClass getRealLiteral();
+
+  /**
+   * Returns the meta object for the attribute '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.RealLiteral#getVal <em>Val</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Val</em>'.
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.RealLiteral#getVal()
+   * @see #getRealLiteral()
+   * @generated
+   */
+  EAttribute getRealLiteral_Val();
+
+  /**
+   * Returns the meta object for class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Addition <em>Addition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Addition</em>'.
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Addition
+   * @generated
+   */
+  EClass getAddition();
+
+  /**
+   * Returns the meta object for the containment reference '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Addition#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Addition#getLeft()
+   * @see #getAddition()
+   * @generated
+   */
+  EReference getAddition_Left();
+
+  /**
+   * Returns the meta object for the attribute list '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Addition#getOperator <em>Operator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Operator</em>'.
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Addition#getOperator()
+   * @see #getAddition()
+   * @generated
+   */
+  EAttribute getAddition_Operator();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Addition#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Right</em>'.
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Addition#getRight()
+   * @see #getAddition()
+   * @generated
+   */
+  EReference getAddition_Right();
+
+  /**
+   * Returns the meta object for class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Multiplication <em>Multiplication</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Multiplication</em>'.
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Multiplication
+   * @generated
+   */
+  EClass getMultiplication();
+
+  /**
+   * Returns the meta object for the containment reference '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Multiplication#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Multiplication#getLeft()
+   * @see #getMultiplication()
+   * @generated
+   */
+  EReference getMultiplication_Left();
+
+  /**
+   * Returns the meta object for the attribute list '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Multiplication#getOperator <em>Operator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Operator</em>'.
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Multiplication#getOperator()
+   * @see #getMultiplication()
+   * @generated
+   */
+  EAttribute getMultiplication_Operator();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Multiplication#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Right</em>'.
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Multiplication#getRight()
+   * @see #getMultiplication()
+   * @generated
+   */
+  EReference getMultiplication_Right();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -1173,26 +1215,6 @@ public interface TankWarPackage extends EPackage
     EReference TANK_WAR_GAME__OPTIONS = eINSTANCE.getTankWarGame_Options();
 
     /**
-     * The meta object literal for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.ValueImpl <em>Value</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.ValueImpl
-     * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getValue()
-     * @generated
-     */
-    EClass VALUE = eINSTANCE.getValue();
-
-    /**
-     * The meta object literal for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.DirectBehaviourImpl <em>Direct Behaviour</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.DirectBehaviourImpl
-     * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getDirectBehaviour()
-     * @generated
-     */
-    EClass DIRECT_BEHAVIOUR = eINSTANCE.getDirectBehaviour();
-
-    /**
      * The meta object literal for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.EndGameBehaviourImpl <em>End Game Behaviour</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1219,42 +1241,6 @@ public interface TankWarPackage extends EPackage
     EAttribute END_GAME_BEHAVIOUR__LOST = eINSTANCE.getEndGameBehaviour_Lost();
 
     /**
-     * The meta object literal for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.StringValueImpl <em>String Value</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.StringValueImpl
-     * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getStringValue()
-     * @generated
-     */
-    EClass STRING_VALUE = eINSTANCE.getStringValue();
-
-    /**
-     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute STRING_VALUE__VALUE = eINSTANCE.getStringValue_Value();
-
-    /**
-     * The meta object literal for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.IntValueImpl <em>Int Value</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.IntValueImpl
-     * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getIntValue()
-     * @generated
-     */
-    EClass INT_VALUE = eINSTANCE.getIntValue();
-
-    /**
-     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute INT_VALUE__VALUE = eINSTANCE.getIntValue_Value();
-
-    /**
      * The meta object literal for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.ScreenSpecificationImpl <em>Screen Specification</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1273,20 +1259,20 @@ public interface TankWarPackage extends EPackage
     EAttribute SCREEN_SPECIFICATION__NAME = eINSTANCE.getScreenSpecification_Name();
 
     /**
-     * The meta object literal for the '<em><b>Screen Width</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Screen Width</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute SCREEN_SPECIFICATION__SCREEN_WIDTH = eINSTANCE.getScreenSpecification_ScreenWidth();
+    EReference SCREEN_SPECIFICATION__SCREEN_WIDTH = eINSTANCE.getScreenSpecification_ScreenWidth();
 
     /**
-     * The meta object literal for the '<em><b>Screen Height</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Screen Height</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute SCREEN_SPECIFICATION__SCREEN_HEIGHT = eINSTANCE.getScreenSpecification_ScreenHeight();
+    EReference SCREEN_SPECIFICATION__SCREEN_HEIGHT = eINSTANCE.getScreenSpecification_ScreenHeight();
 
     /**
      * The meta object literal for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.ObstaclepecificationImpl <em>Obstaclepecification</em>}' class.
@@ -1427,34 +1413,6 @@ public interface TankWarPackage extends EPackage
     EReference FIELD_SPECIFICATION__NEXT_LEVEL = eINSTANCE.getFieldSpecification_NextLevel();
 
     /**
-     * The meta object literal for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.FieldInitialisationsImpl <em>Field Initialisations</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.FieldInitialisationsImpl
-     * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getFieldInitialisations()
-     * @generated
-     */
-    EClass FIELD_INITIALISATIONS = eINSTANCE.getFieldInitialisations();
-
-    /**
-     * The meta object literal for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.LocalFieldInitialisationsImpl <em>Local Field Initialisations</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.LocalFieldInitialisationsImpl
-     * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getLocalFieldInitialisations()
-     * @generated
-     */
-    EClass LOCAL_FIELD_INITIALISATIONS = eINSTANCE.getLocalFieldInitialisations();
-
-    /**
-     * The meta object literal for the '<em><b>Initialisations</b></em>' attribute list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute LOCAL_FIELD_INITIALISATIONS__INITIALISATIONS = eINSTANCE.getLocalFieldInitialisations_Initialisations();
-
-    /**
      * The meta object literal for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.OptionSpecificationImpl <em>Option Specification</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1503,14 +1461,118 @@ public interface TankWarPackage extends EPackage
     EClass ALLOW_RESTART_MENU = eINSTANCE.getAllowRestartMenu();
 
     /**
-     * The meta object literal for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.NoOpBehaviourImpl <em>No Op Behaviour</em>}' class.
+     * The meta object literal for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.ExpressionImpl <em>Expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.NoOpBehaviourImpl
-     * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getNoOpBehaviour()
+     * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.ExpressionImpl
+     * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getExpression()
      * @generated
      */
-    EClass NO_OP_BEHAVIOUR = eINSTANCE.getNoOpBehaviour();
+    EClass EXPRESSION = eINSTANCE.getExpression();
+
+    /**
+     * The meta object literal for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.IntLiteralImpl <em>Int Literal</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.IntLiteralImpl
+     * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getIntLiteral()
+     * @generated
+     */
+    EClass INT_LITERAL = eINSTANCE.getIntLiteral();
+
+    /**
+     * The meta object literal for the '<em><b>Val</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INT_LITERAL__VAL = eINSTANCE.getIntLiteral_Val();
+
+    /**
+     * The meta object literal for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.RealLiteralImpl <em>Real Literal</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.RealLiteralImpl
+     * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getRealLiteral()
+     * @generated
+     */
+    EClass REAL_LITERAL = eINSTANCE.getRealLiteral();
+
+    /**
+     * The meta object literal for the '<em><b>Val</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute REAL_LITERAL__VAL = eINSTANCE.getRealLiteral_Val();
+
+    /**
+     * The meta object literal for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.AdditionImpl <em>Addition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.AdditionImpl
+     * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getAddition()
+     * @generated
+     */
+    EClass ADDITION = eINSTANCE.getAddition();
+
+    /**
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ADDITION__LEFT = eINSTANCE.getAddition_Left();
+
+    /**
+     * The meta object literal for the '<em><b>Operator</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ADDITION__OPERATOR = eINSTANCE.getAddition_Operator();
+
+    /**
+     * The meta object literal for the '<em><b>Right</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ADDITION__RIGHT = eINSTANCE.getAddition_Right();
+
+    /**
+     * The meta object literal for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.MultiplicationImpl <em>Multiplication</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.MultiplicationImpl
+     * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarPackageImpl#getMultiplication()
+     * @generated
+     */
+    EClass MULTIPLICATION = eINSTANCE.getMultiplication();
+
+    /**
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MULTIPLICATION__LEFT = eINSTANCE.getMultiplication_Left();
+
+    /**
+     * The meta object literal for the '<em><b>Operator</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MULTIPLICATION__OPERATOR = eINSTANCE.getMultiplication_Operator();
+
+    /**
+     * The meta object literal for the '<em><b>Right</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MULTIPLICATION__RIGHT = eINSTANCE.getMultiplication_Right();
 
   }
 

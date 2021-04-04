@@ -26,7 +26,7 @@ import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarPackage;
  *
  * @generated
  */
-public class EndGameBehaviourImpl extends DirectBehaviourImpl implements EndGameBehaviour
+public class EndGameBehaviourImpl extends OptionSpecificationImpl implements EndGameBehaviour
 {
   /**
    * The default value of the '{@link #getWin() <em>Win</em>}' attribute.

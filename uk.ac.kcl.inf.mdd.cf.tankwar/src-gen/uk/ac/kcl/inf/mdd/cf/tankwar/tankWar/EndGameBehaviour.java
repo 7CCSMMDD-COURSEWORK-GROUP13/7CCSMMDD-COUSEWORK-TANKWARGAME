@@ -21,7 +21,7 @@ package uk.ac.kcl.inf.mdd.cf.tankwar.tankWar;
  * @model
  * @generated
  */
-public interface EndGameBehaviour extends DirectBehaviour, OptionSpecification
+public interface EndGameBehaviour extends OptionSpecification
 {
   /**
    * Returns the value of the '<em><b>Win</b></em>' attribute.

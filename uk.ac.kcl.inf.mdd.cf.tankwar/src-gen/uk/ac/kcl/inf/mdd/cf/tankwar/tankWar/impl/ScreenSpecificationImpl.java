@@ -4,12 +4,15 @@
 package uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Expression;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.ScreenSpecification;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarPackage;
 
@@ -51,44 +54,24 @@ public class ScreenSpecificationImpl extends MinimalEObjectImpl.Container implem
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getScreenWidth() <em>Screen Width</em>}' attribute.
+   * The cached value of the '{@link #getScreenWidth() <em>Screen Width</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getScreenWidth()
    * @generated
    * @ordered
    */
-  protected static final int SCREEN_WIDTH_EDEFAULT = 0;
+  protected Expression screenWidth;
 
   /**
-   * The cached value of the '{@link #getScreenWidth() <em>Screen Width</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getScreenWidth()
-   * @generated
-   * @ordered
-   */
-  protected int screenWidth = SCREEN_WIDTH_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getScreenHeight() <em>Screen Height</em>}' attribute.
+   * The cached value of the '{@link #getScreenHeight() <em>Screen Height</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getScreenHeight()
    * @generated
    * @ordered
    */
-  protected static final int SCREEN_HEIGHT_EDEFAULT = 0;
-
-  /**
-   * The cached value of the '{@link #getScreenHeight() <em>Screen Height</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getScreenHeight()
-   * @generated
-   * @ordered
-   */
-  protected int screenHeight = SCREEN_HEIGHT_EDEFAULT;
+  protected Expression screenHeight;
 
   /**
    * <!-- begin-user-doc -->
@@ -142,7 +125,7 @@ public class ScreenSpecificationImpl extends MinimalEObjectImpl.Container implem
    * @generated
    */
   @Override
-  public int getScreenWidth()
+  public Expression getScreenWidth()
   {
     return screenWidth;
   }
@@ -152,13 +135,16 @@ public class ScreenSpecificationImpl extends MinimalEObjectImpl.Container implem
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
-  public void setScreenWidth(int newScreenWidth)
+  public NotificationChain basicSetScreenWidth(Expression newScreenWidth, NotificationChain msgs)
   {
-    int oldScreenWidth = screenWidth;
+    Expression oldScreenWidth = screenWidth;
     screenWidth = newScreenWidth;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TankWarPackage.SCREEN_SPECIFICATION__SCREEN_WIDTH, oldScreenWidth, screenWidth));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TankWarPackage.SCREEN_SPECIFICATION__SCREEN_WIDTH, oldScreenWidth, newScreenWidth);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -167,7 +153,29 @@ public class ScreenSpecificationImpl extends MinimalEObjectImpl.Container implem
    * @generated
    */
   @Override
-  public int getScreenHeight()
+  public void setScreenWidth(Expression newScreenWidth)
+  {
+    if (newScreenWidth != screenWidth)
+    {
+      NotificationChain msgs = null;
+      if (screenWidth != null)
+        msgs = ((InternalEObject)screenWidth).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TankWarPackage.SCREEN_SPECIFICATION__SCREEN_WIDTH, null, msgs);
+      if (newScreenWidth != null)
+        msgs = ((InternalEObject)newScreenWidth).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TankWarPackage.SCREEN_SPECIFICATION__SCREEN_WIDTH, null, msgs);
+      msgs = basicSetScreenWidth(newScreenWidth, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TankWarPackage.SCREEN_SPECIFICATION__SCREEN_WIDTH, newScreenWidth, newScreenWidth));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Expression getScreenHeight()
   {
     return screenHeight;
   }
@@ -177,13 +185,56 @@ public class ScreenSpecificationImpl extends MinimalEObjectImpl.Container implem
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
-  public void setScreenHeight(int newScreenHeight)
+  public NotificationChain basicSetScreenHeight(Expression newScreenHeight, NotificationChain msgs)
   {
-    int oldScreenHeight = screenHeight;
+    Expression oldScreenHeight = screenHeight;
     screenHeight = newScreenHeight;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TankWarPackage.SCREEN_SPECIFICATION__SCREEN_HEIGHT, oldScreenHeight, screenHeight));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TankWarPackage.SCREEN_SPECIFICATION__SCREEN_HEIGHT, oldScreenHeight, newScreenHeight);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setScreenHeight(Expression newScreenHeight)
+  {
+    if (newScreenHeight != screenHeight)
+    {
+      NotificationChain msgs = null;
+      if (screenHeight != null)
+        msgs = ((InternalEObject)screenHeight).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TankWarPackage.SCREEN_SPECIFICATION__SCREEN_HEIGHT, null, msgs);
+      if (newScreenHeight != null)
+        msgs = ((InternalEObject)newScreenHeight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TankWarPackage.SCREEN_SPECIFICATION__SCREEN_HEIGHT, null, msgs);
+      msgs = basicSetScreenHeight(newScreenHeight, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TankWarPackage.SCREEN_SPECIFICATION__SCREEN_HEIGHT, newScreenHeight, newScreenHeight));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case TankWarPackage.SCREEN_SPECIFICATION__SCREEN_WIDTH:
+        return basicSetScreenWidth(null, msgs);
+      case TankWarPackage.SCREEN_SPECIFICATION__SCREEN_HEIGHT:
+        return basicSetScreenHeight(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -220,10 +271,10 @@ public class ScreenSpecificationImpl extends MinimalEObjectImpl.Container implem
         setName((String)newValue);
         return;
       case TankWarPackage.SCREEN_SPECIFICATION__SCREEN_WIDTH:
-        setScreenWidth((Integer)newValue);
+        setScreenWidth((Expression)newValue);
         return;
       case TankWarPackage.SCREEN_SPECIFICATION__SCREEN_HEIGHT:
-        setScreenHeight((Integer)newValue);
+        setScreenHeight((Expression)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -243,10 +294,10 @@ public class ScreenSpecificationImpl extends MinimalEObjectImpl.Container implem
         setName(NAME_EDEFAULT);
         return;
       case TankWarPackage.SCREEN_SPECIFICATION__SCREEN_WIDTH:
-        setScreenWidth(SCREEN_WIDTH_EDEFAULT);
+        setScreenWidth((Expression)null);
         return;
       case TankWarPackage.SCREEN_SPECIFICATION__SCREEN_HEIGHT:
-        setScreenHeight(SCREEN_HEIGHT_EDEFAULT);
+        setScreenHeight((Expression)null);
         return;
     }
     super.eUnset(featureID);
@@ -265,9 +316,9 @@ public class ScreenSpecificationImpl extends MinimalEObjectImpl.Container implem
       case TankWarPackage.SCREEN_SPECIFICATION__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case TankWarPackage.SCREEN_SPECIFICATION__SCREEN_WIDTH:
-        return screenWidth != SCREEN_WIDTH_EDEFAULT;
+        return screenWidth != null;
       case TankWarPackage.SCREEN_SPECIFICATION__SCREEN_HEIGHT:
-        return screenHeight != SCREEN_HEIGHT_EDEFAULT;
+        return screenHeight != null;
     }
     return super.eIsSet(featureID);
   }
@@ -285,10 +336,6 @@ public class ScreenSpecificationImpl extends MinimalEObjectImpl.Container implem
     StringBuilder result = new StringBuilder(super.toString());
     result.append(" (name: ");
     result.append(name);
-    result.append(", screenWidth: ");
-    result.append(screenWidth);
-    result.append(", screenHeight: ");
-    result.append(screenHeight);
     result.append(')');
     return result.toString();
   }

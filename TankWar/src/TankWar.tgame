@@ -1,7 +1,7 @@
 game Tank{
 	
 	screen MainFrame{
-		screenWidth = 750
+		screenWidth = 750.0+20+3*2-(100/5)
 		screenHeight = 750
 	}
 	

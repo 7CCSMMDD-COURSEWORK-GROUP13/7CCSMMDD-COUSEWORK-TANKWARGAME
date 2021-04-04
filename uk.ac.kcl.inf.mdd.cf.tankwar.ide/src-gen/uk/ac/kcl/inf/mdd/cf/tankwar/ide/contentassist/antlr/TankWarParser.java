@@ -31,35 +31,33 @@ public class TankWarParser extends AbstractContentAssistParser {
 		}
 		
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, TankWarGrammarAccess grammarAccess) {
-			builder.put(grammarAccess.getValueAccess().getAlternatives(), "rule__Value__Alternatives");
-			builder.put(grammarAccess.getDirectBehaviourAccess().getAlternatives(), "rule__DirectBehaviour__Alternatives");
 			builder.put(grammarAccess.getObstacleMemberAccess().getAlternatives(), "rule__ObstacleMember__Alternatives");
-			builder.put(grammarAccess.getFieldInitialisationAccess().getAlternatives(), "rule__FieldInitialisation__Alternatives");
 			builder.put(grammarAccess.getOptionSpecificationAccess().getAlternatives(), "rule__OptionSpecification__Alternatives");
+			builder.put(grammarAccess.getAdditionAccess().getOperatorAlternatives_1_1_0(), "rule__Addition__OperatorAlternatives_1_1_0");
+			builder.put(grammarAccess.getMultiplicationAccess().getOperatorAlternatives_1_1_0(), "rule__Multiplication__OperatorAlternatives_1_1_0");
+			builder.put(grammarAccess.getPrimaryAccess().getAlternatives(), "rule__Primary__Alternatives");
 			builder.put(grammarAccess.getTankWarGameAccess().getGroup(), "rule__TankWarGame__Group__0");
-			builder.put(grammarAccess.getDirectBehaviourAccess().getGroup_1(), "rule__DirectBehaviour__Group_1__0");
 			builder.put(grammarAccess.getEndGameBehaviourAccess().getGroup(), "rule__EndGameBehaviour__Group__0");
 			builder.put(grammarAccess.getScreenSpecificationAccess().getGroup(), "rule__ScreenSpecification__Group__0");
 			builder.put(grammarAccess.getObstaclepecificationAccess().getGroup(), "rule__Obstaclepecification__Group__0");
 			builder.put(grammarAccess.getWaterObstacleAccess().getGroup(), "rule__WaterObstacle__Group__0");
 			builder.put(grammarAccess.getWallObstacleAccess().getGroup(), "rule__WallObstacle__Group__0");
 			builder.put(grammarAccess.getFieldSpecificationAccess().getGroup(), "rule__FieldSpecification__Group__0");
-			builder.put(grammarAccess.getLocalFieldInitialisationsAccess().getGroup(), "rule__LocalFieldInitialisations__Group__0");
-			builder.put(grammarAccess.getLocalFieldInitialisationsAccess().getGroup_2(), "rule__LocalFieldInitialisations__Group_2__0");
-			builder.put(grammarAccess.getDefaultInitialisationAccess().getGroup(), "rule__DefaultInitialisation__Group__0");
-			builder.put(grammarAccess.getRandomInitialisationAccess().getGroup(), "rule__RandomInitialisation__Group__0");
-			builder.put(grammarAccess.getContextInitialisationAccess().getGroup(), "rule__ContextInitialisation__Group__0");
 			builder.put(grammarAccess.getSuperModeDeclarationAccess().getGroup(), "rule__SuperModeDeclaration__Group__0");
 			builder.put(grammarAccess.getStartFieldDeclarationAccess().getGroup(), "rule__StartFieldDeclaration__Group__0");
 			builder.put(grammarAccess.getAllowRestartMenuAccess().getGroup(), "rule__AllowRestartMenu__Group__0");
+			builder.put(grammarAccess.getAdditionAccess().getGroup(), "rule__Addition__Group__0");
+			builder.put(grammarAccess.getAdditionAccess().getGroup_1(), "rule__Addition__Group_1__0");
+			builder.put(grammarAccess.getMultiplicationAccess().getGroup(), "rule__Multiplication__Group__0");
+			builder.put(grammarAccess.getMultiplicationAccess().getGroup_1(), "rule__Multiplication__Group_1__0");
+			builder.put(grammarAccess.getPrimaryAccess().getGroup_2(), "rule__Primary__Group_2__0");
+			builder.put(grammarAccess.getREALAccess().getGroup(), "rule__REAL__Group__0");
 			builder.put(grammarAccess.getTankWarGameAccess().getNameAssignment_1(), "rule__TankWarGame__NameAssignment_1");
 			builder.put(grammarAccess.getTankWarGameAccess().getScreenAssignment_3(), "rule__TankWarGame__ScreenAssignment_3");
 			builder.put(grammarAccess.getTankWarGameAccess().getFieldsAssignment_4(), "rule__TankWarGame__FieldsAssignment_4");
 			builder.put(grammarAccess.getTankWarGameAccess().getOptionsAssignment_5(), "rule__TankWarGame__OptionsAssignment_5");
 			builder.put(grammarAccess.getEndGameBehaviourAccess().getWinAssignment_2(), "rule__EndGameBehaviour__WinAssignment_2");
 			builder.put(grammarAccess.getEndGameBehaviourAccess().getLostAssignment_4(), "rule__EndGameBehaviour__LostAssignment_4");
-			builder.put(grammarAccess.getStringValueAccess().getValueAssignment(), "rule__StringValue__ValueAssignment");
-			builder.put(grammarAccess.getIntValueAccess().getValueAssignment(), "rule__IntValue__ValueAssignment");
 			builder.put(grammarAccess.getScreenSpecificationAccess().getNameAssignment_1(), "rule__ScreenSpecification__NameAssignment_1");
 			builder.put(grammarAccess.getScreenSpecificationAccess().getScreenWidthAssignment_5(), "rule__ScreenSpecification__ScreenWidthAssignment_5");
 			builder.put(grammarAccess.getScreenSpecificationAccess().getScreenHeightAssignment_8(), "rule__ScreenSpecification__ScreenHeightAssignment_8");
@@ -75,8 +73,13 @@ public class TankWarParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getFieldSpecificationAccess().getEnemyCountAssignment_5(), "rule__FieldSpecification__EnemyCountAssignment_5");
 			builder.put(grammarAccess.getFieldSpecificationAccess().getObstacleAssignment_6(), "rule__FieldSpecification__ObstacleAssignment_6");
 			builder.put(grammarAccess.getFieldSpecificationAccess().getNextLevelAssignment_9(), "rule__FieldSpecification__NextLevelAssignment_9");
-			builder.put(grammarAccess.getLocalFieldInitialisationsAccess().getInitialisationsAssignment_2_0(), "rule__LocalFieldInitialisations__InitialisationsAssignment_2_0");
 			builder.put(grammarAccess.getStartFieldDeclarationAccess().getFieldAssignment_2(), "rule__StartFieldDeclaration__FieldAssignment_2");
+			builder.put(grammarAccess.getAdditionAccess().getOperatorAssignment_1_1(), "rule__Addition__OperatorAssignment_1_1");
+			builder.put(grammarAccess.getAdditionAccess().getRightAssignment_1_2(), "rule__Addition__RightAssignment_1_2");
+			builder.put(grammarAccess.getMultiplicationAccess().getOperatorAssignment_1_1(), "rule__Multiplication__OperatorAssignment_1_1");
+			builder.put(grammarAccess.getMultiplicationAccess().getRightAssignment_1_2(), "rule__Multiplication__RightAssignment_1_2");
+			builder.put(grammarAccess.getIntLiteralAccess().getValAssignment(), "rule__IntLiteral__ValAssignment");
+			builder.put(grammarAccess.getRealLiteralAccess().getValAssignment(), "rule__RealLiteral__ValAssignment");
 		}
 	}
 	

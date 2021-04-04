@@ -15,16 +15,16 @@ import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import uk.ac.kcl.inf.mdd.cf.tankwar.services.TankWarGrammarAccess;
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Addition;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.AllowRestartMenu;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.EndGameBehaviour;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification;
-import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.IntValue;
-import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.LocalFieldInitialisations;
-import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.NoOpBehaviour;
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.IntLiteral;
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Multiplication;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Obstaclepecification;
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.RealLiteral;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.ScreenSpecification;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.StartFieldDeclaration;
-import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.StringValue;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.SuperModeDeclaration;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarGame;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarPackage;
@@ -45,6 +45,9 @@ public class TankWarSemanticSequencer extends AbstractDelegatingSemanticSequence
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == TankWarPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
+			case TankWarPackage.ADDITION:
+				sequence_Addition(context, (Addition) semanticObject); 
+				return; 
 			case TankWarPackage.ALLOW_RESTART_MENU:
 				sequence_AllowRestartMenu(context, (AllowRestartMenu) semanticObject); 
 				return; 
@@ -54,26 +57,23 @@ public class TankWarSemanticSequencer extends AbstractDelegatingSemanticSequence
 			case TankWarPackage.FIELD_SPECIFICATION:
 				sequence_FieldSpecification(context, (FieldSpecification) semanticObject); 
 				return; 
-			case TankWarPackage.INT_VALUE:
-				sequence_IntValue(context, (IntValue) semanticObject); 
+			case TankWarPackage.INT_LITERAL:
+				sequence_IntLiteral(context, (IntLiteral) semanticObject); 
 				return; 
-			case TankWarPackage.LOCAL_FIELD_INITIALISATIONS:
-				sequence_LocalFieldInitialisations(context, (LocalFieldInitialisations) semanticObject); 
-				return; 
-			case TankWarPackage.NO_OP_BEHAVIOUR:
-				sequence_DirectBehaviour(context, (NoOpBehaviour) semanticObject); 
+			case TankWarPackage.MULTIPLICATION:
+				sequence_Multiplication(context, (Multiplication) semanticObject); 
 				return; 
 			case TankWarPackage.OBSTACLEPECIFICATION:
 				sequence_Obstaclepecification(context, (Obstaclepecification) semanticObject); 
+				return; 
+			case TankWarPackage.REAL_LITERAL:
+				sequence_RealLiteral(context, (RealLiteral) semanticObject); 
 				return; 
 			case TankWarPackage.SCREEN_SPECIFICATION:
 				sequence_ScreenSpecification(context, (ScreenSpecification) semanticObject); 
 				return; 
 			case TankWarPackage.START_FIELD_DECLARATION:
 				sequence_StartFieldDeclaration(context, (StartFieldDeclaration) semanticObject); 
-				return; 
-			case TankWarPackage.STRING_VALUE:
-				sequence_StringValue(context, (StringValue) semanticObject); 
 				return; 
 			case TankWarPackage.SUPER_MODE_DECLARATION:
 				sequence_SuperModeDeclaration(context, (SuperModeDeclaration) semanticObject); 
@@ -94,6 +94,22 @@ public class TankWarSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Contexts:
+	 *     Addition returns Addition
+	 *     Addition.Addition_1_0 returns Addition
+	 *     Multiplication returns Addition
+	 *     Multiplication.Multiplication_1_0 returns Addition
+	 *     Primary returns Addition
+	 *
+	 * Constraint:
+	 *     (left=Addition_Addition_1_0 (operator+='+' | operator+='-') right+=Multiplication)
+	 */
+	protected void sequence_Addition(ISerializationContext context, Addition semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     OptionSpecification returns AllowRestartMenu
 	 *     AllowRestartMenu returns AllowRestartMenu
 	 *
@@ -107,21 +123,6 @@ public class TankWarSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Contexts:
-	 *     Value returns NoOpBehaviour
-	 *     DirectBehaviour returns NoOpBehaviour
-	 *
-	 * Constraint:
-	 *     {NoOpBehaviour}
-	 */
-	protected void sequence_DirectBehaviour(ISerializationContext context, NoOpBehaviour semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Value returns EndGameBehaviour
-	 *     DirectBehaviour returns EndGameBehaviour
 	 *     EndGameBehaviour returns EndGameBehaviour
 	 *     OptionSpecification returns EndGameBehaviour
 	 *
@@ -171,32 +172,39 @@ public class TankWarSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Contexts:
-	 *     Value returns IntValue
-	 *     IntValue returns IntValue
+	 *     Addition returns IntLiteral
+	 *     Addition.Addition_1_0 returns IntLiteral
+	 *     Multiplication returns IntLiteral
+	 *     Multiplication.Multiplication_1_0 returns IntLiteral
+	 *     Primary returns IntLiteral
+	 *     IntLiteral returns IntLiteral
 	 *
 	 * Constraint:
-	 *     value=INT
+	 *     val=INT
 	 */
-	protected void sequence_IntValue(ISerializationContext context, IntValue semanticObject) {
+	protected void sequence_IntLiteral(ISerializationContext context, IntLiteral semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, TankWarPackage.Literals.INT_VALUE__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TankWarPackage.Literals.INT_VALUE__VALUE));
+			if (transientValues.isValueTransient(semanticObject, TankWarPackage.Literals.INT_LITERAL__VAL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TankWarPackage.Literals.INT_LITERAL__VAL));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getIntValueAccess().getValueINTTerminalRuleCall_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getIntLiteralAccess().getValINTTerminalRuleCall_0(), semanticObject.getVal());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     FieldInitialisations returns LocalFieldInitialisations
-	 *     LocalFieldInitialisations returns LocalFieldInitialisations
+	 *     Addition returns Multiplication
+	 *     Addition.Addition_1_0 returns Multiplication
+	 *     Multiplication returns Multiplication
+	 *     Multiplication.Multiplication_1_0 returns Multiplication
+	 *     Primary returns Multiplication
 	 *
 	 * Constraint:
-	 *     initialisations+=FieldInitialisation+
+	 *     (left=Multiplication_Multiplication_1_0 (operator+='*' | operator+='/') right+=Primary)
 	 */
-	protected void sequence_LocalFieldInitialisations(ISerializationContext context, LocalFieldInitialisations semanticObject) {
+	protected void sequence_Multiplication(ISerializationContext context, Multiplication semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -215,10 +223,33 @@ public class TankWarSemanticSequencer extends AbstractDelegatingSemanticSequence
 	
 	/**
 	 * Contexts:
+	 *     Addition returns RealLiteral
+	 *     Addition.Addition_1_0 returns RealLiteral
+	 *     Multiplication returns RealLiteral
+	 *     Multiplication.Multiplication_1_0 returns RealLiteral
+	 *     Primary returns RealLiteral
+	 *     RealLiteral returns RealLiteral
+	 *
+	 * Constraint:
+	 *     val=REAL
+	 */
+	protected void sequence_RealLiteral(ISerializationContext context, RealLiteral semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, TankWarPackage.Literals.REAL_LITERAL__VAL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TankWarPackage.Literals.REAL_LITERAL__VAL));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getRealLiteralAccess().getValREALParserRuleCall_0(), semanticObject.getVal());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     ScreenSpecification returns ScreenSpecification
 	 *
 	 * Constraint:
-	 *     (name=ID screenWidth=INT screenHeight=INT)
+	 *     (name=ID screenWidth=Addition screenHeight=Addition)
 	 */
 	protected void sequence_ScreenSpecification(ISerializationContext context, ScreenSpecification semanticObject) {
 		if (errorAcceptor != null) {
@@ -231,8 +262,8 @@ public class TankWarSemanticSequencer extends AbstractDelegatingSemanticSequence
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getScreenSpecificationAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getScreenSpecificationAccess().getScreenWidthINTTerminalRuleCall_5_0(), semanticObject.getScreenWidth());
-		feeder.accept(grammarAccess.getScreenSpecificationAccess().getScreenHeightINTTerminalRuleCall_8_0(), semanticObject.getScreenHeight());
+		feeder.accept(grammarAccess.getScreenSpecificationAccess().getScreenWidthAdditionParserRuleCall_5_0(), semanticObject.getScreenWidth());
+		feeder.accept(grammarAccess.getScreenSpecificationAccess().getScreenHeightAdditionParserRuleCall_8_0(), semanticObject.getScreenHeight());
 		feeder.finish();
 	}
 	
@@ -252,25 +283,6 @@ public class TankWarSemanticSequencer extends AbstractDelegatingSemanticSequence
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getStartFieldDeclarationAccess().getFieldFieldSpecificationIDTerminalRuleCall_2_0_1(), semanticObject.eGet(TankWarPackage.Literals.START_FIELD_DECLARATION__FIELD, false));
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Value returns StringValue
-	 *     StringValue returns StringValue
-	 *
-	 * Constraint:
-	 *     value=STRING
-	 */
-	protected void sequence_StringValue(ISerializationContext context, StringValue semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, TankWarPackage.Literals.STRING_VALUE__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TankWarPackage.Literals.STRING_VALUE__VALUE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getStringValueAccess().getValueSTRINGTerminalRuleCall_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	

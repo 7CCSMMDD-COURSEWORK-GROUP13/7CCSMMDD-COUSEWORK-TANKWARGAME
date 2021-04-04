@@ -7,14 +7,14 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Value</b></em>'.
+ * A representation of the model object '<em><b>Expression</b></em>'.
  * <!-- end-user-doc -->
  *
  *
- * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarPackage#getValue()
+ * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarPackage#getExpression()
  * @model
  * @generated
  */
-public interface Value extends EObject
+public interface Expression extends EObject
 {
-} // Value
+} // Expression

@@ -33,24 +33,6 @@ public interface TankWarFactory extends EFactory
   TankWarGame createTankWarGame();
 
   /**
-   * Returns a new object of class '<em>Value</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Value</em>'.
-   * @generated
-   */
-  Value createValue();
-
-  /**
-   * Returns a new object of class '<em>Direct Behaviour</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Direct Behaviour</em>'.
-   * @generated
-   */
-  DirectBehaviour createDirectBehaviour();
-
-  /**
    * Returns a new object of class '<em>End Game Behaviour</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -58,24 +40,6 @@ public interface TankWarFactory extends EFactory
    * @generated
    */
   EndGameBehaviour createEndGameBehaviour();
-
-  /**
-   * Returns a new object of class '<em>String Value</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>String Value</em>'.
-   * @generated
-   */
-  StringValue createStringValue();
-
-  /**
-   * Returns a new object of class '<em>Int Value</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Int Value</em>'.
-   * @generated
-   */
-  IntValue createIntValue();
 
   /**
    * Returns a new object of class '<em>Screen Specification</em>'.
@@ -132,24 +96,6 @@ public interface TankWarFactory extends EFactory
   FieldSpecification createFieldSpecification();
 
   /**
-   * Returns a new object of class '<em>Field Initialisations</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Field Initialisations</em>'.
-   * @generated
-   */
-  FieldInitialisations createFieldInitialisations();
-
-  /**
-   * Returns a new object of class '<em>Local Field Initialisations</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Local Field Initialisations</em>'.
-   * @generated
-   */
-  LocalFieldInitialisations createLocalFieldInitialisations();
-
-  /**
    * Returns a new object of class '<em>Option Specification</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -186,13 +132,49 @@ public interface TankWarFactory extends EFactory
   AllowRestartMenu createAllowRestartMenu();
 
   /**
-   * Returns a new object of class '<em>No Op Behaviour</em>'.
+   * Returns a new object of class '<em>Expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>No Op Behaviour</em>'.
+   * @return a new object of class '<em>Expression</em>'.
    * @generated
    */
-  NoOpBehaviour createNoOpBehaviour();
+  Expression createExpression();
+
+  /**
+   * Returns a new object of class '<em>Int Literal</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Int Literal</em>'.
+   * @generated
+   */
+  IntLiteral createIntLiteral();
+
+  /**
+   * Returns a new object of class '<em>Real Literal</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Real Literal</em>'.
+   * @generated
+   */
+  RealLiteral createRealLiteral();
+
+  /**
+   * Returns a new object of class '<em>Addition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Addition</em>'.
+   * @generated
+   */
+  Addition createAddition();
+
+  /**
+   * Returns a new object of class '<em>Multiplication</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Multiplication</em>'.
+   * @generated
+   */
+  Multiplication createMultiplication();
 
   /**
    * Returns the package supported by this factory.

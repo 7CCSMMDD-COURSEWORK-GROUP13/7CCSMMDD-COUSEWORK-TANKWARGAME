@@ -2,6 +2,7 @@ grammar uk.ac.kcl.inf.mdd.cf.tankwar.TankWar with org.eclipse.xtext.common.Termi
 
 generate tankWar "http://www.ac.uk/kcl/inf/mdd/cf/tankwar/TankWar"
 
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 TankWarGame : 
 	"game" name=ID "{"
 		screen = ScreenSpecification 
@@ -11,37 +12,14 @@ TankWarGame :
 ;
 
 
-Value :
-	StringValue |
-	IntValue |
-	DirectBehaviour 
-;
-
-DirectBehaviour :
-	EndGameBehaviour |
-	NoOpBehaviour {NoOpBehaviour}
-;
-
 EndGameBehaviour :
 	"end-game" "(" win=STRING "," lost=STRING ")"
 ;
 
-NoOpBehaviour :
-	"nop"
-;
-
-StringValue :
-	value = STRING 
-;
-
-IntValue : 
-	value = INT 
-;
-
 ScreenSpecification :
 	"screen" name=ID "{" 
-		"screenWidth" "=" screenWidth=INT  
-		"screenHeight" "=" screenHeight=INT 
+		"screenWidth" "=" screenWidth = Addition  
+		"screenHeight" "=" screenHeight= Addition 
     "}"
 ;
 
@@ -81,36 +59,6 @@ FieldSpecification :
     "}"
 ;
 
-FieldInitialisations :
-	LocalFieldInitialisations
-;
-
-
-LocalFieldInitialisations :
-	"init" "{" (initialisations += FieldInitialisation ";")+ "}" 
-;
-
-
-FieldInitialisation :
-	DefaultInitialisation |
-	RandomInitialisation |
-	ContextInitialisation
-;
-
-DefaultInitialisation :
-	"default" ":" "defaultInitialisation"
-;
-
-RandomInitialisation :
-	"random" ":" "randomInitialisation"
-;
-
-// FIXME This should support a number of values, one for each variable defined for the cell type
-ContextInitialisation :
-	"context" ":" "contextInitialisation"
-;
-
-
 OptionSpecification :
 	StartFieldDeclaration | 
 	AllowRestartMenu|
@@ -128,3 +76,31 @@ StartFieldDeclaration:
 AllowRestartMenu:
 	"allowRestart" {AllowRestartMenu}
 ;
+
+
+Addition returns Expression:
+	Multiplication ({Addition.left = current} operator+=("+"|"-") right+=Multiplication)*
+;
+
+Multiplication returns Expression:
+	Primary ({Multiplication.left = current} operator+=("*"|"/") right+=Primary)*
+;
+
+Primary returns Expression:
+	IntLiteral |
+	RealLiteral |
+	"(" Addition ")"
+;
+
+IntLiteral:
+	val = INT
+;
+
+RealLiteral:
+	val = REAL
+;
+
+
+REAL returns ecore::EFloat hidden():
+	INT? "." INT
+; 

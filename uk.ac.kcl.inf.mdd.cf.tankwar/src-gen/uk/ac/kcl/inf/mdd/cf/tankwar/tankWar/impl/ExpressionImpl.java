@@ -7,24 +7,24 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldInitialisations;
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Expression;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Field Initialisations</b></em>'.
+ * An implementation of the model object '<em><b>Expression</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class FieldInitialisationsImpl extends MinimalEObjectImpl.Container implements FieldInitialisations
+public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expression
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected FieldInitialisationsImpl()
+  protected ExpressionImpl()
   {
     super();
   }
@@ -37,7 +37,7 @@ public class FieldInitialisationsImpl extends MinimalEObjectImpl.Container imple
   @Override
   protected EClass eStaticClass()
   {
-    return TankWarPackage.Literals.FIELD_INITIALISATIONS;
+    return TankWarPackage.Literals.EXPRESSION;
   }
 
-} //FieldInitialisationsImpl
+} //ExpressionImpl

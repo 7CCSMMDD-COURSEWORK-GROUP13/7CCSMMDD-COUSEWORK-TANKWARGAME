@@ -9,50 +9,50 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.IntValue;
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.RealLiteral;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Int Value</b></em>'.
+ * An implementation of the model object '<em><b>Real Literal</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.IntValueImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.RealLiteralImpl#getVal <em>Val</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class IntValueImpl extends ValueImpl implements IntValue
+public class RealLiteralImpl extends ExpressionImpl implements RealLiteral
 {
   /**
-   * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+   * The default value of the '{@link #getVal() <em>Val</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getValue()
+   * @see #getVal()
    * @generated
    * @ordered
    */
-  protected static final int VALUE_EDEFAULT = 0;
+  protected static final float VAL_EDEFAULT = 0.0F;
 
   /**
-   * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
+   * The cached value of the '{@link #getVal() <em>Val</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getValue()
+   * @see #getVal()
    * @generated
    * @ordered
    */
-  protected int value = VALUE_EDEFAULT;
+  protected float val = VAL_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected IntValueImpl()
+  protected RealLiteralImpl()
   {
     super();
   }
@@ -65,7 +65,7 @@ public class IntValueImpl extends ValueImpl implements IntValue
   @Override
   protected EClass eStaticClass()
   {
-    return TankWarPackage.Literals.INT_VALUE;
+    return TankWarPackage.Literals.REAL_LITERAL;
   }
 
   /**
@@ -74,9 +74,9 @@ public class IntValueImpl extends ValueImpl implements IntValue
    * @generated
    */
   @Override
-  public int getValue()
+  public float getVal()
   {
-    return value;
+    return val;
   }
 
   /**
@@ -85,12 +85,12 @@ public class IntValueImpl extends ValueImpl implements IntValue
    * @generated
    */
   @Override
-  public void setValue(int newValue)
+  public void setVal(float newVal)
   {
-    int oldValue = value;
-    value = newValue;
+    float oldVal = val;
+    val = newVal;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TankWarPackage.INT_VALUE__VALUE, oldValue, value));
+      eNotify(new ENotificationImpl(this, Notification.SET, TankWarPackage.REAL_LITERAL__VAL, oldVal, val));
   }
 
   /**
@@ -103,8 +103,8 @@ public class IntValueImpl extends ValueImpl implements IntValue
   {
     switch (featureID)
     {
-      case TankWarPackage.INT_VALUE__VALUE:
-        return getValue();
+      case TankWarPackage.REAL_LITERAL__VAL:
+        return getVal();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +119,8 @@ public class IntValueImpl extends ValueImpl implements IntValue
   {
     switch (featureID)
     {
-      case TankWarPackage.INT_VALUE__VALUE:
-        setValue((Integer)newValue);
+      case TankWarPackage.REAL_LITERAL__VAL:
+        setVal((Float)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +136,8 @@ public class IntValueImpl extends ValueImpl implements IntValue
   {
     switch (featureID)
     {
-      case TankWarPackage.INT_VALUE__VALUE:
-        setValue(VALUE_EDEFAULT);
+      case TankWarPackage.REAL_LITERAL__VAL:
+        setVal(VAL_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -153,8 +153,8 @@ public class IntValueImpl extends ValueImpl implements IntValue
   {
     switch (featureID)
     {
-      case TankWarPackage.INT_VALUE__VALUE:
-        return value != VALUE_EDEFAULT;
+      case TankWarPackage.REAL_LITERAL__VAL:
+        return val != VAL_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -170,10 +170,10 @@ public class IntValueImpl extends ValueImpl implements IntValue
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (value: ");
-    result.append(value);
+    result.append(" (val: ");
+    result.append(val);
     result.append(')');
     return result.toString();
   }
 
-} //IntValueImpl
+} //RealLiteralImpl

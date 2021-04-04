@@ -12,22 +12,14 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TankWar.ecore#//TankWarGame/fields"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TankWar.ecore#//TankWarGame/options"/>
     </genClasses>
-    <genClasses ecoreClass="TankWar.ecore#//Value"/>
-    <genClasses ecoreClass="TankWar.ecore#//DirectBehaviour"/>
     <genClasses ecoreClass="TankWar.ecore#//EndGameBehaviour">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TankWar.ecore#//EndGameBehaviour/win"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TankWar.ecore#//EndGameBehaviour/lost"/>
     </genClasses>
-    <genClasses ecoreClass="TankWar.ecore#//StringValue">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TankWar.ecore#//StringValue/value"/>
-    </genClasses>
-    <genClasses ecoreClass="TankWar.ecore#//IntValue">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TankWar.ecore#//IntValue/value"/>
-    </genClasses>
     <genClasses ecoreClass="TankWar.ecore#//ScreenSpecification">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TankWar.ecore#//ScreenSpecification/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TankWar.ecore#//ScreenSpecification/screenWidth"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TankWar.ecore#//ScreenSpecification/screenHeight"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TankWar.ecore#//ScreenSpecification/screenWidth"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TankWar.ecore#//ScreenSpecification/screenHeight"/>
     </genClasses>
     <genClasses ecoreClass="TankWar.ecore#//Obstaclepecification">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TankWar.ecore#//Obstaclepecification/name"/>
@@ -49,16 +41,28 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TankWar.ecore#//FieldSpecification/obstacle"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TankWar.ecore#//FieldSpecification/nextLevel"/>
     </genClasses>
-    <genClasses ecoreClass="TankWar.ecore#//FieldInitialisations"/>
-    <genClasses ecoreClass="TankWar.ecore#//LocalFieldInitialisations">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TankWar.ecore#//LocalFieldInitialisations/initialisations"/>
-    </genClasses>
     <genClasses ecoreClass="TankWar.ecore#//OptionSpecification"/>
     <genClasses ecoreClass="TankWar.ecore#//SuperModeDeclaration"/>
     <genClasses ecoreClass="TankWar.ecore#//StartFieldDeclaration">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TankWar.ecore#//StartFieldDeclaration/field"/>
     </genClasses>
     <genClasses ecoreClass="TankWar.ecore#//AllowRestartMenu"/>
-    <genClasses ecoreClass="TankWar.ecore#//NoOpBehaviour"/>
+    <genClasses ecoreClass="TankWar.ecore#//Expression"/>
+    <genClasses ecoreClass="TankWar.ecore#//IntLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TankWar.ecore#//IntLiteral/val"/>
+    </genClasses>
+    <genClasses ecoreClass="TankWar.ecore#//RealLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TankWar.ecore#//RealLiteral/val"/>
+    </genClasses>
+    <genClasses ecoreClass="TankWar.ecore#//Addition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TankWar.ecore#//Addition/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TankWar.ecore#//Addition/operator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TankWar.ecore#//Addition/right"/>
+    </genClasses>
+    <genClasses ecoreClass="TankWar.ecore#//Multiplication">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TankWar.ecore#//Multiplication/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TankWar.ecore#//Multiplication/operator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TankWar.ecore#//Multiplication/right"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

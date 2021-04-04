@@ -80,44 +80,11 @@ public class TankWarSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case TankWarPackage.VALUE:
-      {
-        Value value = (Value)theEObject;
-        T result = caseValue(value);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case TankWarPackage.DIRECT_BEHAVIOUR:
-      {
-        DirectBehaviour directBehaviour = (DirectBehaviour)theEObject;
-        T result = caseDirectBehaviour(directBehaviour);
-        if (result == null) result = caseValue(directBehaviour);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case TankWarPackage.END_GAME_BEHAVIOUR:
       {
         EndGameBehaviour endGameBehaviour = (EndGameBehaviour)theEObject;
         T result = caseEndGameBehaviour(endGameBehaviour);
-        if (result == null) result = caseDirectBehaviour(endGameBehaviour);
         if (result == null) result = caseOptionSpecification(endGameBehaviour);
-        if (result == null) result = caseValue(endGameBehaviour);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case TankWarPackage.STRING_VALUE:
-      {
-        StringValue stringValue = (StringValue)theEObject;
-        T result = caseStringValue(stringValue);
-        if (result == null) result = caseValue(stringValue);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case TankWarPackage.INT_VALUE:
-      {
-        IntValue intValue = (IntValue)theEObject;
-        T result = caseIntValue(intValue);
-        if (result == null) result = caseValue(intValue);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -165,21 +132,6 @@ public class TankWarSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case TankWarPackage.FIELD_INITIALISATIONS:
-      {
-        FieldInitialisations fieldInitialisations = (FieldInitialisations)theEObject;
-        T result = caseFieldInitialisations(fieldInitialisations);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case TankWarPackage.LOCAL_FIELD_INITIALISATIONS:
-      {
-        LocalFieldInitialisations localFieldInitialisations = (LocalFieldInitialisations)theEObject;
-        T result = caseLocalFieldInitialisations(localFieldInitialisations);
-        if (result == null) result = caseFieldInitialisations(localFieldInitialisations);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case TankWarPackage.OPTION_SPECIFICATION:
       {
         OptionSpecification optionSpecification = (OptionSpecification)theEObject;
@@ -211,12 +163,42 @@ public class TankWarSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case TankWarPackage.NO_OP_BEHAVIOUR:
+      case TankWarPackage.EXPRESSION:
       {
-        NoOpBehaviour noOpBehaviour = (NoOpBehaviour)theEObject;
-        T result = caseNoOpBehaviour(noOpBehaviour);
-        if (result == null) result = caseDirectBehaviour(noOpBehaviour);
-        if (result == null) result = caseValue(noOpBehaviour);
+        Expression expression = (Expression)theEObject;
+        T result = caseExpression(expression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TankWarPackage.INT_LITERAL:
+      {
+        IntLiteral intLiteral = (IntLiteral)theEObject;
+        T result = caseIntLiteral(intLiteral);
+        if (result == null) result = caseExpression(intLiteral);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TankWarPackage.REAL_LITERAL:
+      {
+        RealLiteral realLiteral = (RealLiteral)theEObject;
+        T result = caseRealLiteral(realLiteral);
+        if (result == null) result = caseExpression(realLiteral);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TankWarPackage.ADDITION:
+      {
+        Addition addition = (Addition)theEObject;
+        T result = caseAddition(addition);
+        if (result == null) result = caseExpression(addition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TankWarPackage.MULTIPLICATION:
+      {
+        Multiplication multiplication = (Multiplication)theEObject;
+        T result = caseMultiplication(multiplication);
+        if (result == null) result = caseExpression(multiplication);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -241,38 +223,6 @@ public class TankWarSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Value</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Value</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseValue(Value object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Direct Behaviour</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Direct Behaviour</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseDirectBehaviour(DirectBehaviour object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>End Game Behaviour</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -284,38 +234,6 @@ public class TankWarSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseEndGameBehaviour(EndGameBehaviour object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>String Value</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>String Value</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseStringValue(StringValue object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Int Value</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Int Value</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseIntValue(IntValue object)
   {
     return null;
   }
@@ -417,38 +335,6 @@ public class TankWarSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Field Initialisations</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Field Initialisations</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseFieldInitialisations(FieldInitialisations object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Local Field Initialisations</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Local Field Initialisations</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseLocalFieldInitialisations(LocalFieldInitialisations object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Option Specification</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -513,17 +399,81 @@ public class TankWarSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>No Op Behaviour</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Expression</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>No Op Behaviour</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Expression</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseNoOpBehaviour(NoOpBehaviour object)
+  public T caseExpression(Expression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Int Literal</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Int Literal</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIntLiteral(IntLiteral object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Real Literal</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Real Literal</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRealLiteral(RealLiteral object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Addition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Addition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAddition(Addition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Multiplication</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Multiplication</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMultiplication(Multiplication object)
   {
     return null;
   }

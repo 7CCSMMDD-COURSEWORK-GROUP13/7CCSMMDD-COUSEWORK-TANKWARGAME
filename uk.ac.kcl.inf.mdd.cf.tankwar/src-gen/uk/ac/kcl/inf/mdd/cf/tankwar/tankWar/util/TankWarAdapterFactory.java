@@ -81,29 +81,9 @@ public class TankWarAdapterFactory extends AdapterFactoryImpl
         return createTankWarGameAdapter();
       }
       @Override
-      public Adapter caseValue(Value object)
-      {
-        return createValueAdapter();
-      }
-      @Override
-      public Adapter caseDirectBehaviour(DirectBehaviour object)
-      {
-        return createDirectBehaviourAdapter();
-      }
-      @Override
       public Adapter caseEndGameBehaviour(EndGameBehaviour object)
       {
         return createEndGameBehaviourAdapter();
-      }
-      @Override
-      public Adapter caseStringValue(StringValue object)
-      {
-        return createStringValueAdapter();
-      }
-      @Override
-      public Adapter caseIntValue(IntValue object)
-      {
-        return createIntValueAdapter();
       }
       @Override
       public Adapter caseScreenSpecification(ScreenSpecification object)
@@ -136,16 +116,6 @@ public class TankWarAdapterFactory extends AdapterFactoryImpl
         return createFieldSpecificationAdapter();
       }
       @Override
-      public Adapter caseFieldInitialisations(FieldInitialisations object)
-      {
-        return createFieldInitialisationsAdapter();
-      }
-      @Override
-      public Adapter caseLocalFieldInitialisations(LocalFieldInitialisations object)
-      {
-        return createLocalFieldInitialisationsAdapter();
-      }
-      @Override
       public Adapter caseOptionSpecification(OptionSpecification object)
       {
         return createOptionSpecificationAdapter();
@@ -166,9 +136,29 @@ public class TankWarAdapterFactory extends AdapterFactoryImpl
         return createAllowRestartMenuAdapter();
       }
       @Override
-      public Adapter caseNoOpBehaviour(NoOpBehaviour object)
+      public Adapter caseExpression(Expression object)
       {
-        return createNoOpBehaviourAdapter();
+        return createExpressionAdapter();
+      }
+      @Override
+      public Adapter caseIntLiteral(IntLiteral object)
+      {
+        return createIntLiteralAdapter();
+      }
+      @Override
+      public Adapter caseRealLiteral(RealLiteral object)
+      {
+        return createRealLiteralAdapter();
+      }
+      @Override
+      public Adapter caseAddition(Addition object)
+      {
+        return createAdditionAdapter();
+      }
+      @Override
+      public Adapter caseMultiplication(Multiplication object)
+      {
+        return createMultiplicationAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -208,36 +198,6 @@ public class TankWarAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Value <em>Value</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Value
-   * @generated
-   */
-  public Adapter createValueAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.DirectBehaviour <em>Direct Behaviour</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.DirectBehaviour
-   * @generated
-   */
-  public Adapter createDirectBehaviourAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.EndGameBehaviour <em>End Game Behaviour</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -248,36 +208,6 @@ public class TankWarAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createEndGameBehaviourAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.StringValue <em>String Value</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.StringValue
-   * @generated
-   */
-  public Adapter createStringValueAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.IntValue <em>Int Value</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.IntValue
-   * @generated
-   */
-  public Adapter createIntValueAdapter()
   {
     return null;
   }
@@ -373,36 +303,6 @@ public class TankWarAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldInitialisations <em>Field Initialisations</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldInitialisations
-   * @generated
-   */
-  public Adapter createFieldInitialisationsAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.LocalFieldInitialisations <em>Local Field Initialisations</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.LocalFieldInitialisations
-   * @generated
-   */
-  public Adapter createLocalFieldInitialisationsAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.OptionSpecification <em>Option Specification</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -463,16 +363,76 @@ public class TankWarAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.NoOpBehaviour <em>No Op Behaviour</em>}'.
+   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Expression <em>Expression</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.NoOpBehaviour
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Expression
    * @generated
    */
-  public Adapter createNoOpBehaviourAdapter()
+  public Adapter createExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.IntLiteral <em>Int Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.IntLiteral
+   * @generated
+   */
+  public Adapter createIntLiteralAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.RealLiteral <em>Real Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.RealLiteral
+   * @generated
+   */
+  public Adapter createRealLiteralAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Addition <em>Addition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Addition
+   * @generated
+   */
+  public Adapter createAdditionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Multiplication <em>Multiplication</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Multiplication
+   * @generated
+   */
+  public Adapter createMultiplicationAdapter()
   {
     return null;
   }

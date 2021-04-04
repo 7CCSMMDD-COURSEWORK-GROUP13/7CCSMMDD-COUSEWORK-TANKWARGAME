@@ -48,47 +48,47 @@ public interface ScreenSpecification extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Screen Width</b></em>' attribute.
+   * Returns the value of the '<em><b>Screen Width</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Screen Width</em>' attribute.
-   * @see #setScreenWidth(int)
+   * @return the value of the '<em>Screen Width</em>' containment reference.
+   * @see #setScreenWidth(Expression)
    * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarPackage#getScreenSpecification_ScreenWidth()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  int getScreenWidth();
+  Expression getScreenWidth();
 
   /**
-   * Sets the value of the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.ScreenSpecification#getScreenWidth <em>Screen Width</em>}' attribute.
+   * Sets the value of the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.ScreenSpecification#getScreenWidth <em>Screen Width</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Screen Width</em>' attribute.
+   * @param value the new value of the '<em>Screen Width</em>' containment reference.
    * @see #getScreenWidth()
    * @generated
    */
-  void setScreenWidth(int value);
+  void setScreenWidth(Expression value);
 
   /**
-   * Returns the value of the '<em><b>Screen Height</b></em>' attribute.
+   * Returns the value of the '<em><b>Screen Height</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Screen Height</em>' attribute.
-   * @see #setScreenHeight(int)
+   * @return the value of the '<em>Screen Height</em>' containment reference.
+   * @see #setScreenHeight(Expression)
    * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarPackage#getScreenSpecification_ScreenHeight()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  int getScreenHeight();
+  Expression getScreenHeight();
 
   /**
-   * Sets the value of the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.ScreenSpecification#getScreenHeight <em>Screen Height</em>}' attribute.
+   * Sets the value of the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.ScreenSpecification#getScreenHeight <em>Screen Height</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Screen Height</em>' attribute.
+   * @param value the new value of the '<em>Screen Height</em>' containment reference.
    * @see #getScreenHeight()
    * @generated
    */
-  void setScreenHeight(int value);
+  void setScreenHeight(Expression value);
 
 } // ScreenSpecification

@@ -8,6 +8,11 @@ import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.StartFieldDeclaration
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.EndGameBehaviour
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.OptionSpecification
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.IntLiteral
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.RealLiteral
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Multiplication
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Addition
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Expression
 
 class FrameGenerator extends CommonGenerator {
 	new(ModelPreprocessor mpp) {
@@ -36,8 +41,8 @@ class FrameGenerator extends CommonGenerator {
 		 * Created by tyr on 2016/2/21.
 		 */
 		public class «generateFrameClassName» extends Frame{
-		    public static final int GAME_WIDTH = «twg.screen.screenWidth»;
-		    public static final int GAME_HEIGHT = «twg.screen.screenHeight»;
+		    public static final int GAME_WIDTH = «twg.screen.screenWidth.evaluate.intValue»;
+		    public static final int GAME_HEIGHT = «twg.screen.screenHeight.evaluate.intValue»;
 			public int ENEMY_TANK_COUNT = 5;
 		    Tank myTank = new Tank(50,50,true,this);
 		   
@@ -273,6 +278,119 @@ class FrameGenerator extends CommonGenerator {
 //		}
 //	'''
 	
+		
+	def String generateJavaExpression(Expression exp) {
+		exp.evaluate.translateToJavaString
+	}
+	
+	dispatch def Number evaluate(Expression exp) { null }
+	dispatch def Number evaluate(Addition exp) {
+		val evaluatedChildren = #[exp.left.evaluate] + exp.right.map[evaluate]
+		
+		val Number[] result = #[null]
+		
+		evaluatedChildren.forEach[ec, idx |
+			result.set(0, 
+				if (idx > 0) {
+					if (exp.operator.get(idx - 1) == '+') {
+						result.get(0).add(ec)
+					} else {
+						result.get(0).subtract(ec)						
+					}
+				} else {
+					ec
+				})
+		]
+		
+		result.get(0)
+	}
+	
+	dispatch def Number evaluate(Multiplication exp) {
+		val evaluatedChildren = #[exp.left.evaluate] + exp.right.map[evaluate]
+		
+		val Number[] result = #[null]
+		
+		evaluatedChildren.forEach[ec, idx |
+			result.set(0, 
+				if (idx > 0) {
+					if (exp.operator.get(idx - 1) == '*') {
+						result.get(0).multiply(ec)
+					} else {
+						result.get(0).divide(ec)						
+					}
+				} else {
+					ec
+				})
+		]
+		
+		result.get(0)
+	}
+	
+	dispatch def Number evaluate(IntLiteral exp) { exp.^val }
+	
+	dispatch def Number evaluate(RealLiteral exp) { exp.^val }
+		
+	dispatch def Number add(Integer a, Number b) {
+		if (b instanceof Integer) {
+			Integer.valueOf(a.intValue + b.intValue)
+		} else {
+			a.floatValue + (b as Float).floatValue		
+		}
+	}
+	dispatch def Number add(Float a, Number b) {
+		if (b instanceof Integer) {
+			a.floatValue + b.floatValue
+		} else {
+			a.floatValue + (b as Float).floatValue			
+		}
+	}
+	
+	dispatch def Number subtract(Integer a, Number b) {
+		if (b instanceof Integer) {
+			Integer.valueOf(a.intValue - b.intValue)
+		} else {
+			a.floatValue - (b as Float).floatValue		
+		}
+	}
+	dispatch def Number subtract(Float a, Number b) {
+		if (b instanceof Integer) {
+			a.floatValue - b.floatValue
+		} else {
+			a.floatValue - (b as Float).floatValue			
+		}
+	}
+	
+	dispatch def Number multiply(Integer a, Number b) {
+		if (b instanceof Integer) {
+			Integer.valueOf(a.intValue * b.intValue)
+		} else {
+			a.floatValue * (b as Float).floatValue		
+		}
+	}
+	dispatch def Number multiply(Float a, Number b) {
+		if (b instanceof Integer) {
+			a.floatValue * b.floatValue
+		} else {
+			a.floatValue * (b as Float).floatValue			
+		}
+	}
+	
+	dispatch def Number divide(Integer a, Number b) {
+		if (b instanceof Integer) {
+			Integer.valueOf(a.intValue / b.intValue)
+		} else {
+			a.floatValue / (b as Float).floatValue		
+		}
+	}
+	dispatch def Number divide(Float a, Number b) {
+		if (b instanceof Integer) {
+			a.floatValue / b.floatValue
+		} else {
+			a.floatValue / (b as Float).floatValue			
+		}
+	}
+	dispatch def String translateToJavaString(Number n) { n.toString }
+	dispatch def String translateToJavaString(Float f) '''«f.toString»f'''
 	
 
 

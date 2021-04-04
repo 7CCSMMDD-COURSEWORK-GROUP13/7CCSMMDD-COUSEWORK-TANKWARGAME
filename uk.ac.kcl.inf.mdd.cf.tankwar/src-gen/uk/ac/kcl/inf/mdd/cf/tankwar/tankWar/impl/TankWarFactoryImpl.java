@@ -66,24 +66,22 @@ public class TankWarFactoryImpl extends EFactoryImpl implements TankWarFactory
     switch (eClass.getClassifierID())
     {
       case TankWarPackage.TANK_WAR_GAME: return createTankWarGame();
-      case TankWarPackage.VALUE: return createValue();
-      case TankWarPackage.DIRECT_BEHAVIOUR: return createDirectBehaviour();
       case TankWarPackage.END_GAME_BEHAVIOUR: return createEndGameBehaviour();
-      case TankWarPackage.STRING_VALUE: return createStringValue();
-      case TankWarPackage.INT_VALUE: return createIntValue();
       case TankWarPackage.SCREEN_SPECIFICATION: return createScreenSpecification();
       case TankWarPackage.OBSTACLEPECIFICATION: return createObstaclepecification();
       case TankWarPackage.OBSTACLE_MEMBER: return createObstacleMember();
       case TankWarPackage.WATER_OBSTACLE: return createWaterObstacle();
       case TankWarPackage.WALL_OBSTACLE: return createWallObstacle();
       case TankWarPackage.FIELD_SPECIFICATION: return createFieldSpecification();
-      case TankWarPackage.FIELD_INITIALISATIONS: return createFieldInitialisations();
-      case TankWarPackage.LOCAL_FIELD_INITIALISATIONS: return createLocalFieldInitialisations();
       case TankWarPackage.OPTION_SPECIFICATION: return createOptionSpecification();
       case TankWarPackage.SUPER_MODE_DECLARATION: return createSuperModeDeclaration();
       case TankWarPackage.START_FIELD_DECLARATION: return createStartFieldDeclaration();
       case TankWarPackage.ALLOW_RESTART_MENU: return createAllowRestartMenu();
-      case TankWarPackage.NO_OP_BEHAVIOUR: return createNoOpBehaviour();
+      case TankWarPackage.EXPRESSION: return createExpression();
+      case TankWarPackage.INT_LITERAL: return createIntLiteral();
+      case TankWarPackage.REAL_LITERAL: return createRealLiteral();
+      case TankWarPackage.ADDITION: return createAddition();
+      case TankWarPackage.MULTIPLICATION: return createMultiplication();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -107,58 +105,10 @@ public class TankWarFactoryImpl extends EFactoryImpl implements TankWarFactory
    * @generated
    */
   @Override
-  public Value createValue()
-  {
-    ValueImpl value = new ValueImpl();
-    return value;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public DirectBehaviour createDirectBehaviour()
-  {
-    DirectBehaviourImpl directBehaviour = new DirectBehaviourImpl();
-    return directBehaviour;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public EndGameBehaviour createEndGameBehaviour()
   {
     EndGameBehaviourImpl endGameBehaviour = new EndGameBehaviourImpl();
     return endGameBehaviour;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public StringValue createStringValue()
-  {
-    StringValueImpl stringValue = new StringValueImpl();
-    return stringValue;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public IntValue createIntValue()
-  {
-    IntValueImpl intValue = new IntValueImpl();
-    return intValue;
   }
 
   /**
@@ -239,30 +189,6 @@ public class TankWarFactoryImpl extends EFactoryImpl implements TankWarFactory
    * @generated
    */
   @Override
-  public FieldInitialisations createFieldInitialisations()
-  {
-    FieldInitialisationsImpl fieldInitialisations = new FieldInitialisationsImpl();
-    return fieldInitialisations;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public LocalFieldInitialisations createLocalFieldInitialisations()
-  {
-    LocalFieldInitialisationsImpl localFieldInitialisations = new LocalFieldInitialisationsImpl();
-    return localFieldInitialisations;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public OptionSpecification createOptionSpecification()
   {
     OptionSpecificationImpl optionSpecification = new OptionSpecificationImpl();
@@ -311,10 +237,58 @@ public class TankWarFactoryImpl extends EFactoryImpl implements TankWarFactory
    * @generated
    */
   @Override
-  public NoOpBehaviour createNoOpBehaviour()
+  public Expression createExpression()
   {
-    NoOpBehaviourImpl noOpBehaviour = new NoOpBehaviourImpl();
-    return noOpBehaviour;
+    ExpressionImpl expression = new ExpressionImpl();
+    return expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public IntLiteral createIntLiteral()
+  {
+    IntLiteralImpl intLiteral = new IntLiteralImpl();
+    return intLiteral;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public RealLiteral createRealLiteral()
+  {
+    RealLiteralImpl realLiteral = new RealLiteralImpl();
+    return realLiteral;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Addition createAddition()
+  {
+    AdditionImpl addition = new AdditionImpl();
+    return addition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Multiplication createMultiplication()
+  {
+    MultiplicationImpl multiplication = new MultiplicationImpl();
+    return multiplication;
   }
 
   /**
