@@ -1,9 +1,9 @@
 # COUSEWORK-TANKWARGAME
 It is 7CCSMMDD CourseWork TankWarGame belongs to GROUP 13
 
-## Development Environment: Eclipse
-
-## Java version: Java 11
+## Environment
+- Development Environment: Eclipse
+- Java version: Java 11
 
 ## Warning: Please clean all the project before you build.
 
