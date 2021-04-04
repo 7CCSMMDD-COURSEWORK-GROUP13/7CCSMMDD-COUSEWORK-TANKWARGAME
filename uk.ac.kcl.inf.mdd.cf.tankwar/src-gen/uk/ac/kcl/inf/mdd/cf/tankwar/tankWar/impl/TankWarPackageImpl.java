@@ -336,9 +336,9 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
    * @generated
    */
   @Override
-  public EReference getScreenSpecification_ScreenWidth()
+  public EAttribute getScreenSpecification_ScreenWidth()
   {
-    return (EReference)screenSpecificationEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)screenSpecificationEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -347,9 +347,9 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
    * @generated
    */
   @Override
-  public EReference getScreenSpecification_ScreenHeight()
+  public EAttribute getScreenSpecification_ScreenHeight()
   {
-    return (EReference)screenSpecificationEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)screenSpecificationEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -501,9 +501,9 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
    * @generated
    */
   @Override
-  public EAttribute getFieldSpecification_EnemyCount()
+  public EReference getFieldSpecification_EnemyCount()
   {
-    return (EAttribute)fieldSpecificationEClass.getEStructuralFeatures().get(1);
+    return (EReference)fieldSpecificationEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -769,8 +769,8 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
 
     screenSpecificationEClass = createEClass(SCREEN_SPECIFICATION);
     createEAttribute(screenSpecificationEClass, SCREEN_SPECIFICATION__NAME);
-    createEReference(screenSpecificationEClass, SCREEN_SPECIFICATION__SCREEN_WIDTH);
-    createEReference(screenSpecificationEClass, SCREEN_SPECIFICATION__SCREEN_HEIGHT);
+    createEAttribute(screenSpecificationEClass, SCREEN_SPECIFICATION__SCREEN_WIDTH);
+    createEAttribute(screenSpecificationEClass, SCREEN_SPECIFICATION__SCREEN_HEIGHT);
 
     obstaclepecificationEClass = createEClass(OBSTACLEPECIFICATION);
     createEAttribute(obstaclepecificationEClass, OBSTACLEPECIFICATION__NAME);
@@ -789,7 +789,7 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
 
     fieldSpecificationEClass = createEClass(FIELD_SPECIFICATION);
     createEAttribute(fieldSpecificationEClass, FIELD_SPECIFICATION__NAME);
-    createEAttribute(fieldSpecificationEClass, FIELD_SPECIFICATION__ENEMY_COUNT);
+    createEReference(fieldSpecificationEClass, FIELD_SPECIFICATION__ENEMY_COUNT);
     createEReference(fieldSpecificationEClass, FIELD_SPECIFICATION__OBSTACLE);
     createEReference(fieldSpecificationEClass, FIELD_SPECIFICATION__NEXT_LEVEL);
 
@@ -874,8 +874,8 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
 
     initEClass(screenSpecificationEClass, ScreenSpecification.class, "ScreenSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getScreenSpecification_Name(), ecorePackage.getEString(), "name", null, 0, 1, ScreenSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getScreenSpecification_ScreenWidth(), this.getExpression(), null, "screenWidth", null, 0, 1, ScreenSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getScreenSpecification_ScreenHeight(), this.getExpression(), null, "screenHeight", null, 0, 1, ScreenSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getScreenSpecification_ScreenWidth(), ecorePackage.getEInt(), "screenWidth", null, 0, 1, ScreenSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getScreenSpecification_ScreenHeight(), ecorePackage.getEInt(), "screenHeight", null, 0, 1, ScreenSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(obstaclepecificationEClass, Obstaclepecification.class, "Obstaclepecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getObstaclepecification_Name(), ecorePackage.getEString(), "name", null, 0, 1, Obstaclepecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -894,7 +894,7 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
 
     initEClass(fieldSpecificationEClass, FieldSpecification.class, "FieldSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getFieldSpecification_Name(), ecorePackage.getEString(), "name", null, 0, 1, FieldSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getFieldSpecification_EnemyCount(), ecorePackage.getEInt(), "enemyCount", null, 0, 1, FieldSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFieldSpecification_EnemyCount(), this.getExpression(), null, "enemyCount", null, 0, 1, FieldSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFieldSpecification_Obstacle(), this.getObstaclepecification(), null, "obstacle", null, 0, 1, FieldSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFieldSpecification_NextLevel(), this.getFieldSpecification(), null, "nextLevel", null, 0, 1, FieldSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

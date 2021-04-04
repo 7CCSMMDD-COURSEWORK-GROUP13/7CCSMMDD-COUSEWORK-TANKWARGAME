@@ -4,6 +4,7 @@ import org.eclipse.xtext.generator.IFileSystemAccess
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.WallObstacle
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.ObstacleMember
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Expression
 
 class LevelGenerator extends CommonGenerator{
 	new(ModelPreprocessor mpp) {
@@ -66,13 +67,14 @@ class LevelGenerator extends CommonGenerator{
 			
 			    @Override
 			    public int getEnemyNum() {
-			        return «f.enemyCount»;
+			        return «f.enemyCount.evaluate.intValue»;
 			    }
 			
 			
 			}
 			
 	'''
+	
 	
 	def generateAbsLevelClass() '''
 		package «generateLevelPackage»;

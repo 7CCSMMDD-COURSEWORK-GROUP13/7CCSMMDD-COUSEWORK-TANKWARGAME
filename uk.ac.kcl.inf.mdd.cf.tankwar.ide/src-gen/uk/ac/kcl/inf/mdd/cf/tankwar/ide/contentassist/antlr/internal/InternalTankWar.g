@@ -2969,9 +2969,9 @@ rule__ScreenSpecification__ScreenWidthAssignment_5
 	}
 :
 	(
-		{ before(grammarAccess.getScreenSpecificationAccess().getScreenWidthAdditionParserRuleCall_5_0()); }
-		ruleAddition
-		{ after(grammarAccess.getScreenSpecificationAccess().getScreenWidthAdditionParserRuleCall_5_0()); }
+		{ before(grammarAccess.getScreenSpecificationAccess().getScreenWidthINTTerminalRuleCall_5_0()); }
+		RULE_INT
+		{ after(grammarAccess.getScreenSpecificationAccess().getScreenWidthINTTerminalRuleCall_5_0()); }
 	)
 ;
 finally {
@@ -2984,9 +2984,9 @@ rule__ScreenSpecification__ScreenHeightAssignment_8
 	}
 :
 	(
-		{ before(grammarAccess.getScreenSpecificationAccess().getScreenHeightAdditionParserRuleCall_8_0()); }
-		ruleAddition
-		{ after(grammarAccess.getScreenSpecificationAccess().getScreenHeightAdditionParserRuleCall_8_0()); }
+		{ before(grammarAccess.getScreenSpecificationAccess().getScreenHeightINTTerminalRuleCall_8_0()); }
+		RULE_INT
+		{ after(grammarAccess.getScreenSpecificationAccess().getScreenHeightINTTerminalRuleCall_8_0()); }
 	)
 ;
 finally {
@@ -3134,9 +3134,9 @@ rule__FieldSpecification__EnemyCountAssignment_5
 	}
 :
 	(
-		{ before(grammarAccess.getFieldSpecificationAccess().getEnemyCountINTTerminalRuleCall_5_0()); }
-		RULE_INT
-		{ after(grammarAccess.getFieldSpecificationAccess().getEnemyCountINTTerminalRuleCall_5_0()); }
+		{ before(grammarAccess.getFieldSpecificationAccess().getEnemyCountAdditionParserRuleCall_5_0()); }
+		ruleAddition
+		{ after(grammarAccess.getFieldSpecificationAccess().getEnemyCountAdditionParserRuleCall_5_0()); }
 	)
 ;
 finally {

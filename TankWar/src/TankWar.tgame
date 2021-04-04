@@ -1,14 +1,14 @@
 game Tank{
 	
 	screen MainFrame{
-		screenWidth = 750.0+20+3*2-(100/5)
+		screenWidth = 760
 		screenHeight = 750
 	}
 	
 	
 	
 	field easy {
-		enemyCount = 2
+		enemyCount = 1*2
 		obstacle test{
 			wall first{
 				wallWidth = 100
@@ -22,7 +22,7 @@ game Tank{
 	}
 	
 	field medium {
-		enemyCount = 4
+		enemyCount = 2+2
 		obstacle test{
 			wall first{
 				wallWidth = 100

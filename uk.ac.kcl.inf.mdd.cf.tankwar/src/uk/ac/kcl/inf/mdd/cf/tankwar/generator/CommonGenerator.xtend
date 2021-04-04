@@ -6,6 +6,11 @@ package uk.ac.kcl.inf.mdd.cf.tankwar.generator
 
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarGame
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.IntLiteral
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.RealLiteral
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Multiplication
+import java.beans.Expression
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Addition
 
 /**
  * Common generator bits.
@@ -70,5 +75,119 @@ class CommonGenerator {
 	def generateLevelClassFileName(String level) '''«generateLevelPackageFolder»/«generateLevelClassName(level.toFirstUpper)».java'''
 		
 	def generateAbsLevelClassFileName() '''«generateLevelPackageFolder»/«generateAbsLevelClassName».java'''
+	
+			
+	def String generateJavaExpression(Expression exp) {
+		exp.evaluate.translateToJavaString
+	}
+	
+	dispatch def Number evaluate(Expression exp) { null }
+	dispatch def Number evaluate(Addition exp) {
+		val evaluatedChildren = #[exp.left.evaluate] + exp.right.map[evaluate]
+		
+		val Number[] result = #[null]
+		
+		evaluatedChildren.forEach[ec, idx |
+			result.set(0, 
+				if (idx > 0) {
+					if (exp.operator.get(idx - 1) == '+') {
+						result.get(0).add(ec)
+					} else {
+						result.get(0).subtract(ec)						
+					}
+				} else {
+					ec
+				})
+		]
+		
+		result.get(0)
+	}
+	
+	dispatch def Number evaluate(Multiplication exp) {
+		val evaluatedChildren = #[exp.left.evaluate] + exp.right.map[evaluate]
+		
+		val Number[] result = #[null]
+		
+		evaluatedChildren.forEach[ec, idx |
+			result.set(0, 
+				if (idx > 0) {
+					if (exp.operator.get(idx - 1) == '*') {
+						result.get(0).multiply(ec)
+					} else {
+						result.get(0).divide(ec)						
+					}
+				} else {
+					ec
+				})
+		]
+		
+		result.get(0)
+	}
+	
+	dispatch def Number evaluate(IntLiteral exp) { exp.^val }
+	
+	dispatch def Number evaluate(RealLiteral exp) { exp.^val }
+		
+	dispatch def Number add(Integer a, Number b) {
+		if (b instanceof Integer) {
+			Integer.valueOf(a.intValue + b.intValue)
+		} else {
+			a.floatValue + (b as Float).floatValue		
+		}
+	}
+	dispatch def Number add(Float a, Number b) {
+		if (b instanceof Integer) {
+			a.floatValue + b.floatValue
+		} else {
+			a.floatValue + (b as Float).floatValue			
+		}
+	}
+	
+	dispatch def Number subtract(Integer a, Number b) {
+		if (b instanceof Integer) {
+			Integer.valueOf(a.intValue - b.intValue)
+		} else {
+			a.floatValue - (b as Float).floatValue		
+		}
+	}
+	dispatch def Number subtract(Float a, Number b) {
+		if (b instanceof Integer) {
+			a.floatValue - b.floatValue
+		} else {
+			a.floatValue - (b as Float).floatValue			
+		}
+	}
+	
+	dispatch def Number multiply(Integer a, Number b) {
+		if (b instanceof Integer) {
+			Integer.valueOf(a.intValue * b.intValue)
+		} else {
+			a.floatValue * (b as Float).floatValue		
+		}
+	}
+	dispatch def Number multiply(Float a, Number b) {
+		if (b instanceof Integer) {
+			a.floatValue * b.floatValue
+		} else {
+			a.floatValue * (b as Float).floatValue			
+		}
+	}
+	
+	dispatch def Number divide(Integer a, Number b) {
+		if (b instanceof Integer) {
+			Integer.valueOf(a.intValue / b.intValue)
+		} else {
+			a.floatValue / (b as Float).floatValue		
+		}
+	}
+	dispatch def Number divide(Float a, Number b) {
+		if (b instanceof Integer) {
+			a.floatValue / b.floatValue
+		} else {
+			a.floatValue / (b as Float).floatValue			
+		}
+	}
+	dispatch def String translateToJavaString(Number n) { n.toString }
+	dispatch def String translateToJavaString(Float f) '''«f.toString»f'''
 	
 }

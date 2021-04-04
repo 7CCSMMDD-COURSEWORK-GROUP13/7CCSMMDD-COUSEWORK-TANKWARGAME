@@ -148,7 +148,7 @@ public class TankWarSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     FieldSpecification returns FieldSpecification
 	 *
 	 * Constraint:
-	 *     (name=ID enemyCount=INT obstacle=Obstaclepecification nextLevel=[FieldSpecification|ID])
+	 *     (name=ID enemyCount=Addition obstacle=Obstaclepecification nextLevel=[FieldSpecification|ID])
 	 */
 	protected void sequence_FieldSpecification(ISerializationContext context, FieldSpecification semanticObject) {
 		if (errorAcceptor != null) {
@@ -163,7 +163,7 @@ public class TankWarSemanticSequencer extends AbstractDelegatingSemanticSequence
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getFieldSpecificationAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getFieldSpecificationAccess().getEnemyCountINTTerminalRuleCall_5_0(), semanticObject.getEnemyCount());
+		feeder.accept(grammarAccess.getFieldSpecificationAccess().getEnemyCountAdditionParserRuleCall_5_0(), semanticObject.getEnemyCount());
 		feeder.accept(grammarAccess.getFieldSpecificationAccess().getObstacleObstaclepecificationParserRuleCall_6_0(), semanticObject.getObstacle());
 		feeder.accept(grammarAccess.getFieldSpecificationAccess().getNextLevelFieldSpecificationIDTerminalRuleCall_9_0_1(), semanticObject.eGet(TankWarPackage.Literals.FIELD_SPECIFICATION__NEXT_LEVEL, false));
 		feeder.finish();
@@ -249,7 +249,7 @@ public class TankWarSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     ScreenSpecification returns ScreenSpecification
 	 *
 	 * Constraint:
-	 *     (name=ID screenWidth=Addition screenHeight=Addition)
+	 *     (name=ID screenWidth=INT screenHeight=INT)
 	 */
 	protected void sequence_ScreenSpecification(ISerializationContext context, ScreenSpecification semanticObject) {
 		if (errorAcceptor != null) {
@@ -262,8 +262,8 @@ public class TankWarSemanticSequencer extends AbstractDelegatingSemanticSequence
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getScreenSpecificationAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getScreenSpecificationAccess().getScreenWidthAdditionParserRuleCall_5_0(), semanticObject.getScreenWidth());
-		feeder.accept(grammarAccess.getScreenSpecificationAccess().getScreenHeightAdditionParserRuleCall_8_0(), semanticObject.getScreenHeight());
+		feeder.accept(grammarAccess.getScreenSpecificationAccess().getScreenWidthINTTerminalRuleCall_5_0(), semanticObject.getScreenWidth());
+		feeder.accept(grammarAccess.getScreenSpecificationAccess().getScreenHeightINTTerminalRuleCall_8_0(), semanticObject.getScreenHeight());
 		feeder.finish();
 	}
 	

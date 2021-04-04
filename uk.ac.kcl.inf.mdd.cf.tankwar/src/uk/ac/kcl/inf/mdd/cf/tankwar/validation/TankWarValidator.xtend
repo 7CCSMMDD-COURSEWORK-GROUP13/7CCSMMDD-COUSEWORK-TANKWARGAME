@@ -27,15 +27,15 @@ class TankWarValidator extends AbstractTankWarValidator {
 	}
 
 	@Check def void checkScreenSpecification(ScreenSpecification screenSpecification) {
-		if (screenSpecification.screenWidth.evaluate.longValue < 720 || screenSpecification.screenWidth.evaluate.longValue > 1080) {
+		if (screenSpecification.screenWidth < 720 || screenSpecification.screenWidth > 1080) {
 			error("Screen width can't lower 720 or higher 1080",
 				TankWarPackage::Literals::SCREEN_SPECIFICATION__SCREEN_WIDTH, "SCREEN_WIDTH")
 		}
-		if (screenSpecification.screenHeight.evaluate.longValue < 720 || screenSpecification.screenHeight.evaluate.longValue > 1080) {
+		if (screenSpecification.screenHeight < 720 || screenSpecification.screenHeight > 1080) {
 			error("Screen height can't lower 720 or higher 1080",
 				TankWarPackage::Literals::SCREEN_SPECIFICATION__SCREEN_HEIGHT, "SCREEN_HEIGHT")
 		}
-		if (screenSpecification.screenWidth.evaluate.longValue < screenSpecification.screenHeight.evaluate.longValue) {
+		if (screenSpecification.screenWidth < screenSpecification.screenHeight) {
 			warning("Screen width must higher than height ", TankWarPackage::Literals::SCREEN_SPECIFICATION__NAME,
 				"SCREEN_WIDTH_HEIFHT")
 		}

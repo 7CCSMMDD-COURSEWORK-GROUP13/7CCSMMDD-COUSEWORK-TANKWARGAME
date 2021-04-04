@@ -188,7 +188,7 @@ public interface TankWarPackage extends EPackage
   int SCREEN_SPECIFICATION__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Screen Width</b></em>' containment reference.
+   * The feature id for the '<em><b>Screen Width</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -197,7 +197,7 @@ public interface TankWarPackage extends EPackage
   int SCREEN_SPECIFICATION__SCREEN_WIDTH = 1;
 
   /**
-   * The feature id for the '<em><b>Screen Height</b></em>' containment reference.
+   * The feature id for the '<em><b>Screen Height</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -391,7 +391,7 @@ public interface TankWarPackage extends EPackage
   int FIELD_SPECIFICATION__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Enemy Count</b></em>' attribute.
+   * The feature id for the '<em><b>Enemy Count</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -768,26 +768,26 @@ public interface TankWarPackage extends EPackage
   EAttribute getScreenSpecification_Name();
 
   /**
-   * Returns the meta object for the containment reference '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.ScreenSpecification#getScreenWidth <em>Screen Width</em>}'.
+   * Returns the meta object for the attribute '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.ScreenSpecification#getScreenWidth <em>Screen Width</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Screen Width</em>'.
+   * @return the meta object for the attribute '<em>Screen Width</em>'.
    * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.ScreenSpecification#getScreenWidth()
    * @see #getScreenSpecification()
    * @generated
    */
-  EReference getScreenSpecification_ScreenWidth();
+  EAttribute getScreenSpecification_ScreenWidth();
 
   /**
-   * Returns the meta object for the containment reference '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.ScreenSpecification#getScreenHeight <em>Screen Height</em>}'.
+   * Returns the meta object for the attribute '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.ScreenSpecification#getScreenHeight <em>Screen Height</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Screen Height</em>'.
+   * @return the meta object for the attribute '<em>Screen Height</em>'.
    * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.ScreenSpecification#getScreenHeight()
    * @see #getScreenSpecification()
    * @generated
    */
-  EReference getScreenSpecification_ScreenHeight();
+  EAttribute getScreenSpecification_ScreenHeight();
 
   /**
    * Returns the meta object for class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Obstaclepecification <em>Obstaclepecification</em>}'.
@@ -928,15 +928,15 @@ public interface TankWarPackage extends EPackage
   EAttribute getFieldSpecification_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification#getEnemyCount <em>Enemy Count</em>}'.
+   * Returns the meta object for the containment reference '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification#getEnemyCount <em>Enemy Count</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Enemy Count</em>'.
+   * @return the meta object for the containment reference '<em>Enemy Count</em>'.
    * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification#getEnemyCount()
    * @see #getFieldSpecification()
    * @generated
    */
-  EAttribute getFieldSpecification_EnemyCount();
+  EReference getFieldSpecification_EnemyCount();
 
   /**
    * Returns the meta object for the containment reference '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification#getObstacle <em>Obstacle</em>}'.
@@ -1259,20 +1259,20 @@ public interface TankWarPackage extends EPackage
     EAttribute SCREEN_SPECIFICATION__NAME = eINSTANCE.getScreenSpecification_Name();
 
     /**
-     * The meta object literal for the '<em><b>Screen Width</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Screen Width</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference SCREEN_SPECIFICATION__SCREEN_WIDTH = eINSTANCE.getScreenSpecification_ScreenWidth();
+    EAttribute SCREEN_SPECIFICATION__SCREEN_WIDTH = eINSTANCE.getScreenSpecification_ScreenWidth();
 
     /**
-     * The meta object literal for the '<em><b>Screen Height</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Screen Height</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference SCREEN_SPECIFICATION__SCREEN_HEIGHT = eINSTANCE.getScreenSpecification_ScreenHeight();
+    EAttribute SCREEN_SPECIFICATION__SCREEN_HEIGHT = eINSTANCE.getScreenSpecification_ScreenHeight();
 
     /**
      * The meta object literal for the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.ObstaclepecificationImpl <em>Obstaclepecification</em>}' class.
@@ -1389,12 +1389,12 @@ public interface TankWarPackage extends EPackage
     EAttribute FIELD_SPECIFICATION__NAME = eINSTANCE.getFieldSpecification_Name();
 
     /**
-     * The meta object literal for the '<em><b>Enemy Count</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Enemy Count</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute FIELD_SPECIFICATION__ENEMY_COUNT = eINSTANCE.getFieldSpecification_EnemyCount();
+    EReference FIELD_SPECIFICATION__ENEMY_COUNT = eINSTANCE.getFieldSpecification_EnemyCount();
 
     /**
      * The meta object literal for the '<em><b>Obstacle</b></em>' containment reference feature.

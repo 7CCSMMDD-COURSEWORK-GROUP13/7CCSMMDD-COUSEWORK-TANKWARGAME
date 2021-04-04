@@ -688,10 +688,10 @@ public class InternalTankWarLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalTankWar.g:1257:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalTankWar.g:1257:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalTankWar.g:1256:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalTankWar.g:1256:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalTankWar.g:1257:11: ( '^' )?
+            // InternalTankWar.g:1256:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -700,7 +700,7 @@ public class InternalTankWarLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalTankWar.g:1257:11: '^'
+                    // InternalTankWar.g:1256:11: '^'
                     {
                     match('^'); 
 
@@ -718,7 +718,7 @@ public class InternalTankWarLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalTankWar.g:1257:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalTankWar.g:1256:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -767,10 +767,10 @@ public class InternalTankWarLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalTankWar.g:1259:10: ( ( '0' .. '9' )+ )
-            // InternalTankWar.g:1259:12: ( '0' .. '9' )+
+            // InternalTankWar.g:1258:10: ( ( '0' .. '9' )+ )
+            // InternalTankWar.g:1258:12: ( '0' .. '9' )+
             {
-            // InternalTankWar.g:1259:12: ( '0' .. '9' )+
+            // InternalTankWar.g:1258:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -784,7 +784,7 @@ public class InternalTankWarLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalTankWar.g:1259:13: '0' .. '9'
+            	    // InternalTankWar.g:1258:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -816,10 +816,10 @@ public class InternalTankWarLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalTankWar.g:1261:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalTankWar.g:1261:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalTankWar.g:1260:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalTankWar.g:1260:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalTankWar.g:1261:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalTankWar.g:1260:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -837,10 +837,10 @@ public class InternalTankWarLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // InternalTankWar.g:1261:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalTankWar.g:1260:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalTankWar.g:1261:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalTankWar.g:1260:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -856,7 +856,7 @@ public class InternalTankWarLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // InternalTankWar.g:1261:21: '\\\\' .
+                    	    // InternalTankWar.g:1260:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -864,7 +864,7 @@ public class InternalTankWarLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalTankWar.g:1261:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalTankWar.g:1260:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -889,10 +889,10 @@ public class InternalTankWarLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalTankWar.g:1261:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalTankWar.g:1260:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalTankWar.g:1261:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalTankWar.g:1260:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -908,7 +908,7 @@ public class InternalTankWarLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalTankWar.g:1261:54: '\\\\' .
+                    	    // InternalTankWar.g:1260:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -916,7 +916,7 @@ public class InternalTankWarLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalTankWar.g:1261:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalTankWar.g:1260:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -959,12 +959,12 @@ public class InternalTankWarLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalTankWar.g:1263:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalTankWar.g:1263:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalTankWar.g:1262:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalTankWar.g:1262:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalTankWar.g:1263:24: ( options {greedy=false; } : . )*
+            // InternalTankWar.g:1262:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -989,7 +989,7 @@ public class InternalTankWarLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalTankWar.g:1263:52: .
+            	    // InternalTankWar.g:1262:52: .
             	    {
             	    matchAny(); 
 
@@ -1019,12 +1019,12 @@ public class InternalTankWarLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalTankWar.g:1265:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalTankWar.g:1265:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalTankWar.g:1264:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalTankWar.g:1264:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalTankWar.g:1265:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalTankWar.g:1264:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -1037,7 +1037,7 @@ public class InternalTankWarLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalTankWar.g:1265:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalTankWar.g:1264:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1057,7 +1057,7 @@ public class InternalTankWarLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalTankWar.g:1265:40: ( ( '\\r' )? '\\n' )?
+            // InternalTankWar.g:1264:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1066,9 +1066,9 @@ public class InternalTankWarLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // InternalTankWar.g:1265:41: ( '\\r' )? '\\n'
+                    // InternalTankWar.g:1264:41: ( '\\r' )? '\\n'
                     {
-                    // InternalTankWar.g:1265:41: ( '\\r' )?
+                    // InternalTankWar.g:1264:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -1077,7 +1077,7 @@ public class InternalTankWarLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // InternalTankWar.g:1265:41: '\\r'
+                            // InternalTankWar.g:1264:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1109,10 +1109,10 @@ public class InternalTankWarLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalTankWar.g:1267:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalTankWar.g:1267:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalTankWar.g:1266:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalTankWar.g:1266:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalTankWar.g:1267:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalTankWar.g:1266:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -1166,8 +1166,8 @@ public class InternalTankWarLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalTankWar.g:1269:16: ( . )
-            // InternalTankWar.g:1269:18: .
+            // InternalTankWar.g:1268:16: ( . )
+            // InternalTankWar.g:1268:18: .
             {
             matchAny(); 
 

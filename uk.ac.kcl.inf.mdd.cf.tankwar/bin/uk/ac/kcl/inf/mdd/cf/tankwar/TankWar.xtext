@@ -18,8 +18,8 @@ EndGameBehaviour :
 
 ScreenSpecification :
 	"screen" name=ID "{" 
-		"screenWidth" "=" screenWidth = Addition  
-		"screenHeight" "=" screenHeight= Addition 
+		"screenWidth" "=" screenWidth = INT  
+		"screenHeight" "=" screenHeight= INT 
     "}"
 ;
 
@@ -52,7 +52,7 @@ WallObstacle:
     
 FieldSpecification :
 	"field" name=ID "{" 
-		"enemyCount" "=" enemyCount=INT
+		"enemyCount" "=" enemyCount=Addition
 	     obstacle = Obstaclepecification 
 	     "nextLevel" "goto"  nextLevel = [FieldSpecification]
 		

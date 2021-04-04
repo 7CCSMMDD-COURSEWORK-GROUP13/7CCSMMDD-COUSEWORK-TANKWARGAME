@@ -49,26 +49,26 @@ public interface FieldSpecification extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Enemy Count</b></em>' attribute.
+   * Returns the value of the '<em><b>Enemy Count</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Enemy Count</em>' attribute.
-   * @see #setEnemyCount(int)
+   * @return the value of the '<em>Enemy Count</em>' containment reference.
+   * @see #setEnemyCount(Expression)
    * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarPackage#getFieldSpecification_EnemyCount()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  int getEnemyCount();
+  Expression getEnemyCount();
 
   /**
-   * Sets the value of the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification#getEnemyCount <em>Enemy Count</em>}' attribute.
+   * Sets the value of the '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification#getEnemyCount <em>Enemy Count</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Enemy Count</em>' attribute.
+   * @param value the new value of the '<em>Enemy Count</em>' containment reference.
    * @see #getEnemyCount()
    * @generated
    */
-  void setEnemyCount(int value);
+  void setEnemyCount(Expression value);
 
   /**
    * Returns the value of the '<em><b>Obstacle</b></em>' containment reference.

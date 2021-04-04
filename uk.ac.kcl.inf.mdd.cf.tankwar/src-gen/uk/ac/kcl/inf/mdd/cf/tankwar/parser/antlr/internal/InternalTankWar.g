@@ -289,20 +289,19 @@ ruleScreenSpecification returns [EObject current=null]
 		}
 		(
 			(
+				lv_screenWidth_5_0=RULE_INT
 				{
-					newCompositeNode(grammarAccess.getScreenSpecificationAccess().getScreenWidthAdditionParserRuleCall_5_0());
+					newLeafNode(lv_screenWidth_5_0, grammarAccess.getScreenSpecificationAccess().getScreenWidthINTTerminalRuleCall_5_0());
 				}
-				lv_screenWidth_5_0=ruleAddition
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getScreenSpecificationRule());
+						$current = createModelElement(grammarAccess.getScreenSpecificationRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"screenWidth",
 						lv_screenWidth_5_0,
-						"uk.ac.kcl.inf.mdd.cf.tankwar.TankWar.Addition");
-					afterParserOrEnumRuleCall();
+						"org.eclipse.xtext.common.Terminals.INT");
 				}
 			)
 		)
@@ -316,20 +315,19 @@ ruleScreenSpecification returns [EObject current=null]
 		}
 		(
 			(
+				lv_screenHeight_8_0=RULE_INT
 				{
-					newCompositeNode(grammarAccess.getScreenSpecificationAccess().getScreenHeightAdditionParserRuleCall_8_0());
+					newLeafNode(lv_screenHeight_8_0, grammarAccess.getScreenSpecificationAccess().getScreenHeightINTTerminalRuleCall_8_0());
 				}
-				lv_screenHeight_8_0=ruleAddition
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getScreenSpecificationRule());
+						$current = createModelElement(grammarAccess.getScreenSpecificationRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"screenHeight",
 						lv_screenHeight_8_0,
-						"uk.ac.kcl.inf.mdd.cf.tankwar.TankWar.Addition");
-					afterParserOrEnumRuleCall();
+						"org.eclipse.xtext.common.Terminals.INT");
 				}
 			)
 		)
@@ -698,19 +696,20 @@ ruleFieldSpecification returns [EObject current=null]
 		}
 		(
 			(
-				lv_enemyCount_5_0=RULE_INT
 				{
-					newLeafNode(lv_enemyCount_5_0, grammarAccess.getFieldSpecificationAccess().getEnemyCountINTTerminalRuleCall_5_0());
+					newCompositeNode(grammarAccess.getFieldSpecificationAccess().getEnemyCountAdditionParserRuleCall_5_0());
 				}
+				lv_enemyCount_5_0=ruleAddition
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getFieldSpecificationRule());
+						$current = createModelElementForParent(grammarAccess.getFieldSpecificationRule());
 					}
-					setWithLastConsumed(
+					set(
 						$current,
 						"enemyCount",
 						lv_enemyCount_5_0,
-						"org.eclipse.xtext.common.Terminals.INT");
+						"uk.ac.kcl.inf.mdd.cf.tankwar.TankWar.Addition");
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)

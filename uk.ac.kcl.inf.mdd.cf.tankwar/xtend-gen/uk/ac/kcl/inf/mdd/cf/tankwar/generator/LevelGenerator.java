@@ -201,8 +201,8 @@ public class LevelGenerator extends CommonGenerator {
     _builder.newLine();
     _builder.append("        ");
     _builder.append("return ");
-    int _enemyCount = f.getEnemyCount();
-    _builder.append(_enemyCount, "        ");
+    int _intValue = this.evaluate(f.getEnemyCount()).intValue();
+    _builder.append(_intValue, "        ");
     _builder.append(";");
     _builder.newLineIfNotEmpty();
     _builder.append("    ");

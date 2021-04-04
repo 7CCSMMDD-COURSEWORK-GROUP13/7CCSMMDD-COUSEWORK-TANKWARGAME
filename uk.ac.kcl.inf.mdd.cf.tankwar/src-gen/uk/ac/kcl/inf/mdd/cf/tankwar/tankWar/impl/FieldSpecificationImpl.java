@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Expression;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Obstaclepecification;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarPackage;
@@ -55,24 +56,14 @@ public class FieldSpecificationImpl extends MinimalEObjectImpl.Container impleme
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getEnemyCount() <em>Enemy Count</em>}' attribute.
+   * The cached value of the '{@link #getEnemyCount() <em>Enemy Count</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getEnemyCount()
    * @generated
    * @ordered
    */
-  protected static final int ENEMY_COUNT_EDEFAULT = 0;
-
-  /**
-   * The cached value of the '{@link #getEnemyCount() <em>Enemy Count</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getEnemyCount()
-   * @generated
-   * @ordered
-   */
-  protected int enemyCount = ENEMY_COUNT_EDEFAULT;
+  protected Expression enemyCount;
 
   /**
    * The cached value of the '{@link #getObstacle() <em>Obstacle</em>}' containment reference.
@@ -146,7 +137,7 @@ public class FieldSpecificationImpl extends MinimalEObjectImpl.Container impleme
    * @generated
    */
   @Override
-  public int getEnemyCount()
+  public Expression getEnemyCount()
   {
     return enemyCount;
   }
@@ -156,13 +147,38 @@ public class FieldSpecificationImpl extends MinimalEObjectImpl.Container impleme
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
-  public void setEnemyCount(int newEnemyCount)
+  public NotificationChain basicSetEnemyCount(Expression newEnemyCount, NotificationChain msgs)
   {
-    int oldEnemyCount = enemyCount;
+    Expression oldEnemyCount = enemyCount;
     enemyCount = newEnemyCount;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TankWarPackage.FIELD_SPECIFICATION__ENEMY_COUNT, oldEnemyCount, enemyCount));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TankWarPackage.FIELD_SPECIFICATION__ENEMY_COUNT, oldEnemyCount, newEnemyCount);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setEnemyCount(Expression newEnemyCount)
+  {
+    if (newEnemyCount != enemyCount)
+    {
+      NotificationChain msgs = null;
+      if (enemyCount != null)
+        msgs = ((InternalEObject)enemyCount).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TankWarPackage.FIELD_SPECIFICATION__ENEMY_COUNT, null, msgs);
+      if (newEnemyCount != null)
+        msgs = ((InternalEObject)newEnemyCount).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TankWarPackage.FIELD_SPECIFICATION__ENEMY_COUNT, null, msgs);
+      msgs = basicSetEnemyCount(newEnemyCount, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TankWarPackage.FIELD_SPECIFICATION__ENEMY_COUNT, newEnemyCount, newEnemyCount));
   }
 
   /**
@@ -270,6 +286,8 @@ public class FieldSpecificationImpl extends MinimalEObjectImpl.Container impleme
   {
     switch (featureID)
     {
+      case TankWarPackage.FIELD_SPECIFICATION__ENEMY_COUNT:
+        return basicSetEnemyCount(null, msgs);
       case TankWarPackage.FIELD_SPECIFICATION__OBSTACLE:
         return basicSetObstacle(null, msgs);
     }
@@ -313,7 +331,7 @@ public class FieldSpecificationImpl extends MinimalEObjectImpl.Container impleme
         setName((String)newValue);
         return;
       case TankWarPackage.FIELD_SPECIFICATION__ENEMY_COUNT:
-        setEnemyCount((Integer)newValue);
+        setEnemyCount((Expression)newValue);
         return;
       case TankWarPackage.FIELD_SPECIFICATION__OBSTACLE:
         setObstacle((Obstaclepecification)newValue);
@@ -339,7 +357,7 @@ public class FieldSpecificationImpl extends MinimalEObjectImpl.Container impleme
         setName(NAME_EDEFAULT);
         return;
       case TankWarPackage.FIELD_SPECIFICATION__ENEMY_COUNT:
-        setEnemyCount(ENEMY_COUNT_EDEFAULT);
+        setEnemyCount((Expression)null);
         return;
       case TankWarPackage.FIELD_SPECIFICATION__OBSTACLE:
         setObstacle((Obstaclepecification)null);
@@ -364,7 +382,7 @@ public class FieldSpecificationImpl extends MinimalEObjectImpl.Container impleme
       case TankWarPackage.FIELD_SPECIFICATION__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case TankWarPackage.FIELD_SPECIFICATION__ENEMY_COUNT:
-        return enemyCount != ENEMY_COUNT_EDEFAULT;
+        return enemyCount != null;
       case TankWarPackage.FIELD_SPECIFICATION__OBSTACLE:
         return obstacle != null;
       case TankWarPackage.FIELD_SPECIFICATION__NEXT_LEVEL:
@@ -386,8 +404,6 @@ public class FieldSpecificationImpl extends MinimalEObjectImpl.Container impleme
     StringBuilder result = new StringBuilder(super.toString());
     result.append(" (name: ");
     result.append(name);
-    result.append(", enemyCount: ");
-    result.append(enemyCount);
     result.append(')');
     return result.toString();
   }

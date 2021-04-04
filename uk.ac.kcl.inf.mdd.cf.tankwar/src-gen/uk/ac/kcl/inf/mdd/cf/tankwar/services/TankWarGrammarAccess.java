@@ -140,23 +140,23 @@ public class TankWarGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		private final Keyword cScreenWidthKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Keyword cEqualsSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Assignment cScreenWidthAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cScreenWidthAdditionParserRuleCall_5_0 = (RuleCall)cScreenWidthAssignment_5.eContents().get(0);
+		private final RuleCall cScreenWidthINTTerminalRuleCall_5_0 = (RuleCall)cScreenWidthAssignment_5.eContents().get(0);
 		private final Keyword cScreenHeightKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		private final Keyword cEqualsSignKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Assignment cScreenHeightAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cScreenHeightAdditionParserRuleCall_8_0 = (RuleCall)cScreenHeightAssignment_8.eContents().get(0);
+		private final RuleCall cScreenHeightINTTerminalRuleCall_8_0 = (RuleCall)cScreenHeightAssignment_8.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//ScreenSpecification:
 		//	"screen" name=ID "{"
-		//	"screenWidth" "=" screenWidth=Addition
-		//	"screenHeight" "=" screenHeight=Addition
+		//	"screenWidth" "=" screenWidth=INT
+		//	"screenHeight" "=" screenHeight=INT
 		//	"}";
 		@Override public ParserRule getRule() { return rule; }
 		
 		//"screen" name=ID "{"
-		//"screenWidth" "=" screenWidth=Addition
-		//"screenHeight" "=" screenHeight=Addition
+		//"screenWidth" "=" screenWidth=INT
+		//"screenHeight" "=" screenHeight=INT
 		//"}"
 		public Group getGroup() { return cGroup; }
 		
@@ -178,11 +178,11 @@ public class TankWarGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//"="
 		public Keyword getEqualsSignKeyword_4() { return cEqualsSignKeyword_4; }
 		
-		//screenWidth=Addition
+		//screenWidth=INT
 		public Assignment getScreenWidthAssignment_5() { return cScreenWidthAssignment_5; }
 		
-		//Addition
-		public RuleCall getScreenWidthAdditionParserRuleCall_5_0() { return cScreenWidthAdditionParserRuleCall_5_0; }
+		//INT
+		public RuleCall getScreenWidthINTTerminalRuleCall_5_0() { return cScreenWidthINTTerminalRuleCall_5_0; }
 		
 		//"screenHeight"
 		public Keyword getScreenHeightKeyword_6() { return cScreenHeightKeyword_6; }
@@ -190,11 +190,11 @@ public class TankWarGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//"="
 		public Keyword getEqualsSignKeyword_7() { return cEqualsSignKeyword_7; }
 		
-		//screenHeight=Addition
+		//screenHeight=INT
 		public Assignment getScreenHeightAssignment_8() { return cScreenHeightAssignment_8; }
 		
-		//Addition
-		public RuleCall getScreenHeightAdditionParserRuleCall_8_0() { return cScreenHeightAdditionParserRuleCall_8_0; }
+		//INT
+		public RuleCall getScreenHeightINTTerminalRuleCall_8_0() { return cScreenHeightINTTerminalRuleCall_8_0; }
 		
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
@@ -409,7 +409,7 @@ public class TankWarGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		private final Keyword cEnemyCountKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Keyword cEqualsSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Assignment cEnemyCountAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cEnemyCountINTTerminalRuleCall_5_0 = (RuleCall)cEnemyCountAssignment_5.eContents().get(0);
+		private final RuleCall cEnemyCountAdditionParserRuleCall_5_0 = (RuleCall)cEnemyCountAssignment_5.eContents().get(0);
 		private final Assignment cObstacleAssignment_6 = (Assignment)cGroup.eContents().get(6);
 		private final RuleCall cObstacleObstaclepecificationParserRuleCall_6_0 = (RuleCall)cObstacleAssignment_6.eContents().get(0);
 		private final Keyword cNextLevelKeyword_7 = (Keyword)cGroup.eContents().get(7);
@@ -421,14 +421,14 @@ public class TankWarGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		
 		//FieldSpecification:
 		//	"field" name=ID "{"
-		//	"enemyCount" "=" enemyCount=INT
+		//	"enemyCount" "=" enemyCount=Addition
 		//	obstacle=Obstaclepecification
 		//	"nextLevel" "goto" nextLevel=[FieldSpecification]
 		//	"}";
 		@Override public ParserRule getRule() { return rule; }
 		
 		//"field" name=ID "{"
-		//"enemyCount" "=" enemyCount=INT
+		//"enemyCount" "=" enemyCount=Addition
 		//obstacle=Obstaclepecification
 		//"nextLevel" "goto" nextLevel=[FieldSpecification]
 		//"}"
@@ -452,11 +452,11 @@ public class TankWarGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//"="
 		public Keyword getEqualsSignKeyword_4() { return cEqualsSignKeyword_4; }
 		
-		//enemyCount=INT
+		//enemyCount=Addition
 		public Assignment getEnemyCountAssignment_5() { return cEnemyCountAssignment_5; }
 		
-		//INT
-		public RuleCall getEnemyCountINTTerminalRuleCall_5_0() { return cEnemyCountINTTerminalRuleCall_5_0; }
+		//Addition
+		public RuleCall getEnemyCountAdditionParserRuleCall_5_0() { return cEnemyCountAdditionParserRuleCall_5_0; }
 		
 		//obstacle=Obstaclepecification
 		public Assignment getObstacleAssignment_6() { return cObstacleAssignment_6; }
@@ -865,8 +865,8 @@ public class TankWarGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	
 	//ScreenSpecification:
 	//	"screen" name=ID "{"
-	//	"screenWidth" "=" screenWidth=Addition
-	//	"screenHeight" "=" screenHeight=Addition
+	//	"screenWidth" "=" screenWidth=INT
+	//	"screenHeight" "=" screenHeight=INT
 	//	"}";
 	public ScreenSpecificationElements getScreenSpecificationAccess() {
 		return pScreenSpecification;
@@ -926,7 +926,7 @@ public class TankWarGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	
 	//FieldSpecification:
 	//	"field" name=ID "{"
-	//	"enemyCount" "=" enemyCount=INT
+	//	"enemyCount" "=" enemyCount=Addition
 	//	obstacle=Obstaclepecification
 	//	"nextLevel" "goto" nextLevel=[FieldSpecification]
 	//	"}";

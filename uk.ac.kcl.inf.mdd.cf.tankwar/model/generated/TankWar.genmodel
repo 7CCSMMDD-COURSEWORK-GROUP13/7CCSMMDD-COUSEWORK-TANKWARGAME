@@ -18,8 +18,8 @@
     </genClasses>
     <genClasses ecoreClass="TankWar.ecore#//ScreenSpecification">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TankWar.ecore#//ScreenSpecification/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TankWar.ecore#//ScreenSpecification/screenWidth"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TankWar.ecore#//ScreenSpecification/screenHeight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TankWar.ecore#//ScreenSpecification/screenWidth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TankWar.ecore#//ScreenSpecification/screenHeight"/>
     </genClasses>
     <genClasses ecoreClass="TankWar.ecore#//Obstaclepecification">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TankWar.ecore#//Obstaclepecification/name"/>
@@ -37,7 +37,7 @@
     </genClasses>
     <genClasses ecoreClass="TankWar.ecore#//FieldSpecification">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TankWar.ecore#//FieldSpecification/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TankWar.ecore#//FieldSpecification/enemyCount"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TankWar.ecore#//FieldSpecification/enemyCount"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TankWar.ecore#//FieldSpecification/obstacle"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TankWar.ecore#//FieldSpecification/nextLevel"/>
     </genClasses>
