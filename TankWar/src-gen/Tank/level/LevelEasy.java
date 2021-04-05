@@ -43,7 +43,7 @@ public class LevelEasy extends Level {
 
     @Override
     public int getEnemyNum() {
-        return 2;
+        return 5;
     }
 
 

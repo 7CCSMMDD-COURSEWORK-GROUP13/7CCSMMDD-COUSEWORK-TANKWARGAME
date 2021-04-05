@@ -8,9 +8,14 @@
       fileExtensions="tgame" ecorePackage="TankWar.ecore#/">
     <genClasses ecoreClass="TankWar.ecore#//TankWarGame">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TankWar.ecore#//TankWarGame/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TankWar.ecore#//TankWarGame/variable"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TankWar.ecore#//TankWarGame/screen"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TankWar.ecore#//TankWarGame/fields"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TankWar.ecore#//TankWarGame/options"/>
+    </genClasses>
+    <genClasses ecoreClass="TankWar.ecore#//VariableDeclaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TankWar.ecore#//VariableDeclaration/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TankWar.ecore#//VariableDeclaration/value"/>
     </genClasses>
     <genClasses ecoreClass="TankWar.ecore#//EndGameBehaviour">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TankWar.ecore#//EndGameBehaviour/win"/>
@@ -48,6 +53,9 @@
     </genClasses>
     <genClasses ecoreClass="TankWar.ecore#//AllowRestartMenu"/>
     <genClasses ecoreClass="TankWar.ecore#//Expression"/>
+    <genClasses ecoreClass="TankWar.ecore#//IntVarExpression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference TankWar.ecore#//IntVarExpression/var"/>
+    </genClasses>
     <genClasses ecoreClass="TankWar.ecore#//IntLiteral">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TankWar.ecore#//IntLiteral/val"/>
     </genClasses>

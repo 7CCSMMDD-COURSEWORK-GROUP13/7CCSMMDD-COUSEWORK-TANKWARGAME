@@ -20,6 +20,7 @@ import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.AllowRestartMenu;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.EndGameBehaviour;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.IntLiteral;
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.IntVarExpression;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Multiplication;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Obstaclepecification;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.RealLiteral;
@@ -28,6 +29,7 @@ import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.StartFieldDeclaration;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.SuperModeDeclaration;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarGame;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarPackage;
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.VariableDeclaration;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.WallObstacle;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.WaterObstacle;
 
@@ -60,6 +62,9 @@ public class TankWarSemanticSequencer extends AbstractDelegatingSemanticSequence
 			case TankWarPackage.INT_LITERAL:
 				sequence_IntLiteral(context, (IntLiteral) semanticObject); 
 				return; 
+			case TankWarPackage.INT_VAR_EXPRESSION:
+				sequence_IntVarExpression(context, (IntVarExpression) semanticObject); 
+				return; 
 			case TankWarPackage.MULTIPLICATION:
 				sequence_Multiplication(context, (Multiplication) semanticObject); 
 				return; 
@@ -80,6 +85,9 @@ public class TankWarSemanticSequencer extends AbstractDelegatingSemanticSequence
 				return; 
 			case TankWarPackage.TANK_WAR_GAME:
 				sequence_TankWarGame(context, (TankWarGame) semanticObject); 
+				return; 
+			case TankWarPackage.VARIABLE_DECLARATION:
+				sequence_VariableDeclaration(context, (VariableDeclaration) semanticObject); 
 				return; 
 			case TankWarPackage.WALL_OBSTACLE:
 				sequence_WallObstacle(context, (WallObstacle) semanticObject); 
@@ -189,6 +197,29 @@ public class TankWarSemanticSequencer extends AbstractDelegatingSemanticSequence
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getIntLiteralAccess().getValINTTerminalRuleCall_0(), semanticObject.getVal());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Addition returns IntVarExpression
+	 *     Addition.Addition_1_0 returns IntVarExpression
+	 *     Multiplication returns IntVarExpression
+	 *     Multiplication.Multiplication_1_0 returns IntVarExpression
+	 *     Primary returns IntVarExpression
+	 *     IntVarExpression returns IntVarExpression
+	 *
+	 * Constraint:
+	 *     var=[VariableDeclaration|ID]
+	 */
+	protected void sequence_IntVarExpression(ISerializationContext context, IntVarExpression semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, TankWarPackage.Literals.INT_VAR_EXPRESSION__VAR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TankWarPackage.Literals.INT_VAR_EXPRESSION__VAR));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getIntVarExpressionAccess().getVarVariableDeclarationIDTerminalRuleCall_0_1(), semanticObject.eGet(TankWarPackage.Literals.INT_VAR_EXPRESSION__VAR, false));
 		feeder.finish();
 	}
 	
@@ -305,10 +336,31 @@ public class TankWarSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     TankWarGame returns TankWarGame
 	 *
 	 * Constraint:
-	 *     (name=ID screen=ScreenSpecification fields+=FieldSpecification+ options+=OptionSpecification+)
+	 *     (name=ID variable+=VariableDeclaration? screen=ScreenSpecification fields+=FieldSpecification+ options+=OptionSpecification+)
 	 */
 	protected void sequence_TankWarGame(ISerializationContext context, TankWarGame semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     VariableDeclaration returns VariableDeclaration
+	 *
+	 * Constraint:
+	 *     (name=ID value=INT)
+	 */
+	protected void sequence_VariableDeclaration(ISerializationContext context, VariableDeclaration semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, TankWarPackage.Literals.VARIABLE_DECLARATION__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TankWarPackage.Literals.VARIABLE_DECLARATION__NAME));
+			if (transientValues.isValueTransient(semanticObject, TankWarPackage.Literals.VARIABLE_DECLARATION__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TankWarPackage.Literals.VARIABLE_DECLARATION__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getVariableDeclarationAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getVariableDeclarationAccess().getValueINTTerminalRuleCall_3_0(), semanticObject.getValue());
+		feeder.finish();
 	}
 	
 	

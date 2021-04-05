@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarGame#getName <em>Name</em>}</li>
+ *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarGame#getVariable <em>Variable</em>}</li>
  *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarGame#getScreen <em>Screen</em>}</li>
  *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarGame#getFields <em>Fields</em>}</li>
  *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarGame#getOptions <em>Options</em>}</li>
@@ -49,6 +50,18 @@ public interface TankWarGame extends EObject
    * @generated
    */
   void setName(String value);
+
+  /**
+   * Returns the value of the '<em><b>Variable</b></em>' containment reference list.
+   * The list contents are of type {@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.VariableDeclaration}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Variable</em>' containment reference list.
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarPackage#getTankWarGame_Variable()
+   * @model containment="true"
+   * @generated
+   */
+  EList<VariableDeclaration> getVariable();
 
   /**
    * Returns the value of the '<em><b>Screen</b></em>' containment reference.

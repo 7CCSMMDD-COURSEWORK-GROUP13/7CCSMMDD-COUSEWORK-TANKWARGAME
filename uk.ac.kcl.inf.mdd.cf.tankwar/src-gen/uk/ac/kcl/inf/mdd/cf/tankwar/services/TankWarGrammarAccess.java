@@ -31,16 +31,19 @@ public class TankWarGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cScreenAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cScreenScreenSpecificationParserRuleCall_3_0 = (RuleCall)cScreenAssignment_3.eContents().get(0);
-		private final Assignment cFieldsAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cFieldsFieldSpecificationParserRuleCall_4_0 = (RuleCall)cFieldsAssignment_4.eContents().get(0);
-		private final Assignment cOptionsAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cOptionsOptionSpecificationParserRuleCall_5_0 = (RuleCall)cOptionsAssignment_5.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Assignment cVariableAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cVariableVariableDeclarationParserRuleCall_3_0 = (RuleCall)cVariableAssignment_3.eContents().get(0);
+		private final Assignment cScreenAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cScreenScreenSpecificationParserRuleCall_4_0 = (RuleCall)cScreenAssignment_4.eContents().get(0);
+		private final Assignment cFieldsAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cFieldsFieldSpecificationParserRuleCall_5_0 = (RuleCall)cFieldsAssignment_5.eContents().get(0);
+		private final Assignment cOptionsAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cOptionsOptionSpecificationParserRuleCall_6_0 = (RuleCall)cOptionsAssignment_6.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//TankWarGame:
 		//	"game" name=ID "{"
+		//	variable+=VariableDeclaration?
 		//	screen=ScreenSpecification
 		//	fields+=FieldSpecification+
 		//	options+=OptionSpecification+
@@ -48,6 +51,7 @@ public class TankWarGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		@Override public ParserRule getRule() { return rule; }
 		
 		//"game" name=ID "{"
+		//variable+=VariableDeclaration?
 		//screen=ScreenSpecification
 		//fields+=FieldSpecification+
 		//options+=OptionSpecification+
@@ -66,26 +70,67 @@ public class TankWarGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
+		//variable+=VariableDeclaration?
+		public Assignment getVariableAssignment_3() { return cVariableAssignment_3; }
+		
+		//VariableDeclaration
+		public RuleCall getVariableVariableDeclarationParserRuleCall_3_0() { return cVariableVariableDeclarationParserRuleCall_3_0; }
+		
 		//screen=ScreenSpecification
-		public Assignment getScreenAssignment_3() { return cScreenAssignment_3; }
+		public Assignment getScreenAssignment_4() { return cScreenAssignment_4; }
 		
 		//ScreenSpecification
-		public RuleCall getScreenScreenSpecificationParserRuleCall_3_0() { return cScreenScreenSpecificationParserRuleCall_3_0; }
+		public RuleCall getScreenScreenSpecificationParserRuleCall_4_0() { return cScreenScreenSpecificationParserRuleCall_4_0; }
 		
 		//fields+=FieldSpecification+
-		public Assignment getFieldsAssignment_4() { return cFieldsAssignment_4; }
+		public Assignment getFieldsAssignment_5() { return cFieldsAssignment_5; }
 		
 		//FieldSpecification
-		public RuleCall getFieldsFieldSpecificationParserRuleCall_4_0() { return cFieldsFieldSpecificationParserRuleCall_4_0; }
+		public RuleCall getFieldsFieldSpecificationParserRuleCall_5_0() { return cFieldsFieldSpecificationParserRuleCall_5_0; }
 		
 		//options+=OptionSpecification+
-		public Assignment getOptionsAssignment_5() { return cOptionsAssignment_5; }
+		public Assignment getOptionsAssignment_6() { return cOptionsAssignment_6; }
 		
 		//OptionSpecification
-		public RuleCall getOptionsOptionSpecificationParserRuleCall_5_0() { return cOptionsOptionSpecificationParserRuleCall_5_0; }
+		public RuleCall getOptionsOptionSpecificationParserRuleCall_6_0() { return cOptionsOptionSpecificationParserRuleCall_6_0; }
 		
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
+	}
+	public class VariableDeclarationElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uk.ac.kcl.inf.mdd.cf.tankwar.TankWar.VariableDeclaration");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cVarKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cValueAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cValueINTTerminalRuleCall_3_0 = (RuleCall)cValueAssignment_3.eContents().get(0);
+		
+		//VariableDeclaration:
+		//	"var" name=ID "=" value=INT;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//"var" name=ID "=" value=INT
+		public Group getGroup() { return cGroup; }
+		
+		//"var"
+		public Keyword getVarKeyword_0() { return cVarKeyword_0; }
+		
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		
+		//"="
+		public Keyword getEqualsSignKeyword_2() { return cEqualsSignKeyword_2; }
+		
+		//value=INT
+		public Assignment getValueAssignment_3() { return cValueAssignment_3; }
+		
+		//INT
+		public RuleCall getValueINTTerminalRuleCall_3_0() { return cValueINTTerminalRuleCall_3_0; }
 	}
 	public class EndGameBehaviourElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uk.ac.kcl.inf.mdd.cf.tankwar.TankWar.EndGameBehaviour");
@@ -676,38 +721,61 @@ public class TankWarGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uk.ac.kcl.inf.mdd.cf.tankwar.TankWar.Primary");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cIntLiteralParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cRealLiteralParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
-		private final Keyword cLeftParenthesisKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final RuleCall cAdditionParserRuleCall_2_1 = (RuleCall)cGroup_2.eContents().get(1);
-		private final Keyword cRightParenthesisKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
+		private final RuleCall cIntVarExpressionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cRealLiteralParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final Group cGroup_3 = (Group)cAlternatives.eContents().get(3);
+		private final Keyword cLeftParenthesisKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final RuleCall cAdditionParserRuleCall_3_1 = (RuleCall)cGroup_3.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
 		
 		//Primary Expression:
-		//	IntLiteral | RealLiteral |
+		//	IntLiteral | IntVarExpression | RealLiteral |
 		//	"(" Addition ")";
 		@Override public ParserRule getRule() { return rule; }
 		
-		//IntLiteral | RealLiteral |
+		//IntLiteral | IntVarExpression | RealLiteral |
 		//"(" Addition ")"
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//IntLiteral
 		public RuleCall getIntLiteralParserRuleCall_0() { return cIntLiteralParserRuleCall_0; }
 		
+		//IntVarExpression
+		public RuleCall getIntVarExpressionParserRuleCall_1() { return cIntVarExpressionParserRuleCall_1; }
+		
 		//RealLiteral
-		public RuleCall getRealLiteralParserRuleCall_1() { return cRealLiteralParserRuleCall_1; }
+		public RuleCall getRealLiteralParserRuleCall_2() { return cRealLiteralParserRuleCall_2; }
 		
 		//"(" Addition ")"
-		public Group getGroup_2() { return cGroup_2; }
+		public Group getGroup_3() { return cGroup_3; }
 		
 		//"("
-		public Keyword getLeftParenthesisKeyword_2_0() { return cLeftParenthesisKeyword_2_0; }
+		public Keyword getLeftParenthesisKeyword_3_0() { return cLeftParenthesisKeyword_3_0; }
 		
 		//Addition
-		public RuleCall getAdditionParserRuleCall_2_1() { return cAdditionParserRuleCall_2_1; }
+		public RuleCall getAdditionParserRuleCall_3_1() { return cAdditionParserRuleCall_3_1; }
 		
 		//")"
-		public Keyword getRightParenthesisKeyword_2_2() { return cRightParenthesisKeyword_2_2; }
+		public Keyword getRightParenthesisKeyword_3_2() { return cRightParenthesisKeyword_3_2; }
+	}
+	public class IntVarExpressionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uk.ac.kcl.inf.mdd.cf.tankwar.TankWar.IntVarExpression");
+		private final Assignment cVarAssignment = (Assignment)rule.eContents().get(1);
+		private final CrossReference cVarVariableDeclarationCrossReference_0 = (CrossReference)cVarAssignment.eContents().get(0);
+		private final RuleCall cVarVariableDeclarationIDTerminalRuleCall_0_1 = (RuleCall)cVarVariableDeclarationCrossReference_0.eContents().get(1);
+		
+		//IntVarExpression:
+		//	var=[VariableDeclaration];
+		@Override public ParserRule getRule() { return rule; }
+		
+		//var=[VariableDeclaration]
+		public Assignment getVarAssignment() { return cVarAssignment; }
+		
+		//[VariableDeclaration]
+		public CrossReference getVarVariableDeclarationCrossReference_0() { return cVarVariableDeclarationCrossReference_0; }
+		
+		//ID
+		public RuleCall getVarVariableDeclarationIDTerminalRuleCall_0_1() { return cVarVariableDeclarationIDTerminalRuleCall_0_1; }
 	}
 	public class IntLiteralElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "uk.ac.kcl.inf.mdd.cf.tankwar.TankWar.IntLiteral");
@@ -765,6 +833,7 @@ public class TankWarGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	
 	
 	private final TankWarGameElements pTankWarGame;
+	private final VariableDeclarationElements pVariableDeclaration;
 	private final EndGameBehaviourElements pEndGameBehaviour;
 	private final ScreenSpecificationElements pScreenSpecification;
 	private final ObstaclepecificationElements pObstaclepecification;
@@ -779,6 +848,7 @@ public class TankWarGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	private final AdditionElements pAddition;
 	private final MultiplicationElements pMultiplication;
 	private final PrimaryElements pPrimary;
+	private final IntVarExpressionElements pIntVarExpression;
 	private final IntLiteralElements pIntLiteral;
 	private final RealLiteralElements pRealLiteral;
 	private final REALElements pREAL;
@@ -793,6 +863,7 @@ public class TankWarGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pTankWarGame = new TankWarGameElements();
+		this.pVariableDeclaration = new VariableDeclarationElements();
 		this.pEndGameBehaviour = new EndGameBehaviourElements();
 		this.pScreenSpecification = new ScreenSpecificationElements();
 		this.pObstaclepecification = new ObstaclepecificationElements();
@@ -807,6 +878,7 @@ public class TankWarGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		this.pAddition = new AdditionElements();
 		this.pMultiplication = new MultiplicationElements();
 		this.pPrimary = new PrimaryElements();
+		this.pIntVarExpression = new IntVarExpressionElements();
 		this.pIntLiteral = new IntLiteralElements();
 		this.pRealLiteral = new RealLiteralElements();
 		this.pREAL = new REALElements();
@@ -841,6 +913,7 @@ public class TankWarGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	
 	//TankWarGame:
 	//	"game" name=ID "{"
+	//	variable+=VariableDeclaration?
 	//	screen=ScreenSpecification
 	//	fields+=FieldSpecification+
 	//	options+=OptionSpecification+
@@ -851,6 +924,16 @@ public class TankWarGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	
 	public ParserRule getTankWarGameRule() {
 		return getTankWarGameAccess().getRule();
+	}
+	
+	//VariableDeclaration:
+	//	"var" name=ID "=" value=INT;
+	public VariableDeclarationElements getVariableDeclarationAccess() {
+		return pVariableDeclaration;
+	}
+	
+	public ParserRule getVariableDeclarationRule() {
+		return getVariableDeclarationAccess().getRule();
 	}
 	
 	//EndGameBehaviour:
@@ -999,7 +1082,7 @@ public class TankWarGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	}
 	
 	//Primary Expression:
-	//	IntLiteral | RealLiteral |
+	//	IntLiteral | IntVarExpression | RealLiteral |
 	//	"(" Addition ")";
 	public PrimaryElements getPrimaryAccess() {
 		return pPrimary;
@@ -1007,6 +1090,16 @@ public class TankWarGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	
 	public ParserRule getPrimaryRule() {
 		return getPrimaryAccess().getRule();
+	}
+	
+	//IntVarExpression:
+	//	var=[VariableDeclaration];
+	public IntVarExpressionElements getIntVarExpressionAccess() {
+		return pIntVarExpression;
+	}
+	
+	public ParserRule getIntVarExpressionRule() {
+		return getIntVarExpressionAccess().getRule();
 	}
 	
 	//IntLiteral:

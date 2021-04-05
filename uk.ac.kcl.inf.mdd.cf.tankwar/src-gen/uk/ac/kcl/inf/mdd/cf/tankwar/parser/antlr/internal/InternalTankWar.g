@@ -105,9 +105,28 @@ ruleTankWarGame returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getTankWarGameAccess().getScreenScreenSpecificationParserRuleCall_3_0());
+					newCompositeNode(grammarAccess.getTankWarGameAccess().getVariableVariableDeclarationParserRuleCall_3_0());
 				}
-				lv_screen_3_0=ruleScreenSpecification
+				lv_variable_3_0=ruleVariableDeclaration
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getTankWarGameRule());
+					}
+					add(
+						$current,
+						"variable",
+						lv_variable_3_0,
+						"uk.ac.kcl.inf.mdd.cf.tankwar.TankWar.VariableDeclaration");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getTankWarGameAccess().getScreenScreenSpecificationParserRuleCall_4_0());
+				}
+				lv_screen_4_0=ruleScreenSpecification
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getTankWarGameRule());
@@ -115,7 +134,7 @@ ruleTankWarGame returns [EObject current=null]
 					set(
 						$current,
 						"screen",
-						lv_screen_3_0,
+						lv_screen_4_0,
 						"uk.ac.kcl.inf.mdd.cf.tankwar.TankWar.ScreenSpecification");
 					afterParserOrEnumRuleCall();
 				}
@@ -124,9 +143,9 @@ ruleTankWarGame returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getTankWarGameAccess().getFieldsFieldSpecificationParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getTankWarGameAccess().getFieldsFieldSpecificationParserRuleCall_5_0());
 				}
-				lv_fields_4_0=ruleFieldSpecification
+				lv_fields_5_0=ruleFieldSpecification
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getTankWarGameRule());
@@ -134,7 +153,7 @@ ruleTankWarGame returns [EObject current=null]
 					add(
 						$current,
 						"fields",
-						lv_fields_4_0,
+						lv_fields_5_0,
 						"uk.ac.kcl.inf.mdd.cf.tankwar.TankWar.FieldSpecification");
 					afterParserOrEnumRuleCall();
 				}
@@ -143,9 +162,9 @@ ruleTankWarGame returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getTankWarGameAccess().getOptionsOptionSpecificationParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getTankWarGameAccess().getOptionsOptionSpecificationParserRuleCall_6_0());
 				}
-				lv_options_5_0=ruleOptionSpecification
+				lv_options_6_0=ruleOptionSpecification
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getTankWarGameRule());
@@ -153,16 +172,79 @@ ruleTankWarGame returns [EObject current=null]
 					add(
 						$current,
 						"options",
-						lv_options_5_0,
+						lv_options_6_0,
 						"uk.ac.kcl.inf.mdd.cf.tankwar.TankWar.OptionSpecification");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)+
-		otherlv_6='}'
+		otherlv_7='}'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getTankWarGameAccess().getRightCurlyBracketKeyword_6());
+			newLeafNode(otherlv_7, grammarAccess.getTankWarGameAccess().getRightCurlyBracketKeyword_7());
 		}
+	)
+;
+
+// Entry rule entryRuleVariableDeclaration
+entryRuleVariableDeclaration returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVariableDeclarationRule()); }
+	iv_ruleVariableDeclaration=ruleVariableDeclaration
+	{ $current=$iv_ruleVariableDeclaration.current; }
+	EOF;
+
+// Rule VariableDeclaration
+ruleVariableDeclaration returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='var'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVariableDeclarationAccess().getVarKeyword_0());
+		}
+		(
+			(
+				lv_name_1_0=RULE_ID
+				{
+					newLeafNode(lv_name_1_0, grammarAccess.getVariableDeclarationAccess().getNameIDTerminalRuleCall_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVariableDeclarationRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_1_0,
+						"org.eclipse.xtext.common.Terminals.ID");
+				}
+			)
+		)
+		otherlv_2='='
+		{
+			newLeafNode(otherlv_2, grammarAccess.getVariableDeclarationAccess().getEqualsSignKeyword_2());
+		}
+		(
+			(
+				lv_value_3_0=RULE_INT
+				{
+					newLeafNode(lv_value_3_0, grammarAccess.getVariableDeclarationAccess().getValueINTTerminalRuleCall_3_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVariableDeclarationRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"value",
+						lv_value_3_0,
+						"org.eclipse.xtext.common.Terminals.INT");
+				}
+			)
+		)
 	)
 ;
 
@@ -1104,30 +1186,69 @@ rulePrimary returns [EObject current=null]
 		}
 		    |
 		{
-			newCompositeNode(grammarAccess.getPrimaryAccess().getRealLiteralParserRuleCall_1());
+			newCompositeNode(grammarAccess.getPrimaryAccess().getIntVarExpressionParserRuleCall_1());
 		}
-		this_RealLiteral_1=ruleRealLiteral
+		this_IntVarExpression_1=ruleIntVarExpression
 		{
-			$current = $this_RealLiteral_1.current;
+			$current = $this_IntVarExpression_1.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getPrimaryAccess().getRealLiteralParserRuleCall_2());
+		}
+		this_RealLiteral_2=ruleRealLiteral
+		{
+			$current = $this_RealLiteral_2.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
 		(
-			otherlv_2='('
+			otherlv_3='('
 			{
-				newLeafNode(otherlv_2, grammarAccess.getPrimaryAccess().getLeftParenthesisKeyword_2_0());
+				newLeafNode(otherlv_3, grammarAccess.getPrimaryAccess().getLeftParenthesisKeyword_3_0());
 			}
 			{
-				newCompositeNode(grammarAccess.getPrimaryAccess().getAdditionParserRuleCall_2_1());
+				newCompositeNode(grammarAccess.getPrimaryAccess().getAdditionParserRuleCall_3_1());
 			}
-			this_Addition_3=ruleAddition
+			this_Addition_4=ruleAddition
 			{
-				$current = $this_Addition_3.current;
+				$current = $this_Addition_4.current;
 				afterParserOrEnumRuleCall();
 			}
-			otherlv_4=')'
+			otherlv_5=')'
 			{
-				newLeafNode(otherlv_4, grammarAccess.getPrimaryAccess().getRightParenthesisKeyword_2_2());
+				newLeafNode(otherlv_5, grammarAccess.getPrimaryAccess().getRightParenthesisKeyword_3_2());
+			}
+		)
+	)
+;
+
+// Entry rule entryRuleIntVarExpression
+entryRuleIntVarExpression returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getIntVarExpressionRule()); }
+	iv_ruleIntVarExpression=ruleIntVarExpression
+	{ $current=$iv_ruleIntVarExpression.current; }
+	EOF;
+
+// Rule IntVarExpression
+ruleIntVarExpression returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				if ($current==null) {
+					$current = createModelElement(grammarAccess.getIntVarExpressionRule());
+				}
+			}
+			otherlv_0=RULE_ID
+			{
+				newLeafNode(otherlv_0, grammarAccess.getIntVarExpressionAccess().getVarVariableDeclarationCrossReference_0());
 			}
 		)
 	)

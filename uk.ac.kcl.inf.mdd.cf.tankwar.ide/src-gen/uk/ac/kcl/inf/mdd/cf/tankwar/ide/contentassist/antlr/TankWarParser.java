@@ -37,6 +37,7 @@ public class TankWarParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getMultiplicationAccess().getOperatorAlternatives_1_1_0(), "rule__Multiplication__OperatorAlternatives_1_1_0");
 			builder.put(grammarAccess.getPrimaryAccess().getAlternatives(), "rule__Primary__Alternatives");
 			builder.put(grammarAccess.getTankWarGameAccess().getGroup(), "rule__TankWarGame__Group__0");
+			builder.put(grammarAccess.getVariableDeclarationAccess().getGroup(), "rule__VariableDeclaration__Group__0");
 			builder.put(grammarAccess.getEndGameBehaviourAccess().getGroup(), "rule__EndGameBehaviour__Group__0");
 			builder.put(grammarAccess.getScreenSpecificationAccess().getGroup(), "rule__ScreenSpecification__Group__0");
 			builder.put(grammarAccess.getObstaclepecificationAccess().getGroup(), "rule__Obstaclepecification__Group__0");
@@ -50,12 +51,15 @@ public class TankWarParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getAdditionAccess().getGroup_1(), "rule__Addition__Group_1__0");
 			builder.put(grammarAccess.getMultiplicationAccess().getGroup(), "rule__Multiplication__Group__0");
 			builder.put(grammarAccess.getMultiplicationAccess().getGroup_1(), "rule__Multiplication__Group_1__0");
-			builder.put(grammarAccess.getPrimaryAccess().getGroup_2(), "rule__Primary__Group_2__0");
+			builder.put(grammarAccess.getPrimaryAccess().getGroup_3(), "rule__Primary__Group_3__0");
 			builder.put(grammarAccess.getREALAccess().getGroup(), "rule__REAL__Group__0");
 			builder.put(grammarAccess.getTankWarGameAccess().getNameAssignment_1(), "rule__TankWarGame__NameAssignment_1");
-			builder.put(grammarAccess.getTankWarGameAccess().getScreenAssignment_3(), "rule__TankWarGame__ScreenAssignment_3");
-			builder.put(grammarAccess.getTankWarGameAccess().getFieldsAssignment_4(), "rule__TankWarGame__FieldsAssignment_4");
-			builder.put(grammarAccess.getTankWarGameAccess().getOptionsAssignment_5(), "rule__TankWarGame__OptionsAssignment_5");
+			builder.put(grammarAccess.getTankWarGameAccess().getVariableAssignment_3(), "rule__TankWarGame__VariableAssignment_3");
+			builder.put(grammarAccess.getTankWarGameAccess().getScreenAssignment_4(), "rule__TankWarGame__ScreenAssignment_4");
+			builder.put(grammarAccess.getTankWarGameAccess().getFieldsAssignment_5(), "rule__TankWarGame__FieldsAssignment_5");
+			builder.put(grammarAccess.getTankWarGameAccess().getOptionsAssignment_6(), "rule__TankWarGame__OptionsAssignment_6");
+			builder.put(grammarAccess.getVariableDeclarationAccess().getNameAssignment_1(), "rule__VariableDeclaration__NameAssignment_1");
+			builder.put(grammarAccess.getVariableDeclarationAccess().getValueAssignment_3(), "rule__VariableDeclaration__ValueAssignment_3");
 			builder.put(grammarAccess.getEndGameBehaviourAccess().getWinAssignment_2(), "rule__EndGameBehaviour__WinAssignment_2");
 			builder.put(grammarAccess.getEndGameBehaviourAccess().getLostAssignment_4(), "rule__EndGameBehaviour__LostAssignment_4");
 			builder.put(grammarAccess.getScreenSpecificationAccess().getNameAssignment_1(), "rule__ScreenSpecification__NameAssignment_1");
@@ -78,6 +82,7 @@ public class TankWarParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getAdditionAccess().getRightAssignment_1_2(), "rule__Addition__RightAssignment_1_2");
 			builder.put(grammarAccess.getMultiplicationAccess().getOperatorAssignment_1_1(), "rule__Multiplication__OperatorAssignment_1_1");
 			builder.put(grammarAccess.getMultiplicationAccess().getRightAssignment_1_2(), "rule__Multiplication__RightAssignment_1_2");
+			builder.put(grammarAccess.getIntVarExpressionAccess().getVarAssignment(), "rule__IntVarExpression__VarAssignment");
 			builder.put(grammarAccess.getIntLiteralAccess().getValAssignment(), "rule__IntLiteral__ValAssignment");
 			builder.put(grammarAccess.getRealLiteralAccess().getValAssignment(), "rule__RealLiteral__ValAssignment");
 		}

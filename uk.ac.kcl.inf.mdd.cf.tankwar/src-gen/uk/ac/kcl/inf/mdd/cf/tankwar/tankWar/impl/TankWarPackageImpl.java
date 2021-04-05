@@ -16,6 +16,7 @@ import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.EndGameBehaviour;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Expression;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.IntLiteral;
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.IntVarExpression;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Multiplication;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.ObstacleMember;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Obstaclepecification;
@@ -27,6 +28,7 @@ import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.SuperModeDeclaration;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarFactory;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarGame;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarPackage;
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.VariableDeclaration;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.WallObstacle;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.WaterObstacle;
 
@@ -44,6 +46,13 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
    * @generated
    */
   private EClass tankWarGameEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass variableDeclarationEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -128,6 +137,13 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
    * @generated
    */
   private EClass expressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass intVarExpressionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -248,7 +264,7 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
    * @generated
    */
   @Override
-  public EReference getTankWarGame_Screen()
+  public EReference getTankWarGame_Variable()
   {
     return (EReference)tankWarGameEClass.getEStructuralFeatures().get(1);
   }
@@ -259,7 +275,7 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
    * @generated
    */
   @Override
-  public EReference getTankWarGame_Fields()
+  public EReference getTankWarGame_Screen()
   {
     return (EReference)tankWarGameEClass.getEStructuralFeatures().get(2);
   }
@@ -270,9 +286,53 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
    * @generated
    */
   @Override
-  public EReference getTankWarGame_Options()
+  public EReference getTankWarGame_Fields()
   {
     return (EReference)tankWarGameEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getTankWarGame_Options()
+  {
+    return (EReference)tankWarGameEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getVariableDeclaration()
+  {
+    return variableDeclarationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getVariableDeclaration_Name()
+  {
+    return (EAttribute)variableDeclarationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getVariableDeclaration_Value()
+  {
+    return (EAttribute)variableDeclarationEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -600,6 +660,28 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
    * @generated
    */
   @Override
+  public EClass getIntVarExpression()
+  {
+    return intVarExpressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getIntVarExpression_Var()
+  {
+    return (EReference)intVarExpressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EClass getIntLiteral()
   {
     return intLiteralEClass;
@@ -759,9 +841,14 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
     // Create classes and their features
     tankWarGameEClass = createEClass(TANK_WAR_GAME);
     createEAttribute(tankWarGameEClass, TANK_WAR_GAME__NAME);
+    createEReference(tankWarGameEClass, TANK_WAR_GAME__VARIABLE);
     createEReference(tankWarGameEClass, TANK_WAR_GAME__SCREEN);
     createEReference(tankWarGameEClass, TANK_WAR_GAME__FIELDS);
     createEReference(tankWarGameEClass, TANK_WAR_GAME__OPTIONS);
+
+    variableDeclarationEClass = createEClass(VARIABLE_DECLARATION);
+    createEAttribute(variableDeclarationEClass, VARIABLE_DECLARATION__NAME);
+    createEAttribute(variableDeclarationEClass, VARIABLE_DECLARATION__VALUE);
 
     endGameBehaviourEClass = createEClass(END_GAME_BEHAVIOUR);
     createEAttribute(endGameBehaviourEClass, END_GAME_BEHAVIOUR__WIN);
@@ -803,6 +890,9 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
     allowRestartMenuEClass = createEClass(ALLOW_RESTART_MENU);
 
     expressionEClass = createEClass(EXPRESSION);
+
+    intVarExpressionEClass = createEClass(INT_VAR_EXPRESSION);
+    createEReference(intVarExpressionEClass, INT_VAR_EXPRESSION__VAR);
 
     intLiteralEClass = createEClass(INT_LITERAL);
     createEAttribute(intLiteralEClass, INT_LITERAL__VAL);
@@ -856,6 +946,7 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
     superModeDeclarationEClass.getESuperTypes().add(this.getOptionSpecification());
     startFieldDeclarationEClass.getESuperTypes().add(this.getOptionSpecification());
     allowRestartMenuEClass.getESuperTypes().add(this.getOptionSpecification());
+    intVarExpressionEClass.getESuperTypes().add(this.getExpression());
     intLiteralEClass.getESuperTypes().add(this.getExpression());
     realLiteralEClass.getESuperTypes().add(this.getExpression());
     additionEClass.getESuperTypes().add(this.getExpression());
@@ -864,9 +955,14 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
     // Initialize classes and features; add operations and parameters
     initEClass(tankWarGameEClass, TankWarGame.class, "TankWarGame", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getTankWarGame_Name(), ecorePackage.getEString(), "name", null, 0, 1, TankWarGame.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTankWarGame_Variable(), this.getVariableDeclaration(), null, "variable", null, 0, -1, TankWarGame.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTankWarGame_Screen(), this.getScreenSpecification(), null, "screen", null, 0, 1, TankWarGame.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTankWarGame_Fields(), this.getFieldSpecification(), null, "fields", null, 0, -1, TankWarGame.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTankWarGame_Options(), this.getOptionSpecification(), null, "options", null, 0, -1, TankWarGame.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(variableDeclarationEClass, VariableDeclaration.class, "VariableDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getVariableDeclaration_Name(), ecorePackage.getEString(), "name", null, 0, 1, VariableDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getVariableDeclaration_Value(), ecorePackage.getEInt(), "value", null, 0, 1, VariableDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(endGameBehaviourEClass, EndGameBehaviour.class, "EndGameBehaviour", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getEndGameBehaviour_Win(), ecorePackage.getEString(), "win", null, 0, 1, EndGameBehaviour.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -908,6 +1004,9 @@ public class TankWarPackageImpl extends EPackageImpl implements TankWarPackage
     initEClass(allowRestartMenuEClass, AllowRestartMenu.class, "AllowRestartMenu", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(intVarExpressionEClass, IntVarExpression.class, "IntVarExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getIntVarExpression_Var(), this.getVariableDeclaration(), null, "var", null, 0, 1, IntVarExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(intLiteralEClass, IntLiteral.class, "IntLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getIntLiteral_Val(), ecorePackage.getEInt(), "val", null, 0, 1, IntLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -81,6 +81,11 @@ public class TankWarAdapterFactory extends AdapterFactoryImpl
         return createTankWarGameAdapter();
       }
       @Override
+      public Adapter caseVariableDeclaration(VariableDeclaration object)
+      {
+        return createVariableDeclarationAdapter();
+      }
+      @Override
       public Adapter caseEndGameBehaviour(EndGameBehaviour object)
       {
         return createEndGameBehaviourAdapter();
@@ -141,6 +146,11 @@ public class TankWarAdapterFactory extends AdapterFactoryImpl
         return createExpressionAdapter();
       }
       @Override
+      public Adapter caseIntVarExpression(IntVarExpression object)
+      {
+        return createIntVarExpressionAdapter();
+      }
+      @Override
       public Adapter caseIntLiteral(IntLiteral object)
       {
         return createIntLiteralAdapter();
@@ -193,6 +203,21 @@ public class TankWarAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createTankWarGameAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.VariableDeclaration <em>Variable Declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.VariableDeclaration
+   * @generated
+   */
+  public Adapter createVariableDeclarationAdapter()
   {
     return null;
   }
@@ -373,6 +398,21 @@ public class TankWarAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.IntVarExpression <em>Int Var Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.IntVarExpression
+   * @generated
+   */
+  public Adapter createIntVarExpressionAdapter()
   {
     return null;
   }

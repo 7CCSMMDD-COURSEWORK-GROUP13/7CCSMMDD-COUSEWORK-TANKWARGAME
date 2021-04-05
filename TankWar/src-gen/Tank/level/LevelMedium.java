@@ -44,7 +44,7 @@ public class LevelMedium extends Level {
 
     @Override
     public int getEnemyNum() {
-        return 4;
+        return 7;
     }
 
 

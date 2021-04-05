@@ -11,6 +11,7 @@ import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.RealLiteral
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Multiplication
 import java.beans.Expression
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Addition
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.IntVarExpression
 
 /**
  * Common generator bits.
@@ -125,6 +126,7 @@ class CommonGenerator {
 	}
 	
 	dispatch def Number evaluate(IntLiteral exp) { exp.^val }
+	dispatch def Number evaluate(IntVarExpression exp) { exp.^var.value }
 	
 	dispatch def Number evaluate(RealLiteral exp) { exp.^val }
 		

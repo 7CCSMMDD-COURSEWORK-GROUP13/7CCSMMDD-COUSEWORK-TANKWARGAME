@@ -80,6 +80,13 @@ public class TankWarSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case TankWarPackage.VARIABLE_DECLARATION:
+      {
+        VariableDeclaration variableDeclaration = (VariableDeclaration)theEObject;
+        T result = caseVariableDeclaration(variableDeclaration);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case TankWarPackage.END_GAME_BEHAVIOUR:
       {
         EndGameBehaviour endGameBehaviour = (EndGameBehaviour)theEObject;
@@ -170,6 +177,14 @@ public class TankWarSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case TankWarPackage.INT_VAR_EXPRESSION:
+      {
+        IntVarExpression intVarExpression = (IntVarExpression)theEObject;
+        T result = caseIntVarExpression(intVarExpression);
+        if (result == null) result = caseExpression(intVarExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case TankWarPackage.INT_LITERAL:
       {
         IntLiteral intLiteral = (IntLiteral)theEObject;
@@ -218,6 +233,22 @@ public class TankWarSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseTankWarGame(TankWarGame object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Variable Declaration</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Variable Declaration</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVariableDeclaration(VariableDeclaration object)
   {
     return null;
   }
@@ -410,6 +441,22 @@ public class TankWarSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseExpression(Expression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Int Var Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Int Var Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIntVarExpression(IntVarExpression object)
   {
     return null;
   }

@@ -24,6 +24,7 @@ import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.OptionSpecification;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.ScreenSpecification;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarGame;
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarPackage;
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.VariableDeclaration;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,6 +35,7 @@ import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarPackage;
  * </p>
  * <ul>
  *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarGameImpl#getName <em>Name</em>}</li>
+ *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarGameImpl#getVariable <em>Variable</em>}</li>
  *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarGameImpl#getScreen <em>Screen</em>}</li>
  *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarGameImpl#getFields <em>Fields</em>}</li>
  *   <li>{@link uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.impl.TankWarGameImpl#getOptions <em>Options</em>}</li>
@@ -62,6 +64,16 @@ public class TankWarGameImpl extends MinimalEObjectImpl.Container implements Tan
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getVariable() <em>Variable</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getVariable()
+   * @generated
+   * @ordered
+   */
+  protected EList<VariableDeclaration> variable;
 
   /**
    * The cached value of the '{@link #getScreen() <em>Screen</em>}' containment reference.
@@ -137,6 +149,21 @@ public class TankWarGameImpl extends MinimalEObjectImpl.Container implements Tan
     name = newName;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, TankWarPackage.TANK_WAR_GAME__NAME, oldName, name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EList<VariableDeclaration> getVariable()
+  {
+    if (variable == null)
+    {
+      variable = new EObjectContainmentEList<VariableDeclaration>(VariableDeclaration.class, this, TankWarPackage.TANK_WAR_GAME__VARIABLE);
+    }
+    return variable;
   }
 
   /**
@@ -229,6 +256,8 @@ public class TankWarGameImpl extends MinimalEObjectImpl.Container implements Tan
   {
     switch (featureID)
     {
+      case TankWarPackage.TANK_WAR_GAME__VARIABLE:
+        return ((InternalEList<?>)getVariable()).basicRemove(otherEnd, msgs);
       case TankWarPackage.TANK_WAR_GAME__SCREEN:
         return basicSetScreen(null, msgs);
       case TankWarPackage.TANK_WAR_GAME__FIELDS:
@@ -251,6 +280,8 @@ public class TankWarGameImpl extends MinimalEObjectImpl.Container implements Tan
     {
       case TankWarPackage.TANK_WAR_GAME__NAME:
         return getName();
+      case TankWarPackage.TANK_WAR_GAME__VARIABLE:
+        return getVariable();
       case TankWarPackage.TANK_WAR_GAME__SCREEN:
         return getScreen();
       case TankWarPackage.TANK_WAR_GAME__FIELDS:
@@ -274,6 +305,10 @@ public class TankWarGameImpl extends MinimalEObjectImpl.Container implements Tan
     {
       case TankWarPackage.TANK_WAR_GAME__NAME:
         setName((String)newValue);
+        return;
+      case TankWarPackage.TANK_WAR_GAME__VARIABLE:
+        getVariable().clear();
+        getVariable().addAll((Collection<? extends VariableDeclaration>)newValue);
         return;
       case TankWarPackage.TANK_WAR_GAME__SCREEN:
         setScreen((ScreenSpecification)newValue);
@@ -303,6 +338,9 @@ public class TankWarGameImpl extends MinimalEObjectImpl.Container implements Tan
       case TankWarPackage.TANK_WAR_GAME__NAME:
         setName(NAME_EDEFAULT);
         return;
+      case TankWarPackage.TANK_WAR_GAME__VARIABLE:
+        getVariable().clear();
+        return;
       case TankWarPackage.TANK_WAR_GAME__SCREEN:
         setScreen((ScreenSpecification)null);
         return;
@@ -328,6 +366,8 @@ public class TankWarGameImpl extends MinimalEObjectImpl.Container implements Tan
     {
       case TankWarPackage.TANK_WAR_GAME__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case TankWarPackage.TANK_WAR_GAME__VARIABLE:
+        return variable != null && !variable.isEmpty();
       case TankWarPackage.TANK_WAR_GAME__SCREEN:
         return screen != null;
       case TankWarPackage.TANK_WAR_GAME__FIELDS:

@@ -66,6 +66,7 @@ public class TankWarFactoryImpl extends EFactoryImpl implements TankWarFactory
     switch (eClass.getClassifierID())
     {
       case TankWarPackage.TANK_WAR_GAME: return createTankWarGame();
+      case TankWarPackage.VARIABLE_DECLARATION: return createVariableDeclaration();
       case TankWarPackage.END_GAME_BEHAVIOUR: return createEndGameBehaviour();
       case TankWarPackage.SCREEN_SPECIFICATION: return createScreenSpecification();
       case TankWarPackage.OBSTACLEPECIFICATION: return createObstaclepecification();
@@ -78,6 +79,7 @@ public class TankWarFactoryImpl extends EFactoryImpl implements TankWarFactory
       case TankWarPackage.START_FIELD_DECLARATION: return createStartFieldDeclaration();
       case TankWarPackage.ALLOW_RESTART_MENU: return createAllowRestartMenu();
       case TankWarPackage.EXPRESSION: return createExpression();
+      case TankWarPackage.INT_VAR_EXPRESSION: return createIntVarExpression();
       case TankWarPackage.INT_LITERAL: return createIntLiteral();
       case TankWarPackage.REAL_LITERAL: return createRealLiteral();
       case TankWarPackage.ADDITION: return createAddition();
@@ -97,6 +99,18 @@ public class TankWarFactoryImpl extends EFactoryImpl implements TankWarFactory
   {
     TankWarGameImpl tankWarGame = new TankWarGameImpl();
     return tankWarGame;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public VariableDeclaration createVariableDeclaration()
+  {
+    VariableDeclarationImpl variableDeclaration = new VariableDeclarationImpl();
+    return variableDeclaration;
   }
 
   /**
@@ -241,6 +255,18 @@ public class TankWarFactoryImpl extends EFactoryImpl implements TankWarFactory
   {
     ExpressionImpl expression = new ExpressionImpl();
     return expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public IntVarExpression createIntVarExpression()
+  {
+    IntVarExpressionImpl intVarExpression = new IntVarExpressionImpl();
+    return intVarExpression;
   }
 
   /**

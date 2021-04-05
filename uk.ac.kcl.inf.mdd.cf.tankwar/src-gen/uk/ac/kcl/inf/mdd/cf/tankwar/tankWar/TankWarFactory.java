@@ -33,6 +33,15 @@ public interface TankWarFactory extends EFactory
   TankWarGame createTankWarGame();
 
   /**
+   * Returns a new object of class '<em>Variable Declaration</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Variable Declaration</em>'.
+   * @generated
+   */
+  VariableDeclaration createVariableDeclaration();
+
+  /**
    * Returns a new object of class '<em>End Game Behaviour</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -139,6 +148,15 @@ public interface TankWarFactory extends EFactory
    * @generated
    */
   Expression createExpression();
+
+  /**
+   * Returns a new object of class '<em>Int Var Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Int Var Expression</em>'.
+   * @generated
+   */
+  IntVarExpression createIntVarExpression();
 
   /**
    * Returns a new object of class '<em>Int Literal</em>'.
