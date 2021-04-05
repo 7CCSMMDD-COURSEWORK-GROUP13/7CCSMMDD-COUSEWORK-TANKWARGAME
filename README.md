@@ -1,5 +1,13 @@
 # COUSEWORK-TANKWARGAME
 It is 7CCSMMDD CourseWork TankWarGame belongs to GROUP 13
+## Description
+This is a tank war game! The only way to win is destroy all enemy tanks.
+
+Control your tank by dir key such as up,down,left and right
+
+Shoot your enemies by space key.
+
+Come up! Solider!
 
 ## Environment
 - Development Environment: Eclipse
@@ -20,9 +28,14 @@ These following directories are demo code, you should import them into runtime-e
 - TankWar
   - src 
     - TankWar.tgame
+These following directories are test code, you should import them into runtime-eclipse.And then you can run the test1.tgame.xt as Java Application.
+- uk.ac.kcl.inf.language.tgame.xpect
+  - src
+    - test1.tgame.xt  	
+
 ```
 game Tank{
-	
+	var baseEnemyCount = 1
 	screen MainFrame{            //it contains the mainframe attributes
 		screenWidth = 750    //screenwidth 
 		screenHeight = 750   //screenheight
@@ -33,7 +46,7 @@ game Tank{
 	// wall contains width,height and x,y.
 	// nextLevel means when you defeat this level, which level you will go.
 	field easy {
-		enemyCount = 2
+		enemyCount = baseEnemyCount*1+2
 		obstacle test{
 			wall first{
 				wallWidth = 100
@@ -47,7 +60,7 @@ game Tank{
 	}
 	
 	field medium {
-		enemyCount = 4
+		enemyCount = baseEnemyCount*2+3
 		obstacle test{
 			wall first{
 				wallWidth = 100
@@ -69,7 +82,7 @@ game Tank{
 	}
 	
 	field hard {
-		enemyCount = 8
+		enemyCount = baseEnemyCount*3+4
 		obstacle test{
 			wall first{
 				wallWidth = 100
