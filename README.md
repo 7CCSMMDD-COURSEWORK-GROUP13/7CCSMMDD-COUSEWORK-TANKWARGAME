@@ -1,5 +1,13 @@
 # COUSEWORK-TANKWARGAME
 It is 7CCSMMDD CourseWork TankWarGame belongs to GROUP 13
+## Description
+This is a tank war game! The only way to win is destroy all enemy tanks.
+
+Control your tank by dir key such as up,down,left and right
+
+Shoot your enemies by space key.
+
+Come up! Solider!
 
 ## Environment
 - Development Environment: Eclipse
