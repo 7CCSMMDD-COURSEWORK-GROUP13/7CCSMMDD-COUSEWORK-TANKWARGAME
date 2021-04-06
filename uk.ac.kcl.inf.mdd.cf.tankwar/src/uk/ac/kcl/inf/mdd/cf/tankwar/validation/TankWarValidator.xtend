@@ -17,6 +17,7 @@ import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.ObstacleMember
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Obstaclepecification
 import org.eclipse.emf.ecore.EObject
+import uk.ac.kcl.inf.mdd.cf.tankwar.generator.LevelGenerator
 
 /** 
  * This class contains custom validation rules. 
@@ -79,10 +80,30 @@ class TankWarValidator extends AbstractTankWarValidator {
 				error("Wall must inside the screen", 
 					TankWarPackage::Literals::WALL_OBSTACLE__WALL_HEIGHT, INVALID_WALL_Y)
 			}
-		}
-		
+		}	
 	}
 	
+	@Check
+	def void  checkEnemyCount(FieldSpecification fieldSpecification){
+		if(fieldSpecification.enemyCount.evaluate != null){
+			if((fieldSpecification.enemyCount.evaluate).operator_lessThan(1)){
+			error("enemyCount should be a positive integer", 
+				TankWarPackage::Literals::FIELD_SPECIFICATION__NAME, "ENEMY_COUNT")
+			}else if((fieldSpecification.enemyCount.evaluate).doubleValue == (fieldSpecification.enemyCount.evaluate).intValue){
+				error("enemyCount should be a integer", 
+				TankWarPackage::Literals::FIELD_SPECIFICATION__NAME, "ENEMY_COUNT")
+			}
+		}
+	}
+	
+	
+	def boolean operator_lessThan(Number number, int i){
+		if(number < i){
+			return true;
+		}else{
+			return false;
+		}
+	}
 	
 	def String generateJavaExpression(Expression exp) {
 		exp.evaluate.translateToJavaString
