@@ -4,22 +4,428 @@
 package uk.ac.kcl.inf.mdd.cf.tankwar.validation;
 
 
+import com.google.common.base.Objects;
+import com.google.common.collect.Iterables;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.xtend2.lib.StringConcatenation;
+import org.eclipse.xtext.validation.Check;
+import org.eclipse.xtext.xbase.lib.CollectionLiterals;
+import org.eclipse.xtext.xbase.lib.Functions.Function1;
+import org.eclipse.xtext.xbase.lib.IterableExtensions;
+import org.eclipse.xtext.xbase.lib.ListExtensions;
+import org.eclipse.xtext.xbase.lib.Procedures.Procedure2;
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Addition;
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Expression;
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification;
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.IntLiteral;
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.IntVarExpression;
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Multiplication;
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.RealLiteral;
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.ScreenSpecification;
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarGame;
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.TankWarPackage;
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.WallObstacle;
+import uk.ac.kcl.inf.mdd.cf.tankwar.validation.AbstractTankWarValidator;
+
 /**
- * This class contains custom validation rules. 
- *
+ * This class contains custom validation rules.
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#validation
  */
+@SuppressWarnings("all")
 public class TankWarValidator extends AbstractTankWarValidator {
-	
-//	public static final String INVALID_NAME = "invalidName";
-//
-//	@Check
-//	public void checkGreetingStartsWithCapital(Greeting greeting) {
-//		if (!Character.isUpperCase(greeting.getName().charAt(0))) {
-//			warning("Name should start with a capital",
-//					TankWarPackage.Literals.GREETING__NAME,
-//					INVALID_NAME);
-//		}
-//	}
-	
+  public static final String INVALID_NAME = "invalidName";
+  
+  public static final String INVALID_SCREEN_WIDTH = "screenWidth";
+  
+  public static final String INVALID_SCREEN_HEIGHT = "screenHeight";
+  
+  public static final String INVALID_SCREEN_COMPARE = "screenCompare";
+  
+  public static final String INVALID_WALL_X = "wallX";
+  
+  public static final String INVALID_WALL_Y = "wallY";
+  
+  @Check
+  public void checkGameNameCapital(final TankWarGame tankWarGame) {
+    boolean _isUpperCase = Character.isUpperCase(tankWarGame.getName().charAt(0));
+    boolean _not = (!_isUpperCase);
+    if (_not) {
+      this.warning("Name should start with a capital", TankWarPackage.Literals.TANK_WAR_GAME__NAME, TankWarValidator.INVALID_NAME);
+    }
+  }
+  
+  @Check
+  public void checkScreenSpecification(final ScreenSpecification screenSpecification) {
+    if (((screenSpecification.getScreenWidth() < 720) || (screenSpecification.getScreenWidth() > 1080))) {
+      this.error("Screen width can\'t lower 720 or higher 1080", 
+        TankWarPackage.Literals.SCREEN_SPECIFICATION__SCREEN_WIDTH, TankWarValidator.INVALID_SCREEN_WIDTH);
+    }
+    if (((screenSpecification.getScreenHeight() < 720) || (screenSpecification.getScreenHeight() > 1080))) {
+      this.error("Screen height can\'t lower 720 or higher 1080", 
+        TankWarPackage.Literals.SCREEN_SPECIFICATION__SCREEN_HEIGHT, TankWarValidator.INVALID_SCREEN_HEIGHT);
+    }
+    int _screenWidth = screenSpecification.getScreenWidth();
+    int _screenHeight = screenSpecification.getScreenHeight();
+    boolean _lessThan = (_screenWidth < _screenHeight);
+    if (_lessThan) {
+      this.warning("Screen width must higher than height ", TankWarPackage.Literals.SCREEN_SPECIFICATION__NAME, 
+        TankWarValidator.INVALID_SCREEN_COMPARE);
+    }
+  }
+  
+  public TankWarGame getTankWarGame(final EObject object) {
+    boolean _equals = Objects.equal(object, null);
+    if (_equals) {
+      return null;
+    }
+    if ((object instanceof TankWarGame)) {
+      return ((TankWarGame) object);
+    } else {
+      return this.getTankWarGame(object.eContainer());
+    }
+  }
+  
+  @Check
+  public void checkWall(final WallObstacle wallObstacle) {
+    TankWarGame _tankWarGame = this.getTankWarGame(wallObstacle);
+    boolean _notEquals = (!Objects.equal(_tankWarGame, null));
+    if (_notEquals) {
+      int _wallWidth = wallObstacle.getWallWidth();
+      int _wallPosX = wallObstacle.getWallPosX();
+      int _plus = (_wallWidth + _wallPosX);
+      int _screenWidth = this.getTankWarGame(wallObstacle).getScreen().getScreenWidth();
+      boolean _greaterThan = (_plus > _screenWidth);
+      if (_greaterThan) {
+        this.error("Wall must inside the screen", 
+          TankWarPackage.Literals.WALL_OBSTACLE__WALL_POS_X, TankWarValidator.INVALID_WALL_X);
+        this.error("Wall must inside the screen", 
+          TankWarPackage.Literals.WALL_OBSTACLE__WALL_WIDTH, TankWarValidator.INVALID_WALL_X);
+      }
+      int _wallHeight = wallObstacle.getWallHeight();
+      int _wallPosY = wallObstacle.getWallPosY();
+      int _plus_1 = (_wallHeight + _wallPosY);
+      int _screenHeight = this.getTankWarGame(wallObstacle).getScreen().getScreenHeight();
+      boolean _greaterThan_1 = (_plus_1 > _screenHeight);
+      if (_greaterThan_1) {
+        this.error("Wall must inside the screen", 
+          TankWarPackage.Literals.WALL_OBSTACLE__WALL_POS_Y, TankWarValidator.INVALID_WALL_Y);
+        this.error("Wall must inside the screen", 
+          TankWarPackage.Literals.WALL_OBSTACLE__WALL_HEIGHT, TankWarValidator.INVALID_WALL_Y);
+      }
+    }
+  }
+  
+  @Check
+  public void checkEnemyCount(final FieldSpecification fieldSpecification) {
+    Number _evaluate = this.evaluate(fieldSpecification.getEnemyCount());
+    boolean _notEquals = (!Objects.equal(_evaluate, null));
+    if (_notEquals) {
+      int _intValue = this.evaluate(fieldSpecification.getEnemyCount()).intValue();
+      boolean _lessThan = (_intValue < 1);
+      if (_lessThan) {
+        this.error("enemyCount should be a positive integer", 
+          TankWarPackage.Literals.FIELD_SPECIFICATION__ENEMY_COUNT, "ENEMY_COUNT_POSITIVE");
+      } else {
+        double _doubleValue = this.evaluate(fieldSpecification.getEnemyCount()).doubleValue();
+        int _intValue_1 = this.evaluate(fieldSpecification.getEnemyCount()).intValue();
+        boolean _notEquals_1 = (_doubleValue != _intValue_1);
+        if (_notEquals_1) {
+          this.error("enemyCount should be a integer", 
+            TankWarPackage.Literals.FIELD_SPECIFICATION__ENEMY_COUNT, "ENEMY_COUNT_DECIMAL");
+        }
+      }
+    }
+  }
+  
+  public String generateJavaExpression(final Expression exp) {
+    return this.translateToJavaString(this.evaluate(exp));
+  }
+  
+  protected Number _evaluate(final Expression exp) {
+    return null;
+  }
+  
+  protected Number _evaluate(final Addition exp) {
+    Number _xblockexpression = null;
+    {
+      Number _evaluate = this.evaluate(exp.getLeft());
+      final Function1<Expression, Number> _function = (Expression it) -> {
+        return this.evaluate(it);
+      };
+      List<Number> _map = ListExtensions.<Expression, Number>map(exp.getRight(), _function);
+      final Iterable<Number> evaluatedChildren = Iterables.<Number>concat(Collections.<Number>unmodifiableList(CollectionLiterals.<Number>newArrayList(_evaluate)), _map);
+      final Number[] result = { null };
+      final Procedure2<Number, Integer> _function_1 = (Number ec, Integer idx) -> {
+        Number _xifexpression = null;
+        if (((idx).intValue() > 0)) {
+          Number _xifexpression_1 = null;
+          String _get = exp.getOperator().get(((idx).intValue() - 1));
+          boolean _equals = Objects.equal(_get, "+");
+          if (_equals) {
+            _xifexpression_1 = this.add(result[0], ec);
+          } else {
+            _xifexpression_1 = this.subtract(result[0], ec);
+          }
+          _xifexpression = _xifexpression_1;
+        } else {
+          _xifexpression = ec;
+        }
+        result[0] = _xifexpression;
+      };
+      IterableExtensions.<Number>forEach(evaluatedChildren, _function_1);
+      _xblockexpression = result[0];
+    }
+    return _xblockexpression;
+  }
+  
+  protected Number _evaluate(final Multiplication exp) {
+    Number _xblockexpression = null;
+    {
+      Number _evaluate = this.evaluate(exp.getLeft());
+      final Function1<Expression, Number> _function = (Expression it) -> {
+        return this.evaluate(it);
+      };
+      List<Number> _map = ListExtensions.<Expression, Number>map(exp.getRight(), _function);
+      final Iterable<Number> evaluatedChildren = Iterables.<Number>concat(Collections.<Number>unmodifiableList(CollectionLiterals.<Number>newArrayList(_evaluate)), _map);
+      final Number[] result = { null };
+      final Procedure2<Number, Integer> _function_1 = (Number ec, Integer idx) -> {
+        Number _xifexpression = null;
+        if (((idx).intValue() > 0)) {
+          Number _xifexpression_1 = null;
+          String _get = exp.getOperator().get(((idx).intValue() - 1));
+          boolean _equals = Objects.equal(_get, "*");
+          if (_equals) {
+            _xifexpression_1 = this.multiply(result[0], ec);
+          } else {
+            _xifexpression_1 = this.divide(result[0], ec);
+          }
+          _xifexpression = _xifexpression_1;
+        } else {
+          _xifexpression = ec;
+        }
+        result[0] = _xifexpression;
+      };
+      IterableExtensions.<Number>forEach(evaluatedChildren, _function_1);
+      _xblockexpression = result[0];
+    }
+    return _xblockexpression;
+  }
+  
+  protected Number _evaluate(final IntLiteral exp) {
+    return Integer.valueOf(exp.getVal());
+  }
+  
+  protected Number _evaluate(final IntVarExpression exp) {
+    return Integer.valueOf(exp.getVar().getValue());
+  }
+  
+  protected Number _evaluate(final RealLiteral exp) {
+    return Float.valueOf(exp.getVal());
+  }
+  
+  protected Number _add(final Integer a, final Number b) {
+    Number _xifexpression = null;
+    if ((b instanceof Integer)) {
+      int _intValue = a.intValue();
+      int _intValue_1 = ((Integer)b).intValue();
+      int _plus = (_intValue + _intValue_1);
+      _xifexpression = Integer.valueOf(_plus);
+    } else {
+      float _floatValue = a.floatValue();
+      float _floatValue_1 = ((Float) b).floatValue();
+      _xifexpression = Float.valueOf((_floatValue + _floatValue_1));
+    }
+    return ((Number)_xifexpression);
+  }
+  
+  protected Number _add(final Float a, final Number b) {
+    float _xifexpression = (float) 0;
+    if ((b instanceof Integer)) {
+      float _floatValue = a.floatValue();
+      float _floatValue_1 = ((Integer)b).floatValue();
+      _xifexpression = (_floatValue + _floatValue_1);
+    } else {
+      float _floatValue_2 = a.floatValue();
+      float _floatValue_3 = ((Float) b).floatValue();
+      _xifexpression = (_floatValue_2 + _floatValue_3);
+    }
+    return Float.valueOf(_xifexpression);
+  }
+  
+  protected Number _subtract(final Integer a, final Number b) {
+    Number _xifexpression = null;
+    if ((b instanceof Integer)) {
+      int _intValue = a.intValue();
+      int _intValue_1 = ((Integer)b).intValue();
+      int _minus = (_intValue - _intValue_1);
+      _xifexpression = Integer.valueOf(_minus);
+    } else {
+      float _floatValue = a.floatValue();
+      float _floatValue_1 = ((Float) b).floatValue();
+      _xifexpression = Float.valueOf((_floatValue - _floatValue_1));
+    }
+    return ((Number)_xifexpression);
+  }
+  
+  protected Number _subtract(final Float a, final Number b) {
+    float _xifexpression = (float) 0;
+    if ((b instanceof Integer)) {
+      float _floatValue = a.floatValue();
+      float _floatValue_1 = ((Integer)b).floatValue();
+      _xifexpression = (_floatValue - _floatValue_1);
+    } else {
+      float _floatValue_2 = a.floatValue();
+      float _floatValue_3 = ((Float) b).floatValue();
+      _xifexpression = (_floatValue_2 - _floatValue_3);
+    }
+    return Float.valueOf(_xifexpression);
+  }
+  
+  protected Number _multiply(final Integer a, final Number b) {
+    Number _xifexpression = null;
+    if ((b instanceof Integer)) {
+      int _intValue = a.intValue();
+      int _intValue_1 = ((Integer)b).intValue();
+      int _multiply = (_intValue * _intValue_1);
+      _xifexpression = Integer.valueOf(_multiply);
+    } else {
+      float _floatValue = a.floatValue();
+      float _floatValue_1 = ((Float) b).floatValue();
+      _xifexpression = Float.valueOf((_floatValue * _floatValue_1));
+    }
+    return ((Number)_xifexpression);
+  }
+  
+  protected Number _multiply(final Float a, final Number b) {
+    float _xifexpression = (float) 0;
+    if ((b instanceof Integer)) {
+      float _floatValue = a.floatValue();
+      float _floatValue_1 = ((Integer)b).floatValue();
+      _xifexpression = (_floatValue * _floatValue_1);
+    } else {
+      float _floatValue_2 = a.floatValue();
+      float _floatValue_3 = ((Float) b).floatValue();
+      _xifexpression = (_floatValue_2 * _floatValue_3);
+    }
+    return Float.valueOf(_xifexpression);
+  }
+  
+  protected Number _divide(final Integer a, final Number b) {
+    float _xifexpression = (float) 0;
+    if ((b instanceof Integer)) {
+      Float _valueOf = Float.valueOf(a.intValue());
+      Float _valueOf_1 = Float.valueOf(((Integer)b).intValue());
+      _xifexpression = ((_valueOf).floatValue() / (_valueOf_1).floatValue());
+    } else {
+      float _floatValue = a.floatValue();
+      float _floatValue_1 = ((Float) b).floatValue();
+      _xifexpression = (_floatValue / _floatValue_1);
+    }
+    return Float.valueOf(_xifexpression);
+  }
+  
+  protected Number _divide(final Float a, final Number b) {
+    float _xifexpression = (float) 0;
+    if ((b instanceof Integer)) {
+      float _floatValue = a.floatValue();
+      float _floatValue_1 = ((Integer)b).floatValue();
+      _xifexpression = (_floatValue / _floatValue_1);
+    } else {
+      float _floatValue_2 = a.floatValue();
+      float _floatValue_3 = ((Float) b).floatValue();
+      _xifexpression = (_floatValue_2 / _floatValue_3);
+    }
+    return Float.valueOf(_xifexpression);
+  }
+  
+  protected String _translateToJavaString(final Number n) {
+    return n.toString();
+  }
+  
+  protected String _translateToJavaString(final Float f) {
+    StringConcatenation _builder = new StringConcatenation();
+    String _string = f.toString();
+    _builder.append(_string);
+    _builder.append("f");
+    return _builder.toString();
+  }
+  
+  public Number evaluate(final Expression exp) {
+    if (exp instanceof Addition) {
+      return _evaluate((Addition)exp);
+    } else if (exp instanceof IntLiteral) {
+      return _evaluate((IntLiteral)exp);
+    } else if (exp instanceof IntVarExpression) {
+      return _evaluate((IntVarExpression)exp);
+    } else if (exp instanceof Multiplication) {
+      return _evaluate((Multiplication)exp);
+    } else if (exp instanceof RealLiteral) {
+      return _evaluate((RealLiteral)exp);
+    } else if (exp != null) {
+      return _evaluate(exp);
+    } else {
+      throw new IllegalArgumentException("Unhandled parameter types: " +
+        Arrays.<Object>asList(exp).toString());
+    }
+  }
+  
+  public Number add(final Number a, final Number b) {
+    if (a instanceof Float) {
+      return _add((Float)a, b);
+    } else if (a instanceof Integer) {
+      return _add((Integer)a, b);
+    } else {
+      throw new IllegalArgumentException("Unhandled parameter types: " +
+        Arrays.<Object>asList(a, b).toString());
+    }
+  }
+  
+  public Number subtract(final Number a, final Number b) {
+    if (a instanceof Float) {
+      return _subtract((Float)a, b);
+    } else if (a instanceof Integer) {
+      return _subtract((Integer)a, b);
+    } else {
+      throw new IllegalArgumentException("Unhandled parameter types: " +
+        Arrays.<Object>asList(a, b).toString());
+    }
+  }
+  
+  public Number multiply(final Number a, final Number b) {
+    if (a instanceof Float) {
+      return _multiply((Float)a, b);
+    } else if (a instanceof Integer) {
+      return _multiply((Integer)a, b);
+    } else {
+      throw new IllegalArgumentException("Unhandled parameter types: " +
+        Arrays.<Object>asList(a, b).toString());
+    }
+  }
+  
+  public Number divide(final Number a, final Number b) {
+    if (a instanceof Float) {
+      return _divide((Float)a, b);
+    } else if (a instanceof Integer) {
+      return _divide((Integer)a, b);
+    } else {
+      throw new IllegalArgumentException("Unhandled parameter types: " +
+        Arrays.<Object>asList(a, b).toString());
+    }
+  }
+  
+  public String translateToJavaString(final Number f) {
+    if (f instanceof Float) {
+      return _translateToJavaString((Float)f);
+    } else if (f != null) {
+      return _translateToJavaString(f);
+    } else {
+      throw new IllegalArgumentException("Unhandled parameter types: " +
+        Arrays.<Object>asList(f).toString());
+    }
+  }
 }
+
+
