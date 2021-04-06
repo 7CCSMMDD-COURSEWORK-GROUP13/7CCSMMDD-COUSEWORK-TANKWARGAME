@@ -18,7 +18,7 @@ public class LevelEasy extends Level {
     @Override
     public List<Wall> getWalls() {
         walls = new ArrayList<>();
-       	walls.add(new Wall(250,250,100,100,tankClient));
+       	walls.add(new Wall(190,200,100,100,tankClient));
         return walls;
     }
 

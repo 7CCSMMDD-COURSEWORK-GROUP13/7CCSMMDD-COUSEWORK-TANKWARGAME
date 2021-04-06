@@ -12,6 +12,11 @@ import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.RealLiteral
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Multiplication
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Addition
 import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Expression
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.WallObstacle
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.ObstacleMember
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.FieldSpecification
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Obstaclepecification
+import org.eclipse.emf.ecore.EObject
 
 /** 
  * This class contains custom validation rules. 
@@ -37,8 +42,34 @@ class TankWarValidator extends AbstractTankWarValidator {
 		}
 		if (screenSpecification.screenWidth < screenSpecification.screenHeight) {
 			warning("Screen width must higher than height ", TankWarPackage::Literals::SCREEN_SPECIFICATION__NAME,
-				"SCREEN_WIDTH_HEIFHT")
+				"SCREEN_WIDTH_HEIGHT")
 		}
+	}
+	
+	def TankWarGame getTankWarGame(EObject object){
+		if(object == null){
+			return null;
+		}
+		if(object instanceof TankWarGame){
+			return object as TankWarGame;
+		} else {
+			return getTankWarGame(object.eContainer);
+		}
+	}
+	
+	@Check 
+	def void checkWall(WallObstacle wallObstacle){
+		if( getTankWarGame(wallObstacle) != null){
+			if (wallObstacle.wallWidth + wallObstacle.wallPosX > getTankWarGame(wallObstacle).screen.screenWidth) {
+				error("Wall must inside the screen", 
+					TankWarPackage::Literals::WALL_OBSTACLE__WALL_WIDTH, "WALL_WEIGHT_POS_X")
+			}
+			if(wallObstacle.wallHeight + wallObstacle.wallPosY > getTankWarGame(wallObstacle).screen.screenHeight){
+				error("Wall must inside the screen", 
+					TankWarPackage::Literals::WALL_OBSTACLE__WALL_HEIGHT, "WALL_HEIGHT_POS_Y")
+			}
+		}
+		
 	}
 	
 	
