@@ -24,6 +24,13 @@ import org.eclipse.emf.ecore.EObject
  */
 class TankWarValidator extends AbstractTankWarValidator {
 	public static final String INVALID_NAME = "invalidName"
+	public static final String INVALID_SCREEN_WIDTH = "screenWidth"
+	public static final String INVALID_SCREEN_HEIGHT = "screenHeight"
+	public static final String INVALID_SCREEN_COMPARE = "screenCompare"
+	public static final String INVALID_WALL_X = "wallX"
+	public static final String INVALID_WALL_Y = "wallY"
+	
+	
 
 	@Check def void checkGameNameCapital(TankWarGame tankWarGame) {
 		if (!Character::isUpperCase(tankWarGame.getName().charAt(0))) {
@@ -34,15 +41,15 @@ class TankWarValidator extends AbstractTankWarValidator {
 	@Check def void checkScreenSpecification(ScreenSpecification screenSpecification) {
 		if (screenSpecification.screenWidth < 720 || screenSpecification.screenWidth > 1080) {
 			error("Screen width can't lower 720 or higher 1080",
-				TankWarPackage::Literals::SCREEN_SPECIFICATION__SCREEN_WIDTH, "SCREEN_WIDTH")
+				TankWarPackage::Literals::SCREEN_SPECIFICATION__SCREEN_WIDTH, INVALID_SCREEN_WIDTH)
 		}
 		if (screenSpecification.screenHeight < 720 || screenSpecification.screenHeight > 1080) {
 			error("Screen height can't lower 720 or higher 1080",
-				TankWarPackage::Literals::SCREEN_SPECIFICATION__SCREEN_HEIGHT, "SCREEN_HEIGHT")
+				TankWarPackage::Literals::SCREEN_SPECIFICATION__SCREEN_HEIGHT, INVALID_SCREEN_HEIGHT)
 		}
 		if (screenSpecification.screenWidth < screenSpecification.screenHeight) {
 			warning("Screen width must higher than height ", TankWarPackage::Literals::SCREEN_SPECIFICATION__NAME,
-				"SCREEN_WIDTH_HEIGHT")
+				INVALID_SCREEN_COMPARE)
 		}
 	}
 	
@@ -62,11 +69,15 @@ class TankWarValidator extends AbstractTankWarValidator {
 		if( getTankWarGame(wallObstacle) != null){
 			if (wallObstacle.wallWidth + wallObstacle.wallPosX > getTankWarGame(wallObstacle).screen.screenWidth) {
 				error("Wall must inside the screen", 
-					TankWarPackage::Literals::WALL_OBSTACLE__WALL_WIDTH, "WALL_WEIGHT_POS_X")
+					TankWarPackage::Literals::WALL_OBSTACLE__WALL_POS_X, INVALID_WALL_X)
+				error("Wall must inside the screen", 
+					TankWarPackage::Literals::WALL_OBSTACLE__WALL_WIDTH, INVALID_WALL_X)
 			}
 			if(wallObstacle.wallHeight + wallObstacle.wallPosY > getTankWarGame(wallObstacle).screen.screenHeight){
 				error("Wall must inside the screen", 
-					TankWarPackage::Literals::WALL_OBSTACLE__WALL_HEIGHT, "WALL_HEIGHT_POS_Y")
+					TankWarPackage::Literals::WALL_OBSTACLE__WALL_POS_Y, INVALID_WALL_Y)
+				error("Wall must inside the screen", 
+					TankWarPackage::Literals::WALL_OBSTACLE__WALL_HEIGHT, INVALID_WALL_Y)
 			}
 		}
 		

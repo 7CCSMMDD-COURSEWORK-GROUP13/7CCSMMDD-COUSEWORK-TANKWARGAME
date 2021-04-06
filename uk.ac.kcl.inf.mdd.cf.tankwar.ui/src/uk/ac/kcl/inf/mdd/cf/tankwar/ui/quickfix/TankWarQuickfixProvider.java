@@ -34,15 +34,48 @@ public class TankWarQuickfixProvider extends DefaultQuickfixProvider {
 		});
 	}
 	
-	@Fix(TankWarValidator.SCREEN_WIDTH)
-	public void setWallLocation(Issue issue, IssueResolutionAcceptor acceptor) {
-		acceptor.accept(issue, "Screen initial size", "Change the screen to the initial size", "upcase.png", new IModification() {
+	@Fix(TankWarValidator.INVALID_SCREEN_WIDTH)
+	public void correctScreenSpecificationWidth(Issue issue, IssueResolutionAcceptor acceptor) {
+		acceptor.accept(issue, "Screen initial size", "Change the screen to the initial size", "width.png", new IModification() {
 			public void apply(IModificationContext context) throws BadLocationException {
 				IXtextDocument xtextDocument = context.getXtextDocument();
-				
-				xtextDocument.replace(issue.getOffset(), 1 , "720" );
+				String widthString = xtextDocument.get(issue.getOffset(),issue.getLength());
+				int width = Integer.valueOf(widthString);
+				if (width<720) {
+					xtextDocument.replace(issue.getOffset(), issue.getLength() , "720" );
+				}else {
+					xtextDocument.replace(issue.getOffset(), issue.getLength(), "1080" );
+				}
 			}
 		});
 	}
+	
+	@Fix(TankWarValidator.INVALID_SCREEN_HEIGHT)
+	public void correctScreenSpecificationHeight(Issue issue, IssueResolutionAcceptor acceptor) {
+		acceptor.accept(issue, "Screen initial size", "Change the screen to the initial size", "height.png", new IModification() {
+			public void apply(IModificationContext context) throws BadLocationException {
+				IXtextDocument xtextDocument = context.getXtextDocument();
+				String heightString = xtextDocument.get(issue.getOffset(),issue.getLength());
+				int height = Integer.valueOf(heightString);
+				if (height<720) {
+					xtextDocument.replace(issue.getOffset(), issue.getLength() , "720" );
+				}else {
+					xtextDocument.replace(issue.getOffset(), issue.getLength() , "1080" );
+				}
+			}
+		});
+	}
+	
+	/*
+	 * @Fix(TankWarValidator.INVALID_WALL_X) public void setWallLocation(Issue
+	 * issue, IssueResolutionAcceptor acceptor) { acceptor.accept(issue,
+	 * "Screen initial size", "Change the screen to the initial size", "upcase.png",
+	 * new IModification() { public void apply(IModificationContext context) throws
+	 * BadLocationException { IXtextDocument xtextDocument =
+	 * context.getXtextDocument();
+	 * 
+	 * xtextDocument.replace(issue.getOffset(), 1 , "720" ); } }); }
+	 */
+	
 
 }
