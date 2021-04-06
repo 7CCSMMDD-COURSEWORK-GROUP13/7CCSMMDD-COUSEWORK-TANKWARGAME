@@ -15,7 +15,7 @@ import Tank.level.*;
  * Created by tyr on 2016/2/21.
  */
 public class TankClient extends Frame{
-    public static final int GAME_WIDTH = 760;
+    public static final int GAME_WIDTH = 750;
     public static final int GAME_HEIGHT = 750;
 	public int ENEMY_TANK_COUNT = 5;
     Tank myTank = new Tank(50,50,true,this);

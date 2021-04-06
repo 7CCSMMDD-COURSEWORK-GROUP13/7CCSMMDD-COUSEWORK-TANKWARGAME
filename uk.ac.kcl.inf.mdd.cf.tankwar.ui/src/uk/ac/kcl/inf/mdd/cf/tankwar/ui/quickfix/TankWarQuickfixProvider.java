@@ -15,6 +15,7 @@ import org.eclipse.xtext.validation.Issue;
 
 import uk.ac.kcl.inf.mdd.cf.tankwar.validation.TankWarValidator;
 
+
 /**
  * Custom quickfixes.
  *
@@ -29,6 +30,17 @@ public class TankWarQuickfixProvider extends DefaultQuickfixProvider {
 				IXtextDocument xtextDocument = context.getXtextDocument();
 				String firstLetter = xtextDocument.get(issue.getOffset(), 1);
 				xtextDocument.replace(issue.getOffset(), 1, firstLetter.toUpperCase());
+			}
+		});
+	}
+	
+	@Fix(TankWarValidator.SCREEN_WIDTH)
+	public void setWallLocation(Issue issue, IssueResolutionAcceptor acceptor) {
+		acceptor.accept(issue, "Screen initial size", "Change the screen to the initial size", "upcase.png", new IModification() {
+			public void apply(IModificationContext context) throws BadLocationException {
+				IXtextDocument xtextDocument = context.getXtextDocument();
+				
+				xtextDocument.replace(issue.getOffset(), 1 , "720" );
 			}
 		});
 	}
