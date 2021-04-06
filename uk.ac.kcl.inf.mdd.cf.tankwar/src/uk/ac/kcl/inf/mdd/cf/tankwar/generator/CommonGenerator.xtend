@@ -162,7 +162,7 @@ class CommonGenerator {
 	
 	dispatch def Number multiply(Integer a, Number b) {
 		if (b instanceof Integer) {
-			Integer.valueOf(a.intValue * b.intValue)
+			(Float.valueOf(a.intValue)) / (Float.valueOf(b.intValue))
 		} else {
 			a.floatValue * (b as Float).floatValue		
 		}

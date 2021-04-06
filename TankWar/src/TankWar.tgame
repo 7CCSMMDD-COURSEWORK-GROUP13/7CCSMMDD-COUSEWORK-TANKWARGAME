@@ -7,7 +7,7 @@ game Tank{
 	
 	
 	field easy {
-		enemyCount = baseEnemyCount+1*2
+		enemyCount = baseEnemyCount+10/10
 		obstacle test{
 			wall first{
 				wallWidth = 100
@@ -21,7 +21,7 @@ game Tank{
 	}
 	
 	field medium {
-		enemyCount = baseEnemyCount+2+2
+		enemyCount = baseEnemyCount
 		obstacle test{
 			wall first{
 				wallWidth = 100
