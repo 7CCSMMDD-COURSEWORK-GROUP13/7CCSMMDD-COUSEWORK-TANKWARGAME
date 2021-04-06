@@ -1,13 +1,13 @@
 game Tank{
 	var baseEnemyCount = 3
 	screen MainFrame{
-		screenWidth = 650
+		screenWidth = 750
 		screenHeight = 750
 	}
 	
 	
 	field easy {
-		enemyCount = baseEnemyCount+1
+		enemyCount = baseEnemyCount+10/10
 		obstacle test{
 			wall first{
 				wallWidth = 100
