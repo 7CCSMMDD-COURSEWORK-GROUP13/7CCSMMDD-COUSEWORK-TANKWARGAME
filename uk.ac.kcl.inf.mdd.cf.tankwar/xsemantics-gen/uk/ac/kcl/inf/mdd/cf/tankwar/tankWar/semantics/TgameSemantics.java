@@ -124,19 +124,19 @@ public class TgameSemantics extends XsemanticsRuntimeSystem {
     }
   }
   
-  public Result<Boolean> checkVariableDeclaration(final VariableDeclaration variable) {
-    return checkVariableDeclaration(null, variable);
+  public Result<Boolean> checkBaseEnemyCount(final VariableDeclaration variable) {
+    return checkBaseEnemyCount(null, variable);
   }
   
-  public Result<Boolean> checkVariableDeclaration(final RuleApplicationTrace _trace_, final VariableDeclaration variable) {
+  public Result<Boolean> checkBaseEnemyCount(final RuleApplicationTrace _trace_, final VariableDeclaration variable) {
     try {
-    	return checkVariableDeclarationInternal(_trace_, variable);
-    } catch (Exception _e_checkVariableDeclaration) {
-    	return resultForFailure(_e_checkVariableDeclaration);
+    	return checkBaseEnemyCountInternal(_trace_, variable);
+    } catch (Exception _e_checkBaseEnemyCount) {
+    	return resultForFailure(_e_checkBaseEnemyCount);
     }
   }
   
-  protected Result<Boolean> checkVariableDeclarationInternal(final RuleApplicationTrace _trace_, final VariableDeclaration variable) throws RuleFailedException {
+  protected Result<Boolean> checkBaseEnemyCountInternal(final RuleApplicationTrace _trace_, final VariableDeclaration variable) throws RuleFailedException {
     int _value = variable.getValue();
     /* variable.value < 20 */
     if (!(_value < 20)) {

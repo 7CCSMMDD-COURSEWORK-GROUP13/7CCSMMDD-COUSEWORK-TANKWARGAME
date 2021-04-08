@@ -21,9 +21,9 @@ public class TgameSemanticsValidator extends AbstractTankWarValidator {
   }
   
   @Check
-  public void checkVariableDeclaration(final VariableDeclaration variable) {
+  public void checkBaseEnemyCount(final VariableDeclaration variable) {
     errorGenerator.generateErrors(this,
-    	getXsemanticsSystem().checkVariableDeclaration(variable),
+    	getXsemanticsSystem().checkBaseEnemyCount(variable),
     		variable);
   }
   
