@@ -1,0 +1,72 @@
+import uk.ac.kcl.inf.mdd.cf.tankwar.validation.AbstractTankWarValidator
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Expression
+import uk.ac.kcl.inf.mdd.cf.tankwar.semantics.TgameType
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.IntLiteral
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.RealLiteral
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.IntVarExpression
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Multiplication
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.Addition
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.VariableDeclaration
+import uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.EndGameBehaviour
+
+system uk.ac.kcl.inf.mdd.cf.tankwar.tankWar.semantics.TgameSemantics
+
+validatorExtends AbstractTankWarValidator
+
+auxiliary {
+	typeExpressions(Iterable<Expression> exps) : TgameType cached
+}
+
+judgments {
+	type |- Expression exp : output TgameType
+		cached
+		error "cannot type " + stringRep(exp)
+	subType |- TgameType left <: TgameType right
+		error stringRep(left) + " is not a subtype of " + stringRep(right)
+}
+
+auxiliary typeExpressions(Iterable<Expression> exps) {
+	if (exps.forall[exp | 
+			empty |- exp : var TgameType exp2Type 
+			exp2Type === TgameType.INT]) {
+		return TgameType.INT			
+	} else {
+		return TgameType.REAL
+	}
+}
+	
+axiom TIntLit
+	G |- IntLiteral exp : TgameType.INT
+	
+axiom TRealLit
+	G |- RealLiteral exp : TgameType.REAL
+	
+axiom TVarRef
+	G |- IntVarExpression exp : TgameType.INT
+
+rule TMultiplication
+	G |- Multiplication exp : TgameType t
+from {
+	t = (exp.right + #[exp.left]).typeExpressions
+}
+//
+rule TAddition
+	G |- Addition exp : TgameType t
+from {
+	t = (exp.right + #[exp.left]).typeExpressions
+}
+
+
+
+checkrule checkBaseEnemyCount for
+	VariableDeclaration variable
+from {
+	variable.value < 20
+}
+
+checkrule checkMessage for
+	EndGameBehaviour endGame
+from {
+	endGame.win.length() < 30 &&
+	endGame.lost.length() < 30
+}
