@@ -33,6 +33,7 @@ These following directories are test code, you should import them into runtime-e
   - src
     - test1.tgame.xt  	
 
+## Syntax:
 ```
 game Tank{
 	var baseEnemyCount = 1
