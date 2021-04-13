@@ -44,14 +44,14 @@ class FrameGenerator extends CommonGenerator {
 		    public static final int GAME_WIDTH = «twg.screen.screenWidth»;
 		    public static final int GAME_HEIGHT = «twg.screen.screenHeight»;
 			public int ENEMY_TANK_COUNT = 5;
-		    Tank myTank = new Tank(50,50,true,this);
+		    «generateTankClassName» myTank = new «generateTankClassName»(50,50,true,this);
 		   
-			List<Wall> walls = new ArrayList<>();
-		    List<Missile> missiles = new ArrayList<Missile>();
-		    List<Explode> explodes = new ArrayList<Explode>();
-		    List<Tank>   tanks = new ArrayList<Tank>();
+			List<«generateWallClassName»> walls = new ArrayList<>();
+		    List<«generateMissileClassName»> missiles = new ArrayList<>();
+		    List<«generateExplodeClassName»> explodes = new ArrayList<>();
+		    List<«generateTankClassName»> tanks = new ArrayList<>();
 		    Image offScreenImage = null;
-		    private Level currentLevel = null;
+		    private «generateAbsLevelClassName» currentLevel = null;
 		    
 		    public «generateFrameClassName»(){
 		    	currentLevel = new «getInitLevelName()»(this);
@@ -66,21 +66,21 @@ class FrameGenerator extends CommonGenerator {
 		        g.drawString("tanks life"+myTank.getLife(),10,100);
 		
 		        for(int i = 0;i<missiles.size();i++){
-		            Missile m  = missiles.get(i);
+		            «generateMissileClassName» m  = missiles.get(i);
 		            m.hitTanks(tanks);
 		            m.hitTank(myTank);
-					for (Wall wall:walls){
+					for («generateWallClassName» wall:walls){
 						m.hitWall(wall);
 					}		           
 		            m.draw(g);
 		        }
 		        for(int  i=0;i<explodes.size();i++){
-		            Explode e = explodes.get(i);
+		            «generateExplodeClassName» e = explodes.get(i);
 		            e.draw(g);
 		        }
 		        for(int i =0;i<tanks.size();i++){
-		            Tank t = tanks.get(i);
-		            for (Wall wall:walls){
+		            «generateTankClassName» t = tanks.get(i);
+		            for («generateWallClassName» wall:walls){
 		                t.collidesWithWall(wall);
 		            }
 		            t.collidesWithTank(tanks);
@@ -88,11 +88,11 @@ class FrameGenerator extends CommonGenerator {
 		        }
 		        
 		        
-		        for (Wall wall:walls){
+		        for («generateWallClassName» wall:walls){
 		        	myTank.collidesWithWall(wall);
 		        }
 		        myTank.draw(g);
-		        for (Wall wall:walls){
+		        for («generateWallClassName» wall:walls){
 		        	wall.draw(g);
 		        }
 		        
@@ -145,7 +145,7 @@ class FrameGenerator extends CommonGenerator {
 		    }
 		    
 		    public void init(){
-		            myTank = new Tank(50,50,true,this);
+		            myTank = new «generateTankClassName»(50,50,true,this);
 		            walls = currentLevel.getWalls();
 		            tanks = currentLevel.getTanks();
 		    }
@@ -219,15 +219,6 @@ class FrameGenerator extends CommonGenerator {
 		}
 	}
 	
-//	def generateObstacleFieldInitialiserFor(ObstacleMember member) {
-//		if(member instanceof WallObstacle){
-//			'''
-//				walls.add(new Wall(«member.wallPosX»,«member.wallPosY»,«member.wallWidth»,«member.wallHeight»,this));
-//			'''
-//		}else{
-//			''''''
-//		}
-//	}
 	
 	def generateObstacleDrawFor(ObstacleMember member) {
 		if(member instanceof WallObstacle){
@@ -271,16 +262,5 @@ class FrameGenerator extends CommonGenerator {
 		twg.options.filter(StartFieldDeclaration).join(" ", [o|'''Level«o.field.name.toFirstUpper»'''])
 	}
 	
-//	def generateFieldInitialiserFor(FieldSpecification f) '''
-//		public final void «f.generateFieldInitialiserName»() {
-//			ENEMY_TANK_COUNT = «f.enemyCount»;
-//			«f.obstacle.fields.join("",[obstacle| generateObstacleFieldInitialiserFor(obstacle)])»
-//		}
-//	'''
-	
-
-	
-
-
 
 }

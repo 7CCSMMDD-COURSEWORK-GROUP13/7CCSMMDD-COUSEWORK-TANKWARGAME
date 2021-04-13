@@ -15,15 +15,15 @@ import Tank.level.*;
  * Created by tyr on 2016/2/21.
  */
 public class TankClient extends Frame{
-    public static final int GAME_WIDTH = 730;
+    public static final int GAME_WIDTH = 760;
     public static final int GAME_HEIGHT = 750;
 	public int ENEMY_TANK_COUNT = 5;
     Tank myTank = new Tank(50,50,true,this);
    
 	List<Wall> walls = new ArrayList<>();
-    List<Missile> missiles = new ArrayList<Missile>();
-    List<Explode> explodes = new ArrayList<Explode>();
-    List<Tank>   tanks = new ArrayList<Tank>();
+    List<Missile> missiles = new ArrayList<>();
+    List<Explode> explodes = new ArrayList<>();
+    List<Tank> tanks = new ArrayList<>();
     Image offScreenImage = null;
     private Level currentLevel = null;
     

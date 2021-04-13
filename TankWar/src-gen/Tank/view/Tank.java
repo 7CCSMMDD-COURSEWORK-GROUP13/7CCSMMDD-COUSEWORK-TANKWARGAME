@@ -273,7 +273,7 @@ public class Tank {
     }
     /*
     @param w Wall
-    @return zhangshangfanhui true,or false
+    @return true,or false
      */
     public boolean collidesWithWall(Wall w){
         if(this.live&&this.getRect().intersects(w.getRect())){

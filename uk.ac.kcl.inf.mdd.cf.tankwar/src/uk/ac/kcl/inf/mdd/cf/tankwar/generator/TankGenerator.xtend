@@ -242,20 +242,20 @@ class TankGenerator extends CommonGenerator {
 		        else if(!bL&&!bU&&!bR&&!bD) dir = Direction.STOP;
 		    }
 		
-		    public Missile fire(){
+		    public «generateMissileClassName» fire(){
 		        if(!live) return null;
-		        int x = this.x+«generateTankClassName».WIDTH/2-Missile.WIDTH/2;
-		        int y = this.y+«generateTankClassName».Height/2-Missile.HEIGHT/2;
-		        Missile m  =  new Missile(x,y,good,ptdir,tc);
+		        int x = this.x+«generateTankClassName».WIDTH/2-«generateMissileClassName».WIDTH/2;
+		        int y = this.y+«generateTankClassName».Height/2-«generateMissileClassName».HEIGHT/2;
+		        «generateMissileClassName» m  =  new «generateMissileClassName»(x,y,good,ptdir,tc);
 		        tc.missiles.add(m);
 		        return m;
 		    }
 		
-		    public Missile fire(Direction dir){
+		    public «generateMissileClassName» fire(Direction dir){
 		        if(!live) return null;
-		        int x = this.x+«generateTankClassName».WIDTH/2-Missile.WIDTH/2;
-		        int y = this.y+«generateTankClassName».Height/2-Missile.HEIGHT/2;
-		        Missile m  =  new Missile(x,y,good,dir,tc);
+		        int x = this.x+«generateTankClassName».WIDTH/2-«generateMissileClassName».WIDTH/2;
+		        int y = this.y+«generateTankClassName».Height/2-«generateMissileClassName».HEIGHT/2;
+		        «generateMissileClassName» m  =  new «generateMissileClassName»(x,y,good,dir,tc);
 		        tc.missiles.add(m);
 		        return m;
 		    }
@@ -296,9 +296,9 @@ class TankGenerator extends CommonGenerator {
 		    }
 		    /*
 		    @param w Wall
-		    @return zhangshangfanhui true,or false
+		    @return true,or false
 		     */
-		    public boolean collidesWithWall(Wall w){
+		    public boolean collidesWithWall(«generateWallClassName» w){
 		        if(this.live&&this.getRect().intersects(w.getRect())){
 		            this.stay();
 		            return true;

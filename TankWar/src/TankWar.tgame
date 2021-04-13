@@ -1,5 +1,5 @@
 game Tank{
-	var baseEnemyCount = 19	
+	var baseEnemyCount = 2
 	screen MainFrame{
 		screenWidth = 760
 		screenHeight = 750

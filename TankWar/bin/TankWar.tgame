@@ -1,13 +1,13 @@
 game Tank{
-	var baseEnemyCount = 3
+	var baseEnemyCount = 2
 	screen MainFrame{
-		screenWidth = 730
+		screenWidth = 760
 		screenHeight = 750
 	}
 	
 	
 	field easy {
-		enemyCount = baseEnemyCount
+		enemyCount = baseEnemyCount+1
 		obstacle test{
 			wall first{
 				wallWidth = 100
@@ -21,7 +21,7 @@ game Tank{
 	}
 	
 	field medium {
-		enemyCount = baseEnemyCount
+		enemyCount = baseEnemyCount+3
 		obstacle test{
 			wall first{
 				wallWidth = 100
@@ -43,7 +43,7 @@ game Tank{
 	}
 	
 	field hard {
-		enemyCount = 8
+		enemyCount = baseEnemyCount+4
 		obstacle test{
 			wall first{
 				wallWidth = 100

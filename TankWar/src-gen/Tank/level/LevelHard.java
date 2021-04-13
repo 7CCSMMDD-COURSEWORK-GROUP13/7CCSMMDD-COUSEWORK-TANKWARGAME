@@ -45,7 +45,7 @@ public class LevelHard extends Level {
 
     @Override
     public int getEnemyNum() {
-        return 8;
+        return 6;
     }
 
 

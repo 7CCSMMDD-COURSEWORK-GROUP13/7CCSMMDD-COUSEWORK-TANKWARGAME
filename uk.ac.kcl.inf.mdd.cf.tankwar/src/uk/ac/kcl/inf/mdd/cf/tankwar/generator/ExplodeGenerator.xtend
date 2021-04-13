@@ -17,15 +17,15 @@ class ExplodeGenerator extends CommonGenerator {
 		/**
 		 * Created by tyr on 2016/2/22.
 		 */
-		public class Explode {
+		public class «generateExplodeClassName» {
 		    int x,y;
 		    private boolean live = true;
 		
 		    int[] diameter = {4,7,12,18,26,32,49,30,14,6};
 		    int step = 0;
-		    private TankClient tc = null;
+		    private «generateFrameClassName» tc = null;
 		
-		    public Explode(int x,int y,TankClient tc){
+		    public «generateExplodeClassName»(int x,int y,«generateFrameClassName» tc){
 		        this.x= x;
 		        this.y= y;
 		        this.tc = tc;

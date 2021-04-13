@@ -20,7 +20,7 @@ class MissileGenerator extends CommonGenerator {
 		/**
 		 * Created by tyr on 2016/2/21.
 		 */
-		public class  Missile{
+		public class  «generateMissileClassName»{
 		    public static final int XSPEED = 10;
 		    public static final int YSPEED = 10;
 		
@@ -31,15 +31,15 @@ class MissileGenerator extends CommonGenerator {
 		
 		    private boolean good;
 		
-		    Tank.Direction dir;
-		    TankClient tc ;
-		    public Missile(int x,int y,Tank.Direction dir){
+		    «generateTankClassName».Direction dir;
+		    «generateFrameClassName» tc ;
+		    public «generateMissileClassName»(int x,int y,«generateTankClassName».Direction dir){
 		        this.x = x;
 		        this.y = y;
 		        this.dir = dir;
 		    }
 		
-		    public Missile(int x,int y,boolean good, Tank.Direction dir,TankClient tc){
+		    public «generateMissileClassName»(int x,int y,boolean good, «generateTankClassName».Direction dir,TankClient tc){
 		        this(x,y,dir);
 		        this.good = good;
 		        this.tc = tc;
@@ -92,7 +92,7 @@ class MissileGenerator extends CommonGenerator {
 		            case STOP:
 		                break;
 		        }
-		        if(x<0||y<0||x>TankClient.GAME_HEIGHT||y>TankClient.GAME_WIDTH){
+		        if(x<0||y<0||x>«generateFrameClassName».GAME_HEIGHT||y>«generateFrameClassName».GAME_WIDTH){
 		            live = false;
 		        }
 		
@@ -111,7 +111,7 @@ class MissileGenerator extends CommonGenerator {
 		        return new Rectangle(x,y,WIDTH,HEIGHT);
 		    }
 		
-		    public boolean hitTank(Tank t){
+		    public boolean hitTank(«generateTankClassName» t){
 		        if(this.live&&this.getRect().intersects(t.getRect())&&t.isLive()&this.good!=t.isGood()){
 		            if(t.isGood()){
 		                t.setLife(t.getLife()-20);
@@ -121,14 +121,14 @@ class MissileGenerator extends CommonGenerator {
 		            }
 		
 		            this.setLive(false);
-		            Explode e = new Explode(x,y,tc);
+		            «generateExplodeClassName» e = new «generateExplodeClassName»(x,y,tc);
 		            tc.explodes.add(e);
 		            return true;
 		        }
 		        return false;
 		    }
 		
-		    public boolean hitTanks(List<Tank> tanks){
+		    public boolean hitTanks(List<«generateTankClassName»> tanks){
 		        for(int i =0;i<tanks.size();i++){
 		            if(hitTank(tanks.get(i))){
 		                return true;
@@ -138,7 +138,7 @@ class MissileGenerator extends CommonGenerator {
 		        return false;
 		    }
 		
-		    public boolean hitWall(Wall w){
+		    public boolean hitWall(«generateWallClassName» w){
 		        if(this.live&&this.getRect().intersects(w.getRect())){
 		            this.live = false;
 		            return true;
