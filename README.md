@@ -37,7 +37,7 @@ uk.ac.kcl.inf.language.tgame.xpect
      |-- test1.tgame.xt  	
 ```
 ## Get Start
-It is a guide book for you to build our Tgame Praogram.
+It is a guide book for you to build our Tgame Program.
 
 [Configuration Guide](./GUIDE.md)
 
