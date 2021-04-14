@@ -2,7 +2,7 @@
 **1. Clone project to your Eclipse.**
 
 Open Eclipse -> File -> Import 
-<div align="center">
+<div align="left">
 	<img src="https://user-images.githubusercontent.com/77758668/114480417-714e0580-9bfa-11eb-9f8e-a02617296f33.png" alt="Editor" width="500">
 </div>
 Click Projects from Git -> Next
