@@ -1,5 +1,5 @@
 ## Get Start
-**1. Clone project to your Eclipse.(If you have cloned it by git command, you can skip this step)**
+**1. Clone project to your Eclipse.(If you have cloned it by git command, you can skip this step and to the 2nd step Input project)**
 
 Open Eclipse -> File -> Import 
 
@@ -86,7 +86,7 @@ The console shows as pictures:
 	<img src="https://user-images.githubusercontent.com/77758668/114487425-782f4500-9c07-11eb-9224-f4818381ac78.png" alt="Editor" width="500">
 </div>
 
-**3. Run an example writen by TGAME language**
+**5. Run an example writen by TGAME language**
 
 Right click 'uk.ac.kcl.inf.mdd.cf.tankwar' -> Run as -> Eclipse Application
 
@@ -104,7 +104,7 @@ Click this two projects as picture shows
 
 Click Finish
 
-**4. Run the example project**
+**6. Run the example project**
 
 Click 'TankWar' -> src -> 'TankWar.tgame' 
 
