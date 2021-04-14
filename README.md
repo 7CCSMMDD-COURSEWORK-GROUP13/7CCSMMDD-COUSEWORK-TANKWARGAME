@@ -16,29 +16,37 @@ Come up! Solider!
 ## Directory Structure:
 
 These following directories are project code, you should import them into eclipse.And then you can run them as Eclipse Application
-- uk.ac.kcl.inf.mdd.cf.tankwar
-- uk.ac.kcl.inf.mdd.cf.tankwar.ide
-- uk.ac.kcl.inf.mdd.cf.tankwar.tests
-- uk.ac.kcl.inf.mdd.cf.tankwar.ui
-- uk.ac.kcl.inf.mdd.cf.tankwar.ui.tests
-
+```
+7CCSMMDD-COUSEWORK-TANKWARGAME
+|-- uk.ac.kcl.inf.mdd.cf.tankwar
+|-- uk.ac.kcl.inf.mdd.cf.tankwar.ide
+|-- uk.ac.kcl.inf.mdd.cf.tankwar.tests
+|-- uk.ac.kcl.inf.mdd.cf.tankwar.ui
+|-- uk.ac.kcl.inf.mdd.cf.tankwar.ui.tests
+```
 These following directories are demo code, you should import them into runtime-eclipse.And then you can run the TankWar.tgame as Java Application.
-- TankWar
-  - src 
-    - TankWar.tgame
+```
+TankWar
+|-- src 
+     |-- TankWar.tgame
+```
 These following directories are test code, you should import them into runtime-eclipse.And then you can run the test1.tgame.xt as Java Application.
-- uk.ac.kcl.inf.language.tgame.xpect
-  - src
-    - test1.tgame.xt  	
-
+uk.ac.kcl.inf.language.tgame.xpect
+```
+|-- src
+     |-- test1.tgame.xt  	
+```
 ## Get Start
+It is a guide book for you to build our Tgame Praogram.
+
 [Configuration Guide](./GUIDE.md)
+
 Warning: Please clean all the project before you build.
 
 ## Syntax:
 ```
 game Tank{
-	var baseEnemyCount = 1
+	var baseEnemyCount = 1       // base count only need one or zero
 	screen MainFrame{            //it contains the mainframe attributes
 		screenWidth = 750    //screenwidth 
 		screenHeight = 750   //screenheight
