@@ -13,10 +13,6 @@ Come up! Solider!
 - Development Environment: Eclipse
 - Java version: Java 11
 
-## Warning: Please clean all the project before you build.
-## Get Start
-[Configuration Guide](./GUIDE.md)
-
 ## Directory Structure:
 
 These following directories are project code, you should import them into eclipse.And then you can run them as Eclipse Application
@@ -34,6 +30,10 @@ These following directories are test code, you should import them into runtime-e
 - uk.ac.kcl.inf.language.tgame.xpect
   - src
     - test1.tgame.xt  	
+
+## Get Start
+[Configuration Guide](./GUIDE.md)
+Warning: Please clean all the project before you build.
 
 ## Syntax:
 ```
