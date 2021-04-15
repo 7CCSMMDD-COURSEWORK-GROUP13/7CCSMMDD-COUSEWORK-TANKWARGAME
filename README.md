@@ -9,6 +9,16 @@ Shoot your enemies by space key.
 
 Come up! Solider!
 
+
+<div align="left">
+	<img src="https://user-images.githubusercontent.com/77758668/114857826-a2882a80-9de0-11eb-8571-98944d7d0092.png" alt="Editor" width="500">
+</div>
+
+<div align="left">
+	<img src="https://user-images.githubusercontent.com/77758668/114856511-1aedec00-9ddf-11eb-8ba5-1fa49eaf1387.png" alt="Editor" width="500">
+</div>
+
+
 ## Environment
 - Development Environment: Eclipse
 - Java version: Java 11
