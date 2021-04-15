@@ -90,6 +90,10 @@ The console shows as pictures:
 
 Right click 'uk.ac.kcl.inf.mdd.cf.tankwar' -> Run as -> Eclipse Application
 
+<div align="left">
+	<img src="https://user-images.githubusercontent.com/18624406/114897962-a3818200-9e09-11eb-84e1-d65d097abc01.png" alt="Editor" width="500">
+</div>
+
 After opening another Eclipse application
 
 Click File -> 'Open Projects from File System'
@@ -111,6 +115,10 @@ Click 'TankWar' -> src -> 'TankWar.tgame'
 This is an example file about how to use TGAME language
 
 Right click 'TankWar' -> Run as 'Java Application' 
+
+<div align="left">
+	<img src="https://user-images.githubusercontent.com/18624406/114898258-d9266b00-9e09-11eb-8cb5-b2666c9b7663.png" alt="Editor" width="500">
+</div>
 
 Then we can run the example
 
