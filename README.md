@@ -47,6 +47,7 @@ TankWar
 These following directories are test code, you should import them into runtime-eclipse.And then you can run the test1.tgame.xt as Java Application.
 uk.ac.kcl.inf.language.tgame.xpect
 ```
+uk.ac.kcl.inf.language.tgame.xpect
 |-- src
      |-- test1.tgame.xt  	
 ```
