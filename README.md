@@ -11,6 +11,10 @@ Come up! Solider!
 
 
 <div align="left">
+	<img src="https://user-images.githubusercontent.com/77758668/114858204-11658380-9de1-11eb-9370-28d942062b8d.png" alt="Editor" width="500">
+</div>
+
+<div align="left">
 	<img src="https://user-images.githubusercontent.com/77758668/114857826-a2882a80-9de0-11eb-8571-98944d7d0092.png" alt="Editor" width="500">
 </div>
 
