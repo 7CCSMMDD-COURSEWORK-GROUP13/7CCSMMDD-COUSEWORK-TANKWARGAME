@@ -9,7 +9,9 @@ Shoot your enemies by space key.
 
 Come up! Solider!
 
-<img src="https://user-images.githubusercontent.com/77758668/114858204-11658380-9de1-11eb-9370-28d942062b8d.png" alt="Editor" width="300">    <img src="https://user-images.githubusercontent.com/77758668/114857826-a2882a80-9de0-11eb-8571-98944d7d0092.png" alt="Editor" width="300">    <img src="https://user-images.githubusercontent.com/77758668/114856511-1aedec00-9ddf-11eb-8ba5-1fa49eaf1387.png" alt="Editor" width="300">
+<img src="https://user-images.githubusercontent.com/18624406/115001720-d1170b80-9e9b-11eb-8f53-5a2004ad0378.jpg" alt="Editor" width="400">    <img src="https://user-images.githubusercontent.com/77758668/114858204-11658380-9de1-11eb-9370-28d942062b8d.png" alt="Editor" width="400">
+
+<img src="https://user-images.githubusercontent.com/77758668/114857826-a2882a80-9de0-11eb-8571-98944d7d0092.png" alt="Editor" width="400">    <img src="https://user-images.githubusercontent.com/77758668/114856511-1aedec00-9ddf-11eb-8ba5-1fa49eaf1387.png" alt="Editor" width="400">
 
 
 ## Environment
